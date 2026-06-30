@@ -1,0 +1,30 @@
+import { NextRequest, NextResponse } from "next/server";
+import { evaluateCivilizationCoherence } from "@/lib/consciousness/civilization-coherence";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { prisma } from "@/lib/prisma";
+
+export async function GET(req: NextRequest) {
+  const session = await getServerSession(authOptions);
+  if (!session?.user?.email) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const user = await prisma.user.findUnique({
+    where: { email: session.user.email },
+    include: { memberships: true }
+  });
+
+  const workspaceId = user?.memberships[0]?.workspaceId;
+  if (!workspaceId) {
+    return NextResponse.json({ error: "Workspace not found" }, { status: 404 });
+  }
+
+  try {
+    const coherence = await evaluateCivilizationCoherence(workspaceId);
+    return NextResponse.json(coherence);
+  } catch (error) {
+    console.error("Error evaluating civilization coherence:", error);
+    return NextResponse.json({ error: "Failed to evaluate civilization coherence" }, { status: 500 });
+  }
+}

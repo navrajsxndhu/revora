@@ -91,6 +91,10 @@ model Workspace {
   temporalDebtProfiles                 TemporalDebtProfile[]
   civilizationEvolutionRecords         CivilizationEvolutionRecord[]
   futureContinuityProjections          FutureContinuityProjection[]
+
+  systemicAwarenessSnapshots           SystemicAwarenessSnapshot[]
+  operationalPerceptionRecords         OperationalPerceptionRecord[]
+  consciousnessProjections             ConsciousnessProjection[]
 }
 
 model WorkspaceMember {
@@ -851,6 +855,8 @@ model SovereignFederation {
   treatyCount               Int      @default(0)
   treasuryCoordinationLevel String   // ISOLATED, POOLED, BALANCED
   createdAt                 DateTime @default(now())
+
+  civilizationCoherenceSnapshots CivilizationCoherenceSnapshot[]
 }
 
 model EcosystemDependency {
@@ -955,5 +961,45 @@ model FutureContinuityProjection {
   projectionHorizon    String   // 5_YEARS, 10_YEARS, 20_YEARS
   survivabilityForecast Float
   continuityClass      String   // REACTIVE, STABILIZING, ENDURING, MULTI_GENERATIONAL, TEMPORAL_CIVILIZATION
+  generatedAt          DateTime @default(now())
+}
+
+model SystemicAwarenessSnapshot {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  awarenessScore     Float
+  coherenceIntegrity Float
+  causalityDensity   Float
+  capturedAt         DateTime @default(now())
+}
+
+model OperationalPerceptionRecord {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  integrityScore       Float
+  blindSpotIndex       Float
+  synchronizationDrift Float
+  recordedAt           DateTime @default(now())
+}
+
+model CivilizationCoherenceSnapshot {
+  id                    String   @id @default(cuid())
+  federationId          String
+  federation            SovereignFederation @relation(fields: [federationId], references: [id])
+  coherenceScore        Float
+  continuityAlignment   Float
+  survivabilityAgreement Float
+  capturedAt            DateTime @default(now())
+}
+
+model ConsciousnessProjection {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  projectionHorizon    String
+  consciousnessClass   String
+  awarenessStability   Float
   generatedAt          DateTime @default(now())
 }
