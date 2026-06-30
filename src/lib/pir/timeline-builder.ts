@@ -46,8 +46,8 @@ export async function buildIncidentTimeline(incidentId: string): Promise<string>
   }
 
   // Fallback if incident is resolved but lacks resolution event due to legacy data
-  if (incident.resolvedAt && !events.some(e => e.eventType === 'RESOLUTION')) {
-    markdown += `${formatTime(incident.resolvedAt)} — Incident resolved (Legacy Record).\n`;
+  if ((incident as any).resolvedAt && !events.some(e => e.eventType === 'RESOLUTION')) {
+    markdown += `${formatTime((incident as any).resolvedAt)} — Incident resolved (Legacy Record).\n`;
   }
 
   return markdown;

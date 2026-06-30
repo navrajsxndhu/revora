@@ -1,7 +1,7 @@
 import { Command } from 'commander';
 import fetch from 'node-fetch';
 import { getConfig } from '../lib/config';
-import { log } from '../lib/output';
+import { cliLogger as log } from '../lib/output';
 
 export const historyCommand = new Command('history')
   .argument('<service>', 'Service name to fetch history for')

@@ -9,8 +9,6 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
       where: { id: resolvedParams.id },
       data: {
         state: "ACKNOWLEDGED",
-        acknowledgedAt: new Date(),
-        acknowledgedBy: "operator@revora.com", // Normally from NextAuth session
       }
     });
 

@@ -1,6 +1,6 @@
 import { Command } from 'commander';
 import { evaluateLocalRisk } from '../lib/risk-evaluator';
-import { log } from '../lib/output';
+import { cliLogger as log } from '../lib/output';
 
 export const analyzeCommand = new Command('analyze')
   .description('Evaluate deployment risk locally before pushing code')

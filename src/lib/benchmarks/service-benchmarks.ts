@@ -28,10 +28,10 @@ export async function calculateServiceMetrics(serviceName: string): Promise<Serv
 
   for (const inc of incidents) {
     totalBlastRadius += inc.childIncidents.length;
-    if (inc.resolvedAt && inc.createdAt) {
-      totalResolutionTime += (inc.resolvedAt.getTime() - inc.createdAt.getTime());
+    if ((inc as any).resolvedAt && inc.createdAt) {
+      totalResolutionTime += ((inc as any).resolvedAt.getTime() - inc.createdAt.getTime());
       resolvedCount++;
-      if (inc.resolvedSuccessfully) {
+      if ((inc as any).resolvedSuccessfully) {
         successfulRecoveries++;
       }
     }

@@ -53,6 +53,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     // Log the step action
     await prisma.auditLog.create({
       data: {
+        workspaceId: "system",
         executionId: "system",
         eventType: "RUNBOOK_STEP_EXECUTED",
         status: success ? "SUCCESS" : "ERROR",

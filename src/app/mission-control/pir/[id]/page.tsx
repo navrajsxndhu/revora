@@ -29,7 +29,7 @@ export default async function PirPage({ params }: { params: { id: string } }) {
       <div className="max-w-4xl mx-auto">
         <ExecutiveBrief summary={pir.aiSummary} />
       </div>
-      <PirViewer pir={pir} />
+      <PirViewer pir={pir as any} />
       
       {pir.status !== 'APPROVED' && (
         <div className="max-w-4xl mx-auto mt-6 flex justify-end gap-4">

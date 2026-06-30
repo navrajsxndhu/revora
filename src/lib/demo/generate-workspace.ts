@@ -57,7 +57,7 @@ export async function generateDemoWorkspace() {
       resolvedSuccessfully: true,
       rollbackTriggered: true,
       createdAt: new Date(Date.now() - 3600000), // 1 hour ago
-      resolvedAt: new Date(Date.now() - 1800000), // 30 mins ago
+      updatedAt: new Date(Date.now() - 1800000), // 30 mins ago
     }
   });
 

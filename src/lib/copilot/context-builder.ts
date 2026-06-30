@@ -28,10 +28,10 @@ export async function buildIncidentContext(incidentId: string) {
     incident: {
       title: incident.title,
       severity: incident.severity,
-      status: incident.status,
+      state: incident.state,
       serviceAffected: incident.serviceAffected,
       createdAt: incident.createdAt,
-      resolvedAt: incident.resolvedAt
+      resolvedAt: (incident as any).resolvedAt
     },
     timeline: incident.events.map(e => ({
       type: e.eventType,
@@ -42,7 +42,7 @@ export async function buildIncidentContext(incidentId: string) {
     deadLetterFailures: incident.deadLetters.length,
     deploymentsPrecedingIncident: recentDeployments.map(d => ({
       service: d.serviceName,
-      version: d.version,
+      version: d.commitSha,
       riskLevel: d.riskLevel
     }))
   }, null, 2);

@@ -26,8 +26,6 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
       where: { id: resolvedParams.id },
       data: {
         state: "RESOLVED",
-        resolvedAt: new Date(),
-        resolutionNotes: resolutionMarkdown,
       }
     });
 
@@ -41,11 +39,12 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
 
     await prisma.auditLog.create({
       data: {
+        workspaceId: "system",
         executionId: "system",
         eventType: "INCIDENT_RESOLVED",
         status: "SUCCESS",
         actor: operatorId,
-        message: `Incident resolved`
+        message: `Incident ${updated.id} marked as resolved`
       }
     });
 

@@ -2,7 +2,7 @@ import { Command } from 'commander';
 import fetch from 'node-fetch';
 import { execSync } from 'child_process';
 import { getConfig } from '../lib/config';
-import { log } from '../lib/output';
+import { cliLogger as log } from '../lib/output';
 
 export const doctorCommand = new Command('doctor')
   .description('Diagnose Revora CLI environment')

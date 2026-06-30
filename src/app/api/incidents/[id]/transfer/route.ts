@@ -35,11 +35,12 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
 
     await prisma.auditLog.create({
       data: {
+        workspaceId: "system",
         executionId: "system",
         eventType: "INCIDENT_TRANSFERRED",
         status: "INFO",
         actor: operatorId,
-        message: `Incident transferred to ${newAssignee}`
+        message: `Incident ${incident.id} transferred to ${newAssignee}`
       }
     });
 

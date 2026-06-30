@@ -14,7 +14,7 @@ async function main() {
 
   // Incident 1: Critical Database Timeout (Recurring)
   const inc1 = await prisma.incident.create({
-    data: {
+    data: { workspaceId: 'system',
       title: "Deployment Failure: revora-production",
       description: "PrismaClientInitializationError: Timed out fetching a new connection from the connection pool.",
       state: "OPEN",
@@ -27,8 +27,8 @@ async function main() {
       recommendedAction: "Rollback strongly recommended. 3+ consecutive failures detected for this deployment hash.",
       probableCommit: "abc1234",
       assignedTo: "admin@revora.app",
-      acknowledgedAt: new Date(Date.now() - 1000 * 60 * 5),
-      acknowledgedBy: "admin@revora.app",
+      
+      
       deploymentDiff: JSON.stringify({
         changes: [{ type: "DEPENDENCY_CHANGE", file: "package.json", details: "prisma upgraded 5.1.0 -> 5.2.0" }]
       }),
@@ -42,7 +42,7 @@ async function main() {
   // Create child incidents to simulate grouped failures
   for (let i = 0; i < 3; i++) {
     await prisma.incident.create({
-      data: {
+      data: { workspaceId: 'system',
         title: "Deployment Failure: revora-production",
         description: "PrismaClientInitializationError: Timed out fetching a new connection from the connection pool.",
         state: "OPEN",
@@ -59,7 +59,7 @@ async function main() {
 
   // Create downstream symptom incidents
   await prisma.incident.create({
-    data: {
+    data: { workspaceId: 'system',
       title: "API Timeout: revora-api",
       description: "Error: 504 Gateway Timeout while communicating with upstream database.",
       state: "OPEN",
@@ -76,7 +76,7 @@ async function main() {
   });
 
   await prisma.incident.create({
-    data: {
+    data: { workspaceId: 'system',
       title: "Worker Crash: revora-worker",
       description: "Error: Redis connection failed while processing queue.",
       state: "OPEN",
@@ -94,7 +94,7 @@ async function main() {
 
   // Mock Remediation Actions
   await prisma.auditLog.create({
-    data: {
+    data: { workspaceId: 'system',
       executionId: "system",
       eventType: "RUNBOOK_STARTED",
       status: "INFO",
@@ -114,7 +114,7 @@ async function main() {
   });
 
   await prisma.auditLog.create({
-    data: {
+    data: { workspaceId: 'system',
       executionId: "system",
       eventType: "RUNBOOK_STEP_EXECUTED",
       status: "SUCCESS",
@@ -144,7 +144,7 @@ async function main() {
 
   // Incident 2: Medium Environment Variable Issue
   await prisma.incident.create({
-    data: {
+    data: { workspaceId: 'system',
       title: "Deployment Failure: revora-worker",
       description: "Error: Missing required environment variable REDIS_URL.",
       state: "ACKNOWLEDGED",
@@ -157,15 +157,12 @@ async function main() {
       recommendedAction: "Manual investigation required. Review the deployment diff to isolate the breaking change.",
       probableCommit: "def5678",
       assignedTo: "navraj@revora.app",
-      acknowledgedAt: new Date(Date.now() - 1000 * 60 * 15),
-      acknowledgedBy: "navraj@revora.app",
+      
+      
       deploymentDiff: JSON.stringify({
         changes: [{ type: "ENV_CHANGE", file: ".env.production", details: "REDIS_URL removed" }]
       }),
       createdAt: new Date(Date.now() - 1000 * 60 * 60),
-      state: "RESOLVED",
-      resolvedAt: new Date(Date.now() - 1000 * 60 * 10),
-      resolutionNotes: `**Resolved by navraj@revora.app**\n\n**Root Cause:**\nREDIS_URL environment variable was missing from Vercel.\n\n**Mitigation:**\nRe-added the variable via Vercel CLI and replayed the worker deployment. It succeeded.\n\n**Future Notes:**\nNeed to add a pre-flight check in CI to validate required ENV vars.`
     }
   });
 
@@ -173,7 +170,7 @@ async function main() {
   for (let i = 0; i < 20; i++) {
     const execId = crypto.randomUUID();
     await prisma.workflowExecution.create({
-      data: {
+    data: {
         id: execId,
         workflowId: "deployment-intelligence-loop",
         state: "COMPLETED",
@@ -184,7 +181,7 @@ async function main() {
 
     if (i < 3) {
       await prisma.auditLog.create({
-        data: {
+        data: { workspaceId: 'system',
           executionId: execId,
           eventType: "REMEDIATION_REPLAY_WORKFLOW",
           status: "SUCCESS",
@@ -201,7 +198,7 @@ async function main() {
   for (let i = 0; i < 12; i++) {
     // 12 historical incidents for worker-service (High Risk)
     await prisma.incident.create({
-      data: {
+      data: { workspaceId: 'system',
         title: `Historical Worker Crash ${i}`,
         description: "OOM Killed during payload processing",
         state: "RESOLVED",
@@ -210,12 +207,12 @@ async function main() {
         relatedTraceId: `trace-hist-${i}`,
         serviceAffected: "worker-service",
         createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * (i + 1)),
-        resolvedAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * (i + 1) + 1000 * 60 * 65) // 65 min MTTR
+        
       }
     });
 
     await prisma.apiTrace.create({
-      data: {
+      data: { workspaceId: 'system',
         id: `trace-hist-${i}`,
         workflowExecutionId: "system",
         nodeId: "worker-process",
@@ -228,7 +225,7 @@ async function main() {
 
     if (i % 2 === 0) {
       await prisma.auditLog.create({
-        data: {
+        data: { workspaceId: 'system',
           executionId: "system",
           eventType: "RECOVERY_STEP_FAILED",
           status: "ERROR",
@@ -243,7 +240,7 @@ async function main() {
   for (let i = 0; i < 5; i++) {
     // Database incidents with large blast radius
     const dbInc = await prisma.incident.create({
-      data: {
+      data: { workspaceId: 'system',
         title: `Historical Database Outage ${i}`,
         description: "Connection pool exhausted",
         state: "RESOLVED",
@@ -252,12 +249,12 @@ async function main() {
         relatedTraceId: `trace-db-hist-${i}`,
         serviceAffected: "database",
         createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * (i + 2)),
-        resolvedAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * (i + 2) + 1000 * 60 * 40) // 40 min MTTR
+        
       }
     });
 
     await prisma.apiTrace.create({
-      data: {
+      data: { workspaceId: 'system',
         id: `trace-db-hist-${i}`,
         workflowExecutionId: "system",
         nodeId: "pg-pool",
@@ -271,7 +268,7 @@ async function main() {
     // Seed symptoms
     for (const downstream of ["api-gateway", "auth-service", "webhooks", "worker-service"]) {
       await prisma.incident.create({
-        data: {
+        data: { workspaceId: 'system',
           title: `Symptom ${downstream}`,
           description: "Timeout waiting for upstream.",
           state: "RESOLVED",
@@ -281,7 +278,7 @@ async function main() {
           isSymptom: true,
           rootCauseIncidentId: dbInc.id,
           createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * (i + 2) + 1000 * 30),
-          resolvedAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * (i + 2) + 1000 * 60 * 41)
+          
         }
       });
     }

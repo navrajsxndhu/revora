@@ -18,9 +18,9 @@ if (redisUrl) {
 
 // Ensure queues don't crash if connection is null (by mocking them in dev if needed)
 export const incidentAnalysisQueue = connection 
-  ? new Queue('incident-analysis-queue', { connection }) 
-  : { add: async (name: string, data: any) => console.log(`[MOCK QUEUE] Added ${name} to incident-analysis-queue`, data) };
+  ? new Queue('incident-analysis-queue', { connection: connection as any }) 
+  : { add: async (name: string, data: any) => console.log(`[MOCK QUEUE] Added ${name} to incident analysis.`) };
 
 export const notificationQueue = connection
-  ? new Queue('notification-queue', { connection })
+  ? new Queue('notification-queue', { connection: connection as any }) 
   : { add: async (name: string, data: any) => console.log(`[MOCK QUEUE] Added ${name} to notification-queue`, data) };

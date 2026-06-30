@@ -43,7 +43,7 @@ export default async function IncidentPage({ params }: { params: Promise<{ id: s
     orderBy: { createdAt: 'desc' }
   });
 
-  const blastRadius = calculateBlastRadius(incident, relatedIncidents);
+  const blastRadius = await calculateBlastRadius(incident.id);
   const diagnostics = await aggregateDiagnostics(incident);
   const historicalInsights = await getHistoricalInsights(incident);
 
@@ -102,7 +102,7 @@ export default async function IncidentPage({ params }: { params: Promise<{ id: s
           <IncidentActions 
             incidentId={incident.id} 
             currentState={incident.state} 
-            assignedTo={incident.assignedTo} 
+            currentAssignee={incident.assignedTo} 
           />
         </header>
 
@@ -156,13 +156,13 @@ export default async function IncidentPage({ params }: { params: Promise<{ id: s
           <div className="col-span-2 space-y-8">
             <ReplayController events={replayEvents} />
             
-            {incident.resolutionNotes && (
+            {(incident as any).resolutionNotes && (
               <section>
                 <PostMortemViewer 
                   incidentId={incident.id} 
-                  resolutionNotes={incident.resolutionNotes} 
+                  resolutionNotes={(incident as any).resolutionNotes} 
                   createdAt={incident.createdAt} 
-                  resolvedAt={incident.resolvedAt} 
+                  resolvedAt={(incident as any).resolvedAt} 
                 />
               </section>
             )}
@@ -282,7 +282,7 @@ export default async function IncidentPage({ params }: { params: Promise<{ id: s
             </section>
             
             {incident.serviceAffected && confidenceContext && (
-              <RecoveryHistory service={incident.serviceAffected} confidenceContext={confidenceContext} />
+              <RecoveryHistory service={incident.serviceAffected} confidenceContext={confidenceContext as any} />
             )}
 
             <section className="mt-6">

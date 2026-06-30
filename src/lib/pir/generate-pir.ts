@@ -34,7 +34,7 @@ export async function generatePIR(workspaceId: string, incidentId: string) {
   const title = `PIR: ${incident.title}`;
   const summary = `On ${incident.createdAt.toISOString().split('T')[0]}, an incident affected ${incident.serviceAffected || 'the platform'}, resulting in ${impact.totalDowntimeMinutes} minutes of downtime.`;
   const rootCause = incident.rootCauseSummary || 'Root cause investigation pending (Update Required).';
-  const resolutionMarkdown = incident.resolutionNotes || 'No specific resolution notes recorded during mitigation.';
+  const resolutionMarkdown = (incident as any).resolutionNotes || 'No specific resolution notes recorded during mitigation.';
 
   const pirData = {
     workspaceId,

@@ -3,7 +3,7 @@ import Stripe from 'stripe';
 const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY || 'sk_test_mock';
 
 export const stripe = new Stripe(STRIPE_SECRET_KEY, {
-  apiVersion: '2023-10-16', // using a recent, stable API version
+  apiVersion: '2026-06-24.dahlia', // using a recent, stable API version
   appInfo: {
     name: 'Revora',
     version: '0.1.0'

@@ -76,6 +76,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
 
     await prisma.auditLog.create({
       data: {
+        workspaceId: "system",
         executionId: "system",
         eventType: `REMEDIATION_${actionType}`,
         status: success ? "SUCCESS" : "ERROR",

@@ -1,7 +1,7 @@
 import { Command } from 'commander';
 import fetch from 'node-fetch';
 import { getConfig } from '../lib/config';
-import { log } from '../lib/output';
+import { cliLogger as log } from '../lib/output';
 import { evaluateLocalRisk } from '../lib/risk-evaluator';
 
 export const explainCommand = new Command('explain')

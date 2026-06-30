@@ -38,8 +38,8 @@ export async function getStabilityIntelligence() {
 
     for (const inc of incidents) {
       totalBlastRadius += inc.symptomIncidents.length;
-      if (inc.resolvedAt) {
-        totalMTTR += (inc.resolvedAt.getTime() - inc.createdAt.getTime()) / 60000;
+      if ((inc as any).resolvedAt) {
+        totalMTTR += ((inc as any).resolvedAt.getTime() - inc.createdAt.getTime()) / 60000;
         resolvedCount++;
       }
     }

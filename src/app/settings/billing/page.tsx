@@ -16,7 +16,7 @@ export default async function BillingPage() {
   async function handleUpgrade() {
     "use server";
     const url = await createCheckoutSession(workspaceId!, process.env.STRIPE_PRO_PRICE_ID || 'price_mock_pro');
-    redirect(url);
+    if (url) redirect(url);
   }
 
   async function handleManageBilling() {

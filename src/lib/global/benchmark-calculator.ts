@@ -8,12 +8,11 @@ export async function calculateGlobalMttr(): Promise<number> {
     where: {
       isEligibleForBenchmarking: true,
       state: 'RESOLVED',
-      resolvedAt: { not: null },
       workspace: { benchmarkOptIn: true }
     },
     select: {
       createdAt: true,
-      resolvedAt: true
+      updatedAt: true
     }
   });
 
@@ -21,7 +20,7 @@ export async function calculateGlobalMttr(): Promise<number> {
 
   let totalMinutes = 0;
   for (const inc of resolvedIncidents) {
-    totalMinutes += (inc.resolvedAt!.getTime() - inc.createdAt.getTime()) / 60000;
+    totalMinutes += (inc.updatedAt.getTime() - inc.createdAt.getTime()) / 60000;
   }
 
   // Simplified median/average. Using average for performance here.

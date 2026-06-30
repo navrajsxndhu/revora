@@ -10,7 +10,7 @@ export async function getOperationalAnalytics() {
     recoveryLogs
   ] = await Promise.all([
     prisma.incident.count(),
-    prisma.incident.findMany({ where: { state: 'RESOLVED', resolvedAt: { not: null } } }),
+    prisma.incident.findMany({ where: { state: 'RESOLVED' } }),
     prisma.workflowExecution.count(),
     prisma.incident.groupBy({
       by: ['serviceAffected'],
@@ -25,7 +25,7 @@ export async function getOperationalAnalytics() {
   let mttrMinutes = 0;
   if (resolvedIncidents.length > 0) {
     const totalDiff = resolvedIncidents.reduce((acc, inc) => {
-      const diffMs = inc.resolvedAt!.getTime() - inc.createdAt.getTime();
+      const diffMs = inc.updatedAt.getTime() - inc.createdAt.getTime();
       return acc + diffMs;
     }, 0);
     mttrMinutes = Math.round((totalDiff / resolvedIncidents.length) / 60000);

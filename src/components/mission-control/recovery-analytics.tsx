@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 export async function RecoveryAnalytics() {
   const resolvedIncidents = await prisma.incident.findMany({
     where: { state: "RESOLVED" },
-    select: { id: true, createdAt: true, resolvedAt: true, activeRunbookId: true }
+    select: { id: true, createdAt: true, updatedAt: true, activeRunbookId: true }
   });
 
   const replays = await prisma.auditLog.findMany({
@@ -13,8 +13,8 @@ export async function RecoveryAnalytics() {
   const successfulReplays = replays.filter(r => r.status === "SUCCESS").length;
   const replaySuccessRate = replays.length > 0 ? Math.round((successfulReplays / replays.length) * 100) : 0;
 
-  const validIncidents = resolvedIncidents.filter(i => i.resolvedAt);
-  const totalRecoveryTimeMs = validIncidents.reduce((acc, i) => acc + (i.resolvedAt!.getTime() - i.createdAt.getTime()), 0);
+  const validIncidents = resolvedIncidents.filter(i => i.updatedAt);
+  const totalRecoveryTimeMs = validIncidents.reduce((acc, i) => acc + (i.updatedAt!.getTime() - i.createdAt.getTime()), 0);
   const avgRecoveryMins = validIncidents.length > 0 ? Math.round(totalRecoveryTimeMs / validIncidents.length / 60000) : 0;
 
   const runbookResolutions = validIncidents.filter(i => i.activeRunbookId).length;

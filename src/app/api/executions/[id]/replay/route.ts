@@ -40,11 +40,12 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
 
     await prisma.auditLog.create({
       data: {
+        workspaceId: "system",
         executionId: newExecutionId,
         eventType: "REPLAY_INITIATED",
         status: "SUCCESS",
-        message: `Manual replay triggered from original execution ${originalExecution.id}`,
-        actor: operatorId
+        message: `Execution ${originalExecution.id} replayed as ${newExecutionId}`,
+        actor: "system"
       }
     });
 
@@ -52,10 +53,11 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     const newTraceId = crypto.randomUUID();
     await prisma.apiTrace.create({
       data: {
+        workspaceId: "system",
         id: newTraceId,
         workflowExecutionId: newExecutionId,
         nodeId: originalTrace.nodeId,
-        status: "ERROR",
+        status: "QUEUED",
         latencyMs: 0,
         requestPayload: originalTrace.requestPayload,
         timestamp: new Date(),

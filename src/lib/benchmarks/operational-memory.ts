@@ -32,8 +32,8 @@ export async function getHistoricalInsights(incident: Incident): Promise<Histori
   const deployments: Record<string, number> = {};
 
   for (const past of pastIncidents) {
-    if (past.resolvedAt && past.createdAt && past.resolvedSuccessfully) {
-      totalResolutionTime += (past.resolvedAt.getTime() - past.createdAt.getTime());
+    if ((past as any).resolvedAt && past.createdAt && (past as any).resolvedSuccessfully) {
+      totalResolutionTime += ((past as any).resolvedAt.getTime() - past.createdAt.getTime());
       resolvedCount++;
 
       if (past.recommendedAction) {

@@ -71,6 +71,7 @@ export const createIncidentWorker = () => {
       // Create as Child Incident
       incident = await prisma.incident.create({
         data: {
+          workspaceId: "system",
           id: crypto.randomUUID(),
           title: `Duplicate Failure: ${payload.payload?.deployment?.name || 'Unknown'}`,
           description: `Correlated to ${masterIncident.id}`,
@@ -92,6 +93,7 @@ export const createIncidentWorker = () => {
       // Log deduplication
       await prisma.auditLog.create({
         data: {
+          workspaceId: "system",
           executionId: "system",
           eventType: "INCIDENT_GROUPED",
           status: "INFO",
@@ -115,6 +117,7 @@ export const createIncidentWorker = () => {
       
       incident = await prisma.incident.create({
         data: {
+          workspaceId: "system",
           id: crypto.randomUUID(),
           title: `Deployment Failure: ${payload.payload?.deployment?.name || 'Unknown'}`,
           description: `Deployment error detected for ${payload.payload?.deployment?.url || 'Unknown'}`,
@@ -160,16 +163,16 @@ export const createIncidentWorker = () => {
         data: { id: newExecutionId, workflowId: "deployment-intelligence-loop", state: "QUEUED", autoReplayed: true }
       });
       await prisma.apiTrace.create({
-        data: { id: newTraceId, workflowExecutionId: newExecutionId, nodeId: "auto-replay", status: "ERROR", latencyMs: 0, requestPayload: JSON.stringify(payload) }
+        data: { workspaceId: "system", id: newTraceId, workflowExecutionId: newExecutionId, nodeId: "auto-replay", status: "ERROR", latencyMs: 0, requestPayload: JSON.stringify(payload) }
       });
       
       await prisma.auditLog.create({
-        data: { executionId, eventType: "PLAYBOOK_TRIGGERED", status: "SUCCESS", message: `Auto-replayed incident ${incident.id}`, actor: "System" }
+        data: { workspaceId: "system", executionId, eventType: "PLAYBOOK_TRIGGERED", status: "SUCCESS", message: `Auto-replayed incident ${incident.id}`, actor: "System" }
       });
 
       await incidentAnalysisQueue.add('analyze-failure', { traceId: newTraceId, executionId: newExecutionId, payload });
     }
-  }, { connection });
+  }, { connection: connection as any });
 
   worker.on('failed', async (job, err) => {
     if (job) {

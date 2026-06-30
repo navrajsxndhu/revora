@@ -23,8 +23,8 @@ export async function analyzeIncidentImpact(incidentId: string): Promise<ImpactA
 
   // 1. Downtime
   let downtime = 0;
-  if (incident.resolvedAt) {
-    downtime = Math.round((incident.resolvedAt.getTime() - incident.createdAt.getTime()) / 60000);
+  if ((incident as any).resolvedAt) {
+    downtime = Math.round(((incident as any).resolvedAt.getTime() - incident.createdAt.getTime()) / 60000);
   }
 
   // 2. Blast Radius & Symptoms

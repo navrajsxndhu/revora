@@ -20,8 +20,8 @@ export async function computeReliabilityDNA(workspaceId: string, serviceName: st
     incidentCount += d.incidents.length;
     // Mock MTTR for demonstration
     for (const inc of d.incidents) {
-      if (inc.resolvedAt) {
-        mttrAcc += (inc.resolvedAt.getTime() - inc.createdAt.getTime()) / 60000;
+      if ((inc as any).resolvedAt) {
+        mttrAcc += ((inc as any).resolvedAt.getTime() - inc.createdAt.getTime()) / 60000;
       }
     }
   }

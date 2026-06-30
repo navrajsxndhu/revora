@@ -1,6 +1,6 @@
 import { Command } from 'commander';
 import fetch from 'node-fetch';
-import { log } from '../lib/output';
+import { cliLogger as log } from '../lib/output';
 import { evaluateLocalRisk } from '../lib/risk-evaluator';
 import fs from 'fs';
 
@@ -21,6 +21,7 @@ export const ciCommand = new Command('ci')
     log.info(`Analyzed local changes: ${localResult.changedFilesCount} files, ${localResult.dependencyChangesCount} deps.`);
     console.log(log.riskLevel(localResult.level));
 
+    if (options.url) {
       log.info(`Fetching operational context from ${options.url}...`);
       try {
         // Also check governance policies first

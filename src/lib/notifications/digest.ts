@@ -13,7 +13,7 @@ export async function generateOperationalDigest() {
       recoveryStatus: true,
       isSymptom: true,
       createdAt: true,
-      resolvedAt: true
+      updatedAt: true
     }
   });
 
@@ -29,8 +29,8 @@ export async function generateOperationalDigest() {
     if (inc.serviceAffected) {
       serviceCounts[inc.serviceAffected] = (serviceCounts[inc.serviceAffected] || 0) + 1;
     }
-    if (inc.resolvedAt && inc.createdAt) {
-      totalResolutionTime += (inc.resolvedAt.getTime() - inc.createdAt.getTime());
+    if (inc.updatedAt && inc.createdAt) {
+      totalResolutionTime += (inc.updatedAt.getTime() - inc.createdAt.getTime());
       resolvedCount++;
     }
     if (inc.recoveryStatus === "FAILED") {

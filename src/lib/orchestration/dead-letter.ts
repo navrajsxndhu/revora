@@ -23,6 +23,7 @@ export async function sendToDeadLetter(
   await prisma.auditLog.create({
     data: {
       workspaceId,
+      executionId: 'system',
       eventType: 'DEAD_LETTER_ROUTED',
       status: 'FAILURE',
       message: `Recovery Action ${recoveryActionId} exhausted retries for Incident ${incidentId}. Moved to DLQ.`,
@@ -55,6 +56,7 @@ export async function replayDeadLetter(deadLetterId: string, userId: string) {
   await prisma.auditLog.create({
     data: {
       workspaceId: dlqItem.workspaceId,
+      executionId: 'system',
       eventType: 'DEAD_LETTER_REPLAYED',
       status: 'SUCCESS',
       message: `Replayed Dead Letter Action ${dlqItem.recoveryActionId}`,

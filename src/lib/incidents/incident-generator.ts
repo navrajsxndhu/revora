@@ -10,6 +10,7 @@ export async function generateDeploymentFailureIncident(
   // 1. Write the trace to Prisma
   await prisma.apiTrace.create({
     data: {
+      workspaceId: "system",
       id: trace.id,
       workflowExecutionId: trace.workflowExecutionId,
       nodeId: trace.nodeId,
@@ -31,6 +32,7 @@ export async function generateDeploymentFailureIncident(
   // 3. Create Incident in Prisma
   const incident = await prisma.incident.create({
     data: {
+      workspaceId: "system",
       id: crypto.randomUUID(),
       title: `Deployment Failure: ${payload.payload.deployment.name}`,
       description: `A deployment error was detected for ${payload.payload.deployment.url}`,

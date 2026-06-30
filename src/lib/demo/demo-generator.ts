@@ -5,13 +5,14 @@ export async function generateDemoEnvironment() {
   // Clear existing active incidents for a clean demo
   await prisma.incident.updateMany({
     where: { state: { not: "RESOLVED" } },
-    data: { state: "RESOLVED", resolvedAt: new Date() }
+    data: { state: "RESOLVED" }
   });
 
   // Create a realistic Root Cause Outage
   const rootCauseId = crypto.randomUUID();
   const dbInc = await prisma.incident.create({
     data: {
+      workspaceId: "system",
       id: rootCauseId,
       title: "Connection Pool Exhaustion",
       description: "Database connection limit reached. All new queries are timing out.",
@@ -33,6 +34,7 @@ export async function generateDemoEnvironment() {
 
   await prisma.apiTrace.create({
     data: {
+      workspaceId: "system",
       id: dbInc.relatedTraceId,
       workflowExecutionId: "demo-system",
       nodeId: "pg-pool",
@@ -49,6 +51,7 @@ export async function generateDemoEnvironment() {
     const symptomTraceId = `trace-demo-${downstream}-${Date.now()}`;
     await prisma.incident.create({
       data: {
+        workspaceId: "system",
         title: `Timeout waiting for upstream: ${downstream}`,
         description: `Service ${downstream} is failing to communicate with the database layer.`,
         state: "OPEN",
@@ -66,6 +69,7 @@ export async function generateDemoEnvironment() {
 
     await prisma.apiTrace.create({
       data: {
+        workspaceId: "system",
         id: symptomTraceId,
         workflowExecutionId: "demo-system",
         nodeId: downstream,
@@ -80,6 +84,7 @@ export async function generateDemoEnvironment() {
   // Create a random isolated worker crash
   await prisma.incident.create({
     data: {
+      workspaceId: "system",
       title: "Worker Process OOM Crash",
       description: "Worker node ran out of memory processing large payload.",
       state: "OPEN",

@@ -19,6 +19,7 @@ export const createNotificationWorker = () => {
     if (isSymptomUpdate && incident.slackThreadTs) {
       await prisma.auditLog.create({
         data: {
+          workspaceId: "system",
           executionId,
           eventType: 'SLACK_ALERT_SENDING',
           status: 'SUCCESS',
@@ -29,6 +30,7 @@ export const createNotificationWorker = () => {
     } else if (isGroupedUpdate && incident.slackThreadTs) {
       await prisma.auditLog.create({
         data: {
+          workspaceId: "system",
           executionId,
           eventType: 'SLACK_ALERT_SENDING',
           status: 'SUCCESS',
@@ -39,6 +41,7 @@ export const createNotificationWorker = () => {
     } else {
       await prisma.auditLog.create({
         data: {
+          workspaceId: "system",
           executionId,
           eventType: 'SLACK_ALERT_SENDING',
           status: 'SUCCESS',
@@ -67,6 +70,7 @@ export const createNotificationWorker = () => {
 
     await prisma.auditLog.create({
       data: {
+        workspaceId: "system",
         executionId,
         eventType: 'EXECUTION_COMPLETED',
         status: 'SUCCESS',
@@ -75,7 +79,7 @@ export const createNotificationWorker = () => {
     });
 
   }, { 
-    connection,
+    connection: connection as any,
     // Add retry logic with exponential backoff
     settings: {
       backoffStrategy: (attemptsMade: number) => Math.pow(2, attemptsMade) * 1000,
@@ -94,6 +98,7 @@ export const createNotificationWorker = () => {
       });
       await prisma.auditLog.create({
         data: {
+          workspaceId: "system",
           executionId: job.data.executionId,
           eventType: 'NOTIFICATION_FAILED',
           status: 'ERROR',

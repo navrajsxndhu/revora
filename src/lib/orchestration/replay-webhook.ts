@@ -41,6 +41,7 @@ export async function replayWebhook(webhookReplayId: string, userId: string) {
   await prisma.auditLog.create({
     data: {
       workspaceId: replay.workspaceId,
+      executionId: 'system',
       eventType: 'WEBHOOK_REPLAYED',
       status: 'SUCCESS',
       message: `Replayed webhook from ${replay.provider}`,

@@ -42,6 +42,7 @@ export async function fetchCommitDiff(owner: string, repo: string, base: string,
     // Harden: Log integration failure
     await prisma.auditLog.create({
       data: {
+        workspaceId: "system",
         executionId: "system",
         eventType: "INTEGRATION_FAILURE",
         status: "ERROR",

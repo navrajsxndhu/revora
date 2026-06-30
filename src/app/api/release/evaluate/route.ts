@@ -14,6 +14,7 @@ export async function POST(req: NextRequest) {
 
     const deployment = await prisma.deployment.create({
       data: {
+        workspaceId: (payload as any).workspaceId || "system",
         serviceName: payload.serviceName,
         commitSha: payload.commitSha,
         environment: payload.environment || "production",

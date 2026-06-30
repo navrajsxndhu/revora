@@ -17,7 +17,7 @@ export default async function RevoraOSDashboard() {
   // Aggregate recent operations timeline (incidents, governance, deployments)
   const timelineEvents = await prisma.incidentEvent.findMany({
     where: { incident: { workspaceId: workspace.id } },
-    orderBy: { timestamp: 'desc' },
+    orderBy: { createdAt: 'desc' },
     take: 10
   });
 

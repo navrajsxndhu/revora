@@ -56,8 +56,9 @@ export async function POST(req: NextRequest) {
             workspaceId,
             eventType: 'BILLING_UPDATED',
             status: 'SUCCESS',
-            message: 'Upgraded to PRO plan via Checkout',
-            actor: 'System'
+            message: 'Subscription updated via Stripe webhook.',
+            actor: 'system',
+            executionId: 'system-webhook'
           }
         });
         break;
@@ -70,15 +71,15 @@ export async function POST(req: NextRequest) {
           data: {
             status: sub.status.toUpperCase(),
             stripePriceId: sub.items.data[0].price.id,
-            currentPeriodEnd: new Date(sub.current_period_end * 1000),
-            cancelAtPeriodEnd: sub.cancel_at_period_end
+            currentPeriodEnd: new Date((sub as any).current_period_end * 1000),
+            cancelAtPeriodEnd: (sub as any).cancel_at_period_end
           }
         });
         break;
       }
       case 'invoice.payment_failed': {
         const invoice = event.data.object as Stripe.Invoice;
-        const subId = invoice.subscription as string;
+        const subId = (invoice as any).subscription as string;
         
         const sub = await prisma.subscription.findUnique({ where: { stripeSubscriptionId: subId }});
         if (sub) {
@@ -87,8 +88,9 @@ export async function POST(req: NextRequest) {
               workspaceId: sub.workspaceId,
               eventType: 'BILLING_FAILED',
               status: 'FAILURE',
-              message: 'Invoice payment failed',
-              actor: 'System'
+              message: 'Invoice payment failed.',
+              actor: 'system',
+              executionId: 'system-webhook'
             }
           });
         }

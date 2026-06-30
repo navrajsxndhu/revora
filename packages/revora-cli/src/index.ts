@@ -27,7 +27,7 @@ program
   .description('Log in to your Revora workspace')
   .action((apiKey) => {
     const command = authCommands.commands.find(c => c.name() === 'login');
-    if (command) command.emit('command:login', [apiKey]);
+    if (command) (command as any).emit('command:login', [apiKey]);
   });
   
 program
@@ -35,7 +35,7 @@ program
   .description('Log out and clear stored API Key')
   .action(() => {
     const command = authCommands.commands.find(c => c.name() === 'logout');
-    if (command) command.emit('command:logout');
+    if (command) (command as any).emit('command:logout');
   });
 
 program
@@ -43,7 +43,7 @@ program
   .description('Display the current authentication status')
   .action(() => {
     const command = authCommands.commands.find(c => c.name() === 'whoami');
-    if (command) command.emit('command:whoami');
+    if (command) (command as any).emit('command:whoami');
   });
 
 program
@@ -51,7 +51,7 @@ program
   .description('Check current workspace quota usage')
   .action(() => {
     const command = billingCommands.commands.find(c => c.name() === 'usage');
-    if (command) command.emit('command:usage');
+    if (command) (command as any).emit('command:usage');
   });
 
 program
@@ -59,7 +59,7 @@ program
   .description('View current subscription plan details')
   .action(() => {
     const command = billingCommands.commands.find(c => c.name() === 'plan');
-    if (command) command.emit('command:plan');
+    if (command) (command as any).emit('command:plan');
   });
 
 program.parse(process.argv);

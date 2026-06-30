@@ -72,6 +72,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
 
     await prisma.auditLog.create({
       data: {
+        workspaceId: "system",
         executionId: "system",
         eventType: "RECOVERY_STARTED",
         status: "INFO",
@@ -112,6 +113,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
 
         await prisma.auditLog.create({
           data: {
+            workspaceId: "system",
             executionId: "system",
             eventType: success ? "RECOVERY_STEP_COMPLETED" : "RECOVERY_STEP_FAILED",
             status: success ? "SUCCESS" : "ERROR",
@@ -137,6 +139,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
 
       await prisma.auditLog.create({
         data: {
+          workspaceId: "system",
           executionId: "system",
           eventType: "RECOVERY_COMPLETED",
           status: anyFailures ? "ERROR" : "SUCCESS",

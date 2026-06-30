@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const pir = await prisma.postIncidentReview.findUnique({
-    where: { id: params.id }
+    where: { id }
   });
 
   if (!pir) {
@@ -38,7 +39,7 @@ ${pir.preventativeActions}
   return new NextResponse(markdown, {
     headers: {
       'Content-Type': 'text/markdown',
-      'Content-Disposition': `attachment; filename="PIR-${params.id}.md"`
+      'Content-Disposition': `attachment; filename="PIR-${id}.md"`
     }
   });
 }

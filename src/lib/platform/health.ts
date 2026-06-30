@@ -10,7 +10,7 @@ export type PlatformHealth = {
 };
 
 export async function checkPlatformHealth(): Promise<PlatformHealth> {
-  let dbStatus: HealthStatus = "GREEN";
+  let dbStatus = "GREEN" as HealthStatus;
   try {
     // Simple query to verify DB connectivity
     await prisma.user.count();
@@ -19,10 +19,10 @@ export async function checkPlatformHealth(): Promise<PlatformHealth> {
   }
 
   // Mocking Redis for this demo as Revora relies on BullMQ which expects Redis
-  const redisStatus: HealthStatus = "GREEN"; 
+  let redisStatus = "GREEN" as HealthStatus; 
   
   // Mocking Webhook ingestion status
-  const webhooksStatus: HealthStatus = "GREEN";
+  let webhooksStatus = "GREEN" as HealthStatus;
 
   let overall: HealthStatus = "GREEN";
   if (dbStatus === "RED" || redisStatus === "RED" || webhooksStatus === "RED") {

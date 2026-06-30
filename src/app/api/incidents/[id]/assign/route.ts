@@ -19,8 +19,6 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
       data: {
         assignedTo: operatorId,
         state: "ACKNOWLEDGED",
-        acknowledgedAt: new Date(),
-        acknowledgedBy: operatorId
       }
     });
 
