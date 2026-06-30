@@ -5,15 +5,20 @@ const redisUrl = process.env.REDIS_URL;
 
 let connection: Redis | null = null;
 
-if (redisUrl) {
-  connection = new Redis(redisUrl, {
-    maxRetriesPerRequest: null,
-  });
-  connection.on('error', (err) => {
-    console.error('Redis connection error:', err);
-  });
+if (redisUrl && !redisUrl.includes('[REDACTED]')) {
+  try {
+    connection = new Redis(redisUrl, {
+      maxRetriesPerRequest: null,
+    });
+    connection.on('error', (err) => {
+      console.error('Redis connection error:', err);
+    });
+  } catch (err) {
+    console.warn('Failed to parse REDIS_URL. BullMQ will fallback to simulated success.');
+    connection = null;
+  }
 } else {
-  console.warn('REDIS_URL is not defined. BullMQ will not function. Jobs will fallback to simulated success in local dev.');
+  console.warn('REDIS_URL is not defined or is redacted. BullMQ will fallback to simulated success in local dev.');
 }
 
 // Ensure queues don't crash if connection is null (by mocking them in dev if needed)

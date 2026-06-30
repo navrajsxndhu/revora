@@ -6,9 +6,15 @@ import { sendSlackOperationalAlert, appendSlackThreadMessage } from '@/lib/integ
 const redisUrl = process.env.REDIS_URL;
 
 export const createNotificationWorker = () => {
-  if (!redisUrl) return null;
+  if (!redisUrl || redisUrl.includes('[REDACTED]')) return null;
 
-  const connection = new Redis(redisUrl, { maxRetriesPerRequest: null });
+  let connection: Redis;
+  try {
+    connection = new Redis(redisUrl, { maxRetriesPerRequest: null });
+  } catch (err) {
+    console.warn('Failed to parse REDIS_URL in notification-worker:', err);
+    return null;
+  }
 
   const worker = new Worker('notification-queue', async (job) => {
     const { incidentId, executionId, isGroupedUpdate, groupedCount, isSymptomUpdate, symptomService, probableRootService } = job.data;

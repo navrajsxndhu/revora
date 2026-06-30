@@ -12,9 +12,15 @@ import { incidentAnalysisQueue } from '../queue';
 const redisUrl = process.env.REDIS_URL;
 
 export const createIncidentWorker = () => {
-  if (!redisUrl) return null;
+  if (!redisUrl || redisUrl.includes('[REDACTED]')) return null;
 
-  const connection = new Redis(redisUrl, { maxRetriesPerRequest: null });
+  let connection: Redis;
+  try {
+    connection = new Redis(redisUrl, { maxRetriesPerRequest: null });
+  } catch (err) {
+    console.warn('Failed to parse REDIS_URL in incident-worker:', err);
+    return null;
+  }
 
   const worker = new Worker('incident-analysis-queue', async (job) => {
     const { traceId, executionId, payload } = job.data;
