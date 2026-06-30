@@ -1,0 +1,29 @@
+name: Revora CI
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  revora_risk_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Evaluate Revora Reliability Governance Policy
+        run: |
+          RESPONSE=$(curl -s -X POST https://api.revora.dev/governance/evaluate \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ secrets.REVORA_API_KEY }}" \
+            -d '{"workspaceId": "${{ secrets.REVORA_WORKSPACE_ID }}", "serviceName": "api-gateway"}')
+            
+          STATUS=$(echo $RESPONSE | jq -r '.status')
+          MESSAGE=$(echo $RESPONSE | jq -r '.message')
+          
+          echo "Governance Status: $STATUS"
+          echo "Reasoning: $MESSAGE"
+          
+          if [ "$STATUS" = "BLOCK" ]; then
+            echo "Deployment halted by Revora Governance Engine."
+            exit 1
+          elif [ "$STATUS" = "CANARY_ONLY" ]; then
+            echo "Enforcing canary deployment strategy."
+            # Set action output for canary logic
+          fi

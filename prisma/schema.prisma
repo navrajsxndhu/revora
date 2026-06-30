@@ -1,0 +1,959 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Organization {
+  id        String      @id @default(uuid())
+  name      String
+  createdAt DateTime    @default(now())
+  workspaces Workspace[]
+}
+
+model Workspace {
+  id             String      @id @default(uuid())
+  name           String
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  createdAt      DateTime    @default(now())
+  
+  members              WorkspaceMember[]
+  incidents            Incident[]
+  deployments          Deployment[]
+  auditLogs            AuditLog[]
+  apiTraces            ApiTrace[]
+  notificationDeliveries NotificationDelivery[]
+  webhookDeliveries    WebhookDelivery[]
+  recoveryExecutions   RecoveryExecution[]
+  postIncidentReviews  PostIncidentReview[]
+  invites              WorkspaceInvite[]
+  apiKeys              ApiKey[]
+  rateLimitEvents      RateLimitEvent[]
+  subscription         Subscription?
+  usageRecords         WorkspaceUsage[]
+  webhookReplays       WebhookReplay[]
+  deadLetters          DeadLetterExecution[]
+
+  benchmarkOptIn       Boolean  @default(true)
+  globalReliabilityTier String?
+
+  serviceGovernance    ServiceGovernance[]
+  governanceEvents     GovernanceEvent[]
+
+  regionalHealth       RegionalServiceHealth[]
+  simulations          SimulationExecution[]
+
+  regionalCoordinators RegionalCoordinator[]
+  federatedEvents      FederatedEvent[]
+  digitalTwinStates    DigitalTwinState[]
+  chaosSimulations     ChaosSimulation[]
+  rollbackExecutions   RollbackExecution[]
+
+  infrastructurePulses   InfrastructurePulse[]
+  migrationExecutions    MigrationExecution[]
+  topologyRebalances     TopologyRebalance[]
+  regionalStressForecasts RegionalStressForecast[]
+
+  governanceLearningEvents GovernanceLearningEvent[]
+  reliabilityDNAs          ReliabilityDNA[]
+  antiPatternEvents        AntiPatternEvent[]
+  
+  reliabilityLedgerEvents ReliabilityLedgerEvent[]
+  reliabilityBudgets      ReliabilityBudget[]
+  operationalDebtProfiles OperationalDebtProfile[]
+
+  reliabilityCapitalAllocations ReliabilityCapitalAllocation[]
+  organizationalPressureZones   OrganizationalPressureZone[]
+  reliabilityTreasurySnapshots  ReliabilityTreasurySnapshot[]
+  deploymentCongestionEvents    DeploymentCongestionEvent[]
+
+  reliabilityConstitutions      ReliabilityConstitution[]
+  constitutionalViolations      ConstitutionalViolation[]
+
+  governanceEntropySnapshots    GovernanceEntropySnapshot[]
+  institutionalDoctrines        InstitutionalDoctrine[]
+  organizationalLineages        OrganizationalLineage[]
+  operationalContinuitySnapshots OperationalContinuitySnapshot[]
+
+  reliabilityTreaties            ReliabilityTreaty[]
+  ecosystemDependencies          EcosystemDependency[]
+
+  infrastructureSurvivabilitySnapshots InfrastructureSurvivabilitySnapshot[]
+  energyGovernanceProfiles             EnergyGovernanceProfile[]
+  climateExposureZones                 ClimateExposureZone[]
+  hardwareLifecycleRecords             HardwareLifecycleRecord[]
+
+  temporalDriftSnapshots               TemporalDriftSnapshot[]
+  temporalDebtProfiles                 TemporalDebtProfile[]
+  civilizationEvolutionRecords         CivilizationEvolutionRecord[]
+  futureContinuityProjections          FutureContinuityProjection[]
+}
+
+model WorkspaceMember {
+  id          String    @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  userId      String
+  user        User      @relation(fields: [userId], references: [id])
+  role        String    // OWNER, OPERATOR, VIEWER
+  createdAt   DateTime  @default(now())
+  
+  warRoomParticipations WarRoomParticipant[]
+
+  @@unique([workspaceId, userId])
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  memberships WorkspaceMember[]
+  sessions    AuthSession[]
+}
+
+model AuthSession {
+  id           String   @id @default(uuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id])
+  tokenHash    String   @unique
+  fingerprint  String?
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+  lastActiveAt DateTime @default(now())
+}
+
+model ApiTrace {
+  id                  String   @id @default(uuid())
+  workspaceId         String
+  workspace           Workspace @relation(fields: [workspaceId], references: [id])
+  workflowExecutionId String
+  nodeId              String
+  status              String
+  latencyMs           Int
+  requestPayload      String?
+  responsePayload     String?
+  errorMessage        String?
+  timestamp           DateTime @default(now())
+}
+
+model Incident {
+  id                     String         @id @default(uuid())
+  workspaceId            String
+  workspace              Workspace      @relation(fields: [workspaceId], references: [id])
+  title                  String
+  description            String
+  state                  String         // OPEN, ACKNOWLEDGED, INVESTIGATING, MITIGATING, RECOVERING, RESOLVED
+  severity               String         @default("MEDIUM") // LOW, MEDIUM, HIGH, CRITICAL
+  recurringCount         Int            @default(0)
+  relatedTraceId         String
+  correlationId          String?        
+  deploymentId           String?
+  deployment             Deployment?    @relation(fields: [deploymentId], references: [id])
+  serviceAffected        String?
+  rootCauseSummary       String?
+  recommendedAction      String?
+  probableCommit         String?
+  deploymentDiff         String?        // JSON summary of diffs
+  
+  // Current Snapshot Fields
+  assignedTo             String?        // Operator assigned to incident
+  incidentCommander      String?        // Operational coordination owner
+  team                   String?        // Optional organizational mapping
+  resolvedSuccessfully   Boolean        @default(true)
+  rollbackTriggered      Boolean        @default(false)
+  slackThreadTs          String?        
+  activeRunbookId        String?
+  completedRunbookSteps  String?        @default("[]") // JSON string array of step IDs
+  
+  createdAt              DateTime       @default(now())
+  updatedAt              DateTime       @updatedAt
+  
+  events                 IncidentEvent[]
+  notes                  IncidentNote[]
+  postIncidentReview     PostIncidentReview?
+  warRoom                WarRoom?
+
+  
+  masterIncidentId       String?
+  masterIncident         Incident?      @relation("IncidentToIncident", fields: [masterIncidentId], references: [id])
+  childIncidents         Incident[]     @relation("IncidentToIncident")
+  groupedCount           Int            @default(0)
+
+  isSymptom              Boolean        @default(false)
+  rootCauseIncidentId    String?
+  probableRootService    String?
+  rootCauseIncident      Incident?      @relation("RootCauseToIncident", fields: [rootCauseIncidentId], references: [id])
+  symptomIncidents       Incident[]     @relation("RootCauseToIncident")
+
+  recoveryStatus         String?        // PENDING | IN_PROGRESS | COMPLETED
+  recoveryStartedAt      DateTime?
+  recoveryCompletedAt    DateTime?
+  
+  recoveryConfidence     Int?
+  historicalRecoveryCount Int?
+  lastSuccessfulRemediation DateTime?
+  
+  failureSignature       String?
+  probableFailurePoint   String?
+  deploymentRiskLevel    String?
+  historicalSimilarityCount Int? @default(0)
+  deadLetters            DeadLetterExecution[]
+
+  aiSummary              String?
+  aiSummaryGeneratedAt   DateTime?
+  summaryVersion         Int      @default(1)
+
+  isEligibleForBenchmarking Boolean @default(true)
+}
+
+model IncidentEvent {
+  id          String   @id @default(uuid())
+  incidentId  String
+  incident    Incident @relation(fields: [incidentId], references: [id])
+  eventType   String   // ASSIGNMENT, ESCALATION, RESOLUTION, REMEDIATION, RECOVERY, COMMANDER_CHANGE, STATE_TRANSITION
+  payload     String?  // JSON context
+  actor       String?  // User or system
+  createdAt   DateTime @default(now())
+}
+
+model IncidentNote {
+  id         String   @id @default(uuid())
+  incidentId String
+  incident   Incident @relation(fields: [incidentId], references: [id])
+  authorId   String
+  message    String
+  createdAt  DateTime @default(now())
+}
+
+model WorkflowExecution {
+  id             String    @id @default(uuid())
+  workflowId     String
+  state          String    // QUEUED, PROCESSING, COMPLETED, FAILED, RETRYING
+  autoReplayed   Boolean   @default(false)
+  startedAt      DateTime  @default(now())
+  completedAt    DateTime?
+  retryCount     Int       @default(0)
+  failureReason  String?
+}
+
+model AuditLog {
+  id            String   @id @default(uuid())
+  workspaceId   String
+  workspace     Workspace @relation(fields: [workspaceId], references: [id])
+  executionId   String
+  eventType     String
+  status        String
+  message       String?
+  actor         String?        // Operator or System identity
+  createdAt     DateTime       @default(now())
+}
+
+model Deployment {
+  id                String     @id @default(uuid())
+  workspaceId       String
+  workspace         Workspace  @relation(fields: [workspaceId], references: [id])
+  serviceName       String
+  commitSha         String
+  environment       String
+  changedFiles      String     // JSON string of files changed
+  dependencyChanges String?    // JSON string of dependencies changed
+  team              String?
+  riskLevel         String     // LOW, MEDIUM, HIGH, CRITICAL
+  riskReasoning     String
+  rolloutStrategy   String
+  status            String     @default("EVALUATED") // EVALUATED, SHIPPED, ROLLED_BACK
+  rollbackCount     Int        @default(0)
+  createdAt         DateTime   @default(now())
+  incidents         Incident[]
+  isEligibleForBenchmarking Boolean @default(true)
+}
+
+model NotificationDelivery {
+  id            String   @id @default(uuid())
+  workspaceId   String
+  workspace     Workspace @relation(fields: [workspaceId], references: [id])
+  provider      String   // e.g., SLACK
+  status        String   // PENDING, DELIVERED, FAILED
+  retries       Int      @default(0)
+  responseCode  Int?
+  deliveredAt   DateTime?
+  payload       String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model WebhookDelivery {
+  id            String   @id @default(uuid())
+  workspaceId   String
+  workspace     Workspace @relation(fields: [workspaceId], references: [id])
+  deliveryId    String   @unique
+  provider      String   // GITHUB, VERCEL
+  payloadHash   String
+  processedAt   DateTime?
+  status        String   // PENDING, PROCESSED, FAILED, DUPLICATE
+  createdAt     DateTime @default(now())
+}
+
+model RecoveryExecution {
+  id            String   @id @default(uuid())
+  workspaceId   String
+  workspace     Workspace @relation(fields: [workspaceId], references: [id])
+  incidentId    String
+  currentStep   Int      @default(0)
+  totalSteps    Int
+  state         String   // QUEUED, ACTIVE, COMPLETED, FAILED, STALLED
+  retries       Int      @default(0)
+  startedAt     DateTime?
+  completedAt   DateTime?
+  commitsIncluded Int      @default(0)
+
+  isEligibleForBenchmarking Boolean @default(true)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model PostIncidentReview {
+  id                  String   @id @default(uuid())
+  workspaceId         String
+  workspace           Workspace @relation(fields: [workspaceId], references: [id])
+  incidentId          String    @unique
+  incident            Incident  @relation(fields: [incidentId], references: [id])
+  title               String
+  summary             String
+  rootCause           String
+  impact              String
+  timelineMarkdown    String
+  resolutionMarkdown  String
+  preventativeActions String
+  status              String    // DRAFT, REVIEWED, APPROVED
+  generatedAt         DateTime  @default(now())
+  approvedAt          DateTime?
+  approvedBy          String?
+
+  aiSummary              String?
+  aiSummaryGeneratedAt   DateTime?
+  summaryVersion         Int      @default(1)
+}
+
+model WorkspaceInvite {
+  id          String    @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  email       String
+  role        String    // OWNER, OPERATOR, VIEWER
+  token       String    @unique
+  expiresAt   DateTime
+  invitedBy   String
+  acceptedAt  DateTime?
+  createdAt   DateTime  @default(now())
+}
+
+model ApiKey {
+  id          String    @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  name        String
+  keyHash     String
+  prefix      String    // e.g., "rva_" for easy identification
+  scopes      String    // JSON array of scopes like ["incident:read", "deployment:write"]
+  lastUsed    DateTime?
+  revoked     Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+}
+
+model RateLimitEvent {
+  id          String    @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  route       String
+  identifier  String    // IP or API Key prefix
+  exceededAt  DateTime  @default(now())
+}
+
+model Subscription {
+  id                    String   @id @default(uuid())
+  workspaceId           String   @unique
+  workspace             Workspace @relation(fields: [workspaceId], references: [id])
+  stripeCustomerId      String   @unique
+  stripeSubscriptionId  String?  @unique
+  stripePriceId         String?
+  status                String   // TRIALING, ACTIVE, PAST_DUE, CANCELED, INCOMPLETE
+  currentPeriodEnd      DateTime?
+  cancelAtPeriodEnd     Boolean  @default(false)
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+model WorkspaceUsage {
+  id              String   @id @default(uuid())
+  workspaceId     String
+  workspace       Workspace @relation(fields: [workspaceId], references: [id])
+  billingPeriodId String   // e.g. "2023-10"
+  metric          String   // INCIDENT_COUNT, RECOVERY_EXECUTIONS, API_REQUESTS
+  value           Int      @default(0)
+  updatedAt       DateTime @updatedAt
+  
+  @@unique([workspaceId, billingPeriodId, metric])
+}
+
+model WebhookReplay {
+  id          String   @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  provider    String   // 'github', 'vercel', etc.
+  payload     String   // The raw JSON payload stringified
+  headers     String   // The headers stringified
+  status      String   // 'FAILED', 'REPLAYED'
+  errorMessage String?
+  createdAt   DateTime @default(now())
+  replayedAt  DateTime?
+}
+
+model DeadLetterExecution {
+  id               String   @id @default(uuid())
+  workspaceId      String
+  workspace        Workspace @relation(fields: [workspaceId], references: [id])
+  incidentId       String
+  incident         Incident @relation(fields: [incidentId], references: [id])
+  recoveryActionId String
+  payload          String   // The state when it failed
+  errorReason      String
+  retryCount       Int      @default(0)
+  status           String   // 'PENDING_REVIEW', 'REPLAYED', 'DISCARDED'
+  createdAt        DateTime @default(now())
+  resolvedAt       DateTime?
+}
+
+
+
+
+model ServiceGovernance {
+  id                      String    @id @default(uuid())
+  workspaceId             String
+  workspace               Workspace @relation(fields: [workspaceId], references: [id])
+  serviceName             String
+  reliabilityBudget       Int       @default(100)
+  deploymentFreezeActive  Boolean   @default(false)
+  freezeReason            String?
+  rolloutRestrictionLevel String    @default("SAFE") // SAFE, WATCHLIST, RESTRICTED, FROZEN
+  createdAt               DateTime  @default(now())
+  updatedAt               DateTime  @updatedAt
+
+  @@unique([workspaceId, serviceName])
+}
+
+model GovernanceEvent {
+  id          String   @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  serviceName String
+  actionType  String   // FREEZE_APPLIED, FREEZE_LIFTED, BUDGET_DECREASED, RESTRICTION_ESCALATED
+  reasoning   String
+  actor       String   // e.g. SYSTEM, OPERATOR_NAME
+  createdAt   DateTime @default(now())
+}
+
+model WarRoom {
+  id          String   @id @default(uuid())
+  incidentId  String   @unique
+  incident    Incident @relation(fields: [incidentId], references: [id])
+  status      String   @default("ACTIVE") // ACTIVE, ARCHIVED
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  participants WarRoomParticipant[]
+}
+
+model WarRoomParticipant {
+  id          String   @id @default(uuid())
+  warRoomId   String
+  warRoom     WarRoom  @relation(fields: [warRoomId], references: [id])
+  memberId    String
+  member      WorkspaceMember @relation(fields: [memberId], references: [id])
+  joinedAt    DateTime @default(now())
+  leftAt      DateTime?
+}
+
+model RegionalServiceHealth {
+  id          String   @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  region      String
+  serviceName String
+  healthState String   @default("HEALTHY") // HEALTHY, DEGRADED, FAILING
+  lastUpdated DateTime @default(now())
+
+  @@unique([workspaceId, region, serviceName])
+}
+
+model SimulationExecution {
+  id              String   @id @default(uuid())
+  workspaceId     String
+  workspace       Workspace @relation(fields: [workspaceId], references: [id])
+  serviceName     String
+  simulatedRisk   Int
+  recommendation  String
+  createdAt       DateTime @default(now())
+}
+
+model RegionalCoordinator {
+  id          String   @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  region      String
+  endpoint    String
+  status      String   @default("ACTIVE")
+  lastPing    DateTime @default(now())
+
+  @@unique([workspaceId, region])
+}
+
+model FederatedEvent {
+  id          String   @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  originRegion String
+  eventType   String
+  payload     String
+  signature   String
+  timestamp   DateTime @default(now())
+}
+
+model DigitalTwinState {
+  id          String   @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  snapshot    String   // JSON payload of topology and state
+  timestamp   DateTime @default(now())
+}
+
+model ChaosSimulation {
+  id          String   @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  scenario    String
+  targetRegion String?
+  targetService String?
+  status      String   @default("RUNNING") // RUNNING, COMPLETED, FAILED
+  result      String?
+  createdAt   DateTime @default(now())
+}
+
+model RollbackExecution {
+  id          String   @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  deploymentId String
+  serviceName  String
+  targetRegions String // JSON array of regions
+  status      String   @default("PENDING") // PENDING, EXECUTING, COMPLETED, FAILED
+  createdAt   DateTime @default(now())
+}
+
+model InfrastructurePulse {
+  id          String   @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  region      String
+  latencyMs   Int
+  activeQueues Int
+  federationLagMs Int
+  timestamp   DateTime @default(now())
+}
+
+model MigrationExecution {
+  id          String   @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  serviceName String
+  sourceRegion String
+  targetRegion String
+  reason      String
+  status      String   @default("RECOMMENDED") // RECOMMENDED, EXECUTING, COMPLETED
+  createdAt   DateTime @default(now())
+}
+
+model TopologyRebalance {
+  id          String   @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  serviceName String
+  action      String   // THROTTLE, DECOUPLE, REROUTE
+  impact      String
+  status      String   @default("ACTIVE")
+  createdAt   DateTime @default(now())
+}
+
+model RegionalStressForecast {
+  id          String   @id @default(uuid())
+  workspaceId String
+  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  region      String
+  stressScore Float
+  predictedSaturation DateTime?
+  createdAt   DateTime @default(now())
+}
+
+model GovernanceLearningEvent {
+  id                String   @id @default(cuid())
+  workspaceId       String
+  workspace         Workspace @relation(fields: [workspaceId], references: [id])
+  service           String
+  policyType        String
+  previousValue     Float
+  newValue          Float
+  reason            String
+  confidenceScore   Float
+  createdAt         DateTime @default(now())
+}
+
+model ReliabilityDNA {
+  id                         String   @id @default(cuid())
+  workspaceId                String
+  workspace                  Workspace @relation(fields: [workspaceId], references: [id])
+  service                    String
+  mttrTrend                  Float
+  rollbackAcceleration       Float
+  blastRadiusGrowth          Float
+  governanceViolationRate    Float
+  recoveryReliability        Float
+  stressSensitivity          Float
+  reliabilityTier            String
+  updatedAt                  DateTime @updatedAt
+  
+  @@unique([workspaceId, service])
+}
+
+model AntiPatternEvent {
+  id                String   @id @default(cuid())
+  workspaceId       String
+  workspace         Workspace @relation(fields: [workspaceId], references: [id])
+  service           String
+  patternType       String
+  severity          String
+  evidence          String   // JSON stringified
+  recommendation    String
+  createdAt         DateTime @default(now())
+}
+
+model ReliabilityLedgerEvent {
+  id                String   @id @default(cuid())
+  workspaceId       String
+  workspace         Workspace @relation(fields: [workspaceId], references: [id])
+  service           String
+  team              String?
+  eventType         String   // DEPLOYMENT_SPEND, INCIDENT_DEBT, ROLLBACK_PENALTY, STABILITY_REWARD, GOVERNANCE_TAX, VELOCITY_BONUS
+  reliabilityCost   Int      @default(0)
+  operationalCredit Int      @default(0)
+  debtImpact        Int      @default(0)
+  governanceTax     Int      @default(0)
+  createdAt         DateTime @default(now())
+}
+
+model ReliabilityBudget {
+  id                String   @id @default(cuid())
+  workspaceId       String
+  workspace         Workspace @relation(fields: [workspaceId], references: [id])
+  service           String
+  currentBudget     Int      @default(1000)
+  burnRate          Float    @default(0.0)
+  exhaustionRisk    String   @default("SUSTAINABLE") // SUSTAINABLE, AGGRESSIVE, UNSAFE, CRITICAL
+  stabilityScore    Float    @default(100.0)
+  deploymentQuota   Int      @default(10)
+  lastRecalculatedAt DateTime @default(now())
+
+  @@unique([workspaceId, service])
+}
+
+model OperationalDebtProfile {
+  id                     String   @id @default(cuid())
+  workspaceId            String
+  workspace              Workspace @relation(fields: [workspaceId], references: [id])
+  service                String
+  debtScore              Float    @default(0.0)
+  recurringIncidentRate  Float    @default(0.0)
+  governancePenaltyScore Float    @default(0.0)
+  recoveryEfficiency     Float    @default(100.0)
+  debtDecayRate          Float    @default(1.0)
+  updatedAt              DateTime @updatedAt
+
+  @@unique([workspaceId, service])
+}
+
+model ReliabilityCapitalAllocation {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  service            String
+  allocatedCapital   Int      @default(0)
+  deploymentWeight   Float    @default(1.0)
+  governancePriority String   @default("NORMAL")
+  exhaustionRisk     String   @default("SUSTAINABLE")
+  createdAt          DateTime @default(now())
+
+  @@unique([workspaceId, service])
+}
+
+model OrganizationalPressureZone {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  region               String
+  pressureScore        Float    @default(0.0)
+  instabilityDensity   Float    @default(0.0)
+  deploymentCongestion String   @default("STABLE") // STABLE, COMPRESSED, CONGESTED, SATURATED
+  debtConcentration    Float    @default(0.0)
+  updatedAt            DateTime @updatedAt
+
+  @@unique([workspaceId, region])
+}
+
+model ReliabilityTreasurySnapshot {
+  id                     String   @id @default(cuid())
+  workspaceId            String
+  workspace              Workspace @relation(fields: [workspaceId], references: [id])
+  availableCapital       Int      @default(0)
+  reservedCapital        Int      @default(0)
+  debtExposure           Int      @default(0)
+  organizationalBurnRate Float    @default(0.0)
+  deploymentLiquidity    Float    @default(0.0)
+  capturedAt             DateTime @default(now())
+}
+
+model DeploymentCongestionEvent {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  congestionLevel    String   // STABLE, COMPRESSED, CONGESTED, SATURATED
+  affectedServices   String   // JSON string of services
+  rolloutCompression Float    @default(0.0)
+  mitigationStrategy String
+  createdAt          DateTime @default(now())
+}
+
+model ReliabilityConstitution {
+  id                           String   @id @default(cuid())
+  workspaceId                  String   @unique
+  workspace                    Workspace @relation(fields: [workspaceId], references: [id])
+  constitutionVersion          Int      @default(1)
+  activeAmendmentCount         Int      @default(0)
+  constitutionalStabilityScore Float    @default(100.0)
+  treasuryProtectionLevel      String   @default("STRICT")
+  createdAt                    DateTime @default(now())
+
+  policies                     ConstitutionalPolicy[]
+  amendments                   ConstitutionalAmendment[]
+}
+
+model ConstitutionalPolicy {
+  id               String   @id @default(cuid())
+  constitutionId   String
+  constitution     ReliabilityConstitution @relation(fields: [constitutionId], references: [id])
+  policyType       String   // DEPLOYMENT_LAW, FREEZE_LAW, DEBT_CEILING, etc.
+  policyDefinition String   // JSON
+  enforcementLevel String   // BLOCKING, AUDIT_ONLY
+  immutableHash    String   @unique
+  createdAt        DateTime @default(now())
+}
+
+model ConstitutionalViolation {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  service            String
+  region             String?
+  violationType      String
+  severity           String   // MINOR, MAJOR, SEVERE, CRITICAL_BREACH
+  operationalImpact  String
+  governanceContext  String
+  detectedAt         DateTime @default(now())
+}
+
+model ConstitutionalAmendment {
+  id                String   @id @default(cuid())
+  constitutionId    String
+  constitution      ReliabilityConstitution @relation(fields: [constitutionId], references: [id])
+  amendmentTitle    String
+  proposedChange    String   // JSON
+  simulationOutcome String?
+  approvalStatus    String   @default("PENDING_SIMULATION") // PENDING_SIMULATION, REJECTED, APPROVED, ACTIVATED
+  activationDate    DateTime?
+  createdAt         DateTime @default(now())
+}
+
+model GovernanceEntropySnapshot {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  entropyScore       Float    @default(0.0)
+  amendmentVelocity  Float    @default(0.0)
+  overrideFrequency  Float    @default(0.0)
+  governanceDrift    String   @default("STABLE") // STABLE, DRIFTING, FRAGMENTING, ENTROPIC
+  capturedAt         DateTime @default(now())
+}
+
+model InstitutionalDoctrine {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  doctrineType       String
+  doctrineDefinition String   // JSON
+  historicalEvidence String
+  stabilityImpact    Float
+  createdAt          DateTime @default(now())
+}
+
+model OrganizationalLineage {
+  id                    String   @id @default(cuid())
+  workspaceId           String
+  workspace             Workspace @relation(fields: [workspaceId], references: [id])
+  operationalEra        String
+  resilienceScore       Float
+  governancePattern     String
+  treasurySurvivability Float
+  recordedAt            DateTime @default(now())
+}
+
+model OperationalContinuitySnapshot {
+  id                     String   @id @default(cuid())
+  workspaceId            String
+  workspace              Workspace @relation(fields: [workspaceId], references: [id])
+  civilizationIndex      Float
+  survivabilityHorizon   String
+  continuityClass        String   // EMERGING, STABILIZED, RESILIENT, ENDURING, CIVILIZATIONAL
+  institutionalStability Float
+  createdAt              DateTime @default(now())
+}
+
+model ReliabilityTreaty {
+  id                         String   @id @default(cuid())
+  workspaceId                String
+  workspace                  Workspace @relation(fields: [workspaceId], references: [id])
+  treatyType                 String
+  treatyDefinition           String   // JSON
+  participatingOrganizations String   // JSON array of org/workspace IDs
+  enforcementLevel           String   // BLOCKING, ADVISORY
+  createdAt                  DateTime @default(now())
+}
+
+model SovereignFederation {
+  id                        String   @id @default(cuid())
+  federationName            String
+  memberOrganizations       String   // JSON array
+  federationStability       Float    @default(100.0)
+  treatyCount               Int      @default(0)
+  treasuryCoordinationLevel String   // ISOLATED, POOLED, BALANCED
+  createdAt                 DateTime @default(now())
+}
+
+model EcosystemDependency {
+  id                      String   @id @default(cuid())
+  workspaceId             String
+  workspace               Workspace @relation(fields: [workspaceId], references: [id])
+  dependencyType          String   // CLOUD, VENDOR, ALLIANCE
+  dependencyConcentration Float
+  fragilityScore          Float
+  survivabilityImpact     String
+  updatedAt               DateTime @updatedAt
+}
+
+model OperationalDiplomacyEvent {
+  id                 String   @id @default(cuid())
+  federationId       String
+  // Relation to SovereignFederation conceptually, simplified for now
+  conflictType       String
+  resolutionStrategy String
+  stabilityImpact    Float
+  resolvedAt         DateTime @default(now())
+}
+
+model InfrastructureSurvivabilitySnapshot {
+  id                          String   @id @default(cuid())
+  workspaceId                 String
+  workspace                   Workspace @relation(fields: [workspaceId], references: [id])
+  region                      String
+  survivabilityScore          Float
+  infrastructureConcentration Float
+  energyReliability           Float
+  capturedAt                  DateTime @default(now())
+}
+
+model EnergyGovernanceProfile {
+  id                         String   @id @default(cuid())
+  workspaceId                String
+  workspace                  Workspace @relation(fields: [workspaceId], references: [id])
+  region                     String
+  energyStability            Float
+  deploymentRestrictionLevel String   // NONE, THROTTLED, BLOCKED
+  carbonAwarenessScore       Float
+  updatedAt                  DateTime @updatedAt
+}
+
+model ClimateExposureZone {
+  id                     String   @id @default(cuid())
+  workspaceId            String
+  workspace              Workspace @relation(fields: [workspaceId], references: [id])
+  region                 String
+  climateRiskType        String   // HEATWAVE, FLOOD, WILDFIRE, SEISMIC
+  resilienceScore        Float
+  infrastructureExposure Float
+  updatedAt              DateTime @updatedAt
+}
+
+model HardwareLifecycleRecord {
+  id                  String   @id @default(cuid())
+  workspaceId         String
+  workspace           Workspace @relation(fields: [workspaceId], references: [id])
+  infrastructureClass String   // COMPUTE, STORAGE, NETWORK, COOLING
+  lifecycleHealth     Float
+  maintenanceDebt     Float
+  survivabilityImpact String   // LOW, MODERATE, HIGH, CRITICAL
+  recordedAt          DateTime @default(now())
+}
+
+model TemporalDriftSnapshot {
+  id                    String   @id @default(cuid())
+  workspaceId           String
+  workspace             Workspace @relation(fields: [workspaceId], references: [id])
+  driftScore            Float
+  survivabilityDecay    Float
+  governanceErosionRate Float
+  recordedAt            DateTime @default(now())
+}
+
+model TemporalDebtProfile {
+  id                       String   @id @default(cuid())
+  workspaceId              String
+  workspace                Workspace @relation(fields: [workspaceId], references: [id])
+  debtScore                Float
+  deferredResilienceBurden Float
+  modernizationLiability   Float
+  updatedAt                DateTime @updatedAt
+}
+
+model CivilizationEvolutionRecord {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  operationalEpoch     String
+  resilienceTransition String
+  survivabilityImpact  Float
+  recordedAt           DateTime @default(now())
+}
+
+model FutureContinuityProjection {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  projectionHorizon    String   // 5_YEARS, 10_YEARS, 20_YEARS
+  survivabilityForecast Float
+  continuityClass      String   // REACTIVE, STABILIZING, ENDURING, MULTI_GENERATIONAL, TEMPORAL_CIVILIZATION
+  generatedAt          DateTime @default(now())
+}
