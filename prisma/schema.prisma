@@ -95,6 +95,44 @@ model Workspace {
   systemicAwarenessSnapshots           SystemicAwarenessSnapshot[]
   operationalPerceptionRecords         OperationalPerceptionRecord[]
   consciousnessProjections             ConsciousnessProjection[]
+
+  operationalPathogenEvents            OperationalPathogenEvent[]
+  governanceIntegritySnapshots         GovernanceIntegritySnapshot[]
+  continuityAntibodyRecords            ContinuityAntibodyRecord[]
+
+  adaptationEvidences                  AdaptationEvidence[]
+  governanceOptimizations              GovernanceOptimization[]
+  convergenceSnapshots                 ConvergenceSnapshot[]
+  adaptationSimulations                AdaptationSimulation[]
+
+  operationalKnowledge                 OperationalKnowledge[]
+  operationalDoctrines                 OperationalDoctrine[]
+  operationalWisdom                    OperationalWisdom[]
+  institutionalMemoryLinks             InstitutionalMemoryLink[]
+
+  operationalDecisions                 OperationalDecision[]
+  decisionSimulations                  DecisionSimulation[]
+
+  operationalExecutions                OperationalExecution[]
+  operationalIntents                   OperationalIntent[]
+  operationalDrifts                    OperationalDriftRecord[]
+
+  operationalOptimizations             OperationalOptimization[]
+  optimizationSimulations              OptimizationSimulation[]
+
+  operationalPlans                     OperationalPlan[]
+  planSimulations                      PlanSimulation[]
+
+  operationalCoordinations             OperationalCoordination[]
+  operationalIntelligenceSnapshots     OperationalIntelligenceSnapshot[]
+  intelligenceSimulations              IntelligenceSimulation[]
+
+  integrationConnectors                IntegrationConnector[]
+  integrationEvents                    IntegrationEvent[]
+  integrationSynchronizations          IntegrationSynchronization[]
+  integrationHealthSnapshots           IntegrationHealthSnapshot[]
+
+  enterpriseReleases                   EnterpriseRelease[]
 }
 
 model WorkspaceMember {
@@ -857,6 +895,7 @@ model SovereignFederation {
   createdAt                 DateTime @default(now())
 
   civilizationCoherenceSnapshots CivilizationCoherenceSnapshot[]
+  survivabilityQuarantineZones   SurvivabilityQuarantineZone[]
 }
 
 model EcosystemDependency {
@@ -1002,4 +1041,540 @@ model ConsciousnessProjection {
   consciousnessClass   String
   awarenessStability   Float
   generatedAt          DateTime @default(now())
+}
+
+model OperationalPathogenEvent {
+  id                    String   @id @default(cuid())
+  workspaceId           String
+  workspace             Workspace @relation(fields: [workspaceId], references: [id])
+  pathogenType          String
+  contaminationSeverity String
+  propagationVelocity   Float
+  detectedAt            DateTime @default(now())
+}
+
+model SurvivabilityQuarantineZone {
+  id               String   @id @default(cuid())
+  federationId     String
+  federation       SovereignFederation @relation(fields: [federationId], references: [id])
+  quarantineReason String
+  restrictionLevel String
+  containmentStatus String
+  activatedAt      DateTime @default(now())
+}
+
+model GovernanceIntegritySnapshot {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  purityScore        Float
+  corruptionExposure Float
+  integrityConfidence Float
+  capturedAt         DateTime @default(now())
+}
+
+model ContinuityAntibodyRecord {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  antibodyType       String
+  protectionStrength Float
+  historicalOrigin   String
+  recordedAt         DateTime @default(now())
+}
+
+model AdaptationEvidence {
+  id                     String   @id @default(cuid())
+  workspaceId            String
+  workspace              Workspace @relation(fields: [workspaceId], references: [id])
+  adaptationType         String
+  previousConfiguration  String
+  optimizedConfiguration String
+  mathematicalEvidence   String
+  constitutionalValidation String
+  createdAt              DateTime @default(now())
+}
+
+model GovernanceOptimization {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  optimizationCategory String
+  optimizationDelta    Float
+  projectedImprovement Float
+  activatedAt          DateTime @default(now())
+}
+
+model ConvergenceSnapshot {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  convergenceScore     Float
+  optimizationVelocity Float
+  stabilityDelta       Float
+  capturedAt           DateTime @default(now())
+}
+
+model AdaptationSimulation {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  simulationScenario String
+  projectedOutcome   String
+  convergenceImpact  Float
+  executedAt         DateTime @default(now())
+}
+
+model OperationalKnowledge {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  title              String
+  knowledgeType      String
+  evidenceScore      Float
+  doctrineVersion    String
+  createdAt          DateTime @default(now())
+}
+
+model OperationalDoctrine {
+  id                     String   @id @default(cuid())
+  workspaceId            String
+  workspace              Workspace @relation(fields: [workspaceId], references: [id])
+  doctrineName           String
+  version                Int
+  supersedesId           String?
+  constitutionalApproval String
+  publishedAt            DateTime @default(now())
+}
+
+model OperationalWisdom {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  wisdomStatement      String
+  mathematicalEvidence String
+  confidenceScore      Float
+  createdAt            DateTime @default(now())
+}
+
+model InstitutionalMemoryLink {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  sourceType           String
+  sourceId             String
+  targetType           String
+  targetId             String
+  relationship         String
+  createdAt            DateTime @default(now())
+}
+
+model OperationalDecision {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  decisionType       String
+  selectedOption     String
+  decisionScore      Float
+  createdAt          DateTime @default(now())
+
+  alternatives       DecisionAlternative[]
+  evidence           DecisionEvidence[]
+}
+
+model DecisionAlternative {
+  id                       String   @id @default(cuid())
+  decisionId               String
+  decision                 OperationalDecision @relation(fields: [decisionId], references: [id])
+  optionName               String
+  survivabilityImpact      Float
+  treasuryImpact           Float
+  constitutionalCompliance String
+  ranking                  Int
+}
+
+model DecisionEvidence {
+  id                 String   @id @default(cuid())
+  decisionId         String
+  decision           OperationalDecision @relation(fields: [decisionId], references: [id])
+  evidenceType       String
+  sourceReference    String
+  mathematicalWeight Float
+  createdAt          DateTime @default(now())
+}
+
+model DecisionSimulation {
+  id                  String   @id @default(cuid())
+  workspaceId         String
+  workspace           Workspace @relation(fields: [workspaceId], references: [id])
+  scenario            String
+  recommendedDecision String
+  projectedOutcome    String
+  simulatedAt         DateTime @default(now())
+}
+
+model OperationalExecution {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  decisionId         String
+  executionStatus    String
+  executionScore     Float
+  startedAt          DateTime @default(now())
+  completedAt        DateTime?
+
+  stages             ExecutionStage[]
+  rollbackPlans      RollbackPlan[]
+  replays            ExecutionReplay[]
+
+  intents            OperationalIntent[]
+  verifications      AssuranceVerification[]
+}
+
+model ExecutionStage {
+  id                 String   @id @default(cuid())
+  executionId        String
+  execution          OperationalExecution @relation(fields: [executionId], references: [id])
+  stageName          String
+  executionOrder     Int
+  validationStatus   String
+  completedAt        DateTime?
+}
+
+model RollbackPlan {
+  id                 String   @id @default(cuid())
+  executionId        String
+  execution          OperationalExecution @relation(fields: [executionId], references: [id])
+  rollbackVersion    String
+  recoveryStrategy   String
+  createdAt          DateTime @default(now())
+}
+
+model ExecutionReplay {
+  id                 String   @id @default(cuid())
+  executionId        String
+  execution          OperationalExecution @relation(fields: [executionId], references: [id])
+  replayChecksum     String
+  replayDuration     Int
+  verifiedAt         DateTime @default(now())
+}
+
+model OperationalIntent {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  executionId        String
+  execution          OperationalExecution @relation(fields: [executionId], references: [id])
+  objective          String
+  expectedOutcome    String
+  definedAt          DateTime @default(now())
+}
+
+model AssuranceVerification {
+  id                 String   @id @default(cuid())
+  executionId        String
+  execution          OperationalExecution @relation(fields: [executionId], references: [id])
+  assuranceScore     Float
+  verificationStatus String
+  completedAt        DateTime @default(now())
+
+  evidence           AssuranceEvidence[]
+}
+
+model AssuranceEvidence {
+  id                 String   @id @default(cuid())
+  verificationId     String
+  verification       AssuranceVerification @relation(fields: [verificationId], references: [id])
+  evidenceType       String
+  sourceReference    String
+  evidenceWeight     Float
+  createdAt          DateTime @default(now())
+}
+
+model OperationalDriftRecord {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  workspace          Workspace @relation(fields: [workspaceId], references: [id])
+  driftCategory      String
+  severity           String
+  detectedAt         DateTime @default(now())
+}
+
+model OperationalOptimization {
+  id                      String   @id @default(cuid())
+  workspaceId             String
+  workspace               Workspace @relation(fields: [workspaceId], references: [id])
+  optimizationObjective   String
+  optimizationScore       Float
+  selectedConfiguration   String
+  createdAt               DateTime @default(now())
+
+  constraints             OptimizationConstraint[]
+  candidates              OptimizationCandidate[]
+  simulations             OptimizationSimulation[]
+}
+
+model OptimizationConstraint {
+  id                 String   @id @default(cuid())
+  optimizationId     String
+  optimization       OperationalOptimization @relation(fields: [optimizationId], references: [id])
+  constraintType     String
+  mathematicalLimit  Float
+  sourceReference    String
+}
+
+model OptimizationCandidate {
+  id                       String   @id @default(cuid())
+  optimizationId           String
+  optimization             OperationalOptimization @relation(fields: [optimizationId], references: [id])
+  candidateName            String
+  objectiveScore           Float
+  survivabilityImpact      Float
+  constitutionalCompliance Boolean
+  ranking                  Int
+}
+
+model OptimizationSimulation {
+  id                     String   @id @default(cuid())
+  workspaceId            String
+  workspace              Workspace @relation(fields: [workspaceId], references: [id])
+  optimizationId         String
+  optimization           OperationalOptimization @relation(fields: [optimizationId], references: [id])
+  projectedImprovement   String
+  simulationResult       String
+  simulatedAt            DateTime @default(now())
+}
+
+model OperationalPlan {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  planName             String
+  planningObjective    String
+  planningScore        Float
+  status               String
+  createdAt            DateTime @default(now())
+
+  milestones           PlanMilestone[]
+  dependencies         PlanDependency[]
+  simulations          PlanSimulation[]
+}
+
+model PlanMilestone {
+  id                   String   @id @default(cuid())
+  planId               String
+  plan                 OperationalPlan @relation(fields: [planId], references: [id])
+  milestoneName        String
+  executionOrder       Int
+  completionStatus     String
+  targetDate           DateTime?
+
+  sourceDependencies   PlanDependency[] @relation("SourceMilestone")
+  targetDependencies   PlanDependency[] @relation("TargetMilestone")
+}
+
+model PlanDependency {
+  id                   String   @id @default(cuid())
+  planId               String
+  plan                 OperationalPlan @relation(fields: [planId], references: [id])
+  
+  sourceMilestoneId    String
+  sourceMilestone      PlanMilestone @relation("SourceMilestone", fields: [sourceMilestoneId], references: [id])
+  
+  targetMilestoneId    String
+  targetMilestone      PlanMilestone @relation("TargetMilestone", fields: [targetMilestoneId], references: [id])
+  
+  dependencyType       String
+}
+
+model PlanSimulation {
+  id                      String   @id @default(cuid())
+  workspaceId             String
+  workspace               Workspace @relation(fields: [workspaceId], references: [id])
+  planId                  String
+  plan                    OperationalPlan @relation(fields: [planId], references: [id])
+  projectedCompletion     DateTime
+  survivabilityProjection Float
+  simulatedAt             DateTime @default(now())
+}
+
+model OperationalCoordination {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  coordinationName     String
+  coordinationScore    Float
+  coordinationStatus   String
+  createdAt            DateTime @default(now())
+
+  nodes                CoordinationNode[]
+  conflicts            CoordinationConflict[]
+  resourceReservations ResourceReservation[]
+}
+
+model CoordinationNode {
+  id                   String   @id @default(cuid())
+  coordinationId       String
+  coordination         OperationalCoordination @relation(fields: [coordinationId], references: [id])
+  nodeType             String
+  nodeReference        String
+  operationalRole      String
+}
+
+model CoordinationConflict {
+  id                   String   @id @default(cuid())
+  coordinationId       String
+  coordination         OperationalCoordination @relation(fields: [coordinationId], references: [id])
+  conflictType         String
+  severity             String
+  resolutionStrategy   String
+  resolvedAt           DateTime @default(now())
+}
+
+model ResourceReservation {
+  id                   String   @id @default(cuid())
+  coordinationId       String
+  coordination         OperationalCoordination @relation(fields: [coordinationId], references: [id])
+  resourceType         String
+  reservedCapacity     Float
+  reservationWindow    String
+  createdAt            DateTime @default(now())
+}
+
+model OperationalIntelligenceSnapshot {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  intelligenceScore    Float
+  organizationalHealth Float
+  intelligenceClass    String
+  createdAt            DateTime @default(now())
+
+  signals              OperationalSignal[]
+  correlations         IntelligenceCorrelation[]
+}
+
+model OperationalSignal {
+  id                   String   @id @default(cuid())
+  snapshotId           String
+  snapshot             OperationalIntelligenceSnapshot @relation(fields: [snapshotId], references: [id])
+  signalName           String
+  signalValue          Float
+  signalCategory       String
+}
+
+model IntelligenceCorrelation {
+  id                   String   @id @default(cuid())
+  snapshotId           String
+  snapshot             OperationalIntelligenceSnapshot @relation(fields: [snapshotId], references: [id])
+  sourceSubsystem      String
+  targetSubsystem      String
+  correlationReason    String
+  evidenceReference    String
+}
+
+model IntelligenceSimulation {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  scenario             String
+  projectedHealth      Float
+  survivabilityDelta   Float
+  simulatedAt          DateTime @default(now())
+}
+
+model IntegrationConnector {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  provider             String
+  status               String
+  lastSync             DateTime?
+  createdAt            DateTime @default(now())
+
+  events               IntegrationEvent[]
+  healthSnapshots      IntegrationHealthSnapshot[]
+}
+
+model IntegrationEvent {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  connectorId          String
+  connector            IntegrationConnector @relation(fields: [connectorId], references: [id])
+  eventType            String
+  externalId           String
+  payloadHash          String
+  validationState      String
+  createdAt            DateTime @default(now())
+
+  synchronization      IntegrationSynchronization?
+}
+
+model IntegrationSynchronization {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  eventId              String   @unique
+  event                IntegrationEvent @relation(fields: [eventId], references: [id])
+  targetSubsystem      String
+  synchronizationStatus String
+  syncedAt             DateTime @default(now())
+}
+
+model IntegrationHealthSnapshot {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  connectorId          String
+  connector            IntegrationConnector @relation(fields: [connectorId], references: [id])
+  uptimePercentage     Float
+  latencyMs            Int
+  status               String
+  createdAt            DateTime @default(now())
+}
+
+model EnterpriseRelease {
+  id                   String   @id @default(cuid())
+  workspaceId          String
+  workspace            Workspace @relation(fields: [workspaceId], references: [id])
+  releaseName          String
+  status               String
+  readinessScore       Float
+  governanceStatus     String
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  approvals            ReleaseApproval[]
+  checkpoints          ReleaseCheckpoint[]
+  evidence             ReleaseEvidence[]
+}
+
+model ReleaseApproval {
+  id                   String   @id @default(cuid())
+  releaseId            String
+  release              EnterpriseRelease @relation(fields: [releaseId], references: [id])
+  approverRole         String
+  status               String
+  approvedAt           DateTime?
+  comments             String?
+}
+
+model ReleaseCheckpoint {
+  id                   String   @id @default(cuid())
+  releaseId            String
+  release              EnterpriseRelease @relation(fields: [releaseId], references: [id])
+  milestone            String
+  status               String
+  reachedAt            DateTime?
+}
+
+model ReleaseEvidence {
+  id                   String   @id @default(cuid())
+  releaseId            String
+  release              EnterpriseRelease @relation(fields: [releaseId], references: [id])
+  evidenceType         String
+  referenceId          String
+  validationHash       String
+  recordedAt           DateTime @default(now())
 }
