@@ -1,123 +1,133 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { OrganizationalHealthPanel } from "@/components/mission-control/intelligence/organizational-health-panel";
-import { OperationalSignalsGrid } from "@/components/mission-control/intelligence/operational-signals-grid";
-import { IntelligenceCorrelationTable } from "@/components/mission-control/intelligence/intelligence-correlation-table";
-import { SubsystemScoreMatrix } from "@/components/mission-control/intelligence/subsystem-score-matrix";
-import { IntelligenceLedger } from "@/components/mission-control/intelligence/intelligence-ledger";
-import { IntelligenceSimulationPanel } from "@/components/mission-control/intelligence/intelligence-simulation-panel";
-import { OrganizationalTrendTimeline } from "@/components/mission-control/intelligence/organizational-trend-timeline";
+import React from "react";
+import { Brain, Activity, ShieldCheck } from "lucide-react";
+import { IntelligenceOverview } from "@/components/mission-control/intelligence/intelligence-overview";
+import { ExecutiveKPICenter } from "@/components/mission-control/intelligence/executive-kpi-center";
+import { EnterpriseMetrics } from "@/components/mission-control/intelligence/enterprise-metrics";
+import { BusinessObjectives } from "@/components/mission-control/intelligence/business-objectives";
+import { StrategicInitiatives } from "@/components/mission-control/intelligence/strategic-initiatives";
+import { OperationalInsights } from "@/components/mission-control/intelligence/operational-insights";
+import { EvidenceCorrelation } from "@/components/mission-control/intelligence/evidence-correlation";
+import { DepartmentScorecards } from "@/components/mission-control/intelligence/department-scorecards";
+import { EnterpriseHealth } from "@/components/mission-control/intelligence/enterprise-health";
+import { BusinessImpactCenter } from "@/components/mission-control/intelligence/business-impact-center";
+import { StrategicRiskDashboard } from "@/components/mission-control/intelligence/strategic-risk-dashboard";
+import { ExecutiveBriefings } from "@/components/mission-control/intelligence/executive-briefings";
+import { DecisionHistory } from "@/components/mission-control/intelligence/decision-history";
+import { IntelligenceSimulator } from "@/components/mission-control/intelligence/intelligence-simulator";
 import { ExecutiveIntelligenceDashboard } from "@/components/mission-control/intelligence/executive-intelligence-dashboard";
-import { Loader2, BrainCircuit } from "lucide-react";
 
-export default function OperationalIntelligencePage() {
-  const [data, setData] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
+export const metadata = {
+  title: "Intelligence Command | Revora Mission Control",
+};
 
-  useEffect(() => {
-    // In a real implementation this would fetch from /api/intelligence/index and related routes
-    setTimeout(() => {
-      setData({
-        index: {
-          intelligenceScore: 92.5,
-          intelligenceClass: "OPERATIONAL_INTELLIGENCE_CIVILIZATION",
-          intelligenceMaturity: "EVIDENCE_DRIVEN_EXECUTIVE_AWARENESS"
-        },
-        health: 92.5,
-        components: [
-          { subsystem: "RELIABILITY", weight: 0.15, score: 99.2, contribution: 14.88 },
-          { subsystem: "COORDINATION", weight: 0.15, score: 88.4, contribution: 13.26 },
-          { subsystem: "PLANNING", weight: 0.10, score: 82.5, contribution: 8.25 },
-          { subsystem: "CONSTITUTION", weight: 0.10, score: 100.0, contribution: 10.0 },
-          { subsystem: "TREASURY", weight: 0.10, score: 94.0, contribution: 9.4 },
-          { subsystem: "ASSURANCE", weight: 0.10, score: 96.5, contribution: 9.65 },
-          { subsystem: "EXECUTION", weight: 0.10, score: 91.2, contribution: 9.12 },
-          { subsystem: "KNOWLEDGE", weight: 0.10, score: 85.0, contribution: 8.5 },
-          { subsystem: "IMMUNITY", weight: 0.10, score: 97.8, contribution: 9.78 }
-        ],
-        signals: [
-          { signalName: "DEPLOYMENT_SUCCESS_TREND", signalValue: 99.4, signalCategory: "EXECUTION" },
-          { signalName: "INCIDENT_DENSITY_7D", signalValue: 0.12, signalCategory: "RELIABILITY" },
-          { signalName: "TREASURY_BURN_RATE", signalValue: 85.0, signalCategory: "ECONOMY" },
-          { signalName: "CONSTITUTIONAL_COMPLIANCE", signalValue: 100.0, signalCategory: "GOVERNANCE" },
-          { signalName: "COORDINATION_INTEGRITY", signalValue: 95.5, signalCategory: "COORDINATION" }
-        ],
-        correlations: [
-          { sourceSubsystem: "PLANNING", targetSubsystem: "EXECUTION", correlationReason: "High planning maturity directly correlated with 99.4% deployment success.", evidenceReference: "SIGNAL:DEPLOYMENT_SUCCESS_TREND" },
-          { sourceSubsystem: "COORDINATION", targetSubsystem: "RELIABILITY", correlationReason: "Coordination resource locks prevented 3 regional outages.", evidenceReference: "SIGNAL:INCIDENT_DENSITY_7D" }
-        ],
-        ledger: [
-          { id: "cm02v89x", intelligenceScore: 92.5, organizationalHealth: 92.5, intelligenceClass: "OPERATIONAL_INTELLIGENCE_CIVILIZATION", createdAt: new Date(Date.now() - 3600000).toISOString() },
-          { id: "cm02v89y", intelligenceScore: 91.2, organizationalHealth: 91.2, intelligenceClass: "OPERATIONAL_INTELLIGENCE_CIVILIZATION", createdAt: new Date(Date.now() - 86400000).toISOString() }
-        ],
-        simulation: {
-          scenario: "INCIDENT_SURGE",
-          projectedHealth: 79.8,
-          survivabilityDelta: -15.2
-        },
-        timeline: [75, 78, 80, 81, 85, 87, 86, 89, 91.2, 92.5]
-      });
-      
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="flex h-[80vh] items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin text-slate-500" />
-      </div>
-    );
-  }
-
+export default function IntelligenceCommandCenterPage() {
   return (
-    <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-      <div className="flex items-center justify-between space-y-2">
-        <div>
-          <h2 className="text-2xl font-bold tracking-tight text-slate-100 flex items-center gap-2">
-            <BrainCircuit className="h-6 w-6 text-indigo-400" />
-            The Operational Intelligence Plane
-          </h2>
-          <p className="text-muted-foreground text-slate-400">
-            Deterministic synthesis of organizational health and operational subsystems.
-          </p>
-        </div>
-      </div>
-
-      <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4">
-        <div className="col-span-2">
-          <OrganizationalHealthPanel health={data?.health} intelligenceClass={data?.index?.intelligenceClass} maturity={data?.index?.intelligenceMaturity} />
-        </div>
-        <div className="col-span-2 space-y-4">
-          <OrganizationalTrendTimeline timelineData={data?.timeline} />
-        </div>
-      </div>
-
-      <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-7">
-        <div className="col-span-2 space-y-4">
-          <ExecutiveIntelligenceDashboard score={data?.index?.intelligenceScore} />
-          <IntelligenceSimulationPanel simulation={data?.simulation} />
-        </div>
-        <div className="col-span-5 space-y-4">
-          <div className="grid gap-4 grid-cols-1">
-            <SubsystemScoreMatrix components={data?.components} />
-          </div>
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
-            <div className="col-span-1 space-y-4">
-              <OperationalSignalsGrid signals={data?.signals} />
-            </div>
-            <div className="col-span-1 space-y-4">
-              <IntelligenceCorrelationTable correlations={data?.correlations} />
+    <div className="flex flex-col min-h-screen bg-black text-slate-300 font-sans p-4 space-y-4">
+      {/* Telemetry Header */}
+      <header className="flex justify-between items-center border-b border-slate-800 pb-3">
+        <div className="flex items-center space-x-3">
+          <Brain className="w-5 h-5 text-indigo-400" />
+          <div>
+            <h1 className="text-xl font-bold tracking-tight text-white">Enterprise Intelligence & Decision Support</h1>
+            <div className="text-[10px] uppercase font-mono tracking-widest text-slate-500 mt-1 flex items-center">
+              <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse" />
+              SYSTEM STATE: DETERMINISTIC | EVIDENCED
             </div>
           </div>
         </div>
+        <div className="flex space-x-4">
+          <div className="text-right">
+            <div className="text-[10px] text-slate-500 font-mono">INTEGRITY</div>
+            <div className="text-sm font-bold text-indigo-400 flex items-center justify-end">
+              <ShieldCheck className="w-3 h-3 mr-1" /> STRICT
+            </div>
+          </div>
+          <div className="text-right">
+            <div className="text-[10px] text-slate-500 font-mono">HEALTH INDEX</div>
+            <div className="text-sm font-bold text-emerald-400 flex items-center justify-end">
+              <Activity className="w-3 h-3 mr-1" /> 98.5%
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Row 1: Executive Overview */}
+      <div className="grid grid-cols-12 gap-4">
+        <div className="col-span-12 xl:col-span-12 h-[140px]">
+          <IntelligenceOverview />
+        </div>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-1">
-        <div className="col-span-1">
-          <IntelligenceLedger ledgerEntries={data?.ledger} />
+      {/* Row 2: KPIs & Health */}
+      <div className="grid grid-cols-12 gap-4 h-[350px]">
+        <div className="col-span-12 xl:col-span-8 h-full">
+          <ExecutiveKPICenter />
         </div>
+        <div className="col-span-12 xl:col-span-4 h-full">
+          <EnterpriseHealth />
+        </div>
+      </div>
+
+      {/* Row 3: Metrics & Scorecards */}
+      <div className="grid grid-cols-12 gap-4 h-[400px]">
+        <div className="col-span-12 xl:col-span-8 h-full">
+          <EnterpriseMetrics />
+        </div>
+        <div className="col-span-12 xl:col-span-4 h-full">
+          <DepartmentScorecards />
+        </div>
+      </div>
+
+      {/* Row 4: Objectives & Initiatives */}
+      <div className="grid grid-cols-12 gap-4 h-[350px]">
+        <div className="col-span-12 xl:col-span-6 h-full">
+          <BusinessObjectives />
+        </div>
+        <div className="col-span-12 xl:col-span-6 h-full">
+          <StrategicInitiatives />
+        </div>
+      </div>
+
+      {/* Row 5: Insights & Impact */}
+      <div className="grid grid-cols-12 gap-4 h-[350px]">
+        <div className="col-span-12 xl:col-span-8 h-full">
+          <OperationalInsights />
+        </div>
+        <div className="col-span-12 xl:col-span-4 h-full">
+          <BusinessImpactCenter />
+        </div>
+      </div>
+
+      {/* Row 6: Risks & Correlation */}
+      <div className="grid grid-cols-12 gap-4 h-[350px]">
+        <div className="col-span-12 xl:col-span-6 h-full flex flex-col space-y-4">
+          <div className="flex-1">
+            <StrategicRiskDashboard />
+          </div>
+          <div className="flex-1">
+            <EvidenceCorrelation />
+          </div>
+        </div>
+        <div className="col-span-12 xl:col-span-6 h-full flex flex-col space-y-4">
+          <div className="flex-1">
+            <ExecutiveBriefings />
+          </div>
+          <div className="flex-1">
+            <IntelligenceSimulator />
+          </div>
+        </div>
+      </div>
+
+      {/* Row 7: Ledger History */}
+      <div className="grid grid-cols-12 gap-4 h-[250px]">
+        <div className="col-span-12 h-full">
+          <DecisionHistory />
+        </div>
+      </div>
+
+      {/* Executive Footer */}
+      <div className="pt-4 border-t border-slate-800">
+        <ExecutiveIntelligenceDashboard />
       </div>
     </div>
   );

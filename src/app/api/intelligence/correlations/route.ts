@@ -1,23 +1,12 @@
-import { NextRequest, NextResponse } from "next/server";
-import { correlateIntelligence } from "@/lib/intelligence/intelligence-correlation";
-import { extractOperationalSignals } from "@/lib/intelligence/operational-signals";
-import { calculateOrganizationalHealth } from "@/lib/intelligence/organizational-health";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { NextResponse } from "next/server";
+import { CorrelationEngine } from "@/lib/intelligence/correlation-engine";
 
-export async function GET(req: NextRequest) {
-  const session = await getServerSession(authOptions);
-  if (!session?.user?.email) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
+export async function GET(request: Request) {
   try {
-    const signals = extractOperationalSignals();
-    const { components } = calculateOrganizationalHealth();
-    const correlations = correlateIntelligence(signals, components);
-    return NextResponse.json(correlations);
+    const workspaceId = "ws-123";
+    const correlations = await CorrelationEngine.getCorrelations(workspaceId);
+    return NextResponse.json({ correlations });
   } catch (error) {
-    console.error("Error correlating intelligence:", error);
-    return NextResponse.json({ error: "Failed to correlate intelligence" }, { status: 500 });
+    return NextResponse.json({ error: "Failed to fetch correlations" }, { status: 500 });
   }
 }

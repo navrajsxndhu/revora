@@ -1,57 +1,76 @@
-import { prisma } from "@/lib/prisma";
-import { evaluateReliabilityBudget } from "@/lib/governance/reliability-budget";
-import { FreezeBanner } from "@/components/mission-control/freeze-banner";
-import { ReliabilityBudgetCard } from "@/components/mission-control/reliability-budget-card";
-import { GovernancePanel } from "@/components/mission-control/governance-panel";
+import React from "react";
+import { GovernanceOverview } from "@/components/mission-control/governance/governance-overview";
+import { ActivePolicies } from "@/components/mission-control/governance/active-policies";
+import { EnterpriseRiskRegister } from "@/components/mission-control/governance/enterprise-risk-register";
+import { GovernanceControlsMatrix } from "@/components/mission-control/governance/governance-controls-matrix";
+import { PolicyExceptions } from "@/components/mission-control/governance/policy-exceptions";
+import { GovernanceAssessmentTimeline } from "@/components/mission-control/governance/governance-assessment-timeline";
+import { GovernanceSimulator } from "@/components/mission-control/governance/governance-simulator";
+import { ExecutiveGovernanceDashboard } from "@/components/mission-control/governance/executive-governance-dashboard";
+import { ShieldCheck } from "lucide-react";
 
-export default async function GovernanceDashboardPage() {
-  const workspaceId = await prisma.workspace.findFirst().then(w => w?.id);
-  if (!workspaceId) return <div>No workspace found.</div>;
+export const metadata = {
+  title: "Governance, Risk & Policy | Mission Control",
+};
 
-  // We fetch a list of active services from deployment history to evaluate their budgets dynamically
-  const uniqueServices = await prisma.deployment.findMany({
-    where: { workspaceId },
-    select: { serviceName: true },
-    distinct: ['serviceName']
-  });
-
-  const budgets = await Promise.all(
-    uniqueServices.map(s => evaluateReliabilityBudget(workspaceId, s.serviceName).then(res => ({
-      serviceName: s.serviceName,
-      ...res
-    })))
-  );
-
-  const events = await prisma.governanceEvent.findMany({
-    where: { workspaceId },
-    orderBy: { createdAt: 'desc' },
-    take: 15
-  });
-
-  const frozenServices = budgets.filter(b => b.state === 'FROZEN');
-
+export default function GovernanceMissionControlPage() {
   return (
-    <div className="min-h-screen bg-black text-white p-10 font-sans">
-      <div className="max-w-6xl mx-auto">
-        <header className="mb-10 border-b border-slate-800 pb-6">
-          <h1 className="text-3xl font-light text-slate-100 mb-2">Autonomous Governance</h1>
-          <p className="text-slate-400 text-sm">Deterministic policy enforcement and reliability budgets.</p>
-        </header>
+    <div className="min-h-screen bg-slate-950 text-slate-300 p-6 font-mono text-sm selection:bg-indigo-500/30">
+      <header className="mb-6 flex justify-between items-end border-b border-slate-800 pb-4">
+        <div>
+          <div className="flex items-center space-x-3 mb-2">
+            <ShieldCheck className="w-8 h-8 text-emerald-500" />
+            <h1 className="text-2xl font-bold text-slate-100 tracking-tight uppercase font-sans">Enterprise Governance Center</h1>
+          </div>
+          <div className="flex space-x-6 text-xs text-slate-400">
+            <span>SYS.STATE: <span className="text-emerald-400">ENFORCING</span></span>
+            <span>VER: <span className="text-indigo-400">v1.128.0</span></span>
+            <span>LAST.ASSESS: <span className="text-slate-300">T-14M</span></span>
+            <span>CONST.AUTH: <span className="text-emerald-400">ACTIVE</span></span>
+          </div>
+        </div>
+        <div className="text-right">
+          <div className="text-[10px] text-slate-500 mb-1">ENTERPRISE GOVERNANCE INDEX</div>
+          <div className="text-3xl font-bold text-emerald-400">98.4<span className="text-lg text-emerald-500/50">%</span></div>
+        </div>
+      </header>
 
-        {frozenServices.map(fs => (
-          <FreezeBanner key={fs.serviceName} active={true} reason={`${fs.serviceName} deployment freeze active due to budget depletion.`} />
-        ))}
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          {budgets.map(b => (
-            <div key={b.serviceName}>
-              <h4 className="text-sm font-medium text-slate-300 mb-2">{b.serviceName}</h4>
-              <ReliabilityBudgetCard budget={b.budget} state={b.state} />
-            </div>
-          ))}
+      <div className="grid grid-cols-1 xl:grid-cols-12 gap-4">
+        {/* Section 1: Governance Overview */}
+        <div className="xl:col-span-12">
+          <GovernanceOverview />
         </div>
 
-        <GovernancePanel events={events} />
+        {/* Section 2: Policies & Exceptions */}
+        <div className="xl:col-span-7 h-[400px]">
+          <ActivePolicies />
+        </div>
+        <div className="xl:col-span-5 h-[400px]">
+          <PolicyExceptions />
+        </div>
+
+        {/* Section 3: Risk Register */}
+        <div className="xl:col-span-12">
+          <EnterpriseRiskRegister />
+        </div>
+
+        {/* Section 4: Controls Matrix */}
+        <div className="xl:col-span-12">
+          <GovernanceControlsMatrix />
+        </div>
+
+        {/* Section 5 & 6: Timeline & Simulator */}
+        <div className="xl:col-span-6 h-[500px]">
+          <GovernanceAssessmentTimeline />
+        </div>
+        <div className="xl:col-span-6 h-[500px]">
+          <GovernanceSimulator />
+        </div>
+
+        {/* Bottom: Executive Dash */}
+        <div className="xl:col-span-12 mt-4">
+          <ExecutiveGovernanceDashboard />
+        </div>
       </div>
     </div>
   );

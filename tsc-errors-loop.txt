@@ -1,0 +1,32 @@
+src/lib/change/approval-engine.ts(9,7): error TS2322: Type '{ changeId: string; approver: string; role: string; decision: string; }' is not assignable to type '(Without<ChangeApprovalCreateInput, ChangeApprovalUncheckedCreateInput> & ChangeApprovalUncheckedCreateInput) | (Without<...> & ChangeApprovalCreateInput)'.
+  Type '{ changeId: string; approver: string; role: string; decision: string; }' is not assignable to type 'Without<ChangeApprovalUncheckedCreateInput, ChangeApprovalCreateInput> & ChangeApprovalCreateInput'.
+    Property 'workspace' is missing in type '{ changeId: string; approver: string; role: string; decision: string; }' but required in type 'ChangeApprovalCreateInput'.
+src/lib/change/enterprise-change-engine.ts(30,65): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string'.
+  Type 'null' is not assignable to type 'string'.
+src/lib/change/impact-analysis.ts(10,7): error TS2322: Type 'number' is not assignable to type 'string'.
+src/lib/identity/approval-engine.ts(8,9): error TS2353: Object literal may only specify known properties, and 'identity' does not exist in type 'AccessRequestInclude<DefaultArgs>'.
+src/lib/identity/enterprise-identity-engine.ts(8,9): error TS2353: Object literal may only specify known properties, and 'provider' does not exist in type 'EnterpriseIdentityInclude<DefaultArgs>'.
+src/lib/identity/enterprise-identity-engine.ts(20,9): error TS2353: Object literal may only specify known properties, and 'provider' does not exist in type 'EnterpriseIdentityInclude<DefaultArgs>'.
+src/lib/identity/permission-engine.ts(8,9): error TS2353: Object literal may only specify known properties, and 'group' does not exist in type 'PermissionInclude<DefaultArgs>'.
+src/lib/identity/privileged-access-engine.ts(8,9): error TS2353: Object literal may only specify known properties, and 'identity' does not exist in type 'PrivilegedSessionInclude<DefaultArgs>'.
+src/lib/identity/role-engine.ts(8,9): error TS2353: Object literal may only specify known properties, and 'permissions' does not exist in type 'EnterpriseRoleInclude<DefaultArgs>'.
+src/lib/identity/role-engine.ts(18,9): error TS2353: Object literal may only specify known properties, and 'permissions' does not exist in type 'EnterpriseRoleInclude<DefaultArgs>'.
+src/lib/planning/enterprise-capacity-engine.ts(7,122): error TS2339: Property 'score' does not exist on type '{ id: string; workspaceId: string; createdAt: Date; data: string | null; }'.
+src/lib/platform/resource-lifecycle.ts(5,5): error TS2322: Type '"lifecycleStatus"[]' is not assignable to type 'PlatformResourceScalarFieldEnum | PlatformResourceScalarFieldEnum[]'.
+  Type '"lifecycleStatus"[]' is not assignable to type 'PlatformResourceScalarFieldEnum[]'.
+    Type '"lifecycleStatus"' is not assignable to type 'PlatformResourceScalarFieldEnum'.
+src/lib/platform/resource-lifecycle.ts(7,15): error TS2353: Object literal may only specify known properties, and 'lifecycleStatus' does not exist in type 'PlatformResourceCountAggregateInputType'.
+src/lib/portfolio/enterprise-portfolio-engine.ts(6,124): error TS2339: Property 'score' does not exist on type '{ id: string; workspaceId: string; createdAt: Date; data: string | null; }'.
+src/lib/releases/release-package.ts(24,9): error TS2322: Type 'boolean' is not assignable to type 'string'.
+src/lib/releases/release-risk.ts(16,7): error TS2322: Type 'number' is not assignable to type 'string'.
+src/lib/releases/release-strategy.ts(10,5): error TS2322: Type '{ releaseId: string; strategyType: string; description: string; }' is not assignable to type '(Without<ReleaseStrategyCreateInput, ReleaseStrategyUncheckedCreateInput> & ReleaseStrategyUncheckedCreateInput) | (Without<...> & ReleaseStrategyCreateInput)'.
+  Type '{ releaseId: string; strategyType: string; description: string; }' is not assignable to type 'Without<ReleaseStrategyUncheckedCreateInput, ReleaseStrategyCreateInput> & ReleaseStrategyCreateInput'.
+    Property 'workspace' is missing in type '{ releaseId: string; strategyType: string; description: string; }' but required in type 'ReleaseStrategyCreateInput'.
+src/lib/releases/release-window.ts(12,20): error TS2322: Type 'Date' is not assignable to type 'string | FieldRef<"ReleaseWindow", "String"> | undefined'.
+src/lib/releases/release-window.ts(20,13): error TS2339: Property 'enforceBlackout' does not exist on type '{ id: string; workspaceId: string; createdAt: Date; data: string | null; startTime: string | null; }'.
+src/lib/releases/release-window.ts(21,73): error TS2339: Property 'windowType' does not exist on type '{ id: string; workspaceId: string; createdAt: Date; data: string | null; startTime: string | null; }'.
+src/lib/resilience/enterprise-resilience-engine.ts(7,126): error TS2339: Property 'score' does not exist on type '{ id: string; workspaceId: string; createdAt: Date; data: string | null; }'.
+src/lib/resilience/enterprise-resilience-engine.ts(8,127): error TS2339: Property 'score' does not exist on type '{ id: string; workspaceId: string; createdAt: Date; data: string | null; }'.
+src/lib/topology/asset-engine.ts(7,18): error TS2353: Object literal may only specify known properties, and 'environment' does not exist in type 'EnterpriseAssetInclude<DefaultArgs>'.
+src/lib/topology/enterprise-topology-engine.ts(11,90): error TS2322: Type 'true' is not assignable to type 'string | StringNullableFilter<"ServiceDependency"> | null | undefined'.
+src/lib/workflows/enterprise-workflow-engine.ts(18,7): error TS2353: Object literal may only specify known properties, and 'evidence' does not exist in type 'OperationalWorkflowExecutionInclude<DefaultArgs>'.

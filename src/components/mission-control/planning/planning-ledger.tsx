@@ -1,51 +1,39 @@
 "use client";
 
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { BookOpen } from "lucide-react";
+import React from "react";
+import { DatabaseBackup, Hash } from "lucide-react";
 
-interface PlanningLedgerProps {
-  ledgerEntries: any[];
-}
+export function PlanningLedger() {
+  const ledger = [
+    { event: "ALLOCATION_CREATED", id: "ALLOC-0921", hash: "8f4a2b1c", time: "2h ago" },
+    { event: "VALIDATION_COMPLETED", id: "ASSESS-GLOBAL-EXP", hash: "9e1c2d4a", time: "3h ago" },
+    { event: "DEMAND_APPROVED", id: "REQ-4011", hash: "1b2c3d4e", time: "5h ago" },
+  ];
 
-export function PlanningLedger({ ledgerEntries }: PlanningLedgerProps) {
   return (
-    <Card className="border-slate-800 bg-slate-900/50">
-      <CardHeader className="flex flex-row items-center justify-between pb-2">
-        <CardTitle className="text-sm font-medium text-slate-300 flex items-center gap-2">
-          <BookOpen className="h-4 w-4 text-slate-400" />
-          Planning Ledger History
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        {ledgerEntries && ledgerEntries.length > 0 ? (
-          <div className="space-y-3 mt-2">
-            {ledgerEntries.map((entry, idx) => (
-              <div key={idx} className="p-3 bg-slate-950/50 rounded border border-slate-800 flex flex-col gap-2">
-                <div className="flex justify-between items-center border-b border-slate-800/50 pb-1">
-                  <span className="text-xs font-semibold text-slate-300">{entry.planName}</span>
-                  <span className="text-[10px] text-slate-500 font-mono">{new Date(entry.createdAt).toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between text-xs">
-                  <span className="text-slate-500">Objective:</span>
-                  <span className="text-emerald-400 font-mono">{entry.planningObjective}</span>
-                </div>
-                <div className="flex justify-between text-xs">
-                  <span className="text-slate-500">Opt Score:</span>
-                  <span className="text-slate-300 font-mono">{entry.planningScore.toFixed(1)}</span>
-                </div>
-                <div className="flex justify-between text-xs">
-                  <span className="text-slate-500">Status:</span>
-                  <span className={`text-[10px] uppercase font-bold tracking-wider ${entry.status === 'COMPLETED' ? 'text-emerald-500' : 'text-indigo-400'}`}>{entry.status}</span>
-                </div>
+    <div className="bg-slate-900 border border-slate-800 h-full flex flex-col">
+      <div className="p-3 border-b border-slate-800 bg-slate-900/80">
+        <h2 className="text-xs font-bold text-slate-200 uppercase tracking-wider font-sans">Planning Ledger</h2>
+      </div>
+      <div className="p-4 flex-1 overflow-auto space-y-2">
+        {ledger.map((l, i) => (
+          <div key={i} className="flex justify-between items-center text-[10px] font-mono border-b border-slate-800/50 pb-2">
+            <div className="flex items-center space-x-2">
+              <DatabaseBackup className="w-3 h-3 text-slate-500" />
+              <div>
+                <div className="text-emerald-400">{l.event}</div>
+                <div className="text-slate-600">ID: {l.id}</div>
               </div>
-            ))}
+            </div>
+            <div className="text-right">
+              <div className="text-slate-400 flex items-center justify-end">
+                <Hash className="w-2 h-2 mr-1" /> {l.hash}
+              </div>
+              <div className="text-slate-600">{l.time}</div>
+            </div>
           </div>
-        ) : (
-          <div className="text-sm text-slate-500 italic mt-4">
-            No operational plans found in ledger.
-          </div>
-        )}
-      </CardContent>
-    </Card>
+        ))}
+      </div>
+    </div>
   );
 }

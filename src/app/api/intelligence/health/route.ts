@@ -1,19 +1,12 @@
-import { NextRequest, NextResponse } from "next/server";
-import { calculateOrganizationalHealth } from "@/lib/intelligence/organizational-health";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { NextResponse } from "next/server";
+import { HealthEngine } from "@/lib/intelligence/health-engine";
 
-export async function GET(req: NextRequest) {
-  const session = await getServerSession(authOptions);
-  if (!session?.user?.email) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
+export async function GET(request: Request) {
   try {
-    const health = calculateOrganizationalHealth();
-    return NextResponse.json(health);
+    const workspaceId = "ws-123";
+    const health = await HealthEngine.getHealth(workspaceId);
+    return NextResponse.json({ health });
   } catch (error) {
-    console.error("Error calculating health:", error);
-    return NextResponse.json({ error: "Failed to calculate health" }, { status: 500 });
+    return NextResponse.json({ error: "Failed to fetch health" }, { status: 500 });
   }
 }

@@ -2,13 +2,17 @@
 
 import { useEffect, useState } from "react";
 import { ActiveReleases } from "@/components/mission-control/releases/active-releases";
-import { ReleaseReadiness } from "@/components/mission-control/releases/release-readiness";
+import { ReadinessMatrix } from "@/components/mission-control/releases/readiness-matrix";
 import { ApprovalMatrix } from "@/components/mission-control/releases/approval-matrix";
 import { ConstitutionalValidation } from "@/components/mission-control/releases/constitutional-validation";
 import { ReleaseTimeline } from "@/components/mission-control/releases/release-timeline";
 import { RollbackReadiness } from "@/components/mission-control/releases/rollback-readiness";
 import { ReleaseEvidence } from "@/components/mission-control/releases/release-evidence";
 import { ReleaseHistory } from "@/components/mission-control/releases/release-history";
+import { ReleasePackages } from "@/components/mission-control/releases/release-packages";
+import { ReleaseWindows } from "@/components/mission-control/releases/release-windows";
+import { StrategyViewer } from "@/components/mission-control/releases/strategy-viewer";
+import { RiskProfile } from "@/components/mission-control/releases/risk-profile";
 import { Loader2, Rocket } from "lucide-react";
 
 export default function EnterpriseReleasesPage() {
@@ -20,18 +24,28 @@ export default function EnterpriseReleasesPage() {
     setTimeout(() => {
       setData({
         activeReleases: [
-          { releaseName: "Production Release v1.1.0", status: "EXECUTING", readinessScore: 92.5, governanceStatus: "VALID" }
+          { releaseName: "Production Release v1.1.0", releaseType: "APPLICATION", status: "EXECUTING", readinessScore: 98.0, governanceStatus: "VALID" }
         ],
         readiness: {
-          score: 92.5,
+          score: 98.0,
           planningComplete: true,
-          assuranceVerified: true,
+          dependenciesResolved: true,
+          constitutionalCompliance: true,
+          approvalCompletion: false,
+          rollbackAvailable: true,
+          infrastructureCapacity: true,
           integrationHealthy: true,
-          rollbackAvailable: true
+          serviceHealth: true,
+          treasurySafety: true,
+          resourceAvailability: true,
+          releaseWindowValid: true,
+          strategySelected: true
         },
         approvals: [
-          { approverRole: "Engineering Lead", status: "APPROVED" },
-          { approverRole: "Security Officer", status: "APPROVED" }
+          { approverRole: "Engineering Manager", status: "APPROVED" },
+          { approverRole: "Platform Engineering", status: "APPROVED" },
+          { approverRole: "Site Reliability Engineering", status: "PENDING" },
+          { approverRole: "Security", status: "APPROVED" }
         ],
         checkpoints: [
           { milestone: "PLANNING_STARTED", status: "COMPLETED", reachedAt: new Date(Date.now() - 172800000).toISOString() },
@@ -45,7 +59,27 @@ export default function EnterpriseReleasesPage() {
         history: [
           { releaseName: "Production Release v1.0.5", status: "COMPLETED", readinessScore: 95.0, governanceStatus: "VALID" },
           { releaseName: "Emergency Patch v1.0.4", status: "COMPLETED", readinessScore: 82.5, governanceStatus: "VALID" }
-        ]
+        ],
+        packages: [
+          { artifactType: "DOCKER_IMAGE", artifactHash: "sha256:7b3a4...", isImmutable: true, dependenciesResolved: true },
+          { artifactType: "KUBERNETES_MANIFEST", artifactHash: "sha256:4c2d1...", isImmutable: true, dependenciesResolved: true }
+        ],
+        windows: [
+          { windowType: "MAINTENANCE_WINDOW", startTime: new Date(Date.now() - 3600000), endTime: new Date(Date.now() + 7200000), timezone: "UTC", enforceBlackout: false },
+          { windowType: "HOLIDAY_FREEZE", startTime: new Date(Date.now() + 86400000 * 5), endTime: new Date(Date.now() + 86400000 * 7), timezone: "UTC", enforceBlackout: true }
+        ],
+        strategy: {
+          strategyType: "BLUE_GREEN",
+          description: "Zero-downtime cutover validated via synthetic traffic."
+        },
+        risk: {
+          blastRadius: 15.5,
+          rollbackComplexity: 42.0,
+          dependencyDepth: 3,
+          serviceCriticality: 95.0,
+          infrastructureImpact: 20.0,
+          treasuryExposure: 1200.50
+        }
       });
       
       setLoading(false);
@@ -66,10 +100,10 @@ export default function EnterpriseReleasesPage() {
         <div>
           <h2 className="text-2xl font-bold tracking-tight text-slate-100 flex items-center gap-2">
             <Rocket className="h-6 w-6 text-emerald-400" />
-            Deterministic Enterprise Release Management
+            Universal Operational Release Management
           </h2>
           <p className="text-muted-foreground text-slate-400">
-            Constitutionally governed operational releases and execution tracking.
+            Constitutionally governed orchestration of all engineering changes.
           </p>
         </div>
       </div>
@@ -77,16 +111,25 @@ export default function EnterpriseReleasesPage() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
         <div className="col-span-4 space-y-4">
           <ActiveReleases releases={data?.activeReleases} />
+          
           <div className="grid gap-4 grid-cols-2">
-            <ReleaseReadiness readiness={data?.readiness} />
+            <StrategyViewer strategy={data?.strategy} />
             <ConstitutionalValidation status="VALID" />
           </div>
+
+          <div className="grid gap-4 grid-cols-2">
+            <ReleasePackages packages={data?.packages} />
+            <ReleaseWindows windows={data?.windows} />
+          </div>
+
           <div className="grid gap-4 grid-cols-2">
             <ApprovalMatrix approvals={data?.approvals} />
             <RollbackReadiness />
           </div>
         </div>
         <div className="col-span-3 space-y-4">
+          <ReadinessMatrix readiness={data?.readiness} />
+          <RiskProfile risk={data?.risk} />
           <ReleaseTimeline checkpoints={data?.checkpoints} />
         </div>
       </div>

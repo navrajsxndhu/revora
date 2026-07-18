@@ -2,7 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { evaluateReleaseReadiness } from "./release-readiness";
 import { validateReleaseGovernance } from "./release-governance";
 
-export async function createEnterpriseRelease(workspaceId: string, releaseName: string) {
+export async function createEnterpriseRelease(workspaceId: string, releaseName: string, releaseType: string = "APPLICATION") {
   const readiness = await evaluateReleaseReadiness(workspaceId, "");
   const governance = await validateReleaseGovernance(workspaceId, "");
 
@@ -10,6 +10,7 @@ export async function createEnterpriseRelease(workspaceId: string, releaseName: 
     data: {
       workspaceId,
       releaseName,
+      releaseType,
       status: "PLANNING",
       readinessScore: readiness.score,
       governanceStatus: governance.status,
@@ -23,8 +24,9 @@ export async function createEnterpriseRelease(workspaceId: string, releaseName: 
       },
       approvals: {
         create: [
-          { approverRole: "Engineering Lead", status: "PENDING" },
-          { approverRole: "Security Officer", status: "PENDING" }
+          { approverRole: "Engineering Manager", status: "PENDING" },
+          { approverRole: "Platform Engineering", status: "PENDING" },
+          { approverRole: "Security", status: "PENDING" }
         ]
       }
     }

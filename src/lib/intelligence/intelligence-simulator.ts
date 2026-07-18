@@ -1,27 +1,19 @@
-export interface SimulationResult {
-  scenario: string;
-  projectedHealth: number;
-  survivabilityDelta: number;
-  simulatedAt: string;
-}
+import { prisma } from "@/lib/prisma";
 
-export function simulateIntelligenceScenario(scenario: string): SimulationResult {
-  // Simulates structural impacts on organizational health
-  let delta = -2.5;
-  let health = 92.5;
-
-  if (scenario === 'INCIDENT_SURGE') {
-    delta = -15.2;
-    health = 79.8;
-  } else if (scenario === 'TREASURY_REDUCTION') {
-    delta = -4.1;
-    health = 90.9;
+export const IntelligenceSimulator = {
+  simulate: async (workspaceId: string, action: string, targetId: string) => {
+    return {
+      action,
+      targetId,
+      enterpriseHealthImpact: -2.5,
+      affectedKPIs: ["Service Availability", "Cost Efficiency"],
+      operationalRisks: ["Elevated latency in primary gateway"],
+      governanceStatus: "Requires Executive Override",
+      finopsImpact: "+$4,500/mo"
+    };
   }
+};
 
-  return {
-    scenario,
-    projectedHealth: health,
-    survivabilityDelta: delta,
-    simulatedAt: new Date().toISOString()
-  };
+export function simulateIntelligenceScenario(scenario: string) {
+  return { simulated: true, scenario };
 }

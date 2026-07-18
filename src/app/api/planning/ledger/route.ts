@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getPlanningLedger } from "@/lib/planning/planning-ledger";
+import { PlanningLedger } from "@/lib/planning/planning-ledger";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const ledger = await getPlanningLedger(workspaceId);
+    const ledger = await PlanningLedger.getLedger(workspaceId);
     return NextResponse.json(ledger);
   } catch (error) {
     console.error("Error fetching planning ledger:", error);

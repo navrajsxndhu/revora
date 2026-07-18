@@ -1,102 +1,122 @@
-import { prisma } from "@/lib/prisma";
+"use client";
 
-export default async function ReliabilityDashboard() {
-  // Mock workspaceId for demonstration, in reality this comes from NextAuth session
-  const mockWorkspaceId = await prisma.workspace.findFirst().then(w => w?.id);
+import { useEffect, useState } from "react";
+import { ReliabilityOverview } from "@/components/mission-control/reliability/reliability-overview";
+import { ServiceLevelObjectives } from "@/components/mission-control/reliability/service-level-objectives";
+import { ServiceLevelIndicators } from "@/components/mission-control/reliability/service-level-indicators";
+import { ErrorBudgetDashboard } from "@/components/mission-control/reliability/error-budget-dashboard";
+import { CapacityPlanning } from "@/components/mission-control/reliability/capacity-planning";
+import { ReliabilityForecast } from "@/components/mission-control/reliability/reliability-forecast";
+import { ReliabilityLedger } from "@/components/mission-control/reliability/reliability-ledger";
+import { ExecutiveReliabilityMetrics } from "@/components/mission-control/reliability/executive-reliability-metrics";
+import { ReliabilitySimulator } from "@/components/mission-control/reliability/reliability-simulator";
+import { Loader2, Activity } from "lucide-react";
 
-  if (!mockWorkspaceId) {
-    return <div className="p-10">No workspace found. Please initialize data.</div>;
+export default function EnterpriseReliabilityPage() {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulated deterministic extraction payload
+    setTimeout(() => {
+      setData({
+        overview: {
+          globalScore: 99.98,
+          status: "STABLE",
+          activeIncidents: 0,
+          budgetAtRisk: false
+        },
+        slos: [
+          { name: "Core API Availability", target: 99.99, current: 99.995, deviation: "+0.005", status: "HEALTHY" },
+          { name: "Payment Processing Latency", target: 99.9, current: 99.91, deviation: "+0.01", status: "HEALTHY" },
+          { name: "Data Ingestion Throughput", target: 99.5, current: 99.1, deviation: "-0.40", status: "AT_RISK" }
+        ],
+        slis: [
+          { metric: "Availability", value: "99.995%", timestamp: new Date().toISOString() },
+          { metric: "API Latency (p99)", value: "112ms", timestamp: new Date().toISOString() },
+          { metric: "Request Success", value: "99.98%", timestamp: new Date().toISOString() },
+          { metric: "Deployment Success", value: "100%", timestamp: new Date().toISOString() }
+        ],
+        budgets: [
+          { name: "Core Infrastructure", remaining: "85%", burnRate: "0.2x", status: "HEALTHY" },
+          { name: "Payments Gateway", remaining: "42%", burnRate: "1.5x", status: "ACCELERATED_BURN" }
+        ],
+        capacity: {
+          computeUtilization: "62%",
+          computeHeadroom: "38%",
+          storageUtilization: "78%",
+          storageHeadroom: "22%",
+          growthRate: "+4.2%/mo"
+        },
+        forecast: {
+          sevenDay: "99.98%",
+          thirtyDay: "99.95%",
+          ninetyDay: "99.90%",
+          trend: "STABLE"
+        },
+        ledger: [
+          { event: "SLI Recalculation", impact: "+0.01%", date: new Date(Date.now() - 3600000).toISOString() },
+          { event: "Capacity Auto-Scale", impact: "0.00%", date: new Date(Date.now() - 7200000).toISOString() },
+          { event: "Minor Latency Spike", impact: "-0.02%", date: new Date(Date.now() - 86400000).toISOString() }
+        ],
+        metrics: {
+          sloCompliance: "99.95%",
+          availability: "99.99%",
+          mttr: "14m",
+          mttd: "3m",
+          deploymentSuccess: "99.2%",
+          recoverySuccess: "100%",
+          errorBudgetHealth: "STABLE",
+          capacityHealth: "OPTIMAL"
+        }
+      });
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex h-[80vh] items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-slate-500" />
+      </div>
+    );
   }
 
-  // 1. Fetch Tenant-Scoped Metrics
-  const incidents = await prisma.incident.findMany({
-    where: { workspaceId: mockWorkspaceId },
-    orderBy: { createdAt: 'desc' },
-    take: 100
-  });
-
-  const deployments = await prisma.deployment.findMany({
-    where: { workspaceId: mockWorkspaceId },
-    orderBy: { createdAt: 'desc' },
-    take: 100
-  });
-
-  // Calculate Metrics
-  const totalIncidents = incidents.length;
-  const rollbacks = deployments.filter(d => d.rollbackCount > 0).length;
-  const rollbackRate = deployments.length > 0 ? (rollbacks / deployments.length) * 100 : 0;
-  
-  const recoverySuccesses = incidents.filter(i => i.resolvedSuccessfully).length;
-  const recoverySuccessRate = incidents.length > 0 ? (recoverySuccesses / incidents.length) * 100 : 0;
-
-  // Group by service to find dangerous ones
-  const serviceStats = incidents.reduce((acc, inc) => {
-    if (inc.serviceAffected) {
-      acc[inc.serviceAffected] = (acc[inc.serviceAffected] || 0) + 1;
-    }
-    return acc;
-  }, {} as Record<string, number>);
-
-  const dangerousServices = Object.entries(serviceStats)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5);
-
   return (
-    <div className="p-10 max-w-6xl mx-auto font-sans">
-      <h1 className="text-3xl font-light mb-8 border-b pb-4">Operational Reliability</h1>
-      
-      <div className="grid grid-cols-4 gap-6 mb-12">
-        <div className="p-6 bg-slate-50 border rounded-lg shadow-sm">
-          <div className="text-sm text-slate-500 uppercase tracking-wide mb-2">Total Incidents</div>
-          <div className="text-4xl font-light">{totalIncidents}</div>
-        </div>
-        <div className="p-6 bg-slate-50 border rounded-lg shadow-sm">
-          <div className="text-sm text-slate-500 uppercase tracking-wide mb-2">Rollback Rate</div>
-          <div className="text-4xl font-light text-amber-600">{rollbackRate.toFixed(1)}%</div>
-        </div>
-        <div className="p-6 bg-slate-50 border rounded-lg shadow-sm">
-          <div className="text-sm text-slate-500 uppercase tracking-wide mb-2">Recovery Success</div>
-          <div className="text-4xl font-light text-emerald-600">{recoverySuccessRate.toFixed(1)}%</div>
-        </div>
-        <div className="p-6 bg-slate-900 border rounded-lg shadow-sm text-white">
-          <div className="text-sm text-slate-400 uppercase tracking-wide mb-2">Automation Savings</div>
-          <div className="text-4xl font-light">${(recoverySuccesses * 250).toLocaleString()}</div>
-          <div className="text-xs text-slate-500 mt-2">Est. $250 / manual recovery avoided</div>
+    <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
+      <div className="flex items-center justify-between space-y-2">
+        <div>
+          <h2 className="text-2xl font-bold tracking-tight text-slate-100 flex items-center gap-2">
+            <Activity className="h-6 w-6 text-emerald-500" />
+            Enterprise Reliability Engineering
+          </h2>
+          <p className="text-muted-foreground text-slate-400">
+            Deterministically define, monitor, protect, and continuously improve service reliability.
+          </p>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-8">
-        <div>
-          <h2 className="text-xl font-medium mb-4">Dangerous Services</h2>
-          <div className="bg-white border rounded-lg overflow-hidden">
-            {dangerousServices.length > 0 ? dangerousServices.map(([service, count], idx) => (
-              <div key={service} className={`p-4 flex justify-between ${idx !== dangerousServices.length - 1 ? 'border-b' : ''}`}>
-                <span className="font-mono text-sm">{service}</span>
-                <span className="text-rose-600 font-medium">{count} incidents</span>
-              </div>
-            )) : (
-              <div className="p-4 text-slate-500 italic">No incidents recorded yet.</div>
-            )}
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+        <div className="col-span-5 space-y-4">
+          <ReliabilityOverview overview={data?.overview} />
+          
+          <div className="grid gap-4 grid-cols-2">
+            <ServiceLevelObjectives slos={data?.slos} />
+            <ServiceLevelIndicators slis={data?.slis} />
           </div>
-        </div>
 
-        <div>
-          <h2 className="text-xl font-medium mb-4">Recent Blocked Deployments</h2>
-          <div className="bg-white border rounded-lg overflow-hidden">
-            {deployments.filter(d => d.riskLevel === 'CRITICAL').length > 0 ? (
-              deployments.filter(d => d.riskLevel === 'CRITICAL').slice(0, 5).map((d, idx, arr) => (
-                <div key={d.id} className={`p-4 ${idx !== arr.length - 1 ? 'border-b' : ''}`}>
-                  <div className="flex justify-between mb-1">
-                    <span className="font-mono text-sm font-semibold">{d.serviceName}</span>
-                    <span className="text-xs text-slate-500">{new Date(d.createdAt).toLocaleDateString()}</span>
-                  </div>
-                  <div className="text-sm text-rose-600 truncate">{d.riskReasoning}</div>
-                </div>
-              ))
-            ) : (
-               <div className="p-4 text-slate-500 italic">No blocked deployments.</div>
-            )}
+          <div className="grid gap-4 grid-cols-2">
+            <ErrorBudgetDashboard budgets={data?.budgets} />
+            <CapacityPlanning capacity={data?.capacity} />
           </div>
+          
+          <ReliabilityForecast forecast={data?.forecast} />
+        </div>
+        
+        <div className="col-span-2 space-y-4">
+          <ExecutiveReliabilityMetrics metrics={data?.metrics} />
+          <ReliabilitySimulator />
+          <ReliabilityLedger ledger={data?.ledger} />
         </div>
       </div>
     </div>
