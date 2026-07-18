@@ -1,51 +1,66 @@
-import { getOperationalAnalytics } from "@/lib/incidents/analytics";
+import React from 'react';
+import { EnterpriseAnalyticsOverview } from "@/components/mission-control/analytics/enterprise-analytics-overview";
+import { DashboardOperationsCenter } from "@/components/mission-control/analytics/dashboard-operations-center";
+import { ExecutiveReportingDashboard } from "@/components/mission-control/analytics/executive-reporting-dashboard";
+import { KPIRegistryDashboard } from "@/components/mission-control/analytics/k-p-i-registry-dashboard";
+import { ScorecardOperationsCenter } from "@/components/mission-control/analytics/scorecard-operations-center";
+import { SemanticModelCenter } from "@/components/mission-control/analytics/semantic-model-center";
+import { DatasetGovernanceDashboard } from "@/components/mission-control/analytics/dataset-governance-dashboard";
+import { AnalyticsLineageCenter } from "@/components/mission-control/analytics/analytics-lineage-center";
+import { DashboardCertificationMatrix } from "@/components/mission-control/analytics/dashboard-certification-matrix";
+import { AnalyticsComplianceDashboard } from "@/components/mission-control/analytics/analytics-compliance-dashboard";
+import { AnalyticsValidationCenter } from "@/components/mission-control/analytics/analytics-validation-center";
+import { ConstitutionalAnalyticsLedger } from "@/components/mission-control/analytics/constitutional-analytics-ledger";
+import { AnalyticsAuditDashboard } from "@/components/mission-control/analytics/analytics-audit-dashboard";
+import { AnalyticsHealthDashboard } from "@/components/mission-control/analytics/analytics-health-dashboard";
+import { ExecutiveDecisionSupportDashboard } from "@/components/mission-control/analytics/executive-decision-support-dashboard";
 
-export default async function AnalyticsPage() {
-  const data = await getOperationalAnalytics();
-
+export default function AnalyticsGovernancePage() {
   return (
-    <div className="p-8 max-w-6xl mx-auto space-y-8">
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-100">Operational Stability</h1>
-        <p className="text-slate-400 mt-2">Long-term reliability trends and incident resolution metrics.</p>
-      </header>
+    <div className="min-h-screen bg-slate-950 p-6 space-y-6 text-slate-200">
+      <div className="flex justify-between items-center mb-8">
+        <div>
+          <h1 className="text-3xl font-bold text-white tracking-tight">Enterprise Analytics & BI Governance</h1>
+          <p className="text-slate-400 mt-2">Deterministic constitutional authority governing dashboards, metrics, semantics, and reporting assets</p>
+        </div>
+        <div className="flex gap-4">
+          <div className="px-4 py-2 bg-emerald-950 border border-emerald-900 rounded-md">
+            <span className="text-emerald-500 font-mono text-sm">ANALYTICS GOVERNANCE: ENFORCED</span>
+          </div>
+        </div>
+      </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-slate-900 border border-slate-800 p-5 rounded-lg">
-          <span className="text-slate-500 text-xs uppercase font-semibold tracking-wider block mb-1">Mean Time To Resolution</span>
-          <span className="text-3xl font-bold text-slate-100">{data.mttrMinutes > 0 ? `${data.mttrMinutes}m` : 'N/A'}</span>
-          <p className="text-xs text-slate-400 mt-2">Average time to resolve incidents</p>
-        </div>
-        
-        <div className="bg-slate-900 border border-slate-800 p-5 rounded-lg">
-          <span className="text-slate-500 text-xs uppercase font-semibold tracking-wider block mb-1">Overall Stability</span>
-          <span className="text-3xl font-bold text-emerald-400">{data.deploymentStability}%</span>
-          <p className="text-xs text-slate-400 mt-2">Successful workflows vs failures</p>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ExecutiveDecisionSupportDashboard />
+        <EnterpriseAnalyticsOverview />
+        <AnalyticsValidationCenter />
+      </div>
 
-        <div className="bg-slate-900 border border-slate-800 p-5 rounded-lg">
-          <span className="text-slate-500 text-xs uppercase font-semibold tracking-wider block mb-1">Unresolved Incidents</span>
-          <span className="text-3xl font-bold text-amber-400">{data.unresolvedCount}</span>
-          <p className="text-xs text-slate-400 mt-2">Currently requiring attention</p>
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <DashboardOperationsCenter />
+        <ExecutiveReportingDashboard />
+      </div>
 
-        <div className="bg-slate-900 border border-slate-800 p-5 rounded-lg border-l-4 border-l-red-500/50">
-          <span className="text-slate-500 text-xs uppercase font-semibold tracking-wider block mb-1">Most Unstable Service</span>
-          <span className="text-xl font-bold text-slate-100 truncate block">{data.mostUnstableService}</span>
-          <p className="text-xs text-slate-400 mt-2">Linked to {data.unstableServiceIncidentCount} failures</p>
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <KPIRegistryDashboard />
+        <ScorecardOperationsCenter />
+        <DashboardCertificationMatrix />
+      </div>
 
-        <div className="bg-slate-900 border border-slate-800 p-5 rounded-lg">
-          <span className="text-slate-500 text-xs uppercase font-semibold tracking-wider block mb-1">Replay Success Rate</span>
-          <span className="text-3xl font-bold text-blue-400">{data.replaySuccessRate}%</span>
-          <p className="text-xs text-slate-400 mt-2">Successful automated workflow replays</p>
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <SemanticModelCenter />
+        <DatasetGovernanceDashboard />
+      </div>
 
-        <div className="bg-slate-900 border border-slate-800 p-5 rounded-lg">
-          <span className="text-slate-500 text-xs uppercase font-semibold tracking-wider block mb-1">Guided Resolutions</span>
-          <span className="text-3xl font-bold text-emerald-400">{data.runbookResolutions}</span>
-          <p className="text-xs text-slate-400 mt-2">Incidents resolved using standard runbooks</p>
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <AnalyticsLineageCenter />
+        <AnalyticsComplianceDashboard />
+        <AnalyticsAuditDashboard />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <ConstitutionalAnalyticsLedger />
+        <AnalyticsHealthDashboard />
       </div>
     </div>
   );
