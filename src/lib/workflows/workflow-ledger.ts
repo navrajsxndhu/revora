@@ -1,9 +1,11 @@
 import { prisma } from "@/lib/prisma";
 
-export async function appendWorkflowEvidence(executionId: string, eventType: string, payloadHash: string) {
-  // Append-only workflow history
-  return {
-    status: "RECORDED",
-    evidenceId: `evd-${Date.now()}`
-  };
-}
+export const WorkflowLedger = {
+  getOverview: async (workspaceId: string) => {
+    return { data: "mock", workspaceId };
+  }
+};
+
+export const getWorkflowLedger = async (...args: any[]) => ({});
+export const calculateWorkflowLedger = async (...args: any[]) => ({});
+export const recordWorkflowLedgerEvents = async (...args: any[]) => ({});

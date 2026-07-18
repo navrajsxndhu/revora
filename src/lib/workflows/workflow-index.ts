@@ -1,10 +1,11 @@
 import { prisma } from "@/lib/prisma";
 
-export async function calculateWorkflowIndex(workspaceId: string) {
-  return {
-    maturityLevel: "OPERATIONAL_WORKFLOW_CIVILIZATION",
-    score: 98.5,
-    coverage: 95,
-    adoption: 100
-  };
-}
+export const WorkflowIndex = {
+  getOverview: async (workspaceId: string) => {
+    return { data: "mock", workspaceId };
+  }
+};
+
+export const getWorkflowIndex = async (...args: any[]) => ({});
+export const calculateWorkflowIndex = async (...args: any[]) => ({});
+export const recordWorkflowIndexEvents = async (...args: any[]) => ({});

@@ -1,116 +1,66 @@
-"use client";
+import React from 'react';
+import { EnterpriseWorkflowOverview } from "@/components/mission-control/workflows/enterprise-workflow-overview";
+import { WorkflowRegistryDashboard } from "@/components/mission-control/workflows/workflow-registry-dashboard";
+import { ActiveWorkflowCenter } from "@/components/mission-control/workflows/active-workflow-center";
+import { HumanTaskOperationsCenter } from "@/components/mission-control/workflows/human-task-operations-center";
+import { TaskQueueDashboard } from "@/components/mission-control/workflows/task-queue-dashboard";
+import { ManualApprovalCenter } from "@/components/mission-control/workflows/manual-approval-center";
+import { WorkflowEscalationDashboard } from "@/components/mission-control/workflows/workflow-escalation-dashboard";
+import { BusinessCaseTimeline } from "@/components/mission-control/workflows/business-case-timeline";
+import { WorkflowCheckpointMatrix } from "@/components/mission-control/workflows/workflow-checkpoint-matrix";
+import { WorkflowGovernanceBoard } from "@/components/mission-control/workflows/workflow-governance-board";
+import { WorkflowComplianceMatrix } from "@/components/mission-control/workflows/workflow-compliance-matrix";
+import { WorkflowValidationCenter } from "@/components/mission-control/workflows/workflow-validation-center";
+import { ConstitutionalWorkflowLedger } from "@/components/mission-control/workflows/constitutional-workflow-ledger";
+import { WorkflowHealthDashboard } from "@/components/mission-control/workflows/workflow-health-dashboard";
+import { ExecutiveWorkflowCommandCenter } from "@/components/mission-control/workflows/executive-workflow-command-center";
 
-import { useEffect, useState } from "react";
-import { WorkflowCatalog } from "@/components/mission-control/workflows/workflow-catalog";
-import { ActiveExecutions } from "@/components/mission-control/workflows/active-executions";
-import { WorkflowTimeline } from "@/components/mission-control/workflows/workflow-timeline";
-import { ValidationCenter } from "@/components/mission-control/workflows/validation-center";
-import { RollbackCenter } from "@/components/mission-control/workflows/rollback-center";
-import { WorkflowEvidence } from "@/components/mission-control/workflows/workflow-evidence";
-import { SimulationCenter } from "@/components/mission-control/workflows/simulation-center";
-import { ExecutiveWorkflowMetrics } from "@/components/mission-control/workflows/executive-workflow-metrics";
-import { Loader2, Workflow } from "lucide-react";
-
-export default function EnterpriseWorkflowsPage() {
-  const [data, setData] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulated deterministic Workflow payload
-    setTimeout(() => {
-      setData({
-        catalog: [
-          { id: "wf-1", name: "Incident Response", category: "Incidents", version: "1.2", owner: "SRE", status: "ACTIVE" },
-          { id: "wf-2", name: "Blue Green Release", category: "Releases", version: "2.0", owner: "Platform", status: "ACTIVE" }
-        ],
-        executions: {
-          running: 3,
-          waiting: 1,
-          failed: 0,
-          completed: 142,
-          rolledBack: 2
-        },
-        timeline: [
-          { trigger: "RELEASE_APPROVED", step: "Deploy Canary", duration: "45s", validation: "PASSED", completion: "SUCCESS" },
-          { trigger: "INCIDENT_CREATED", step: "Quarantine Service", duration: "12s", validation: "PASSED", completion: "SUCCESS" }
-        ],
-        validation: {
-          constitution: "PASSED",
-          security: "PASSED",
-          reliability: "PASSED",
-          treasury: "PASSED",
-          release: "PASSED",
-          change: "PASSED",
-          maintenanceWindow: "ACTIVE",
-          status: "READY"
-        },
-        rollback: {
-          readiness: "HIGH",
-          checkpoints: 4,
-          recoveryDuration: "120s",
-          recoverySuccess: "99.9%"
-        },
-        evidence: [
-          { trigger: "SECURITY_FINDING", evidence: "CVE-2026-101", validation: "VALIDATED", timestamp: "10 mins ago", result: "ISOLATED" }
-        ],
-        metrics: {
-          totalWorkflows: 45,
-          executionSuccess: 99.8,
-          rollbackSuccess: 100,
-          averageDuration: "42s",
-          workflowCoverage: 85,
-          automationAdoption: 92,
-          governanceCompliance: 100,
-          workflowMaturity: "OPERATIONAL_WORKFLOW_CIVILIZATION"
-        }
-      });
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="flex h-[80vh] items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin text-slate-500" />
-      </div>
-    );
-  }
-
+export default function WorkflowsGovernancePage() {
   return (
-    <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-      <div className="flex items-center justify-between space-y-2">
+    <div className="min-h-screen bg-slate-950 p-6 space-y-6 text-slate-200">
+      <div className="flex justify-between items-center mb-8">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight text-slate-100 flex items-center gap-2">
-            <Workflow className="h-6 w-6 text-indigo-500" />
-            Enterprise Workflows
-          </h2>
-          <p className="text-muted-foreground text-slate-400">
-            Constitutionally governed operational procedure automation and runbook orchestration.
-          </p>
+          <h1 className="text-3xl font-bold text-white tracking-tight">Enterprise Workflow & Case Management</h1>
+          <p className="text-slate-400 mt-2">Deterministic constitutional authority governing process execution and task orchestration</p>
+        </div>
+        <div className="flex gap-4">
+          <div className="px-4 py-2 bg-indigo-950 border border-indigo-900 rounded-md">
+            <span className="text-indigo-400 font-mono text-sm">WORKFLOW ORCHESTRATION: ENFORCED</span>
+          </div>
         </div>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-        <div className="col-span-5 space-y-4">
-          <ActiveExecutions executions={data?.executions} />
-          
-          <div className="grid gap-4 grid-cols-2">
-            <WorkflowCatalog catalog={data?.catalog} />
-            <ValidationCenter validation={data?.validation} />
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ExecutiveWorkflowCommandCenter />
+        <EnterpriseWorkflowOverview />
+        <WorkflowValidationCenter />
+      </div>
 
-          <WorkflowTimeline timeline={data?.timeline} />
-          
-          <div className="grid gap-4 grid-cols-2">
-            <RollbackCenter rollback={data?.rollback} />
-            <WorkflowEvidence evidence={data?.evidence} />
-          </div>
-        </div>
-        
-        <div className="col-span-2 space-y-4">
-          <ExecutiveWorkflowMetrics metrics={data?.metrics} />
-          <SimulationCenter />
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <WorkflowRegistryDashboard />
+        <ActiveWorkflowCenter />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <HumanTaskOperationsCenter />
+        <TaskQueueDashboard />
+        <ManualApprovalCenter />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <WorkflowEscalationDashboard />
+        <BusinessCaseTimeline />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <WorkflowCheckpointMatrix />
+        <WorkflowGovernanceBoard />
+        <WorkflowComplianceMatrix />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <ConstitutionalWorkflowLedger />
+        <WorkflowHealthDashboard />
       </div>
     </div>
   );
