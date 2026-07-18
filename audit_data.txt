@@ -1,0 +1,9 @@
+Models: 1161
+APIs: 903
+Engines: 1128
+MC Pages: 86
+Widgets: 986
+UI Comps: 5
+TS Files: 3167
+Platforms: 84
+Platform List: adaptation, ai-governance, analytics, api-governance, architecture, assets, assurance, benchmarks, business-rules, change, cmdb, collaboration, commercial, compliance, configuration-governance, consciousness, constitution, continuity, coordination, copilot, customer, data-governance, decision, digital-twin, economy, esg, event-streaming, evolution, execution, executions, facilities, finance, finops, global-reliability, governance, identity, immunity, incidents, information, integration, intelligence, investments, knowledge, legal, maintenance, manufacturing, master-data, nervous-system, network, observability, optimization, orchestration, os, performance, pir, planning, platform, portfolio, predictive, prevention, privacy, process-governance, procurement, product-lifecycle, projects, quality, reality, release-governance, releases, reliability, resilience, risk, security, service, service-governance, service-management, statecraft, strategy, supply-chain, temporal, topology, vendors, workflows, workforce
