@@ -4297,6 +4297,123 @@ model CommunicationProfile {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
+
+// Phase 201: Enterprise Document, Content, Records & Document Lifecycle Governance Platform
+model EnterpriseDocument {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentRepository {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentFolder {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentCategory {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentClassification {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentVersion {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentApproval {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentWorkflow {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentReview {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentPublication {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentDistribution {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentRetention {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentArchive {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentDisposition {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentSignature {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentAccessPolicy {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentEvidence {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RecordsManagementPolicy {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model OfficialRecord {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContentCollection {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentMetadata {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentAuditTrail {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DocumentLedger {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
 model ConfigurationVersion {
   id             String    @id @default(cuid())
   workspaceId    String
@@ -7065,7 +7182,7 @@ model LegalHealthIndex {
 }
 
 // Phase 161: Enterprise Document, Records & Information Governance Platform
-model EnterpriseDocument {
+model EnterpriseEnterpriseDocument {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -7075,7 +7192,7 @@ model DocumentLibrary {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model DocumentCategory {
+model EnterpriseDocumentCategory {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -7090,12 +7207,12 @@ model ControlledDocument {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model DocumentVersion {
+model EnterpriseDocumentVersion {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model DocumentApproval {
+model EnterpriseDocumentApproval {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -7145,7 +7262,7 @@ model RecordsDisposition {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model DocumentDistribution {
+model EnterpriseDocumentDistribution {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
