@@ -4531,6 +4531,123 @@ model CalendarIntegration {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
+
+// Phase 203: Enterprise Geographic Information, Spatial Assets & Location Governance Platform
+model GeographicRegion {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model AdministrativeBoundary {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseFacility {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model FacilityCampus {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model Building {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model FloorPlan {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model SpatialAsset {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model LocationHierarchy {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model GeoCoordinate {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ServiceTerritory {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model SalesTerritory {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DeliveryZone {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model OperationalZone {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RestrictedArea {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model GeofencePolicy {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model LocationClassification {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model SpatialRelationship {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model MapLayer {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model SpatialDataset {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model LocationEvidence {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model LocationAudit {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model SpatialLedger {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model LocationReference {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
 model ConfigurationVersion {
   id             String    @id @default(cuid())
   workspaceId    String
@@ -6973,7 +7090,7 @@ model CustomerSegment {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model SalesTerritory {
+model EnterpriseSalesTerritory {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -8016,7 +8133,7 @@ model FacilityZone {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model FloorPlan {
+model EnterpriseFloorPlan {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
