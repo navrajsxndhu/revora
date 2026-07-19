@@ -8467,3 +8467,120 @@ model ProductComplianceSnapshot {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
+
+// Phase 183: Enterprise Customer Experience, Omnichannel Engagement & Journey Governance Platform
+model EnterpriseCustomerJourney {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model JourneyStage {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model JourneyCheckpoint {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model CustomerInteraction {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model InteractionChannel {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model OmnichannelSession {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model CustomerCommunication {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model CommunicationTemplate {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model CustomerNotification {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model CustomerPreference {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model FeedbackRecord {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model SatisfactionSurvey {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ExperiencePolicy {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ServiceTouchpoint {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model JourneyEvidence {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EngagementCampaign {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model CampaignExecution {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseCustomerEscalation {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DigitalExperienceMetric {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ExperienceAudit {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model CustomerJourneyLedger {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model CustomerJourneySnapshot {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ExperienceGovernanceRecord {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
