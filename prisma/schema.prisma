@@ -8818,3 +8818,120 @@ model RevenueGovernanceSnapshot {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
+
+// Phase 186: Enterprise Platform Runtime, Kernel Services & Distributed Execution Governance
+model RuntimeNode {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeKernel {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeService {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model PlatformCapability {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeRegistry {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeContext {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeHeartbeat {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ExecutionContext {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeDependency {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeLifecycle {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeState {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeCluster {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeTopology {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeCompatibility {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeVersion {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeHealth {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeEvent {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeConfiguration {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeEvidence {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeLedger {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeInitialization {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeIsolation {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeExecutionRecord {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
