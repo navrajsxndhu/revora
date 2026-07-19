@@ -4932,6 +4932,123 @@ model APIPortal {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
+
+// Phase 196: Enterprise Configuration, Feature Flag & Runtime Configuration Governance Platform
+model EnterpriseConfigurationProfile {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeConfiguration {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnvironmentConfiguration {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ConfigurationVariable {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ConfigurationGroup {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseConfigurationVersion {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseConfigurationSnapshot {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ConfigurationBaseline {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model FeatureFlag {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model FeatureFlagRule {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model FeatureFlagRollout {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ConfigurationPolicy {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseConfigurationApproval {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ConfigurationDeployment {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ConfigurationOverride {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model TenantConfiguration {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseSecretReference {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ConfigurationAudit {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseConfigurationEvidence {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseConfigurationLedger {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RuntimeProfile {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model RolloutWindow {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseConfigurationTemplate {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
 model ArchitectureDependency {
   id             String    @id @default(cuid())
   workspaceId    String
@@ -9490,7 +9607,7 @@ model RuntimeEvent {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model RuntimeConfiguration {
+model EnterpriseRuntimeConfiguration {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -9582,7 +9699,7 @@ model MaintenanceWindow {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model EnvironmentConfiguration {
+model EnterpriseEnvironmentConfiguration {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
