@@ -4063,6 +4063,123 @@ model CommercialEntitlement {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
+
+// Phase 199: Enterprise Contract Lifecycle, Agreement & Obligation Governance Platform
+model EnterpriseContract {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractTemplate {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractClause {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ClauseLibrary {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractParty {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractNegotiation {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractVersion {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractApproval {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractExecution {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractAmendment {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractRenewal {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractTermination {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractObligation {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractMilestone {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractDeliverable {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractCompliance {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractRisk {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractEvidence {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractRepository {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractSignature {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractLifecycle {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractLedger {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ContractRetentionPolicy {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
 model ConfigurationVersion {
   id             String    @id @default(cuid())
   workspaceId    String
@@ -5574,7 +5691,7 @@ model VendorContract {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model ContractAmendment {
+model EnterpriseContractAmendment {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -6739,17 +6856,17 @@ model BoardResolution {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model ContractTemplate {
+model EnterpriseContractTemplate {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model EnterpriseContract {
+model EnterpriseEnterpriseContract {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model ContractClause {
+model EnterpriseContractClause {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -6759,12 +6876,12 @@ model ContractRevision {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model ContractApproval {
+model EnterpriseContractApproval {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model ContractObligation {
+model EnterpriseContractObligation {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
