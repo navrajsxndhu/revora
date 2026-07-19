@@ -2,13 +2,13 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Compass } from "lucide-react";
 
-export function TechnologyLifecycleCenter() {
+export function GovernanceOperationsCenter() {
   return (
     <Card className="bg-slate-900 border-slate-800 text-slate-200">
       <CardHeader>
         <CardTitle className="text-lg font-mono flex items-center gap-2">
           <Compass className="w-5 h-5 text-indigo-400" />
-          Technology Lifecycle Center
+          GovernanceOperations Center
         </CardTitle>
       </CardHeader>
       <CardContent>
