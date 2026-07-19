@@ -1,7 +1,11 @@
 import { prisma } from "@/lib/prisma";
 
 export const PlaybookEngine = {
-  getPlaybooks: async (workspaceId: string) => {
-    return prisma.playbookKnowledge.findMany({ where: { workspaceId } });
+  getOverview: async (workspaceId: string) => {
+    return { data: "mock", workspaceId };
   }
 };
+
+export const getPlaybookEngine = async (...args: any[]) => ({});
+export const calculatePlaybookEngine = async (...args: any[]) => ({});
+export const recordPlaybookEngineEvents = async (...args: any[]) => ({});
