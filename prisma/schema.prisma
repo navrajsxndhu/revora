@@ -4698,6 +4698,123 @@ model IdentityGovernanceProfile {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
+
+// Phase 194: Enterprise Data Platform, Lakehouse & Data Engineering Governance Platform
+model DataLake {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataWarehouse {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseLakehouse {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataPipeline {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataPipelineExecution {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataTransformation {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model Dataset {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DatasetVersion {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataContract {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataProduct {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataCatalogEntry {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseDataLineage {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataLineageNode {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model StreamingPipeline {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model BatchPipeline {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ChangeDataCapturePipeline {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseDataQualityRule {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataValidationExecution {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataRetentionProfile {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataMeshDomain {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataFabricNode {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataEngineeringEvidence {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataEngineeringLedger {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
 model ArchitectureDependency {
   id             String    @id @default(cuid())
   workspaceId    String
@@ -7369,7 +7486,7 @@ model EntityRelationshipDefinition {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model EnterpriseDataQualityRule {
+model EnterpriseEnterpriseDataQualityRule {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
