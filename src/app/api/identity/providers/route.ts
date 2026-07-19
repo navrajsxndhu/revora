@@ -1,12 +1,19 @@
-import { NextResponse } from "next/server";
-import { IdentityProviderEngine } from "@/lib/identity/identity-provider-engine";
+import { NextRequest, NextResponse } from "next/server";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { prisma } from "@/lib/prisma";
 
-export async function GET(request: Request) {
+export async function GET(req: NextRequest) {
+  const session = await getServerSession(authOptions);
+  if (!session) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   try {
     const workspaceId = "ws-123";
-    const providers = await IdentityProviderEngine.getProviders(workspaceId);
-    return NextResponse.json({ providers });
+    const data = await prisma.enterpriseIdentity.findMany({ where: { workspaceId } as any });
+    return NextResponse.json({ data });
   } catch (error) {
-    return NextResponse.json({ error: "Failed to fetch providers" }, { status: 500 });
+    return NextResponse.json({ error: "Failed to fetch data" }, { status: 500 });
   }
 }

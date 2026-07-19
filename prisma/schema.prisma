@@ -4581,6 +4581,123 @@ model AutomationHealth {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
+
+// Phase 193: Enterprise Identity, Directory, Access & Federation Governance Platform
+model EnterpriseEnterpriseIdentity {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IdentityDirectory {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DirectoryDomain {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseIdentityProvider {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model AuthenticationMethod {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model FederationTrust {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model FederationProvider {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IdentitySession {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseServiceAccount {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model PrivilegedAccount {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model AccessCredential {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model CredentialVault {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model CredentialRotation {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IdentityLifecycle {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IdentityProvisioning {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IdentityDeprovisioning {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IdentityEvidence {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseIdentityLedger {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model AccessCertification {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IdentityPolicy {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model AuthenticationEvidence {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model AuthorizationEvidence {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IdentityGovernanceProfile {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
 model ArchitectureDependency {
   id             String    @id @default(cuid())
   workspaceId    String

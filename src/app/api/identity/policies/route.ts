@@ -1,12 +1,19 @@
-import { NextResponse } from "next/server";
-import { AccessPolicyEngine } from "@/lib/identity/access-policy-engine";
+import { NextRequest, NextResponse } from "next/server";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { prisma } from "@/lib/prisma";
 
-export async function GET(request: Request) {
+export async function GET(req: NextRequest) {
+  const session = await getServerSession(authOptions);
+  if (!session) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   try {
-    const workspaceId = "ws-123"; // Mocked workspace context
-    const policies = await AccessPolicyEngine.getPolicies(workspaceId);
-    return NextResponse.json({ policies });
+    const workspaceId = "ws-123";
+    const data = await prisma.enterpriseIdentity.findMany({ where: { workspaceId } as any });
+    return NextResponse.json({ data });
   } catch (error) {
-    return NextResponse.json({ error: "Failed to fetch policies" }, { status: 500 });
+    return NextResponse.json({ error: "Failed to fetch data" }, { status: 500 });
   }
 }
