@@ -5,3 +5,7 @@ export const ConnectorEngine = {
     return { data: "mock", workspaceId };
   }
 };
+
+export const validateConnectorEngine = async (...args: any[]) => ({});
+export const governConnectorEngine = async (...args: any[]) => ({});
+export const verifyConnectorEngine = async (...args: any[]) => ({});

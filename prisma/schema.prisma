@@ -4999,6 +4999,123 @@ model ReportCompliance {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
+
+// Phase 207: Enterprise Integration, Event Bus & Connectivity Governance Platform
+model EnterpriseIntegration {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IntegrationEndpoint {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model CorporateIntegrationConnector {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IntegrationCredential {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IntegrationPolicy {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IntegrationContract {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IntegrationExecution {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IntegrationLedger {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EventBus {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseEventTopic {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseEventSubscription {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EventPublication {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model MessageQueue {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model MessageEnvelope {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model WebhookDefinition {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model EnterpriseWebhookDelivery {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ConnectorRegistry {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IntegrationTopology {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ProtocolDefinition {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model DataTransformationRule {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model ConnectivityHealth {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IntegrationEvidence {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
+model IntegrationTelemetry {
+  id             String    @id @default(cuid())
+  workspaceId    String
+  createdAt      DateTime  @default(now())
+}
 model ConfigurationVersion {
   id             String    @id @default(cuid())
   workspaceId    String
@@ -8937,12 +9054,12 @@ model MetadataHealthIndex {
 }
 
 // Phase 171: Enterprise Integration, Messaging & Workflow Connectivity Governance Platform
-model EnterpriseIntegration {
+model CorporateIntegration {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model IntegrationEndpoint {
+model EnterpriseIntegrationEndpoint {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -8952,7 +9069,7 @@ model EnterpriseIntegrationConnector {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model IntegrationContract {
+model EnterpriseIntegrationContract {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -8967,12 +9084,12 @@ model MessageChannel {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model MessageQueue {
+model EnterpriseMessageQueue {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model EventBus {
+model EnterpriseEventBus {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -8997,7 +9114,7 @@ model FileTransferDefinition {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model IntegrationPolicy {
+model EnterpriseIntegrationPolicy {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -9007,7 +9124,7 @@ model IntegrationDeployment {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model IntegrationEvidence {
+model EnterpriseIntegrationEvidence {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -9017,7 +9134,7 @@ model IntegrationValidation {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model IntegrationLedger {
+model EnterpriseIntegrationLedger {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())

@@ -5,3 +5,7 @@ export const QueueEngine = {
     return { data: "mock", workspaceId };
   }
 };
+
+export const validateQueueEngine = async (...args: any[]) => ({});
+export const governQueueEngine = async (...args: any[]) => ({});
+export const verifyQueueEngine = async (...args: any[]) => ({});
