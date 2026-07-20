@@ -5,3 +5,7 @@ export const BenchmarkEngine = {
     return { data: "mock", workspaceId };
   }
 };
+
+export const validateBenchmarkEngine = async (...args: any[]) => ({});
+export const governBenchmarkEngine = async (...args: any[]) => ({});
+export const verifyBenchmarkEngine = async (...args: any[]) => ({});

@@ -11,7 +11,7 @@ export async function GET(req: NextRequest) {
 
   try {
     const workspaceId = "ws-123";
-    const data = await prisma.enterpriseAIRegistry.findMany({ where: { workspaceId } as any });
+    const data = await prisma.aIModel.findMany({ where: { workspaceId } as any });
     return NextResponse.json({ data });
   } catch (error) {
     return NextResponse.json({ error: "Failed to fetch data" }, { status: 500 });

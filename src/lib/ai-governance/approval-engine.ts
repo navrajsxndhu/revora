@@ -5,3 +5,7 @@ export const ApprovalEngine = {
     return { data: "mock", workspaceId };
   }
 };
+
+export const validateApprovalEngine = async (...args: any[]) => ({});
+export const governApprovalEngine = async (...args: any[]) => ({});
+export const verifyApprovalEngine = async (...args: any[]) => ({});
