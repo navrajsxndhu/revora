@@ -11509,3 +11509,2967 @@ model EnterpriseTechnologyRoadmap {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model InstallationManifest {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model InstallationPackage {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model InstallationBundle {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model InstallationEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model InstallationExecution {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model BootstrapSession {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model BootstrapManifest {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model BootstrapEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model ProvisioningPlan {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model ProvisioningExecution {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model ProvisioningEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model EnvironmentRegistration {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model EnvironmentInitialization {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model InfrastructureRegistration {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model PlatformInitialization {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model DependencyValidation {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model DependencyManifest {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model InstallationPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model BootstrapPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model ProvisioningPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model InstallationCheckpoint {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model InitializationLedger {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 209: Enterprise Installation, Bootstrap & Provisioning Governance
+model InstallationAudit {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model PlatformVersion {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model VersionManifest {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model VersionCatalog {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model VersionPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model UpgradePlan {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model UpgradeExecution {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model UpgradeEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model UpgradeCheckpoint {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model UpgradeWindow {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model MigrationPlan {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model MigrationEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model MigrationScript {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model SchemaMigration {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model CompatibilityMatrix {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model CompatibilityValidation {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model RollbackEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model ReleaseTransition {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model VersionApproval {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model VersionLedger {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 210: Enterprise Upgrade, Migration & Version Governance
+model VersionAudit {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model Cluster {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model ClusterNode {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model ClusterMembership {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model ClusterPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model ClusterEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model ClusterExecution {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model NodeRegistration {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model NodeHealthRecord {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model NodeRole {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model HighAvailabilityPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model FailoverPlan {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model FailoverEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model ReplicationEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model QuorumPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model QuorumValidation {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model DistributedTopology {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model InfrastructureZone {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model AvailabilityGroup {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model InfrastructureLedger {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model ClusterAudit {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 211: Enterprise Cluster, High Availability & Distributed Infrastructure Governance
+model ClusterCheckpoint {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model SecretVault {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model SecretEntry {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model SecretVersion {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model SecretAccessPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model SecretEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model EncryptionKey {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model KeyVersion {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model KeyRotationPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model KeyEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model Certificate {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model CertificateAuthority {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model CertificateChain {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model CertificatePolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model CertificateRenewalPlan {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model TrustStore {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model TrustRelationship {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model SigningIdentity {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model CryptographicPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model CryptographicValidation {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model CryptographicExecution {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model CryptographicLedger {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model CryptographicAudit {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 212: Enterprise Secrets, Certificates & Cryptographic Governance
+model CryptographicCheckpoint {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model ResourcePool {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model ResourceAllocation {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model ResourceQuota {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model ResourceUtilization {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model CapacityPlan {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model CapacitySnapshot {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model CapacityValidation {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model CapacityEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model CostRecord {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model CostPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model ChargebackRecord {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model ShowbackRecord {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model ConsumptionLedger {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model ConsumptionEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model UtilizationAudit {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model CapacityAudit {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model ResourceLedger {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 213: Enterprise Cost, Capacity & Resource Governance
+model ResourceCheckpoint {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model ResiliencePolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model ContinuityPlan {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model ContinuityExecution {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model ContinuityEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model RecoveryObjective {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model CriticalService {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model CriticalAsset {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model ReadinessAssessment {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model CrisisScenario {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model CrisisExercise {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model ExerciseEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model RecoveryWorkflow {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model RestorationCheckpoint {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model ResilienceValidation {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model AvailabilityAssessment {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model OperationalRiskRecord {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model ResilienceAudit {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model ContinuityCheckpoint {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model ResilienceMetrics {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 214: Enterprise Operational Resilience & Business Continuity Governance
+model BusinessContinuityReview {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model ComplianceAssessmentEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model ComplianceFinding {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model ComplianceAttestation {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model ComplianceSubmission {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model ComplianceReview {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model ComplianceReport {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model ComplianceEvidenceCollection {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model EvidenceValidation {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model EvidenceIntegrity {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model EvidenceRetention {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model EvidencePackage {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model ConsolidatedEvidenceLedger {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model ComplianceAudit {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model RegulatoryMapping {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model GovernanceMapping {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model ComplianceCheckpoint {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 215: Enterprise Compliance Evidence Consolidation Governance
+model ComplianceMetrics {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model ExecutiveView {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model ExecutiveWorkspace {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model GovernanceSnapshot {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model GovernanceKPI {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model GovernanceMetric {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model GovernanceIndicator {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model ExecutiveWidget {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model ExecutiveWidgetLayout {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model DashboardFilter {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model DashboardView {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model DashboardSession {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model DashboardEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model DashboardLedger {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model DashboardAudit {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model ExecutiveAlert {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model ExecutiveNotification {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model EnterpriseHealthSnapshot {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model GovernanceCoverage {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model GovernanceSummary {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model DashboardPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model DashboardCheckpoint {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 216: Enterprise Governance Intelligence Dashboard
+model DashboardMetrics {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model SDKVersion {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model SDKManifest {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model CLIProfile {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model CLICommand {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model CLIExecution {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model CLISession {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model TemplateCatalog {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model ProjectTemplate {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model CodeGenerationPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model ExtensionPackage {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model PluginPackage {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model PluginManifest {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model DeveloperIdentity {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model DeveloperApproval {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model ToolchainConfiguration {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model DeveloperLedger {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model DeveloperAudit {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model DeveloperEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model ToolchainCheckpoint {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 217: Enterprise SDK, CLI & Developer Toolchain Completion
+model ToolchainMetrics {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model DeploymentBundle {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model InstallerPackage {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model InstallationMedia {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model BundleManifest {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model BundleVersion {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model DeploymentArtifact {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model ArtifactManifest {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model ArtifactSignature {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model DistributionChannel {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model DeploymentProfile {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model DeploymentConfiguration {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model BundlePolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model BundleCheckpoint {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model InstallerConfiguration {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model DeploymentLedger {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model DeploymentAudit {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model DeploymentMetrics {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model DeploymentCatalog {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model PackageIntegrity {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 218: Enterprise Installer & Deployment Bundle Governance
+model ReleaseBundle {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model ProductionReadinessAssessment {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model ProductionCertification {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model HardeningPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model HardeningValidation {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model SecurityBaseline {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model DependencyBaseline {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model PerformanceBaseline {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model OperationalBaseline {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model ReadinessChecklist {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model CertificationEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model PlatformVerification {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model VerificationCheckpoint {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model ReadinessGate {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model ReleaseCertification {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model EnvironmentCertification {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model ProductionLedger {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model ProductionAudit {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model ProductionMetrics {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model ReadinessException {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model HardeningEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model CertificationPolicy {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 219: Enterprise Platform Hardening & Production Readiness Governance
+model ProductionApproval {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("PENDING")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model ConstitutionalRegistry {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model ConstitutionalModule {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model ConstitutionalVersion {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model ConstitutionalEvidence {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model ConstitutionalLedger {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model ConstitutionalAudit {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model ConstitutionalIntegration {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model ConstitutionalVerification {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model ConstitutionalCheckpoint {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model ConstitutionalCertification {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model EnterpriseOperatingSystem {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model SystemManifest {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model EnterpriseCapability {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model CapabilityRegistry {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model CapabilityVerification {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model GovernanceBoundary {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model GovernanceDependency {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model ConstitutionalMetrics {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model ConstitutionalApproval {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model EnterpriseCertification {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+// Phase 220: Final Constitutional Integration & Enterprise Operating System v1.0
+model EOSRelease {
+  id             String    @id @default(uuid())
+  workspaceId    String
+  tenantId       String?
+  organizationId String?
+  runtimeExecutionId String?
+  status         String    @default("CERTIFIED")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}

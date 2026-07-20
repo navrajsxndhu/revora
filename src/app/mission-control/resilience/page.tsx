@@ -1,81 +1,44 @@
-"use client";
+import React from 'react';
+import { ResilienceOverview } from '@/components/mission-control/resilience/ResilienceOverview';
+import { ContinuityPlans } from '@/components/mission-control/resilience/ContinuityPlans';
+import { RecoveryObjectives } from '@/components/mission-control/resilience/RecoveryObjectives';
+import { CriticalServices } from '@/components/mission-control/resilience/CriticalServices';
+import { OperationalReadiness } from '@/components/mission-control/resilience/OperationalReadiness';
+import { CrisisScenarios } from '@/components/mission-control/resilience/CrisisScenarios';
+import { ExerciseCenter } from '@/components/mission-control/resilience/ExerciseCenter';
+import { DependencyMap } from '@/components/mission-control/resilience/DependencyMap';
+import { RuntimeIntegration } from '@/components/mission-control/resilience/RuntimeIntegration';
+import { ComplianceStatus } from '@/components/mission-control/resilience/ComplianceStatus';
+import { MetricsDashboard } from '@/components/mission-control/resilience/MetricsDashboard';
+import { EvidenceTimeline } from '@/components/mission-control/resilience/EvidenceTimeline';
+import { LedgerView } from '@/components/mission-control/resilience/LedgerView';
+import { AuditEvents } from '@/components/mission-control/resilience/AuditEvents';
+import { ExecutiveSummary } from '@/components/mission-control/resilience/ExecutiveSummary';
 
-import React from "react";
-import { ResilienceOverview } from "@/components/mission-control/resilience/resilience-overview";
-import { BusinessContinuityCenter } from "@/components/mission-control/resilience/business-continuity-center";
-import { RecoveryPlanRegistry } from "@/components/mission-control/resilience/recovery-plan-registry";
-import { RecoveryExecutionCenter } from "@/components/mission-control/resilience/recovery-execution-center";
-import { FailoverCenter } from "@/components/mission-control/resilience/failover-center";
-import { FailbackCenter } from "@/components/mission-control/resilience/failback-center";
-import { BusinessImpactAnalysis } from "@/components/mission-control/resilience/business-impact-analysis";
-import { RecoveryValidationCenter } from "@/components/mission-control/resilience/recovery-validation-center";
-import { RecoveryCheckpoints } from "@/components/mission-control/resilience/recovery-checkpoints";
-import { RecoveryReadiness } from "@/components/mission-control/resilience/recovery-readiness";
-import { ResilienceExercises } from "@/components/mission-control/resilience/resilience-exercises";
-import { RecoveryTimeline } from "@/components/mission-control/resilience/recovery-timeline";
-import { ContinuityLedger } from "@/components/mission-control/resilience/continuity-ledger";
-import { ResilienceSimulator } from "@/components/mission-control/resilience/resilience-simulator";
-import { ExecutiveResilienceDashboard } from "@/components/mission-control/resilience/executive-resilience-dashboard";
-
-export default function ResilienceMissionControl() {
+export default function ResilienceGovernancePage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-300 p-4 font-sans selection:bg-emerald-500/30">
-      <div className="max-w-[1600px] mx-auto space-y-4">
+    <div className="min-h-screen bg-slate-950 p-6">
+      <div className="mb-6">
+        <h1 className="text-2xl font-bold text-slate-100 tracking-tight">Enterprise Resilience Governance</h1>
+        <p className="text-slate-400 text-sm mt-1">Constitutional Continuity & Crisis Ledger</p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         <ResilienceOverview />
-        
-        <div className="grid grid-cols-12 gap-4 h-[400px]">
-          <div className="col-span-8 flex flex-col space-y-4">
-            <div className="flex-1">
-              <BusinessContinuityCenter />
-            </div>
-            <div className="h-40 flex space-x-4">
-              <div className="w-1/2">
-                <RecoveryPlanRegistry />
-              </div>
-              <div className="w-1/2">
-                <RecoveryExecutionCenter />
-              </div>
-            </div>
-          </div>
-          <div className="col-span-4 flex flex-col space-y-4">
-            <div className="h-1/2">
-              <FailoverCenter />
-            </div>
-            <div className="h-1/2">
-              <FailbackCenter />
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-12 gap-4 h-[350px]">
-          <div className="col-span-3">
-            <BusinessImpactAnalysis />
-          </div>
-          <div className="col-span-3">
-            <RecoveryValidationCenter />
-          </div>
-          <div className="col-span-3">
-            <RecoveryCheckpoints />
-          </div>
-          <div className="col-span-3">
-            <RecoveryReadiness />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-12 gap-4 h-[350px]">
-          <div className="col-span-4">
-            <ResilienceExercises />
-          </div>
-          <div className="col-span-4">
-            <RecoveryTimeline />
-          </div>
-          <div className="col-span-4 flex flex-col space-y-4">
-            <div className="flex-1"><ContinuityLedger /></div>
-            <div className="h-32"><ResilienceSimulator /></div>
-          </div>
-        </div>
-
-        <ExecutiveResilienceDashboard />
+        <ContinuityPlans />
+        <RecoveryObjectives />
+        <CriticalServices />
+        <OperationalReadiness />
+        <CrisisScenarios />
+        <ExerciseCenter />
+        <DependencyMap />
+        <RuntimeIntegration />
+        <ComplianceStatus />
+        <MetricsDashboard />
+        <EvidenceTimeline />
+        <LedgerView />
+        <AuditEvents />
+        <ExecutiveSummary />
       </div>
     </div>
   );

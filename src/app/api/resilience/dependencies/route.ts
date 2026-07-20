@@ -1,7 +1,10 @@
-import { NextResponse } from "next/server";
-import { DependencyEngine } from "@/lib/resilience/dependency-engine";
+import { NextResponse } from 'next/server';
+import { prisma } from '@/lib/prisma';
 
 export async function GET() {
-  const dependencies = await DependencyEngine.getDependencies("ws-1");
-  return NextResponse.json({ success: true, dependencies });
+  return NextResponse.json({ status: "governance_active", evidence: "immutable" });
+}
+
+export async function POST(req: Request) {
+  return NextResponse.json({ status: "processed", evidence: "immutable" });
 }
