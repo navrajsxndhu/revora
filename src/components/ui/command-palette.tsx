@@ -5,7 +5,7 @@ import { Command } from 'cmdk';
 import { useRouter } from 'next/navigation';
 import { 
   Search, Shield, Users, Server, Activity, 
-  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2
+  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe
 } from 'lucide-react';
 
 export function CommandPalette() {
@@ -62,6 +62,54 @@ export function CommandPalette() {
               <Command.Item onSelect={() => navigate('/mission-control')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <Shield className="w-4 h-4 text-blue-400" />
                 Global Mission Control
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/executive/esg')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Leaf className="w-4 h-4 text-emerald-500" />
+                Executive ESG Board
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/esg')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Globe className="w-4 h-4 text-blue-400" />
+                Sustainability Operations Command Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/esg/registry')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <TreePine className="w-4 h-4 text-purple-400" />
+                Enterprise ESG Registry
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/esg/reports')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <BarChart className="w-4 h-4 text-amber-400" />
+                ESG Reporting Governance
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/executive/products')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Target className="w-4 h-4 text-blue-500" />
+                Executive Product Board
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/products')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Box className="w-4 h-4 text-emerald-400" />
+                Product Portfolio Command Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/products/portfolio')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <LayoutDashboard className="w-4 h-4 text-purple-400" />
+                Enterprise Product Registry
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/products/roadmaps')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Layers className="w-4 h-4 text-amber-400" />
+                Roadmap & Release Governance
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/executive/manufacturing')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Factory className="w-4 h-4 text-emerald-500" />
+                Executive Manufacturing Board
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/manufacturing')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Cog className="w-4 h-4 text-blue-400" />
+                Manufacturing Operations Command Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/manufacturing/production')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <ClipboardList className="w-4 h-4 text-purple-400" />
+                Production Order Registry
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/manufacturing/quality')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <FileCheck2 className="w-4 h-4 text-amber-400" />
+                Quality Assurance Center
               </Command.Item>
               <Command.Item onSelect={() => navigate('/executive/supply-chain')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <PackageCheck className="w-4 h-4 text-blue-500" />
