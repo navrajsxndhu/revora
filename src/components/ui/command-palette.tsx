@@ -5,7 +5,7 @@ import { Command } from 'cmdk';
 import { useRouter } from 'next/navigation';
 import { 
   Search, Shield, Users, Server, Activity, 
-  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe, Presentation, Workflow, Hexagon, Undo, PlayCircle, History, RefreshCw, BrainCircuit, Bot, KeyRound, FileKey2, Fingerprint, Lock, CloudCog, Thermometer, ShoppingCart, Store, Tag
+  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe, Presentation, Workflow, Hexagon, Undo, PlayCircle, History, RefreshCw, BrainCircuit, Bot, KeyRound, FileKey2, Fingerprint, Lock, CloudCog, Thermometer, ShoppingCart, Store, Tag, Puzzle, DownloadCloud, Blocks, Code2, BarChart2
 } from 'lucide-react';
 
 export function CommandPalette() {
@@ -142,6 +142,54 @@ export function CommandPalette() {
               <Command.Item onSelect={() => navigate('/commerce/marketplaces')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <TrendingUp className="w-4 h-4 text-amber-400" />
                 Marketplace Integrations
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/marketplace')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Puzzle className="w-4 h-4 text-blue-400" />
+                Marketplace Command Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/marketplace/catalog')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <ShoppingCart className="w-4 h-4 text-emerald-400" />
+                Extension Catalog
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/marketplace/installed')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <DownloadCloud className="w-4 h-4 text-blue-400" />
+                Installed Extensions
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/marketplace/low-code')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Blocks className="w-4 h-4 text-indigo-400" />
+                Low-Code Builder
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/marketplace/sdk')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Code2 className="w-4 h-4 text-purple-400" />
+                Plugin SDK Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/marketplace/permissions')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <KeyRound className="w-4 h-4 text-amber-400" />
+                Extension Permissions
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/marketplace/packages')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Box className="w-4 h-4 text-emerald-400" />
+                Package Repository
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/marketplace/certification')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <ShieldCheck className="w-4 h-4 text-blue-400" />
+                Certification Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/marketplace/templates')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Workflow className="w-4 h-4 text-purple-400" />
+                Automation Templates
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/marketplace/runtime')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <PlayCircle className="w-4 h-4 text-indigo-400" />
+                Extension Runtime Monitor
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/marketplace/audit')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <History className="w-4 h-4 text-amber-400" />
+                Marketplace Audit Ledger
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/marketplace/analytics')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <BarChart2 className="w-4 h-4 text-emerald-400" />
+                Ecosystem Analytics
               </Command.Item>
               <Command.Item onSelect={() => navigate('/commerce/customers')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <Users className="w-4 h-4 text-slate-400" />
