@@ -153,7 +153,7 @@ model Workspace {
   releaseIndices             ReleaseIndex[]
   deploymentHealths          DeploymentHealth[]
   deploymentTargets DeploymentTarget[]
-  enterpriseApis                 EnterpriseApi[]
+  
   apiConsumers                   ApiConsumer[]
   apiProviders                   ApiProvider[]
   changeApprovals                ChangeApproval[]
@@ -1974,13 +1974,7 @@ model DeploymentHealth {
   createdAt   DateTime @default(now())
 }
 
-model EnterpriseApi {
-  id          String   @id @default(cuid())
-  workspaceId String
-  workspace   Workspace @relation(fields: [workspaceId], references: [id])
-  data        String?
-  createdAt   DateTime @default(now())
-}
+
 
 model ApiConsumer {
   id          String   @id @default(cuid())
@@ -6221,27 +6215,14 @@ model DataEngineeringLedger {
 }
 
 // Phase 195: Enterprise API Management, Gateway & API Governance Platform
-model EnterpriseAPI {
-  id             String    @id @default(cuid())
-  workspaceId    String
-  createdAt      DateTime  @default(now())
-}
+
 model APIService {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model APIEndpoint {
-  id             String    @id @default(cuid())
-  workspaceId    String
-  createdAt      DateTime  @default(now())
-}
+
 model APIVersion {
-  id             String    @id @default(cuid())
-  workspaceId    String
-  createdAt      DateTime  @default(now())
-}
-model APIContract {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -6251,32 +6232,12 @@ model APISpecification {
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model APIConsumer {
-  id             String    @id @default(cuid())
-  workspaceId    String
-  createdAt      DateTime  @default(now())
-}
 model APIApplication {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
 }
-model APISubscription {
-  id             String    @id @default(cuid())
-  workspaceId    String
-  createdAt      DateTime  @default(now())
-}
-model APIKey {
-  id             String    @id @default(cuid())
-  workspaceId    String
-  createdAt      DateTime  @default(now())
-}
 model APIGateway {
-  id             String    @id @default(cuid())
-  workspaceId    String
-  createdAt      DateTime  @default(now())
-}
-model APIPolicy {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())
@@ -6322,11 +6283,6 @@ model APIAccessLog {
   createdAt      DateTime  @default(now())
 }
 model APIEvidence {
-  id             String    @id @default(cuid())
-  workspaceId    String
-  createdAt      DateTime  @default(now())
-}
-model APILedger {
   id             String    @id @default(cuid())
   workspaceId    String
   createdAt      DateTime  @default(now())

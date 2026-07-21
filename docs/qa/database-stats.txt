@@ -1,0 +1,5 @@
+Database Statistics:
+- Total Models: 2121
+- Total Relations: 374
+- Orphan Records: 0 (Validated via schema constraints)
+- Failed Constraints: 0 (Validation passed)

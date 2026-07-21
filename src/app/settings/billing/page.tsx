@@ -21,8 +21,8 @@ export default async function BillingPage() {
 
   async function handleManageBilling() {
     "use server";
-    if (!ctx.subscription?.stripeCustomerId) return;
-    const url = await createBillingPortalSession(ctx.subscription.stripeCustomerId);
+    if (!ctx?.subscription?.stripeCustomerId) return;
+    const url = await createBillingPortalSession(ctx?.subscription?.stripeCustomerId);
     redirect(url);
   }
 
@@ -41,7 +41,7 @@ export default async function BillingPage() {
                   <p className="text-sm text-slate-500">Renews on {ctx.subscription.currentPeriodEnd?.toLocaleDateString()}</p>
                 )}
               </div>
-              {ctx.subscription?.stripeCustomerId ? (
+              {ctx?.subscription?.stripeCustomerId ? (
                 <form action={handleManageBilling}>
                   <button type="submit" className="text-sm border px-3 py-1.5 rounded hover:bg-slate-50">Manage Billing</button>
                 </form>

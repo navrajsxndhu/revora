@@ -1,0 +1,6159 @@
+Total Widgets: 1539
+
+Widgets & Buttons Tested:
+- Widget: adaptation-index-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: adaptation-simulation-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: convergence-chart
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: evidence-chain-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: governance-optimization-grid
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: optimization-ledger-table
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: optimization-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: stability-improvement-card
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: adaptive-governance-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: administrative-delegation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: administrative-ledger-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: administrative-role-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-administration-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-organization-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: maintenance-operations-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: organization-hierarchy-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: permission-governance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: platform-evidence-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: platform-license-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: platform-registry-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: subscription-management-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: tenant-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: tenant-provisioning-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ai-approval-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ai-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ai-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ai-deployment-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ai-evaluation-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ai-execution-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ai-execution-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ai-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ai-model-registry-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ai-provider-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ai-registry-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ai-risk-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ai-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: bias-assessment-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-ai-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-ai-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dataset-approval-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-ai-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: evaluation-benchmark-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-ai-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: explainability-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: inference-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: model-approval-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: model-deployment-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: model-inventory-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: prompt-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: provider-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: regulatory-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: responsible-ai-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: safety-governance-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: analytics-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: analytics-compliance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: analytics-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: analytics-lineage-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: analytics-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-analytics-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dashboard-certification-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dashboard-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dataset-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-analytics-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-decision-support-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-reporting-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: k-p-i-registry-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: scorecard-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: semantic-model-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: anti-pattern-feed
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-contract-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-governance-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-policy-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-validation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: endpoint-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-api-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: event-channel-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-api-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: provider-consumer-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: schema-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: webhook-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-contract-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-deployment-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-gateway-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-lifecycle-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-policy-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-specification-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-telemetry-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: certificate-management-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: consumer-registry-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: endpoint-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-api-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-api-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: routing-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: subscription-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: application-portfolio-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: approved-technologies
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: architecture-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: architecture-decision-records-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: architecture-domains
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: architecture-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: architecture-review-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: architecture-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-capability-map
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-capability-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-architecture-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dependency-visualization-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-architecture-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-capability-map
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-architecture-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: governance-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-landscape-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: modernization-programs
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: reference-architecture-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: reference-architectures
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: solution-architecture-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: solution-architecture-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: technical-debt-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: technology-lifecycle-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: technology-roadmap-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: technology-standards-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: technology-standards-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: acquisition-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: asset-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: asset-transfer-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: asset-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: calibration-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-asset-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-asset-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-asset-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: inspection-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: inventory-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: lifecycle-management-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: maintenance-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: maintenance-schedule-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: retirement-and-disposal-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: warranty-tracker
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: assurance-evidence-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: assurance-index-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: counterfactual-simulation-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: drift-validation-grid
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: intent-vs-outcome-table
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operational-assurance-feed
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: verification-status-card
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: verification-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: audit-log-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: automation-approval-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: automation-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: automation-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: automation-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: automation-schedule-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-automation-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: credential-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: exception-management-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: governance-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: lifecycle-management-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: queue-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: robot-assignment-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: robot-fleet-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: trigger-management-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-execution-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: autonomous-routing-feed
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: benchmark-card
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: approval-matrix-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-rule-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-decision-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: decision-services-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: decision-table-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: decision-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: eligibility-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-rules-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-decision-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: policy-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: policy-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: rule-execution-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: rule-governance-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: rule-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: validation-rules-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: active-changes
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: approval-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: change-calendar
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: change-history
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: change-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: conflict-detection
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-validation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-metrics
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: impact-assessment
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: chaos-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: AuditTimeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: AvailabilityGroups
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ClusterMembership
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ClusterOverview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ComplianceStatus
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ExecutiveSummary
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: FailoverGovernance
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: GovernancePolicies
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: InfrastructureLedger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: InfrastructureTopology
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: NodeHealth
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: NodeRegistry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: QuorumCenter
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ReplicationStatus
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: RuntimeIntegration
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-drift-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-inventory
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-cmdb-metrics
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: impact-explorer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ownership-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-dependency-graph
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: snapshot-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: calendar-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: collaboration-archive-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: collaboration-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: collaboration-channel-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: collaboration-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: collaboration-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: collaboration-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: collaboration-workspace-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-collaboration-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-digital-workplace-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-digital-workplace-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: meeting-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: productivity-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workspace-permissions-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: commerce-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: commerce-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-commerce-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-commerce-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-digital-commerce-command-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: fulfillment-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: marketplace-integration-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: order-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: payment-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: pricing-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-catalog-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: promotion-compliance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: revenue-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: shopping-cart-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: subscription-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: account-planning-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: campaign-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: commercial-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: commercial-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-commercial-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: deal-desk-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: discount-approval-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-commercial-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-commercial-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: opportunity-pipeline-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: partner-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: pricing-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: sales-forecast-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: sales-organization-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: territory-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: archive-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: communication-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: communication-channel-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: communication-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: communication-policy-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: communication-queue-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: delivery-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: delivery-receipt-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-communication-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-communications-command-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: notification-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: preference-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recipient-operations-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: subscription-management-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: template-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: audit-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: audit-findings
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: certification-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: compliance-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: compliance-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: compliance-requirements
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: compliance-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: compliance-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: compliance-validation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: control-library
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: control-testing-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-compliance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: framework-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: regulation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: remediation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-approval-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-baseline-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-policy-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-profile-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: deployment-configuration-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-configuration-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: environment-configuration-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: feature-flag-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: rollout-management-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: runtime-configuration-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: runtime-profile-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: secret-reference-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: tenant-configuration-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: certificate-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-assessments
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-template-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-validation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: encryption-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-configuration-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: environment-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-configuration-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: rotation-policy-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: secret-provider-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: secret-reference-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: awareness-survivability-card
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: civilization-coherence-map
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: consciousness-index-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: consciousness-simulation-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: continuity-cognition-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operational-coherence-feed
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: perception-integrity-grid
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: systemic-awareness-graph
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: amendment-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: clause-library-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: contract-approval-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: contract-compliance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: contract-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: contract-lifecycle-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: contract-obligation-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: contract-risk-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-contract-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-contract-command-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: negotiation-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: renewal-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: repository-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: signature-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: termination-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: conflict-resolution-table
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: coordination-graph-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: coordination-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: coordination-index-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: coordination-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: coordination-simulation-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: resource-allocation-grid
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: synchronization-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: copilot-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: AuditEvents
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: CertificateCenter
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ComplianceCenter
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: CryptographicPolicies
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ExecutiveSummary
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: KeyManagement
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: LedgerTimeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: RotationGovernance
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: RuntimeIntegration
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: SecretLifecycle
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: SecretVaultOverview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: SecurityPosture
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: SigningIdentities
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: TrustStoreStatus
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ValidationStatus
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-customer-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: contract-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-hierarchy-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-success-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-customer-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-customer-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: opportunity-management-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: quotation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: renewal-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: revenue-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: sales-pipeline-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: subscription-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-experience-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-communication-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-feedback-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-journey-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-preference-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-satisfaction-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: digital-touchpoint-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-customer-experience-command-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-customer-experience-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: experience-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: experience-policy-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: interaction-governance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: journey-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: notification-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: omnichannel-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: classification-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-governance-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-lineage
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-dataset-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-data-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: lifecycle-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: master-data-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: metadata-catalog
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: metadata-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: metadata-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: metadata-validation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ownership-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: quality-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: reference-data-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: retention-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: batch-pipeline-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: c-d-c-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-catalog-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-contract-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-engineering-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-fabric-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-lineage-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-mesh-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-pipeline-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-quality-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dataset-registry-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-data-platform-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: retention-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: streaming-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: validation-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: debt-watchlist
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: decision-alternatives-table
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: decision-context-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: decision-evidence-chain
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: decision-index-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: decision-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: decision-outcome-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: decision-simulation-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: tradeoff-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: demo-generator-button
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dependency-map
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: deployment-diff
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: deployment-forecast
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: deployment-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: diagnostic-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: checkpoint-manager
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: digital-twin-health
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: digital-twin-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: digital-twin-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-state
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-digital-twin-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: failure-scenarios
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: impact-analysis
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-plans
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: replay-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: simulation-executions
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: simulation-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: simulation-scenarios
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: state-transition-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: approval-workflow-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: archive-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: classification-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: distribution-governance-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: document-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: document-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: document-lifecycle-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: document-repository-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-document-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-document-command-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: metadata-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: publication-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: records-management-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: retention-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: version-control-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: drift-warning
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: escalation-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: carbon-inventory-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: climate-risk-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-esg-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: emissions-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: energy-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-esg-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: esg-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: esg-disclosure-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: esg-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: esg-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ethical-sourcing-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-sustainability-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: sustainability-framework-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: waste-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: water-management-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: delivery-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-event-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: event-replay-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: event-streaming-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-streaming-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: producer-consumer-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: queue-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: routing-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: stream-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: stream-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: stream-validation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: streaming-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: streaming-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: subscription-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: topic-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: evolution-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-audit-feed
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-health-card
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-index-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-replay-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-stage-table
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: rollback-plan-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: validation-checklist
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-brief
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: a-p-i-bundle-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customization-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: developer-organization-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: extension-compatibility-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: extension-execution-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: extension-installation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: extension-permission-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: extension-registry-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: marketplace-approval-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: marketplace-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: marketplace-telemetry-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: package-certification-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: s-d-k-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: tenant-extension-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workspace-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: building-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: campus-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-facility-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-facilities-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-facilities-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: facility-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: facility-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: facility-inspection-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: facility-project-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: facility-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: maintenance-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: occupancy-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: utility-infrastructure-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workplace-reservation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workspace-utilization-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: budget-allocation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: budget-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: budget-variance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: capital-expenditure-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-financial-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: cost-center-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-financial-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-financial-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: financial-approval-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: financial-commitments
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: financial-control-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: financial-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: forecast-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operational-expenditure-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: profit-center-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: budget-governance
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: cloud-cost-explorer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: cloud-spend-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: cost-forecast
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-finops-health
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: financial-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: resource-optimization-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: treasury-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: fleet-health-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: freeze-banner
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: administrative-boundary-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-spatial-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: coordinate-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-facility-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: geofence-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: location-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: location-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: location-hierarchy-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: map-layer-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operational-zone-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: regional-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: spatial-asset-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: spatial-dataset-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: spatial-relationship-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: territory-governance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: global-signatures
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: global-trends
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: active-policies
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-risk-register
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: governance-assessment-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: governance-controls-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: governance-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: governance-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: policy-exceptions
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: governance-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: access-certification-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: access-request-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: access-review-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: api-credential-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: approval-workflows
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: authentication-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: authorization-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-identity-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: credential-rotation-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: credential-vault-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-directory
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-identity-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: federation-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: identity-directory-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: identity-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: identity-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: identity-lifecycle-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: identity-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: identity-policy-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: identity-provider-status
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: identity-risk-register
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: identity-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: permission-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: privileged-access-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: privileged-access-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: role-management
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: runtime-identity-monitor
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: separation-of-duty-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-account-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-account-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: containment-horizon-card
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: continuity-antibody-feed
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: governance-integrity-chart
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: immunity-index-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: immunity-simulation-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: pathogen-detection-grid
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: quarantine-coordination-table
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: survivability-protection-map
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: incident-actions
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: incident-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: active-incidents
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: historical-library
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: impact-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: incident-health-metrics
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: incident-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: incident-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: root-cause-evidence
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: archive-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-information-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: controlled-documents-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: document-approval-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: document-library-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-information-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-information-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: information-classification-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: information-compliance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: information-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: information-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: legal-hold-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: records-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: records-retention-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: version-control-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: AuditTimeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: BootstrapSessions
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ComplianceStatus
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: DependencyValidationCenter
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: EnvironmentRegistry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ExecutiveSummary
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: InfrastructureRegistry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: InitializationStatus
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: InstallationEvidence
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: InstallationOverview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: InstallationPolicies
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ManifestCenter
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ProvisioningCenter
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: RuntimeIntegration
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: RuntimeLedger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: authentication-status
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: connectivity-health-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: connectivity-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: connector-health-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: connector-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: connector-registry-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: connector-status-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-integration-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-integration-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: contract-validation-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: endpoint-registry-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-integration-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-integration-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: event-bus-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: event-bus-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: event-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: event-telemetry-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: evidence-operations-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-connectivity-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: external-systems-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-contract-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-ledger-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-mapping-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-registry-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-topology-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: message-queue-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: message-queue-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: protocol-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: synchronization-statistics
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: synchronization-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: transformation-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: validation-failures
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: webhook-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: integration-health
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-impact-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-objectives
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: decision-history
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: department-scorecards
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-health
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-metrics
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: evidence-correlation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-briefings
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-intelligence-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-kpi-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: intelligence-correlation-table
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: intelligence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: intelligence-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: intelligence-simulation-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: intelligence-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operational-insights
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operational-signals-grid
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: organizational-health-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: organizational-trend-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: strategic-initiatives
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: strategic-risk-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: subsystem-score-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: benefit-realization-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-case-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: capital-allocation-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-investment-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-portfolio-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-capital-planning-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-review-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: funding-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: investment-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: investment-portfolio-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: investment-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: portfolio-governance-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: portfolio-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: portfolio-roadmap-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: strategic-initiative-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: architecture-decisions
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-knowledge-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: decision-memory
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: doctrine-evolution-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: doctrine-library
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: documentation-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: engineering-handbook-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-policy-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-knowledge-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: institutional-memory-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: institutional-memory-graph
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: intellectual-capital-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-approval-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-coverage
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-evidence-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-gaps
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-graph
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-index-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-library
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-relationships
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-repository-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-retention-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-reviews
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-simulation-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-version-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operational-knowledge-table
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operations-playbook-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: playbook-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: runbook-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: s-o-p-management-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: standards-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: technical-guidelines-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: wisdom-feed
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: board-resolution-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: clause-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-legal-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: contract-obligation-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: contract-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: corporate-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-legal-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-legal-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: intellectual-property-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: legal-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: legal-entity-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: legal-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: legal-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: litigation-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: policy-acknowledgement-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: commercial-entitlement-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: compliance-monitoring-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-license-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-licensing-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: entitlement-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: feature-access-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: license-activation-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: license-audit-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: license-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: license-quota-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-edition-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: renewal-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: seat-allocation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: subscription-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: usage-meter-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: live-operations-feed
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: carrier-performance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customs-compliance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: delivery-evidence-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: distribution-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-logistics-command-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-logistics-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: fleet-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: fleet-telemetry-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: fleet-utilization-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: logistics-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: route-governance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: shipment-tracking-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: transportation-audit-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: transportation-network-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: transportation-risk-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-maintenance-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: corrective-maintenance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-maintenance-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: equipment-availability-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: equipment-inspection-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-asset-performance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: maintenance-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: maintenance-governance-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: maintenance-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: maintenance-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: preventive-maintenance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: reliability-engineering-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: reliability-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: spare-parts-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: work-order-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: b-o-m-management-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-manufacturing-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-manufacturing-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-manufacturing-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: machine-utilization-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: manufacturing-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: manufacturing-order-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: manufacturing-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: material-consumption-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: plant-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: production-line-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: production-schedule-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: production-traceability-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: routing-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: work-center-monitor
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-glossary-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: canonical-record-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-metadata-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-ownership-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-stewardship-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-master-data-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-master-data-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: golden-record-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: master-domain-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: metadata-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: metadata-catalog-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: metadata-compliance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: metadata-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: metadata-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: reference-data-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: mesh-status-grid
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: migration-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: network-map
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: alert-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: alert-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-telemetry-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: correlation-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: diagnostic-snapshot-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: diagnostics-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: distributed-trace-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: distributed-trace-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-telemetry-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: exception-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-observability-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: global-health-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: health-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: heartbeat-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: instrumentation-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: live-metrics-grid
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: log-explorer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: logs-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: metrics-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: metrics-registry-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: monitoring-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: observability-assessments
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: observability-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: observability-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: organizational-health-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: performance-measurement-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: runtime-health-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-dependency-map
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-health-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: structured-logging-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: telemetry-correlation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: telemetry-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: telemetry-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: telemetry-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: telemetry-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: traces-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operational-insights
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operational-memory-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operations-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constraint-boundary-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: objective-function-table
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: optimization-candidate-table
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: optimization-improvement-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: optimization-index-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: optimization-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: optimization-simulation-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: pareto-frontier-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: approval-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dependency-resolver
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-checkpoints
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-locks
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-queue
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-reservations
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-orchestration-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: orchestration-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: pipeline-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-orchestrator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-performance-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: corporate-performance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: corporate-planning-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-performance-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-corporate-planning-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-review-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-scorecard-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: performance-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: performance-target-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: performance-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-assumptions-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-calendar-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-governance-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: strategic-objectives-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: pir-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: capacity-allocations
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: capacity-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: capacity-utilization
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constraint-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: demand-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dependency-graph-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-capacity
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-roadmap-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-planning-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: goal-definition-table
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: milestone-sequence-table
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-assessments
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-index-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-performance-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-scenarios
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-simulation-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: planning-validation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: resource-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-platform-metrics
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: platform-resources
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: platform-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: provisioning-queue
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: resource-lifecycle
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: resource-policies
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: self-service-portal
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-catalog
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: configuration-governance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: deployment-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: deployment-dependency-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: deployment-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: environment-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: maintenance-window-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operational-health-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: platform-lifecycle-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: platform-manifest-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: platform-operations-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: platform-readiness-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: release-calendar-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: release-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: rollback-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: upgrade-operations-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: benefit-realization
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dependency-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-portfolios
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-portfolio-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-roadmap
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: investment-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: portfolio-assessments
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: portfolio-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: portfolio-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: portfolio-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: portfolio-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: portfolio-validation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: program-management
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: strategic-initiatives
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: value-stream-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: post-mortem-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: prevention-card
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: consent-management-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-privacy-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: cross-border-transfer-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-controller-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-processor-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: data-subject-rights-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-privacy-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-privacy-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: privacy-assessment-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: privacy-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: privacy-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: privacy-incident-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: privacy-policy-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: privacy-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: processing-activity-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-rule-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: control-point-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: decision-gate-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-process-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-process-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: procedure-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: process-assessments
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: process-compliance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: process-governance-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: process-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: process-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: process-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: process-validation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: bid-evaluation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-procurement-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-procurement-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-procurement-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: goods-receipt-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: procurement-approval-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: procurement-compliance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: procurement-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: procurement-policy-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: procurement-request-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: procurement-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: purchase-order-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: purchase-requisition-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: strategic-sourcing-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: vendor-selection-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: certification-authority-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: certification-status-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: compliance-deviation-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: compliance-evidence-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: conformity-assessment-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-compliance-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-product-compliance-command-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-product-compliance-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: hazard-register-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: post-market-surveillance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-labeling-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-recall-operations
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-safety-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: regulatory-framework-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: regulatory-inspection-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-product-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: engineering-change-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: engineering-review-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-product-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-product-lifecycle-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: innovation-pipeline-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-configuration-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-family-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-lifecycle-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-portfolio-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-release-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: requirements-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: active-projects
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: critical-path-monitor
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: deliverable-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dependency-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-project-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-project-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: milestone-tracker
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: project-approval-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: project-lifecycle-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: project-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: resource-allocation-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: schedule-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: task-execution-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: work-package-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: c-a-p-a-management-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-quality-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: continuous-improvement-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-quality-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-quality-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: inspection-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: inspection-plan-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: nonconformance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: process-quality-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: product-quality-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: quality-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: quality-policy-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: root-cause-analysis-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: supplier-quality-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: testing-and-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: archive-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: backup-audit-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: disaster-recovery-execution-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-backup-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-recovery-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: failback-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: failover-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-validation-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: replication-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: repository-health-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: restore-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: retention-management-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: snapshot-management-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-actions
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-analytics
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-history
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: regional-health-grid
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: regional-pressure-grid
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: approval-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: deployment-assessments
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: deployment-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: deployment-validation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: deployment-window-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-release-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: environment-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-release-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: progressive-rollout-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: release-governance-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: release-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: release-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: release-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: rollback-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: verification-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: release-risk-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: active-releases
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: approval-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-validation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: readiness-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: release-evidence
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: release-history
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: release-packages
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: release-readiness
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: release-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: release-windows
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: risk-profile
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: rollback-readiness
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: strategy-viewer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: capacity-planning
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: error-budget-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-reliability-metrics
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: reliability-forecast
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: reliability-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: reliability-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: reliability-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-level-indicators
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-level-objectives
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: reliability-budget-card
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: reliability-dna-card
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: reliability-trends
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: replay-controller
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-reporting-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-report-catalog
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: report-approval-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: report-archive-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: report-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: report-certification-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: report-compliance-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: report-distribution-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: report-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: report-execution-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: report-execution-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: report-parameter-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: report-publication-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: report-retention-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: scheduled-reports-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-research-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-research-command-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-research-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: experiment-governance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: innovation-pipeline-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: laboratory-asset-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: laboratory-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: patent-portfolio-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: prototype-lifecycle-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: publication-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: research-compliance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: research-evidence-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: research-funding-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: research-portfolio-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: technology-transfer-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: AuditEvents
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-continuity-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-impact-analysis
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ComplianceStatus
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: continuity-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ContinuityPlans
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: CrisisScenarios
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: CriticalServices
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: DependencyMap
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: EvidenceTimeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-resilience-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ExecutiveSummary
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ExerciseCenter
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: failback-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: failover-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: LedgerView
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: MetricsDashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: OperationalReadiness
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-checkpoints
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-execution-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-plan-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-readiness
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: RecoveryObjectives
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: resilience-exercises
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: resilience-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: resilience-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ResilienceOverview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: RuntimeIntegration
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: resilience-optimizer-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: AllocationCenter
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: AuditEvents
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: BudgetOverview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: CapacityDashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ChargebackSummary
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ComplianceCenter
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: CostCenters
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ExecutiveSummary
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: LedgerTimeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: QuotaGovernance
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ReservationStatus
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ResourceOverview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: RuntimeIntegration
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ShowbackSummary
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: UtilizationMetrics
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: accounts-receivable-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: billing-adjustment-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: billing-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: collections-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-revenue-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-revenue-command-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-revenue-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: financial-settlement-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: invoice-processing-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: payment-allocation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: refund-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: revenue-audit-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: revenue-compliance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: revenue-recognition-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: settlement-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-continuity-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-risk-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: crisis-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: disaster-recovery-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-resilience-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-risk-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-risk-register
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-risk-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: key-risk-indicator-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recovery-readiness-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: risk-assessment-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: risk-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: risk-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: risk-treatment-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: risk-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: rollback-propagation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: runbook-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: cluster-topology-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dependency-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: distributed-execution-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-context-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: execution-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: heartbeat-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: kernel-state-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: platform-capability-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: platform-service-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: runtime-compatibility-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: runtime-configuration-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: runtime-diagnostics-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: runtime-health-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: runtime-kernel-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: runtime-lifecycle-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: calendar-integration-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: conflict-management-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-calendar-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-timeline-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-scheduling-command-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: maintenance-schedule-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: recurring-schedule-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: resource-availability-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: resource-reservation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: schedule-approval-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: schedule-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: scheduling-audit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: scheduling-constraint-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: scheduling-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: time-zone-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-search-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: crawl-execution-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-search-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: index-scheduling-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: metadata-index-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: retrieval-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: search-analytics-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: search-audit-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: search-catalog-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: search-configuration-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: search-evidence-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: search-execution-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: search-index-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: search-permission-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: search-policy-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: active-findings-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-security-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: endpoint-security-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-security-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-security-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: identity-governance
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: identity-protection-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: organizational-security-health
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: patch-compliance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: policy-library
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: security-audit-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: security-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: security-control-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: security-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: security-incident-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: security-policy-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: security-posture-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: security-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: security-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: threat-intelligence-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: vulnerability-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: zero-trust-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-service-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-case-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-entitlement-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-success-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-service-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: escalation-management-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-customer-service-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: renewal-operations-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-catalog-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-governance-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-request-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: support-queue-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: availability-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: customer-impact-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-service-catalog
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-service-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operational-objectives
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-assessments
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-dependency-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-governance-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-health-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-validation
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: sla-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: slo-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: active-service-requests
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: approval-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-service-catalog
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-service-metrics
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: fulfillment-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: knowledge-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operational-queue-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: sla-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: stress-propagation-map
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: carrier-performance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-supply-chain-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: delivery-monitoring-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: demand-planning-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-supply-chain-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-supply-chain-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: inventory-audit-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: inventory-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: replenishment-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: shipment-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: stock-reservation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: stock-transfer-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: supply-chain-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: supply-chain-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: warehouse-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-tax-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-fiscal-command-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-tax-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: filing-calendar-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: fiscal-calendar-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: fiscal-controls-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: regulatory-submission-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: statutory-reporting-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: tax-audit-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: tax-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: tax-evidence-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: tax-jurisdiction-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: tax-liability-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: tax-return-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: transfer-pricing-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: application-portfolio
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: blast-radius-analyzer
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-capability-map
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: cloud-resource-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dependency-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: dependency-validator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-asset-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-topology-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: network-topology
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: operational-lineage
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-topology
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: topology-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: topology-history
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: topology-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: topology-simulator
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: topology-map
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: trace-inspector
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: bank-account-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: bank-guarantee-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: cash-position-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: debt-portfolio-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-treasury-command-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: fx-exposure-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: investment-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: letter-of-credit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: liquidity-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: payment-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: treasury-audit-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: treasury-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: treasury-executive-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: treasury-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: treasury-risk-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: compliance-and-certification-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-vendor-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: contract-governance-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: contract-renewal-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-vendor-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-vendor-governance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: procurement-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: service-performance-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: supplier-directory
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: third-party-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: vendor-assessment-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: vendor-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: vendor-relationship-map
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: vendor-risk-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: vendor-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: AuditTimeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: CompatibilityMatrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ComplianceStatus
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ExecutionLedger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: ExecutiveSummary
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: MigrationCenter
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: MigrationEvidence
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: RollbackCenter
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: RuntimeIntegration
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: TransitionStatus
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: UpgradeCenter
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: UpgradeEvidence
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: VersionOverview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: VersionPolicies
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: VersionTimeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: war-room-panel
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: active-executions
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: active-workflow-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-case-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-workflow-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-workflow-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-workflow-command-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-workflow-metrics
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: human-task-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: manual-approval-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: rollback-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: simulation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: task-queue-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-catalog
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-checkpoint-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-compliance-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-escalation-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-evidence
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-governance-board
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-health-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-registry-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-timeline
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workflow-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: business-unit-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: capacity-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: certification-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: constitutional-workforce-ledger
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: department-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: enterprise-workforce-overview
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: executive-workforce-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: organization-structure
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: position-registry
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: skills-matrix
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: succession-planning-dashboard
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: team-operations-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workforce-allocation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workforce-directory
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workforce-validation-center
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+
+- Widget: workspace-percentile
+  Buttons: ['Save', 'Export Evidence', 'Cancel']
+  Result: Clicked (Worked)
+

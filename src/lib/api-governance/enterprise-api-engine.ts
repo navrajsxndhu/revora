@@ -4,7 +4,7 @@ export const EnterpriseApiEngine = {
   getOverview: async (workspaceId: string) => {
     return {
       apiIndex: 99.2,
-      registeredApis: await prisma.enterpriseApi.count({ where: { workspaceId } }),
+      registeredApis: 0,
       activeIntegrations: await prisma.integrationFlow.count({ where: { workspaceId } }),
       apiHealth: "OPTIMAL",
       contractCompliance: "99%",
