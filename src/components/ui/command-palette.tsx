@@ -5,7 +5,7 @@ import { Command } from 'cmdk';
 import { useRouter } from 'next/navigation';
 import { 
   Search, Shield, Users, Server, Activity, 
-  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe, Presentation, Workflow, Hexagon, Undo, PlayCircle, History, RefreshCw, BrainCircuit, Bot, KeyRound, FileKey2, Fingerprint, Lock
+  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe, Presentation, Workflow, Hexagon, Undo, PlayCircle, History, RefreshCw, BrainCircuit, Bot, KeyRound, FileKey2, Fingerprint, Lock, CloudCog, Thermometer
 } from 'lucide-react';
 
 export function CommandPalette() {
@@ -90,6 +90,34 @@ export function CommandPalette() {
               <Command.Item onSelect={() => navigate('/cryptography/audit')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <Activity className="w-4 h-4 text-slate-400" />
                 Cryptographic Audit Ledger
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/edge')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Network className="w-4 h-4 text-emerald-400" />
+                Edge Operations Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/edge/devices')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Cpu className="w-4 h-4 text-blue-400" />
+                Device & Gateway Registry
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/edge/operations')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Factory className="w-4 h-4 text-emerald-400" />
+                Industrial Operations
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/edge/deployments')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <CloudCog className="w-4 h-4 text-indigo-400" />
+                Edge Fleet Deployments
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/edge/telemetry')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Thermometer className="w-4 h-4 text-amber-400" />
+                Telemetry Intelligence
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/edge/security')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <ShieldCheck className="w-4 h-4 text-amber-400" />
+                Device Security Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/edge/synchronization')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Network className="w-4 h-4 text-slate-400" />
+                Edge Synchronization
               </Command.Item>
               <Command.Item onSelect={() => navigate('/agents')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <Bot className="w-4 h-4 text-blue-400" />
