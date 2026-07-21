@@ -5,7 +5,7 @@ import { Command } from 'cmdk';
 import { useRouter } from 'next/navigation';
 import { 
   Search, Shield, Users, Server, Activity, 
-  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe, Presentation, Workflow
+  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe, Presentation, Workflow, Hexagon, Undo, PlayCircle, History, RefreshCw
 } from 'lucide-react';
 
 export function CommandPalette() {
@@ -62,6 +62,34 @@ export function CommandPalette() {
               <Command.Item onSelect={() => navigate('/mission-control')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <Shield className="w-4 h-4 text-blue-400" />
                 Global Mission Control
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/digital-twin')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Hexagon className="w-4 h-4 text-indigo-400" />
+                Enterprise Digital Twin
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/digital-twin/models')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Database className="w-4 h-4 text-blue-400" />
+                Enterprise Digital Models
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/digital-twin/scenarios')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Activity className="w-4 h-4 text-indigo-400" />
+                Strategic Scenario Simulator
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/digital-twin/dependencies')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Network className="w-4 h-4 text-purple-400" />
+                Enterprise Dependency Engine
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/digital-twin/history')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <History className="w-4 h-4 text-amber-400" />
+                Time Travel & Historical Replay
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/digital-twin/capacity')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <TrendingUp className="w-4 h-4 text-emerald-400" />
+                Predictive Capacity Planning
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/digital-twin/sync')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <RefreshCw className="w-4 h-4 text-purple-500" />
+                Twin Synchronization Center
               </Command.Item>
               <Command.Item onSelect={() => navigate('/executive/situation-room')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <Globe className="w-4 h-4 text-emerald-500" />
