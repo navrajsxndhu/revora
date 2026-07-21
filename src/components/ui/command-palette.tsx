@@ -5,7 +5,7 @@ import { Command } from 'cmdk';
 import { useRouter } from 'next/navigation';
 import { 
   Search, Shield, Users, Server, Activity, 
-  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe
+  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe, Presentation, Workflow
 } from 'lucide-react';
 
 export function CommandPalette() {
@@ -62,6 +62,26 @@ export function CommandPalette() {
               <Command.Item onSelect={() => navigate('/mission-control')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <Shield className="w-4 h-4 text-blue-400" />
                 Global Mission Control
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/executive/situation-room')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Globe className="w-4 h-4 text-emerald-500" />
+                Executive Situation Room
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/executive/decisions')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Briefcase className="w-4 h-4 text-blue-500" />
+                Enterprise Decision Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/executive/simulator')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Workflow className="w-4 h-4 text-purple-400" />
+                Cross-Platform Impact Simulator
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/executive/priorities')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Target className="w-4 h-4 text-rose-500" />
+                Enterprise Priority Engine
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/executive/board')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Presentation className="w-4 h-4 text-amber-500" />
+                Board Meeting Workspace
               </Command.Item>
               <Command.Item onSelect={() => navigate('/executive/esg')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <Leaf className="w-4 h-4 text-emerald-500" />
