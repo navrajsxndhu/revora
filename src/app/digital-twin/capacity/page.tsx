@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, TrendingUp, Cpu, Server, Factory, Users, Download, ArrowUpRight, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, TrendingUp, Search, Download, AlertTriangle, ArrowUpRight, Zap, Database, Server, Factory, Users, Cpu, ShieldCheck, CheckCircle2 } from "lucide-react";
 import { PremiumTable } from "@/components/ui/premium-table";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 

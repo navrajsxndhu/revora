@@ -5,7 +5,7 @@ import { Command } from 'cmdk';
 import { useRouter } from 'next/navigation';
 import { 
   Search, Shield, Users, Server, Activity, 
-  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe, Presentation, Workflow, Hexagon, Undo, PlayCircle, History, RefreshCw, BrainCircuit, Bot
+  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe, Presentation, Workflow, Hexagon, Undo, PlayCircle, History, RefreshCw, BrainCircuit, Bot, KeyRound, FileKey2, Fingerprint, Lock
 } from 'lucide-react';
 
 export function CommandPalette() {
@@ -62,6 +62,34 @@ export function CommandPalette() {
               <Command.Item onSelect={() => navigate('/mission-control')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <Shield className="w-4 h-4 text-blue-400" />
                 Global Mission Control
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/cryptography')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Lock className="w-4 h-4 text-emerald-400" />
+                Cryptography Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/cryptography/certificates')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <FileKey2 className="w-4 h-4 text-blue-400" />
+                Certificate Registry
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/cryptography/secrets')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <KeyRound className="w-4 h-4 text-amber-400" />
+                Secrets & Key Management
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/cryptography/post-quantum')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Fingerprint className="w-4 h-4 text-indigo-400" />
+                Post-Quantum Readiness
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/cryptography/policies')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <ShieldAlert className="w-4 h-4 text-purple-400" />
+                Cryptographic Policies
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/cryptography/encryption')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Lock className="w-4 h-4 text-emerald-400" />
+                Encryption Coverage
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/cryptography/audit')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Activity className="w-4 h-4 text-slate-400" />
+                Cryptographic Audit Ledger
               </Command.Item>
               <Command.Item onSelect={() => navigate('/agents')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <Bot className="w-4 h-4 text-blue-400" />
