@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, Store, Search, Download, CheckCircle2, AlertCircle, Box, Edit3, Image as ImageIcon, Archive } from "lucide-react";
+import { ArrowLeft, Store, Search, Download, CheckCircle2, AlertCircle, Box, Edit3, Image, Archive, ImageIcon } from "lucide-react";
 import { PremiumTable } from "@/components/ui/premium-table";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 

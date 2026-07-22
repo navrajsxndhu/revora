@@ -1,6 +1,8 @@
 
 import React from "react";
-import { ArrowLeft, LineChart, Search, ShieldCheck, Activity, Target, Download, Settings, History, Palette, Box, LayoutTemplate, MousePointerClick, Accessibility, Move, MonitorSmartphone, FileSignature, CheckCircle2, AlertTriangle, XCircle, FileCode } from "lucide-react";
+import { ArrowLeft, LineChart, Search, ShieldCheck, Activity, Target, Download, Settings, History, Palette, Box, LayoutTemplate, MousePointerClick, Accessibility, Move, MonitorSmartphone, FileSignature, CheckCircle2, AlertTriangle, XCircle, FileCode, TrendingUp } from "lucide-react";
+
+
 
 import Link from "next/link";
 

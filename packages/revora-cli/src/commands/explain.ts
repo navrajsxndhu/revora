@@ -7,7 +7,8 @@ import { evaluateLocalRisk } from '../lib/risk-evaluator';
 export const explainCommand = new Command('explain')
   .argument('[service]', 'Optional service name to fetch remote drift explanations')
   .description('Explain why a deployment is risky')
-  .action(async (service?: string) => {
+  .action(async (...args: any[]) => {
+    const service: string | undefined = args[0];
     log.heading('Risk Explanation');
     
     // 1. Evaluate locally to get rule reasons
@@ -25,7 +26,7 @@ export const explainCommand = new Command('explain')
       try {
         const res = await fetch(`${config.backendUrl}/api/cli/risk?service=${service}`);
         if (res.ok) {
-          const data: unknown = await res.json();
+          const data: any = await res.json();
           if (data.driftWarnings && data.driftWarnings.length > 0) {
             console.log('\nHistorical Operational Drift:');
             for (const warning of data.driftWarnings) {

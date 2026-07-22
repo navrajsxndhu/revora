@@ -1,102 +1,56 @@
 import React from "react";
 import Link from "next/link";
-import { Folder, CheckCircle, Clock, Plus, Zap, AlertCircle } from "lucide-react";
-import { EvidenceBadge } from "@/components/ui/evidence-badge";
+import { ArrowRight, LayoutDashboard, Clock, ActivitySquare, CheckSquare, AlertOctagon, HeartPulse, Bot, Navigation, BarChart3, ShieldCheck, History } from "lucide-react";
 
-export default function WorkspaceHome() {
+export default function WorkspaceCommandCenter() {
+  const modules = [
+    { name: "Unified Timeline", path: "/workspace/timeline", icon: Clock, color: "text-indigo-400", bg: "bg-indigo-500/10", border: "border-indigo-500/20" },
+    { name: "Enterprise Activity", path: "/workspace/activity", icon: ActivitySquare, color: "text-cyan-400", bg: "bg-cyan-500/10", border: "border-cyan-500/20" },
+    { name: "Unified Approvals", path: "/workspace/approvals", icon: CheckSquare, color: "text-emerald-400", bg: "bg-emerald-500/10", border: "border-emerald-500/20" },
+    { name: "Situation Room", path: "/workspace/situation", icon: AlertOctagon, color: "text-rose-400", bg: "bg-rose-500/10", border: "border-rose-500/20" },
+    { name: "Organizational Health", path: "/workspace/health", icon: HeartPulse, color: "text-pink-400", bg: "bg-pink-500/10", border: "border-pink-500/20" },
+    { name: "Enterprise Assistant", path: "/workspace/assistant", icon: Bot, color: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20" },
+    { name: "Navigation Intel", path: "/workspace/navigation", icon: Navigation, color: "text-blue-400", bg: "bg-blue-500/10", border: "border-blue-500/20" },
+    { name: "Workspace Analytics", path: "/workspace/analytics", icon: BarChart3, color: "text-yellow-500", bg: "bg-yellow-500/10", border: "border-yellow-500/20" },
+    { name: "Governance Board", path: "/workspace/governance", icon: ShieldCheck, color: "text-blue-500", bg: "bg-blue-500/10", border: "border-blue-500/20" },
+    { name: "Evidence Ledger", path: "/workspace/evidence", icon: History, color: "text-slate-400", bg: "bg-slate-500/10", border: "border-slate-500/20" },
+  ];
+
   return (
     <div className="min-h-screen bg-black text-white p-8">
-      <div className="max-w-6xl mx-auto space-y-10">
+      <div className="max-w-7xl mx-auto space-y-8 flex flex-col h-[calc(100vh-4rem)]">
         
-        {/* Welcome Section */}
-        <header className="flex flex-col gap-2">
-          <h1 className="text-3xl font-semibold tracking-tight">Good morning, System Administrator</h1>
-          <p className="text-slate-400">Here's what needs your attention today in Global Enterprise HQ.</p>
+        <header className="flex items-end justify-between border-b border-slate-900 pb-6 shrink-0">
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight text-white mb-2 flex items-center gap-3">
+              <LayoutDashboard className="w-8 h-8 text-fuchsia-500" />
+              Unified Enterprise Command Center (RECCOS)
+            </h1>
+            <p className="text-slate-400">The constitutional landing experience for the entire Enterprise Operating System.</p>
+          </div>
+          <div className="flex items-center gap-4">
+             <div className="px-4 py-2 bg-fuchsia-950/30 border border-fuchsia-900/50 rounded-md">
+               <span className="text-xs text-fuchsia-500 font-bold uppercase tracking-wider block mb-1">Executive Rule</span>
+               <div className="text-xl font-black text-fuchsia-400">10-Second Intel</div>
+             </div>
+          </div>
         </header>
 
-        {/* Continue / Jump Back In */}
-        <section>
-          <h2 className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-4">Jump Back In</h2>
-          <div className="grid grid-cols-3 gap-4">
-            <Link href="/workspace/projects/prj-101" className="bg-slate-900/50 border border-slate-800 rounded-xl p-5 hover:bg-slate-800/80 transition-all group flex items-start justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <Folder className="w-4 h-4 text-blue-400" />
-                  <span className="font-medium group-hover:text-blue-400 transition-colors">Q3 Compliance Audit</span>
-                </div>
-                <p className="text-xs text-slate-400">Edited 2 hours ago</p>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 flex-1 overflow-y-auto pb-12 content-start">
+          {modules.map((m, i) => (
+            <Link key={i} href={m.path} className="bg-slate-900/40 border border-slate-800 rounded-xl p-5 hover:bg-slate-800/60 hover:border-slate-700 transition-all group flex flex-col h-full">
+              <div className={`w-10 h-10 rounded-lg ${m.bg} ${m.border} border flex items-center justify-center mb-4 shrink-0`}>
+                <m.icon className={`w-5 h-5 ${m.color}`} />
+              </div>
+              <div className="font-bold text-slate-200 mb-1">{m.name}</div>
+              <div className="text-xs text-slate-500 flex-1">Govern unified enterprise intelligence.</div>
+              <div className="mt-4 flex items-center text-xs font-medium text-slate-400 group-hover:text-fuchsia-400 transition-colors">
+                Open Dashboard <ArrowRight className="w-3 h-3 ml-1" />
               </div>
             </Link>
-            <Link href="/settings/security" className="bg-slate-900/50 border border-slate-800 rounded-xl p-5 hover:bg-slate-800/80 transition-all group flex items-start justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <Zap className="w-4 h-4 text-emerald-400" />
-                  <span className="font-medium group-hover:text-emerald-400 transition-colors">Security Baselines</span>
-                </div>
-                <p className="text-xs text-slate-400">You have 2 pending reviews</p>
-              </div>
-            </Link>
-            <div className="bg-slate-900/20 border border-slate-800 border-dashed rounded-xl p-5 hover:bg-slate-900/40 transition-all group cursor-pointer flex items-center justify-center">
-              <div className="text-sm font-medium text-slate-400 group-hover:text-white flex items-center gap-2 transition-colors">
-                <Plus className="w-4 h-4" /> Start a new project
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="grid grid-cols-3 gap-10">
-          {/* Main Feed: Assigned Tasks & Approvals */}
-          <div className="col-span-2 space-y-10">
-            <section>
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
-                <h2 className="text-lg font-medium">Assigned to You</h2>
-                <span className="text-xs font-medium bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full">3 Tasks</span>
-              </div>
-              <div className="space-y-3">
-                {[
-                  { id: 1, text: "Review identity access control matrix", due: "Today", priority: "High" },
-                  { id: 2, text: "Approve database scaling deployment", due: "Tomorrow", priority: "Medium" },
-                  { id: 3, text: "Update cryptographic rotation policy", due: "Aug 1", priority: "Low" }
-                ].map(task => (
-                  <div key={task.id} className="flex items-center justify-between p-4 bg-slate-900/30 border border-slate-800 rounded-lg hover:border-slate-700 transition-colors">
-                    <div className="flex items-center gap-4">
-                      <div className="w-5 h-5 rounded-full border border-slate-600 flex items-center justify-center hover:bg-blue-500 hover:border-blue-500 cursor-pointer transition-colors text-transparent hover:text-white">
-                        <CheckCircle className="w-3 h-3" />
-                      </div>
-                      <span className="font-medium text-slate-200">{task.text}</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-xs">
-                      <span className={`px-2 py-1 rounded font-medium ${task.priority === 'High' ? 'bg-rose-500/10 text-rose-400' : 'bg-slate-800 text-slate-400'}`}>{task.priority}</span>
-                      <span className="text-slate-500 flex items-center gap-1"><Clock className="w-3 h-3" /> {task.due}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-          </div>
-
-          {/* Right Sidebar: Recent Evidence / Activity */}
-          <div className="space-y-8">
-            <section>
-              <h2 className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-4">Recent Executions</h2>
-              <div className="space-y-4">
-                {[
-                  { id: "exc-8291a", action: "Policy Validated", time: "10 min ago" },
-                  { id: "exc-8291b", action: "Workflow Triggered", time: "1 hr ago" },
-                  { id: "exc-8291c", action: "Access Granted", time: "2 hrs ago" },
-                ].map(ev => (
-                  <div key={ev.id} className="flex flex-col gap-2 p-3 bg-slate-900/50 rounded-lg border border-slate-800">
-                    <div className="text-sm text-slate-300 font-medium">{ev.action}</div>
-                    <div className="flex items-center justify-between">
-                      <EvidenceBadge evidenceId={ev.id} timestamp={ev.time} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-          </div>
+          ))}
         </div>
-        
+
       </div>
     </div>
   );

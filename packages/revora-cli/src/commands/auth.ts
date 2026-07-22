@@ -19,7 +19,8 @@ authCommands
   .command('login')
   .description('Log in to your Revora workspace using an API Key')
   .argument('<api-key>', 'Your Revora API Key')
-  .action((apiKey: any) => {
+  .action((...args: any[]) => {
+    const apiKey = args[0];
     ensureConfigDir();
     const config = { apiKey, updatedAt: new Date().toISOString() };
     fs.writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));
@@ -29,7 +30,8 @@ authCommands
 authCommands
   .command('logout')
   .description('Log out and clear stored API Key')
-  .action(() => {
+  .action((...args: any[]) => {
+    
     if (fs.existsSync(CONFIG_FILE)) {
       fs.unlinkSync(CONFIG_FILE);
       console.log(`\x1b[32m[SUCCESS]\x1b[0m Logged out successfully.`);
@@ -41,7 +43,8 @@ authCommands
 authCommands
   .command('whoami')
   .description('Display the current authentication status')
-  .action(() => {
+  .action((...args: any[]) => {
+    
     if (fs.existsSync(CONFIG_FILE)) {
       const config = JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf-8'));
       // Only show prefix for security

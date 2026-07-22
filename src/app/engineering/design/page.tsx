@@ -2,6 +2,8 @@
 import React from "react";
 import { ArrowRight, ShieldCheck, Palette, Box, LayoutTemplate, MousePointerClick, Accessibility, Move, MonitorSmartphone, LineChart, FileSignature, History } from "lucide-react";
 
+
+
 import Link from "next/link";
 
 

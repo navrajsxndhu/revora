@@ -6,7 +6,8 @@ import { cliLogger as log } from '../lib/output';
 
 export const doctorCommand = new Command('doctor')
   .description('Diagnose Revora CLI environment')
-  .action(async () => {
+  .action(async (...args: any[]) => {
+    
     log.heading('Revora Doctor');
 
     // Check Git

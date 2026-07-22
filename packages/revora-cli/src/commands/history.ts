@@ -6,7 +6,8 @@ import { cliLogger as log } from '../lib/output';
 export const historyCommand = new Command('history')
   .argument('<service>', 'Service name to fetch history for')
   .description('Fetch historical incidents and operational memory for a service')
-  .action(async (service: string) => {
+  .action(async (...args: any[]) => {
+    const service: string = args[0];
     const config = getConfig();
     log.heading(`Operational History: ${service}`);
 
@@ -17,7 +18,7 @@ export const historyCommand = new Command('history')
         return;
       }
 
-      const data: unknown = await res.json();
+      const data: any = await res.json();
       
       if (!data || data.incidentsCount === 0) {
         log.info('No historical incidents found for this service.');

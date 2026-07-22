@@ -11,7 +11,8 @@ export const billingCommands = new Command('billing')
 billingCommands
   .command('usage')
   .description('Check current workspace quota usage')
-  .action(async () => {
+  .action((...args: any[]) => {
+    
     const key = getApiKey();
     if (!key) {
       console.log(`\x1b[31m[ERROR]\x1b[0m Not authenticated. Run 'revora login <api-key>'.`);
@@ -30,7 +31,8 @@ billingCommands
 billingCommands
   .command('plan')
   .description('View current subscription plan details')
-  .action(() => {
+  .action((...args: any[]) => {
+    
     const key = getApiKey();
     if (!key) {
       console.log(`\x1b[31m[ERROR]\x1b[0m Not authenticated.`);

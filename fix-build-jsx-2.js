@@ -15,10 +15,26 @@ const walkSync = function(dir, filelist) {
   return filelist;
 };
 
-// 1. Fix JSX Entities in Experience AND Engineering pages
+// 1. Fix JSX Entities in Experience, Engineering, Intelligence, Adoption, Search, Collaboration, Performance, Trust, Personalization, Continuity, Workspace, Design-Language, Intelligence-Fabric, Digital-Workspace, Orchestration, Data-Fabric, Observability, AND Business-Intelligence pages
 const dirs = [
   path.join(__dirname, 'src', 'app', 'experience'),
-  path.join(__dirname, 'src', 'app', 'engineering')
+  path.join(__dirname, 'src', 'app', 'engineering'),
+  path.join(__dirname, 'src', 'app', 'intelligence'),
+  path.join(__dirname, 'src', 'app', 'adoption'),
+  path.join(__dirname, 'src', 'app', 'search'),
+  path.join(__dirname, 'src', 'app', 'collaboration'),
+  path.join(__dirname, 'src', 'app', 'performance'),
+  path.join(__dirname, 'src', 'app', 'trust'),
+  path.join(__dirname, 'src', 'app', 'personalization'),
+  path.join(__dirname, 'src', 'app', 'continuity'),
+  path.join(__dirname, 'src', 'app', 'workspace'),
+  path.join(__dirname, 'src', 'app', 'design-language'),
+  path.join(__dirname, 'src', 'app', 'intelligence-fabric'),
+  path.join(__dirname, 'src', 'app', 'digital-workspace'),
+  path.join(__dirname, 'src', 'app', 'orchestration'),
+  path.join(__dirname, 'src', 'app', 'data-fabric'),
+  path.join(__dirname, 'src', 'app', 'observability'),
+  path.join(__dirname, 'src', 'app', 'business-intelligence')
 ];
 
 dirs.forEach(dir => {

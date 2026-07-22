@@ -1,6 +1,8 @@
 import React from "react";
 import { ArrowRight, BrainCircuit, Eye, Smile, Move, Languages, Accessibility, Briefcase, Lock, LineChart, History } from "lucide-react";
 
+
+
 import Link from "next/link";
 
 

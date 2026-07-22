@@ -9,7 +9,8 @@ export const ciCommand = new Command('ci')
   .option('-s, --service <name>', 'Service name being deployed')
   .option('-u, --url <url>', 'Revora backend URL (optional)')
   .option('-o, --output <file>', 'Output PR markdown to file (optional)')
-  .action(async (options) => {
+  .action(async (...args: any[]) => {
+    const options = args[0];
     log.heading('Revora CI/CD Quality Gate');
     
     if (!options.service) {
@@ -35,7 +36,7 @@ export const ciCommand = new Command('ci')
         });
 
         if (govRes.ok) {
-          const govData: unknown = await govRes.json();
+          const govData: any = await govRes.json();
           if (govData.status === 'BLOCK') {
              log.error('Deployment BLOCKED by Revora Governance Engine.');
              log.bullet(govData.message);
@@ -57,7 +58,7 @@ export const ciCommand = new Command('ci')
         });
 
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data: unknown = await res.json();
+        const data: any = await res.json();
 
         console.log(`\nGate Decision: ${data.decision}`);
         
@@ -77,7 +78,7 @@ export const ciCommand = new Command('ci')
           log.success('Deployment PASSED Revora gates.');
         }
 
-      } catch (e: unknown) {
+      } catch (e: any) {
         log.error(`Failed to connect to backend: ${e.message}`);
         // Fallback to local
         process.exit(localResult.level === 'CRITICAL' ? 1 : 0);

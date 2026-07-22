@@ -4,7 +4,8 @@ import { cliLogger as log } from '../lib/output';
 
 export const analyzeCommand = new Command('analyze')
   .description('Evaluate deployment risk locally before pushing code')
-  .action(() => {
+  .action((...args: any[]) => {
+    
     log.heading('Revora Local Risk Analysis');
     const result = evaluateLocalRisk();
 

@@ -25,7 +25,8 @@ program.addCommand(authCommands);
 program
   .command('login <api-key>')
   .description('Log in to your Revora workspace')
-  .action((apiKey) => {
+  .action(async (...args: any[]) => {
+    const apiKey = args[0];
     const command = authCommands.commands.find(c => c.name() === 'login');
     if (command) (command as any).emit('command:login', [apiKey]);
   });
