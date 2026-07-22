@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Activity } from "lucide-react";
 
 interface IntelligenceSimulationPanelProps {
-  simulation: unknown;
+  simulation: any;
 }
 
 export function IntelligenceSimulationPanel({ simulation }: IntelligenceSimulationPanelProps) {

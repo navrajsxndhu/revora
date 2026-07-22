@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ListTree } from "lucide-react";
 
 interface SynchronizationTimelineProps {
-  timelineData: unknown[];
+  timelineData: any[];
 }
 
 export function SynchronizationTimeline({ timelineData }: SynchronizationTimelineProps) {

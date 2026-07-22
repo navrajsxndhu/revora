@@ -1,8 +1,8 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { evaluateDeploymentPolicy } from "@/lib/governance/policy-evaluator";
 import { prisma } from "@/lib/prisma";
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   try {
     const { serviceName, workspaceId } = await req.json();
 
@@ -25,6 +25,6 @@ export async function POST() {
 
     return NextResponse.json(evaluation);
   } catch (error: unknown) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ error: (error as Error).message }, { status: 500 });
   }
 }

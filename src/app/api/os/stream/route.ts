@@ -1,6 +1,7 @@
+import { NextRequest } from "next/server";
 import { osEventStream } from "@/lib/os/event-stream";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   const url = new URL(req.url);
   const workspaceId = url.searchParams.get("workspaceId");
 

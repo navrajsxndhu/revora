@@ -1,6 +1,6 @@
 import React from "react";
 
-export function DriftWarning({ driftWarnings }: { driftWarnings: unknown[] }) {
+export function DriftWarning({ driftWarnings }: { driftWarnings: any[] }) {
   if (driftWarnings.length === 0) return null;
 
   return (

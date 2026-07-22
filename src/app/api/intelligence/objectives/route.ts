@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const objectives = await BusinessObjectiveEngine.getObjectives(workspaceId);
     return NextResponse.json({ objectives });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch objectives" }, { status: 500 });
   }
 }

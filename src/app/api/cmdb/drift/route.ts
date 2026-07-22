@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const drift = await detectConfigurationDrift(workspaceId);
     return NextResponse.json(drift);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch drift" }, { status: 500 });
   }
 }

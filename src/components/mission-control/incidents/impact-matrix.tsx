@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Activity } from "lucide-react";
 
 interface ImpactMatrixProps {
-  impact: unknown;
+  impact: any;
 }
 
 export function ImpactMatrix({ impact }: ImpactMatrixProps) {

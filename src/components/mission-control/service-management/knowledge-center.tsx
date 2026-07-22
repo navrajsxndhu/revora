@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { BookOpen } from "lucide-react";
 
 interface KnowledgeCenterProps {
-  knowledge: unknown;
+  knowledge: any;
 }
 
 export function KnowledgeCenter({ knowledge }: KnowledgeCenterProps) {
@@ -20,7 +20,7 @@ export function KnowledgeCenter({ knowledge }: KnowledgeCenterProps) {
       </CardHeader>
       <CardContent>
         <div className="space-y-3 mt-2">
-          {knowledge.map((k: unknown, idx: number) => (
+          {knowledge.map((k: any, idx: number) => (
             <div key={idx} className="flex flex-col gap-1 p-2 bg-slate-950/50 rounded border border-indigo-900/30">
               <div className="flex justify-between items-center">
                 <span className="text-xs font-semibold text-slate-300">{k.title}</span>

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Wrench } from "lucide-react";
 
 interface RecoveryCenterProps {
-  recovery: unknown;
+  recovery: any;
 }
 
 export function RecoveryCenter({ recovery }: RecoveryCenterProps) {

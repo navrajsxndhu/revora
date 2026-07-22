@@ -1,5 +1,5 @@
 
-export async function appendToGovernanceLedger(workspaceId: string, eventData: unknown) {
+export async function appendToGovernanceLedger(workspaceId: string, eventData: any) {
   // Append-only governance history, never mutable
   return {
     status: "RECORDED",

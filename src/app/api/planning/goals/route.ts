@@ -12,7 +12,7 @@ export async function GET() {
   try {
     const goals = getAvailablePlanningGoals();
     return NextResponse.json(goals);
-  } catch {
+  } catch (error) {
     console.error("Error fetching planning goals:", error);
     return NextResponse.json({ error: "Failed to fetch planning goals" }, { status: 500 });
   }

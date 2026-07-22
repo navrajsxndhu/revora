@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Layers } from "lucide-react";
 
 interface PlatformResourcesProps {
-  resources: unknown[];
+  resources: any[];
 }
 
 export function PlatformResources({ resources }: PlatformResourcesProps) {

@@ -23,7 +23,7 @@ export async function GET() {
       orderBy: { createdAt: 'desc' }
     });
     return NextResponse.json(approvals);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch approvals" }, { status: 500 });
   }
 }

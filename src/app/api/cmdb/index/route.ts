@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const index = await calculateCMDBIndex(workspaceId);
     return NextResponse.json(index);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch cmdb index" }, { status: 500 });
   }
 }

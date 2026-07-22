@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const capabilities = await prisma.businessCapability.findMany({ where: { workspaceId } });
     return NextResponse.json({ capabilities });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch capabilities" }, { status: 500 });
   }
 }

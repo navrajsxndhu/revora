@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -25,7 +25,7 @@ export async function GET() {
     const releaseId = url.searchParams.get("releaseId") || "";
     const readiness = await evaluateReleaseReadiness(workspaceId, releaseId);
     return NextResponse.json(readiness);
-  } catch {
+  } catch (error) {
     console.error("Error evaluating readiness:", error);
     return NextResponse.json({ error: "Failed to evaluate readiness" }, { status: 500 });
   }

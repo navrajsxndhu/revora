@@ -4,7 +4,7 @@ export async function sendToDeadLetter(
   workspaceId: string, 
   incidentId: string, 
   recoveryActionId: string, 
-  payload: unknown, 
+  payload: any, 
   errorReason: string
 ) {
   // Move failed execution to Dead Letter Queue for manual review/replay

@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const index = await calculateFinOpsIndex(workspaceId);
     return NextResponse.json(index);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch finops index" }, { status: 500 });
   }
 }

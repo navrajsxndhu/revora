@@ -1,5 +1,5 @@
 
-export async function createServiceRequest(workspaceId: string, category: string, payload: unknown) {
+export async function createServiceRequest(workspaceId: string, category: string, payload: any) {
   const validCategories = [
     "Infrastructure", "Platform", "Security", "Access", "Release",
     "Change", "Incident", "Compliance", "FinOps", "Reliability"

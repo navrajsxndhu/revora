@@ -35,7 +35,7 @@ export function BusinessCapabilityMap() {
         </div>
       </div>
       <div className="flex-1 overflow-auto p-4 space-y-3">
-        {data.map((c: unknown) => (
+        {data.map((c: any) => (
           <div key={c.id} className="border border-slate-800 rounded bg-slate-950 p-3 hover:border-slate-700 cursor-pointer transition-colors group">
             <div className="flex justify-between items-start mb-2">
               <div className="flex items-center space-x-2">

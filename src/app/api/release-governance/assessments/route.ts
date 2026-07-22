@@ -13,7 +13,7 @@ export async function GET() {
   try {
     const data = await DeploymentAssessmentEngine.getAssessments(workspaceId);
     return NextResponse.json(data);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch assessments" }, { status: 500 });
   }
 }

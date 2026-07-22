@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Zap } from "lucide-react";
 
 interface ResourceOptimizationCenterProps {
-  optimizations: unknown[];
+  optimizations: any[];
 }
 
 export function ResourceOptimizationCenter({ optimizations }: ResourceOptimizationCenterProps) {

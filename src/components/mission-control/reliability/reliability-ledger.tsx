@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { List } from "lucide-react";
 
 interface ReliabilityLedgerProps {
-  ledger: unknown[];
+  ledger: any[];
 }
 
 export function ReliabilityLedger({ ledger }: ReliabilityLedgerProps) {

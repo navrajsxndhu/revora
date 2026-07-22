@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -27,7 +27,7 @@ export async function POST() {
 
     const rollback = await generateRollbackPlan(executionId);
     return NextResponse.json(rollback);
-  } catch {
+  } catch (error) {
     console.error("Error generating rollback plan:", error);
     return NextResponse.json({ error: "Failed to generate rollback plan" }, { status: 500 });
   }

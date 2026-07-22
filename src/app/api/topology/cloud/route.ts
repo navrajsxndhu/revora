@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const accounts = await CloudResourceEngine.getAccounts(workspaceId);
     return NextResponse.json({ accounts });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch cloud resources" }, { status: 500 });
   }
 }

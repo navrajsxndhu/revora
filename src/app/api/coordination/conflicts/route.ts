@@ -16,7 +16,7 @@ export async function GET() {
     const resources = coordinateResources();
     const conflicts = detectAndResolveConflicts(nodes, edges, resources);
     return NextResponse.json(conflicts);
-  } catch {
+  } catch (error) {
     console.error("Error resolving conflicts:", error);
     return NextResponse.json({ error: "Failed to resolve conflicts" }, { status: 500 });
   }

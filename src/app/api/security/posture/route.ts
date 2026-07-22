@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const posture = await orchestrateSecurity(workspaceId);
     return NextResponse.json(posture);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch posture" }, { status: 500 });
   }
 }

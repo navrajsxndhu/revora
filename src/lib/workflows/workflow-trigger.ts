@@ -1,5 +1,5 @@
 
-export async function processWorkflowTrigger(workspaceId: string, eventType: string, payload: unknown) {
+export async function processWorkflowTrigger(workspaceId: string, eventType: string, payload: any) {
   // Validate if trigger is allowed
   const validTriggers = [
     "RELEASE_APPROVED",

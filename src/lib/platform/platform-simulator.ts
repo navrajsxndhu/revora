@@ -1,5 +1,5 @@
 
-export async function simulateProvisioning(workspaceId: string, payload: unknown) {
+export async function simulateProvisioning(workspaceId: string, payload: any) {
   // Simulate the governance and execution pathway of a provisioning request
   return {
     simulated: true,

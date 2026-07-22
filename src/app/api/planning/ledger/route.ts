@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const ledger = await PlanningLedger.getLedger(workspaceId);
     return NextResponse.json(ledger);
-  } catch {
+  } catch (error) {
     console.error("Error fetching planning ledger:", error);
     return NextResponse.json({ error: "Failed to fetch planning ledger" }, { status: 500 });
   }

@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const projection = await processOperationalConsciousness(workspaceId);
     return NextResponse.json(projection);
-  } catch {
+  } catch (error) {
     console.error("Error generating consciousness projection:", error);
     return NextResponse.json({ error: "Failed to generate consciousness projection" }, { status: 500 });
   }

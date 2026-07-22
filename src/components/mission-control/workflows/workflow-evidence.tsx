@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { FileCheck } from "lucide-react";
 
 interface WorkflowEvidenceProps {
-  evidence: unknown;
+  evidence: any;
 }
 
 export function WorkflowEvidence({ evidence }: WorkflowEvidenceProps) {
@@ -20,7 +20,7 @@ export function WorkflowEvidence({ evidence }: WorkflowEvidenceProps) {
       </CardHeader>
       <CardContent>
         <div className="space-y-3 mt-2">
-          {evidence.map((ev: unknown, idx: number) => (
+          {evidence.map((ev: any, idx: number) => (
             <div key={idx} className="flex flex-col p-2 bg-slate-950/50 rounded border border-slate-800">
               <div className="flex justify-between items-center mb-1">
                 <span className="text-xs font-semibold text-slate-300">{ev.trigger}</span>

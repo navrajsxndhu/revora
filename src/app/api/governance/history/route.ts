@@ -23,7 +23,7 @@ export async function GET() {
       { action: "EXCEPTION_GRANTED", details: "Emergency DB Access", timestamp: new Date() }
     ];
     return NextResponse.json(history);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch governance history" }, { status: 500 });
   }
 }

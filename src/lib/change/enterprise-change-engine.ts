@@ -3,7 +3,7 @@ import { validateOperationalChange } from "./change-validation";
 import { generateImpactAssessment } from "./impact-analysis";
 import { determineRequiredApprovals } from "./approval-engine";
 
-export async function orchestrateOperationalChange(workspaceId: string, changePayload: unknown) {
+export async function orchestrateOperationalChange(workspaceId: string, changePayload: any) {
   // Master orchestrator for Operational Change Management
   
   // 1. Initial Creation

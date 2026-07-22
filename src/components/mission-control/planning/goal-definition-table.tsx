@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Target } from "lucide-react";
 
 interface GoalDefinitionTableProps {
-  goals: unknown[];
+  goals: any[];
 }
 
 export function GoalDefinitionTable({ goals }: GoalDefinitionTableProps) {
@@ -27,7 +27,7 @@ export function GoalDefinitionTable({ goals }: GoalDefinitionTableProps) {
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Target Metrics</span>
-                  {goal.targetMetrics.map((m: unknown, midx: number) => (
+                  {goal.targetMetrics.map((m: any, midx: number) => (
                     <div key={midx} className="flex justify-between items-center text-xs">
                       <span className="text-slate-300 font-mono">{m.metric}</span>
                       <span className={`px-2 py-0.5 rounded border font-mono text-[10px] ${m.comparator === 'LESS_THAN' ? 'bg-amber-950 border-amber-900 text-amber-400' : 'bg-emerald-950 border-emerald-900 text-emerald-400'}`}>

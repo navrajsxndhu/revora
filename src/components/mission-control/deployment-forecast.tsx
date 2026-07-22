@@ -1,7 +1,7 @@
 import React from "react";
 import { RolloutStrategy } from "@/lib/predictive/rollout-simulator";
 
-export function DeploymentForecast({ simulations }: { simulations: unknown[] }) {
+export function DeploymentForecast({ simulations }: { simulations: any[] }) {
   if (simulations.length === 0) return null;
 
   const getStrategyColor = (strategy: RolloutStrategy) => {

@@ -13,7 +13,7 @@ export async function GET() {
   try {
     const data = await RollbackEngine.getRollbacks(workspaceId);
     return NextResponse.json(data);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch rollbacks" }, { status: 500 });
   }
 }

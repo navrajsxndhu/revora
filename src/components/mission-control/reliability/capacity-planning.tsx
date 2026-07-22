@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Server } from "lucide-react";
 
 interface CapacityPlanningProps {
-  capacity: unknown;
+  capacity: any;
 }
 
 export function CapacityPlanning({ capacity }: CapacityPlanningProps) {

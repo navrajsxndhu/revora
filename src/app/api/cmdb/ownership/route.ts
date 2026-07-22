@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const ownership = await processOwnership(workspaceId);
     return NextResponse.json(ownership);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch ownership" }, { status: 500 });
   }
 }

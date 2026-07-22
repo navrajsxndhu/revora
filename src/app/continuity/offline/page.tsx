@@ -1,118 +1,51 @@
 import React from "react";
-import Link from "next/link";
-import { ArrowLeft, Search, ShieldCheck, Activity, Target, Download, Settings, History, BrainCircuit, Layers, Eye, Smile, Move, Languages, Accessibility, Briefcase, Lock, LineChart, CheckCircle2, AlertTriangle, XCircle, ArrowRight, Image, Keyboard, Timer, TrendingUp, TrendingDown, BookOpen, MousePointerClick, Database, Users, FileCode, GraduationCap, Map, ClipboardList, Sparkles, HeartHandshake, Network, Award, BarChart2, FileSignature, Lightbulb, Compass, MessageSquare, FolderHeart, Tags, Fingerprint, Users2, Video, Megaphone, Inbox, Calendar, Globe, Handshake, MessageCircle, Zap, Wind, Cpu, Mouse, Monitor, EyeOff, Laptop, Smartphone, Box, Maximize, Gauge, Unlock, HelpCircle, Terminal, ThumbsUp, LayoutDashboard, Star, Bell, UserCircle2, RefreshCw, Tablet, WifiOff, ServerCrash, MapPin, Cast, Link as LinkIcon } from "lucide-react";
+import { WifiOff, Database, CheckCircle2, Lock, ShieldCheck } from "lucide-react";
+import { PageShell } from "@/components/ui/page-shell";
+import { ExecutiveHeader } from "@/components/ui/executive-header";
+import { MetricGrid } from "@/components/ui/metric-grid";
 import { PremiumTable } from "@/components/ui/premium-table";
+import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
+
+const TABLE_DATA = [{"mod":"Architecture Drafts","pol":"Aggressive (Full Offline)","mut":"14 Drafts","sync":"2 hours ago","state":"Cached","trace":"OOC-EV-401"},{"mod":"Incident Alerts","pol":"Strict (No Cache)","mut":"None allowed","sync":"Live","state":"Live","trace":"OOC-EV-402"},{"mod":"Employee Directory","pol":"Background (7 days)","mut":"2 Contact updates","sync":"14 mins ago","state":"Syncing","trace":"OOC-EV-403"}];
+
+const METRICS = [
+    { label: "Offline Edits", value: "14.2K", icon: Database, iconColor: "text-indigo-500", desc: "Pending synchronization", descColor: "text-indigo-400" },
+    { label: "Conflict Rate", value: "0.04%", icon: CheckCircle2, iconColor: "text-emerald-500", desc: "Auto-resolved merges" },
+    { label: "Data Encryption", value: "AES-256", icon: Lock, iconColor: "text-blue-500", desc: "Local device cache" },
+    { label: "Sync Failures", value: "0", icon: ShieldCheck, iconColor: "text-emerald-500", desc: "Robust retry queue" },
+];
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-black text-white p-8">
-      <div className="max-w-7xl mx-auto space-y-8 flex flex-col h-[calc(100vh-4rem)]">
-        
-        {/* Header */}
-        <header className="flex items-end justify-between border-b border-slate-900 pb-6 shrink-0">
-          <div>
-            <div className="mb-4">
-              <Link href="/continuity" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-white transition-colors">
-                <ArrowLeft className="w-4 h-4" /> Back to RMDCOS Command Center
-              </Link>
-            </div>
-            <h1 className="text-3xl font-bold tracking-tight text-white mb-2 flex items-center gap-3">
-              <WifiOff className="w-8 h-8 text-indigo-500" />
-              Offline Operations Center
-            </h1>
-            <p className="text-slate-400">Governance for disconnected work, ensuring users understand cached versus live enterprise data.</p>
-          </div>
-          <div className="flex items-center gap-4">
-             <div className="relative">
-                <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
-                <input type="text" placeholder="Search Continuity Logs..." className="bg-slate-900 border border-slate-700 rounded-md pl-9 pr-4 py-2 text-sm text-white focus:outline-none focus:border-indigo-500 w-64 transition-colors" />
-             </div>
-             <button className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-md text-sm font-medium transition-colors text-slate-200">
-               <Download className="w-4 h-4" /> Export Ledger
-             </button>
-          </div>
-        </header>
+    <PageShell>
+      <ExecutiveHeader
+        title="Offline Operations Center"
+        description="Governance for disconnected work, ensuring users understand cached versus live enterprise data."
+        icon={WifiOff}
+        iconColor="text-indigo-500"
+        backHref="/continuity"
+        backLabel="RMDCOS Command Center"
+        searchPlaceholder="Search Continuity Logs..."
+        exportLabel="Export Ledger"
+      />
 
-        {/* KPIs */}
-        <div className="grid grid-cols-4 gap-4 shrink-0">
-          
-          <div className="bg-slate-900/60 border border-indigo-900/30 bg-indigo-950/10 shadow-[0_0_15px_rgba(99,102,241,0.05)] rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              Offline Edits
-              <Database className="w-4 h-4 text-indigo-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">14.2K</div>
-            <div className="text-xs text-indigo-400">Pending synchronization</div>
-          </div>
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              Conflict Rate
-              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">0.04%</div>
-            <div className="text-xs text-slate-500">Auto-resolved merges</div>
-          </div>
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              Data Encryption
-              <Lock className="w-4 h-4 text-blue-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">AES-256</div>
-            <div className="text-xs text-slate-500">Local device cache</div>
-          </div>
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              Sync Failures
-              <ShieldCheck className="w-4 h-4 text-emerald-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">0</div>
-            <div className="text-xs text-slate-500">Robust retry queue</div>
-          </div>
-        </div>
+      <MetricGrid metrics={METRICS} />
 
-        {/* Content */}
-        <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
-          
-          
-          <PremiumTable 
-            title="Multi-Device Continuity Metrics" 
-            headers={["Workspace Module", "Cache Policy", "Pending Mutations", "Last Sync", "Sync State", "Execution ID"]}
-          >
-            {[{"mod":"Architecture Drafts","pol":"Aggressive (Full Offline)","mut":"14 Drafts","sync":"2 hours ago","state":"Cached","trace":"OOC-EV-401"},{"mod":"Incident Alerts","pol":"Strict (No Cache)","mut":"None allowed","sync":"Live","state":"Live","trace":"OOC-EV-402"},{"mod":"Employee Directory","pol":"Background (7 days)","mut":"2 Contact updates","sync":"14 mins ago","state":"Syncing","trace":"OOC-EV-403"}].map((row, i) => (
-              <tr key={i} className="hover:bg-slate-800/30 transition-colors group cursor-pointer border-b border-slate-800/50">
-                
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.mod}
-                </td>
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.pol}
-                </td>
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.mut}
-                </td>
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.sync}
-                </td>
-                <td className="py-4 px-5">
-                  <span className={`px-2 py-1 rounded text-xs font-bold border flex items-center gap-1 w-max ${
-                    row.state === 'Critical' || row.state === 'Offline' || row.state === 'Blocked' || row.state === 'Failed' ? 'bg-rose-900/20 text-rose-400 border-rose-900/50' : 
-                    row.state === 'Syncing' || row.state === 'Medium' || row.state === 'Pending validation' || row.state === 'Cached' ? 'bg-amber-900/20 text-amber-400 border-amber-900/50' :
-                    row.state === 'Optimal' || row.state === 'Live' || row.state === 'Approved' || row.state === 'Verified' || row.state === 'Seamless' || row.state === 'Routed' ? 'bg-emerald-900/20 text-emerald-400 border-emerald-900/50' :
-                    'bg-slate-800 text-slate-300 border-slate-700'
-                  }`}>
-                    {row.state}
-                  </span>
-                </td>
-                <td className="py-4 px-5">
-                  <EvidenceBadge evidenceId={row.trace} timestamp="Verified Sync" />
-                </td>
-              </tr>
-            ))}
-          </PremiumTable>
-        </div>
-
+      <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
+        <PremiumTable title="Multi-Device Continuity Metrics" headers={["Workspace Module", "Cache Policy", "Pending Mutations", "Last Sync", "Sync State", "Execution ID"]}>
+          {TABLE_DATA.map((row: any, i: number) => (
+            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+                <td className="py-4 px-5 text-sm text-slate-400">{row.mod}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.pol}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.mut}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.sync}</td>
+                <td className="py-4 px-5"><StatusBadge status={row.state} /></td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Verified Sync" /></td>
+            </tr>
+          ))}
+        </PremiumTable>
       </div>
-    </div>
+    </PageShell>
   );
 }

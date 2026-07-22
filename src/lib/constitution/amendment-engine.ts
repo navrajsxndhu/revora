@@ -1,7 +1,7 @@
 import { prisma } from '@/lib/prisma';
 import { simulateConstitutionalAmendment } from './constitution-simulator';
 
-export async function proposeAmendment(workspaceId: string, title: string, proposedChange: unknown) {
+export async function proposeAmendment(workspaceId: string, title: string, proposedChange: any) {
   const constitution = await prisma.reliabilityConstitution.findUnique({ where: { workspaceId } });
   if (!constitution) throw new Error('Constitution missing');
 

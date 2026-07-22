@@ -28,7 +28,7 @@ export async function GET() {
       "FinOps": ["Treasury", "Constitution"]
     };
     return NextResponse.json(controls);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch controls" }, { status: 500 });
   }
 }

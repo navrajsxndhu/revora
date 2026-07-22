@@ -1,26 +1,187 @@
 @import "tailwindcss";
 
+/* ============================================
+   REVORA ENTERPRISE DESIGN TOKENS
+   Constitutional visual system governing
+   every screen in the Enterprise OS.
+   ============================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background Hierarchy */
+  --revora-bg: #000000;
+  --revora-surface: rgba(15, 23, 42, 0.6);
+  --revora-surface-hover: rgba(30, 41, 59, 0.6);
+  --revora-surface-active: rgba(30, 41, 59, 0.8);
+  --revora-elevated: rgba(15, 23, 42, 0.5);
+
+  /* Border */
+  --revora-border: rgba(30, 41, 59, 1);
+  --revora-border-subtle: rgba(30, 41, 59, 0.5);
+  --revora-border-accent: rgba(99, 102, 241, 0.3);
+
+  /* Text */
+  --revora-text-primary: #ffffff;
+  --revora-text-secondary: #94a3b8;
+  --revora-text-muted: #64748b;
+  --revora-text-subtle: #475569;
+
+  /* Accent */
+  --revora-accent: #818cf8;
+  --revora-accent-bg: rgba(99, 102, 241, 0.1);
+  --revora-accent-glow: rgba(129, 140, 248, 0.05);
+
+  /* Status Semantics */
+  --revora-status-success-bg: rgba(4, 120, 87, 0.2);
+  --revora-status-success-text: #34d399;
+  --revora-status-success-border: rgba(4, 120, 87, 0.5);
+
+  --revora-status-warning-bg: rgba(146, 64, 14, 0.2);
+  --revora-status-warning-text: #fbbf24;
+  --revora-status-warning-border: rgba(146, 64, 14, 0.5);
+
+  --revora-status-critical-bg: rgba(159, 18, 57, 0.2);
+  --revora-status-critical-text: #fb7185;
+  --revora-status-critical-border: rgba(159, 18, 57, 0.5);
+
+  /* Spacing Scale (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Typography */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+
+  /* Transitions */
+  --duration-fast: 100ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+
+  /* Focus */
+  --revora-focus: rgba(129, 140, 248, 0.8);
+  --revora-focus-offset: 2px;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.4);
+
+  /* Radii */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--revora-bg);
+  --color-foreground: var(--revora-text-primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--revora-bg);
+  color: var(--revora-text-primary);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   FOCUS MANAGEMENT
+   ============================================ */
+
+/* Only show focus rings for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--revora-focus);
+  outline-offset: var(--revora-focus-offset);
+  border-radius: var(--radius-sm);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================
+   SKIP LINK (Accessibility)
+   ============================================ */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: 9999;
+  padding: var(--space-3) var(--space-4);
+  background: var(--revora-accent);
+  color: var(--revora-bg);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: top var(--duration-fast) var(--ease-out);
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.5);
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

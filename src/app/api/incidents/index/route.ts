@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const index = await calculateIncidentIndex(workspaceId);
     return NextResponse.json(index);
-  } catch {
+  } catch (error) {
     console.error("Error fetching incident index:", error);
     return NextResponse.json({ error: "Failed to fetch index" }, { status: 500 });
   }

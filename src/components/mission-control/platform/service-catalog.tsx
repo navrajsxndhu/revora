@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { BookOpen } from "lucide-react";
 
 interface ServiceCatalogProps {
-  catalog: unknown[];
+  catalog: any[];
 }
 
 export function ServiceCatalog({ catalog }: ServiceCatalogProps) {

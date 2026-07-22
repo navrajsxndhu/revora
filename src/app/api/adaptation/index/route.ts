@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const adaptation = await processOperationalAdaptation(workspaceId);
     return NextResponse.json(adaptation);
-  } catch {
+  } catch (error) {
     console.error("Error processing operational adaptation:", error);
     return NextResponse.json({ error: "Failed to process adaptation" }, { status: 500 });
   }

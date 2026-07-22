@@ -1,7 +1,7 @@
 import { prisma } from "../prisma";
 import crypto from 'crypto';
 
-export async function publishFederatedEvent(workspaceId: string, originRegion: string, eventType: string, payload: unknown) {
+export async function publishFederatedEvent(workspaceId: string, originRegion: string, eventType: string, payload: any) {
   const payloadStr = JSON.stringify(payload);
   // Mock crypto signature for Phase 94 prototype
   const signature = crypto.createHash('sha256').update(`${workspaceId}:${originRegion}:${eventType}:${payloadStr}`).digest('hex');

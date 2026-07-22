@@ -1,118 +1,51 @@
 import React from "react";
-import Link from "next/link";
-import { ArrowLeft, Search, ShieldCheck, Activity, Target, Download, Settings, History, BrainCircuit, Layers, Eye, Smile, Move, Languages, Accessibility, Briefcase, Lock, LineChart, CheckCircle2, AlertTriangle, XCircle, ArrowRight, Image, Keyboard, Timer, TrendingUp, TrendingDown, BookOpen, MousePointerClick, Database, Users, FileCode, GraduationCap, Map, ClipboardList, Sparkles, HeartHandshake, Network, Award, BarChart2, FileSignature, Lightbulb, Compass, MessageSquare, FolderHeart, Tags, Fingerprint, Users2, Video, Megaphone, Inbox, Calendar, Globe, Handshake, MessageCircle, Zap, Wind, Cpu, Mouse, Monitor, EyeOff, Laptop, Smartphone, Box, Maximize, Gauge, Unlock, HelpCircle, Terminal, ThumbsUp, LayoutDashboard, Star, Bell, UserCircle2, RefreshCw, Tablet, WifiOff, ServerCrash, MapPin, Cast, Clock, ActivitySquare, CheckSquare, AlertOctagon, HeartPulse, Bot, Navigation, BarChart3, Paintbrush, Type, Wand2, Palette, Component, Sparkle, Share2, Waypoints, GitMerge, Radar, Telescope, Binary, Workflow, Microscope, MonitorPlay, Columns, Menu, Save, GitCompare, Layout, SearchCode, UsersRound, Scale, LinkIcon, PenTool, GitPullRequest, UserCheck, Library, Plug, PlayCircle, ListChecks, BookMarked, TableProperties, DatabaseBackup, FileJson, ShieldAlert, ShoppingBag, PieChart, RadioTower, HardDrive, Siren, Flame, Link as LinkIconComponent } from "lucide-react";
+import { Siren, Clock, Timer, Target } from "lucide-react";
+import { PageShell } from "@/components/ui/page-shell";
+import { ExecutiveHeader } from "@/components/ui/executive-header";
+import { MetricGrid } from "@/components/ui/metric-grid";
 import { PremiumTable } from "@/components/ui/premium-table";
+import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
+
+const TABLE_DATA = [{"id":"INC-2026-901","srv":"Checkout Processing API","cmd":"Jane Doe (SRE)","time":"14m","sev":"SEV-2","trace":"IIC-EV-301"},{"id":"INC-2026-900","srv":"Internal Search Index","cmd":"System Auto-Resolved","time":"Resolved","sev":"SEV-3","trace":"IIC-EV-302"},{"id":"INC-2026-899","srv":"EU Database Replica","cmd":"John Smith","time":"Resolved","sev":"SEV-1","trace":"IIC-EV-303"}];
+
+const METRICS = [
+    { label: "Active Incidents", value: "1", icon: Siren, iconColor: "text-rose-500", desc: "SEV-2 (Checkout)", descColor: "text-rose-400" },
+    { label: "MTTA", value: "1.2m", icon: Clock, iconColor: "text-emerald-500", desc: "Mean Time to Acknowledge" },
+    { label: "MTTR", value: "14m", icon: Timer, iconColor: "text-blue-500", desc: "Mean Time to Resolve" },
+    { label: "Blast Radius", value: "Isolated", icon: Target, iconColor: "text-emerald-500", desc: "Current impact" },
+];
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-black text-white p-8">
-      <div className="max-w-7xl mx-auto space-y-8 flex flex-col h-[calc(100vh-4rem)]">
-        
-        {/* Header */}
-        <header className="flex items-end justify-between border-b border-slate-900 pb-6 shrink-0">
-          <div>
-            <div className="mb-4">
-              <Link href="/observability" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-white transition-colors">
-                <ArrowLeft className="w-4 h-4" /> Back to Observability Command Center
-              </Link>
-            </div>
-            <h1 className="text-3xl font-bold tracking-tight text-white mb-2 flex items-center gap-3">
-              <Siren className="w-8 h-8 text-indigo-400" />
-              Incident Intelligence Center
-            </h1>
-            <p className="text-slate-400">The constitutional command center for active incidents, root cause tracing, and executive communication.</p>
-          </div>
-          <div className="flex items-center gap-4">
-             <div className="relative">
-                <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
-                <input type="text" placeholder="Search Operational Signals..." className="bg-slate-900 border border-slate-700 rounded-md pl-9 pr-4 py-2 text-sm text-white focus:outline-none focus:border-indigo-400 w-64 transition-colors" />
-             </div>
-             <button className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-md text-sm font-medium transition-colors text-slate-200">
-               <Download className="w-4 h-4" /> Export Ledger
-             </button>
-          </div>
-        </header>
+    <PageShell>
+      <ExecutiveHeader
+        title="Incident Intelligence Center"
+        description="The constitutional command center for active incidents, root cause tracing, and executive communication."
+        icon={Siren}
+        iconColor="text-indigo-400"
+        backHref="/observability"
+        backLabel="Observability Command Center"
+        searchPlaceholder="Search Operational Signals..."
+        exportLabel="Export Ledger"
+      />
 
-        {/* KPIs */}
-        <div className="grid grid-cols-4 gap-4 shrink-0">
-          
-          <div className="bg-slate-900/60 border border-indigo-900/30 bg-indigo-950/10 shadow-[0_0_15px_rgba(129,140,248,0.05)] rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              Active Incidents
-              <Siren className="w-4 h-4 text-rose-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">1</div>
-            <div className="text-xs text-rose-400">SEV-2 (Checkout)</div>
-          </div>
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              MTTA
-              <Clock className="w-4 h-4 text-emerald-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">1.2m</div>
-            <div className="text-xs text-slate-500">Mean Time to Acknowledge</div>
-          </div>
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              MTTR
-              <Timer className="w-4 h-4 text-blue-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">14m</div>
-            <div className="text-xs text-slate-500">Mean Time to Resolve</div>
-          </div>
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              Blast Radius
-              <Target className="w-4 h-4 text-emerald-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">Isolated</div>
-            <div className="text-xs text-slate-500">Current impact</div>
-          </div>
-        </div>
+      <MetricGrid metrics={METRICS} />
 
-        {/* Content */}
-        <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
-          
-          
-          <PremiumTable 
-            title="Operational Telemetry" 
-            headers={["Incident ID", "Impacted Service", "Commander", "Time Open", "Severity", "Trace"]}
-          >
-            {[{"id":"INC-2026-901","srv":"Checkout Processing API","cmd":"Jane Doe (SRE)","time":"14m","sev":"SEV-2","trace":"IIC-EV-301"},{"id":"INC-2026-900","srv":"Internal Search Index","cmd":"System Auto-Resolved","time":"Resolved","sev":"SEV-3","trace":"IIC-EV-302"},{"id":"INC-2026-899","srv":"EU Database Replica","cmd":"John Smith","time":"Resolved","sev":"SEV-1","trace":"IIC-EV-303"}].map((row, i) => (
-              <tr key={i} className="hover:bg-slate-800/30 transition-colors group cursor-pointer border-b border-slate-800/50">
-                
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.id}
-                </td>
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.srv}
-                </td>
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.cmd}
-                </td>
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.time}
-                </td>
-                <td className="py-4 px-5">
-                  <span className={`px-2 py-1 rounded text-xs font-bold border flex items-center gap-1 w-max ${
-                    row.sev === 'Critical' || row.sev === 'SEV-1' || row.sev === 'Down' || row.sev === 'Failed' || row.sev === 'Exhausted' ? 'bg-rose-900/20 text-rose-400 border-rose-900/50' : 
-                    row.sev === 'Warning' || row.sev === 'SEV-2' || row.sev === 'Degraded' || row.sev === 'At Risk' ? 'bg-amber-900/20 text-amber-400 border-amber-900/50' :
-                    row.sev === 'Optimal' || row.sev === 'SEV-3' || row.sev === 'Healthy' || row.sev === 'Verified' || row.sev === 'Active' || row.sev === 'Stable' ? 'bg-emerald-900/20 text-emerald-400 border-emerald-900/50' :
-                    'bg-slate-800 text-slate-300 border-slate-700'
-                  }`}>
-                    {row.sev}
-                  </span>
-                </td>
-                <td className="py-4 px-5">
-                  <EvidenceBadge evidenceId={row.trace} timestamp="Observed" />
-                </td>
-              </tr>
-            ))}
-          </PremiumTable>
-        </div>
-
+      <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
+        <PremiumTable title="Operational Telemetry" headers={["Incident ID", "Impacted Service", "Commander", "Time Open", "Severity", "Trace"]}>
+          {TABLE_DATA.map((row: any, i: number) => (
+            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+                <td className="py-4 px-5 text-sm text-slate-400">{row.id}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.srv}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.cmd}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.time}</td>
+                <td className="py-4 px-5"><StatusBadge status={row.sev} /></td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Observed" /></td>
+            </tr>
+          ))}
+        </PremiumTable>
       </div>
-    </div>
+    </PageShell>
   );
 }

@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const treasury = await processTreasury(workspaceId);
     return NextResponse.json(treasury);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch treasury metrics" }, { status: 500 });
   }
 }

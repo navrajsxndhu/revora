@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
 
 interface ChangeCalendarProps {
-  calendar: unknown[];
+  calendar: any[];
 }
 
 export function ChangeCalendar({ calendar }: ChangeCalendarProps) {

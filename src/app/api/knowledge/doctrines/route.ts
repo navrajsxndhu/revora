@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const result = await trackDoctrineEvolution(workspaceId);
     return NextResponse.json(result);
-  } catch {
+  } catch (error) {
     console.error("Error tracking doctrines:", error);
     return NextResponse.json({ error: "Failed to track doctrines" }, { status: 500 });
   }

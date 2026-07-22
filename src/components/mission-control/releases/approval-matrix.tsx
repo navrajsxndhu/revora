@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { CheckSquare } from "lucide-react";
 
 interface ApprovalMatrixProps {
-  approvals: unknown[];
+  approvals: any[];
 }
 
 export function ApprovalMatrix({ approvals }: ApprovalMatrixProps) {

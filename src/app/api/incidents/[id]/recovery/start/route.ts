@@ -7,7 +7,7 @@ import { generateRecoveryPlan } from "@/lib/incidents/recovery-plan";
 
 const COOLDOWN_SECONDS = 60;
 
-export async function POST(request, { params }: { params: Promise<{ id: string }> }) {
+export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const session = await getServerSession(authOptions);
   if (!session || !session.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -132,7 +132,7 @@ export async function POST(request, { params }: { params: Promise<{ id: string }
       await prisma.incident.update({
         where: { id: incident.id },
         data: {
-          recoveryStatus: unknownFailures ? "FAILED" : "COMPLETED", // Using string for status, even if schema doesn't restrict
+          recoveryStatus: anyFailures ? "FAILED" : "COMPLETED", // Using string for status, even if schema doesn't restrict
           recoveryCompletedAt: new Date()
         }
       });
@@ -142,7 +142,7 @@ export async function POST(request, { params }: { params: Promise<{ id: string }
           workspaceId: "system",
           executionId: "system",
           eventType: "RECOVERY_COMPLETED",
-          status: unknownFailures ? "ERROR" : "SUCCESS",
+          status: anyFailures ? "ERROR" : "SUCCESS",
           actor: operatorId,
           message: `Recovery ${anyFailures ? 'failed' : 'completed successfully'} for incident ${incident.id}`
         }
@@ -154,7 +154,7 @@ export async function POST(request, { params }: { params: Promise<{ id: string }
     executeRecoveryChain();
 
     return NextResponse.json({ success: true, message: "Recovery chain started." });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to start recovery" }, { status: 500 });
   }
 }

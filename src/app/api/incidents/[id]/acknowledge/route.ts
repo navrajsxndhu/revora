@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { broadcastEvent } from "@/lib/events/emitter";
 
-export async function POST(request, { params }: { params: Promise<{ id: string }> }) {
+export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   try {
     const updated = await prisma.incident.update({
@@ -15,7 +15,7 @@ export async function POST(request, { params }: { params: Promise<{ id: string }
     broadcastEvent("INCIDENT_UPDATED", { incidentId: updated.id, state: "ACKNOWLEDGED" });
 
     return NextResponse.json({ success: true, incident: updated });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to acknowledge incident" }, { status: 500 });
   }
 }

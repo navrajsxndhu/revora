@@ -1,4 +1,4 @@
-export async function simulateConstitutionalAmendment(workspaceId: string, proposedChange: unknown) {
+export async function simulateConstitutionalAmendment(workspaceId: string, proposedChange: any) {
   let riskScore = 0;
   let instabilityForecast = 'SUSTAINABLE';
 

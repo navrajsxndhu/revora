@@ -6,7 +6,7 @@ import { EventEmitter } from 'events';
 import { publishFederatedEvent } from '../network/federation-engine';
 
 class EventStreamer extends EventEmitter {
-  broadcast(workspaceId: string, eventType: string, payload: unknown) {
+  broadcast(workspaceId: string, eventType: string, payload: any) {
     this.emit(`workspace:${workspaceId}`, { type: eventType, payload, timestamp: new Date().toISOString() });
     
     // Hook into Phase 94 federation

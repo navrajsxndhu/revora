@@ -24,7 +24,7 @@ export async function GET() {
       orderBy: { createdAt: 'desc' }
     });
     return NextResponse.json(exceptions);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch policy exceptions" }, { status: 500 });
   }
 }

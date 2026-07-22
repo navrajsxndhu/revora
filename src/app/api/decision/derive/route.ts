@@ -28,7 +28,7 @@ export async function GET() {
     const tradeoffs = analyzeTradeoffs(alternatives);
     
     return NextResponse.json({ context, alternatives, tradeoffs });
-  } catch {
+  } catch (error) {
     console.error("Error deriving alternatives:", error);
     return NextResponse.json({ error: "Failed to derive alternatives" }, { status: 500 });
   }

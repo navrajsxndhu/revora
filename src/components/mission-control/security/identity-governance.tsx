@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Users } from "lucide-react";
 
 interface IdentityGovernanceProps {
-  identity: unknown;
+  identity: any;
 }
 
 export function IdentityGovernance({ identity }: IdentityGovernanceProps) {

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Timer } from "lucide-react";
 
 interface SLADashboardProps {
-  sla: unknown;
+  sla: any;
 }
 
 export function SLADashboard({ sla }: SLADashboardProps) {

@@ -4,7 +4,7 @@ import crypto from 'crypto';
 export async function registerPolicy(
   workspaceId: string,
   policyType: string,
-  policyDefinition: unknown,
+  policyDefinition: any,
   enforcementLevel: 'BLOCKING' | 'AUDIT_ONLY'
 ) {
   const constitution = await prisma.reliabilityConstitution.findUnique({

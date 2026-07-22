@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const topology = await processTopology(workspaceId);
     return NextResponse.json(topology);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch topology" }, { status: 500 });
   }
 }

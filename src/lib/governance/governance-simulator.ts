@@ -1,5 +1,5 @@
 
-export async function simulateGovernanceScenario(workspaceId: string, scenarioData: unknown) {
+export async function simulateGovernanceScenario(workspaceId: string, scenarioData: any) {
   // Simulates policy changes, risk increases, new compliance requirements, infrastructure failures
   return {
     simulationId: `SIM-GOV-${Date.now()}`,

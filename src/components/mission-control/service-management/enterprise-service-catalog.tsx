@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { FolderKanban } from "lucide-react";
 
 interface EnterpriseServiceCatalogProps {
-  catalog: unknown;
+  catalog: any;
 }
 
 export function EnterpriseServiceCatalog({ catalog }: EnterpriseServiceCatalogProps) {
@@ -20,7 +20,7 @@ export function EnterpriseServiceCatalog({ catalog }: EnterpriseServiceCatalogPr
       </CardHeader>
       <CardContent>
         <div className="space-y-3 mt-2">
-          {catalog.map((srv: unknown, idx: number) => (
+          {catalog.map((srv: any, idx: number) => (
             <div key={idx} className="flex justify-between items-center p-3 bg-slate-950/50 rounded border border-indigo-900/30">
               <div className="flex flex-col">
                 <span className="text-xs font-semibold text-slate-300">{srv.name}</span>

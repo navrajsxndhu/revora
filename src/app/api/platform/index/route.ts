@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const index = await calculatePlatformIndex(workspaceId);
     return NextResponse.json(index);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch platform index" }, { status: 500 });
   }
 }

@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const result = await deriveOperationalWisdom(workspaceId);
     return NextResponse.json(result);
-  } catch {
+  } catch (error) {
     console.error("Error deriving wisdom:", error);
     return NextResponse.json({ error: "Failed to derive wisdom" }, { status: 500 });
   }

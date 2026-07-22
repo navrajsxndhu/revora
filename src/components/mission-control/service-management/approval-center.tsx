@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
 
 interface ApprovalCenterProps {
-  approvals: unknown;
+  approvals: any;
 }
 
 export function ApprovalCenter({ approvals }: ApprovalCenterProps) {
@@ -20,7 +20,7 @@ export function ApprovalCenter({ approvals }: ApprovalCenterProps) {
       </CardHeader>
       <CardContent>
         <div className="space-y-3 mt-2">
-          {approvals.map((app: unknown, idx: number) => (
+          {approvals.map((app: any, idx: number) => (
             <div key={idx} className="flex justify-between items-center p-2 border-b border-slate-800/50 last:border-0 pb-2">
               <div className="flex flex-col">
                 <span className="text-xs text-slate-300">{app.request}</span>

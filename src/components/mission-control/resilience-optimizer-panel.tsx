@@ -1,6 +1,6 @@
 import React from "react";
 
-export function ResilienceOptimizerPanel({ recommendation }: { recommendation: unknown }) {
+export function ResilienceOptimizerPanel({ recommendation }: { recommendation: any }) {
   if (!recommendation) return null;
 
   return (

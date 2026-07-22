@@ -12,7 +12,7 @@ export async function POST() {
   try {
     const simulation = simulateCoordinationOutcome();
     return NextResponse.json(simulation);
-  } catch {
+  } catch (error) {
     console.error("Error simulating coordination:", error);
     return NextResponse.json({ error: "Failed to simulate coordination" }, { status: 500 });
   }

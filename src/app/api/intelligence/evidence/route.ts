@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const evidence = await EvidenceEngine.getEvidence(workspaceId);
     return NextResponse.json({ evidence });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch evidence" }, { status: 500 });
   }
 }

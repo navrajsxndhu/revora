@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Activity } from "lucide-react";
 
 interface ReliabilityOverviewProps {
-  overview: unknown;
+  overview: any;
 }
 
 export function ReliabilityOverview({ overview }: ReliabilityOverviewProps) {

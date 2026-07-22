@@ -12,7 +12,7 @@ export async function GET() {
   try {
     const objectives = getAvailableObjectiveFunctions();
     return NextResponse.json(objectives);
-  } catch {
+  } catch (error) {
     console.error("Error fetching objectives:", error);
     return NextResponse.json({ error: "Failed to fetch objectives" }, { status: 500 });
   }

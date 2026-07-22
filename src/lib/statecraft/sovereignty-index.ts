@@ -1,4 +1,4 @@
-export async function calculateSovereigntyIndex(workspaceId: string, fragility: unknown) {
+export async function calculateSovereigntyIndex(workspaceId: string, fragility: any) {
   let sovereigntyScore = 100.0 - (fragility.fragilityScore * 0.8);
   sovereigntyScore = Math.max(0, sovereigntyScore);
 

@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const credentials = await CredentialEngine.getCredentials(workspaceId);
     return NextResponse.json({ credentials });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch credentials" }, { status: 500 });
   }
 }

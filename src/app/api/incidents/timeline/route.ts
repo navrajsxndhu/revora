@@ -3,7 +3,7 @@ import { buildIncidentTimeline } from "@/lib/incidents/incident-timeline";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -16,7 +16,7 @@ export async function GET() {
 
     const timeline = await buildIncidentTimeline(incidentId);
     return NextResponse.json(timeline);
-  } catch {
+  } catch (error) {
     console.error("Error fetching timeline:", error);
     return NextResponse.json({ error: "Failed to fetch timeline" }, { status: 500 });
   }

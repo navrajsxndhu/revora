@@ -22,7 +22,7 @@ export async function GET() {
       where: { workspaceId }
     });
     return NextResponse.json(slos);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch SLOs" }, { status: 500 });
   }
 }

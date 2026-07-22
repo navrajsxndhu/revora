@@ -3,7 +3,7 @@ import { compileExecutionPlan } from "@/lib/execution/execution-plan";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -18,7 +18,7 @@ export async function POST() {
 
     const plan = compileExecutionPlan(decisionId, strategy);
     return NextResponse.json(plan);
-  } catch {
+  } catch (error) {
     console.error("Error compiling execution plan:", error);
     return NextResponse.json({ error: "Failed to compile execution plan" }, { status: 500 });
   }

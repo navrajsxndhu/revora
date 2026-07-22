@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { AlertOctagon } from "lucide-react";
 
 interface ValidationFailuresProps {
-  failures: unknown[];
+  failures: any[];
 }
 
 export function ValidationFailures({ failures }: ValidationFailuresProps) {

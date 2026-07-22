@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ActivitySquare } from "lucide-react";
 
 interface CoordinationHealthDashboardProps {
-  healthStats: unknown;
+  healthStats: any;
 }
 
 export function CoordinationHealthDashboard({ healthStats }: CoordinationHealthDashboardProps) {

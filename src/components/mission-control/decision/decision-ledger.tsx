@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { BookMarked } from "lucide-react";
 
 interface DecisionLedgerProps {
-  ledger: unknown[];
+  ledger: any[];
 }
 
 export function DecisionLedger({ ledger }: DecisionLedgerProps) {

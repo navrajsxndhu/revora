@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ListOrdered } from "lucide-react";
 
 interface MilestoneSequenceTableProps {
-  milestones: unknown[];
+  milestones: any[];
 }
 
 export function MilestoneSequenceTable({ milestones }: MilestoneSequenceTableProps) {

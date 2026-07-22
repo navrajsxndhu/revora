@@ -6,7 +6,7 @@ export const KnowledgeIndex = {
   }
 };
 
-export function calculateKnowledgeIndex(ext: unknown, doc: unknown, wis: unknown, mem: unknown) {
+export function calculateKnowledgeIndex(ext: any, doc: any, wis: any, mem: any) {
   return 100;
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function FutureContinuityGrid({ projections }: { projections: unknown[] }) {
+export function FutureContinuityGrid({ projections }: { projections: any[] }) {
   if (projections.length === 0) return <p className="text-sm text-zinc-500">No projections available.</p>;
 
   return (

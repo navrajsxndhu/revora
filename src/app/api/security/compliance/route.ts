@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const compliance = await processCompliance(workspaceId);
     return NextResponse.json(compliance);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch compliance" }, { status: 500 });
   }
 }

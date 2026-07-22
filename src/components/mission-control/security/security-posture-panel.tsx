@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Shield } from "lucide-react";
 
 interface SecurityPosturePanelProps {
-  posture: unknown;
+  posture: any;
 }
 
 export function SecurityPosturePanel({ posture }: SecurityPosturePanelProps) {

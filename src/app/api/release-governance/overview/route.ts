@@ -13,7 +13,7 @@ export async function GET() {
   try {
     const data = await EnterpriseReleaseEngine.getReleases(workspaceId);
     return NextResponse.json(data);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch overview" }, { status: 500 });
   }
 }

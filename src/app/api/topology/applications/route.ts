@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const applications = await ApplicationEngine.getApplications(workspaceId);
     return NextResponse.json({ applications });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch applications" }, { status: 500 });
   }
 }

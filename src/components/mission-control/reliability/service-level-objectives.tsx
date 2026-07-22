@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Target } from "lucide-react";
 
 interface ServiceLevelObjectivesProps {
-  slos: unknown[];
+  slos: any[];
 }
 
 export function ServiceLevelObjectives({ slos }: ServiceLevelObjectivesProps) {

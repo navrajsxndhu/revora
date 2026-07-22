@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Gauge } from "lucide-react";
 
 interface ReadinessMatrixProps {
-  readiness: unknown;
+  readiness: any;
 }
 
 export function ReadinessMatrix({ readiness }: ReadinessMatrixProps) {

@@ -1,7 +1,8 @@
+import { NextRequest } from "next/server";
 import { NextResponse } from 'next/server';
 import { simulateAllianceStability } from '@/lib/statecraft/alliance-simulator';
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   try {
     const { federationId, shockScenario } = await req.json();
 
@@ -16,6 +17,6 @@ export async function POST() {
       data: simulation
     });
   } catch (error: unknown) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ error: (error as Error).message }, { status: 500 });
   }
 }

@@ -22,7 +22,7 @@ export async function GET() {
       where: { workspaceId }
     });
     return NextResponse.json(policies);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch resource policies" }, { status: 500 });
   }
 }

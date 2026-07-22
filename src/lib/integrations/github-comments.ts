@@ -40,7 +40,7 @@ export async function postOrUpdateGithubComment(workspaceId: string, payload: Gi
     });
     
     if (!listRes.ok) throw new Error(`GitHub API error: ${listRes.status}`);
-    const comments: unknown[] = await listRes.json();
+    const comments: any[] = await listRes.json();
     
     const existingComment = comments.find(c => c.body.includes('## Revora Operational Review'));
 
@@ -81,7 +81,7 @@ export async function postOrUpdateGithubComment(workspaceId: string, payload: Gi
     });
 
     return { success: true };
-  } catch (error: unknown) {
+  } catch (error: any) {
     console.error('[GithubComments] Failed to post comment:', error.message);
     
     if (deliveryId) {

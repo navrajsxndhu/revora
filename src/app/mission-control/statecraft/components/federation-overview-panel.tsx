@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function FederationOverviewPanel({ federation }: { federation: unknown }) {
+export function FederationOverviewPanel({ federation }: { federation: any }) {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 border border-zinc-800 bg-zinc-900/40 rounded-xl">
       <div>

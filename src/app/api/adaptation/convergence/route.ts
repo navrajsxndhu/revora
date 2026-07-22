@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const result = await calculateConvergence(workspaceId);
     return NextResponse.json(result);
-  } catch {
+  } catch (error) {
     console.error("Error calculating convergence:", error);
     return NextResponse.json({ error: "Failed to calculate convergence" }, { status: 500 });
   }

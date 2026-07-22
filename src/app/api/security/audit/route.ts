@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const audit = await processAudit(workspaceId);
     return NextResponse.json(audit);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch audit" }, { status: 500 });
   }
 }

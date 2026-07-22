@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const antibodies = await synthesizeContinuityAntibodies(workspaceId);
     return NextResponse.json(antibodies);
-  } catch {
+  } catch (error) {
     console.error("Error synthesizing antibodies:", error);
     return NextResponse.json({ error: "Failed to synthesize antibodies" }, { status: 500 });
   }

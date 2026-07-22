@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const risks = await IdentityRiskEngine.getRisks(workspaceId);
     return NextResponse.json({ risks });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch risks" }, { status: 500 });
   }
 }

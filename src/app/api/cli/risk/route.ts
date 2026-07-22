@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { detectArchitecturalDrift } from "@/lib/release/drift-detection";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   const service = req.nextUrl.searchParams.get("service");
   if (!service) {
     return NextResponse.json({ error: "Service name required" }, { status: 400 });
@@ -16,7 +16,7 @@ export async function GET() {
       maxBlastRadius: drift.maxBlastRadius,
       recentFailures: drift.recentFailures
     });
-  } catch {
+  } catch (error) {
     console.error("[CLI_RISK_API]", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }

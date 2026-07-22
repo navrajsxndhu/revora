@@ -3,7 +3,7 @@ export interface ConnectorEvent {
   eventType: string;
   externalId: string;
   payloadHash: string;
-  rawPayload: unknown;
+  rawPayload: any;
   timestamp: string;
 }
 

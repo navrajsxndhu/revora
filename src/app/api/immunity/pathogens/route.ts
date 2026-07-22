@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const pathogens = await detectOperationalPathogens(workspaceId);
     return NextResponse.json(pathogens);
-  } catch {
+  } catch (error) {
     console.error("Error detecting pathogens:", error);
     return NextResponse.json({ error: "Failed to detect pathogens" }, { status: 500 });
   }

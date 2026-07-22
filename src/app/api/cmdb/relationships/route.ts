@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const relationships = await processDependencies(workspaceId);
     return NextResponse.json(relationships);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch relationships" }, { status: 500 });
   }
 }

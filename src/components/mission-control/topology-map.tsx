@@ -1,6 +1,6 @@
 import React from "react";
 
-export function TopologyMap({ graph }: { graph: { nodes: unknown[], edges: unknown[] } }) {
+export function TopologyMap({ graph }: { graph: { nodes: any[], edges: any[] } }) {
   return (
     <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 mb-6">
       <h2 className="text-xl font-medium text-slate-100 mb-4">Live Service Topology</h2>

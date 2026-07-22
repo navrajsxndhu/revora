@@ -1,7 +1,8 @@
+import { NextRequest } from "next/server";
 import { NextResponse } from 'next/server';
 import { simulateStrategy } from '@/lib/strategy/strategic-coordination-engine';
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   try {
     const { workspaceId, scenario } = await req.json();
 
@@ -23,6 +24,6 @@ export async function POST() {
       }
     });
   } catch (error: unknown) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ error: (error as Error).message }, { status: 500 });
   }
 }

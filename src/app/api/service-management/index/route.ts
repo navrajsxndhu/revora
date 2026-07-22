@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const index = await calculateServiceMaturity(workspaceId);
     return NextResponse.json(index);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch service index" }, { status: 500 });
   }
 }

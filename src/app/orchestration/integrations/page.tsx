@@ -1,118 +1,51 @@
 import React from "react";
-import Link from "next/link";
-import { ArrowLeft, Search, ShieldCheck, Activity, Target, Download, Settings, History, BrainCircuit, Layers, Eye, Smile, Move, Languages, Accessibility, Briefcase, Lock, LineChart, CheckCircle2, AlertTriangle, XCircle, ArrowRight, Image, Keyboard, Timer, TrendingUp, TrendingDown, BookOpen, MousePointerClick, Database, Users, FileCode, GraduationCap, Map, ClipboardList, Sparkles, HeartHandshake, Network, Award, BarChart2, FileSignature, Lightbulb, Compass, MessageSquare, FolderHeart, Tags, Fingerprint, Users2, Video, Megaphone, Inbox, Calendar, Globe, Handshake, MessageCircle, Zap, Wind, Cpu, Mouse, Monitor, EyeOff, Laptop, Smartphone, Box, Maximize, Gauge, Unlock, HelpCircle, Terminal, ThumbsUp, LayoutDashboard, Star, Bell, UserCircle2, RefreshCw, Tablet, WifiOff, ServerCrash, MapPin, Cast, Clock, ActivitySquare, CheckSquare, AlertOctagon, HeartPulse, Bot, Navigation, BarChart3, Paintbrush, Type, Wand2, Palette, Component, Sparkle, Share2, Waypoints, GitMerge, Radar, Telescope, Binary, Workflow, Microscope, MonitorPlay, Columns, Menu, Save, GitCompare, Layout, SearchCode, UsersRound, Scale, LinkIcon, PenTool, GitPullRequest, UserCheck, Library, Plug, PlayCircle, ListChecks, BookMarked, Link as LinkIconComponent } from "lucide-react";
+import { Plug, Network, Activity, ShieldCheck, Lock } from "lucide-react";
+import { PageShell } from "@/components/ui/page-shell";
+import { ExecutiveHeader } from "@/components/ui/executive-header";
+import { MetricGrid } from "@/components/ui/metric-grid";
 import { PremiumTable } from "@/components/ui/premium-table";
+import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
+
+const TABLE_DATA = [{"path":"Auth -> Incident Creation","src":"Trust Engine (RTSTOS)","targ":"Security (RXOS)","ptype":"JSON (Encrypted)","state":"Active","trace":"CPI-EV-501"},{"path":"Budget -> Cloud Provision","src":"Commerce Platform","targ":"Architecture Platform","ptype":"JSON (Signed)","state":"Active","trace":"CPI-EV-502"},{"path":"Approval -> Policy Update","src":"Orchestration (RAEOP)","targ":"Governance Registry","ptype":"Cryptographic Hash","state":"Active","trace":"CPI-EV-503"}];
+
+const METRICS = [
+    { label: "Connected Modules", value: "14", icon: Network, iconColor: "text-indigo-500", desc: "Full Revora suite", descColor: "text-indigo-400" },
+    { label: "API Calls / Sec", value: "1,420", icon: Activity, iconColor: "text-emerald-500", desc: "Orchestration load" },
+    { label: "Integration Errors", value: "0.01%", icon: ShieldCheck, iconColor: "text-blue-500", desc: "Deterministic success" },
+    { label: "Zero-Trust Checks", value: "100%", icon: Lock, iconColor: "text-emerald-500", desc: "On every call" },
+];
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-black text-white p-8">
-      <div className="max-w-7xl mx-auto space-y-8 flex flex-col h-[calc(100vh-4rem)]">
-        
-        {/* Header */}
-        <header className="flex items-end justify-between border-b border-slate-900 pb-6 shrink-0">
-          <div>
-            <div className="mb-4">
-              <Link href="/orchestration" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-white transition-colors">
-                <ArrowLeft className="w-4 h-4" /> Back to Orchestration Hub
-              </Link>
-            </div>
-            <h1 className="text-3xl font-bold tracking-tight text-white mb-2 flex items-center gap-3">
-              <Plug className="w-8 h-8 text-indigo-400" />
-              Cross-Platform Integration Hub
-            </h1>
-            <p className="text-slate-400">Coordinates deterministic execution across all Revora platforms (Security, Arch, HR, Commerce, etc.).</p>
-          </div>
-          <div className="flex items-center gap-4">
-             <div className="relative">
-                <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
-                <input type="text" placeholder="Search Orchestrations..." className="bg-slate-900 border border-slate-700 rounded-md pl-9 pr-4 py-2 text-sm text-white focus:outline-none focus:border-indigo-400 w-64 transition-colors" />
-             </div>
-             <button className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-md text-sm font-medium transition-colors text-slate-200">
-               <Download className="w-4 h-4" /> Export Ledger
-             </button>
-          </div>
-        </header>
+    <PageShell>
+      <ExecutiveHeader
+        title="Cross-Platform Integration Hub"
+        description="Coordinates deterministic execution across all Revora platforms (Security, Arch, HR, Commerce, etc.)."
+        icon={Plug}
+        iconColor="text-indigo-400"
+        backHref="/orchestration"
+        backLabel="Orchestration Hub"
+        searchPlaceholder="Search Orchestrations..."
+        exportLabel="Export Ledger"
+      />
 
-        {/* KPIs */}
-        <div className="grid grid-cols-4 gap-4 shrink-0">
-          
-          <div className="bg-slate-900/60 border border-indigo-900/30 bg-indigo-950/10 shadow-[0_0_15px_rgba(129,140,248,0.05)] rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              Connected Modules
-              <Network className="w-4 h-4 text-indigo-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">14</div>
-            <div className="text-xs text-indigo-400">Full Revora suite</div>
-          </div>
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              API Calls / Sec
-              <Activity className="w-4 h-4 text-emerald-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">1,420</div>
-            <div className="text-xs text-slate-500">Orchestration load</div>
-          </div>
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              Integration Errors
-              <ShieldCheck className="w-4 h-4 text-blue-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">0.01%</div>
-            <div className="text-xs text-slate-500">Deterministic success</div>
-          </div>
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              Zero-Trust Checks
-              <Lock className="w-4 h-4 text-emerald-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">100%</div>
-            <div className="text-xs text-slate-500">On every call</div>
-          </div>
-        </div>
+      <MetricGrid metrics={METRICS} />
 
-        {/* Content */}
-        <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
-          
-          
-          <PremiumTable 
-            title="Orchestration Metrics" 
-            headers={["Integration Path", "Source Module", "Target Module", "Payload Type", "State", "Trace"]}
-          >
-            {[{"path":"Auth -> Incident Creation","src":"Trust Engine (RTSTOS)","targ":"Security (RXOS)","ptype":"JSON (Encrypted)","state":"Active","trace":"CPI-EV-501"},{"path":"Budget -> Cloud Provision","src":"Commerce Platform","targ":"Architecture Platform","ptype":"JSON (Signed)","state":"Active","trace":"CPI-EV-502"},{"path":"Approval -> Policy Update","src":"Orchestration (RAEOP)","targ":"Governance Registry","ptype":"Cryptographic Hash","state":"Active","trace":"CPI-EV-503"}].map((row, i) => (
-              <tr key={i} className="hover:bg-slate-800/30 transition-colors group cursor-pointer border-b border-slate-800/50">
-                
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.path}
-                </td>
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.src}
-                </td>
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.targ}
-                </td>
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.ptype}
-                </td>
-                <td className="py-4 px-5">
-                  <span className={`px-2 py-1 rounded text-xs font-bold border flex items-center gap-1 w-max ${
-                    row.state === 'Critical' || row.state === 'High' || row.state === 'Blocked' || row.state === 'Failed' ? 'bg-rose-900/20 text-rose-400 border-rose-900/50' : 
-                    row.state === 'Warning' || row.state === 'Medium' || row.state === 'Pending' || row.state === 'Simulating' ? 'bg-amber-900/20 text-amber-400 border-amber-900/50' :
-                    row.state === 'Optimal' || row.state === 'Active' || row.state === 'Approved' || row.state === 'Verified' || row.state === 'Live' || row.state === 'Executed' ? 'bg-emerald-900/20 text-emerald-400 border-emerald-900/50' :
-                    'bg-slate-800 text-slate-300 border-slate-700'
-                  }`}>
-                    {row.state}
-                  </span>
-                </td>
-                <td className="py-4 px-5">
-                  <EvidenceBadge evidenceId={row.trace} timestamp="Orchestrated" />
-                </td>
-              </tr>
-            ))}
-          </PremiumTable>
-        </div>
-
+      <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
+        <PremiumTable title="Orchestration Metrics" headers={["Integration Path", "Source Module", "Target Module", "Payload Type", "State", "Trace"]}>
+          {TABLE_DATA.map((row: any, i: number) => (
+            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+                <td className="py-4 px-5 text-sm text-slate-400">{row.path}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.src}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.targ}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.ptype}</td>
+                <td className="py-4 px-5"><StatusBadge status={row.state} /></td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Orchestrated" /></td>
+            </tr>
+          ))}
+        </PremiumTable>
       </div>
-    </div>
+    </PageShell>
   );
 }

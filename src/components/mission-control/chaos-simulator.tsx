@@ -18,7 +18,7 @@ export function ChaosSimulator({ workspaceId }: { workspaceId: string }) {
       });
       const data = await res.json();
       setResult(data.simulation?.result || "Simulation failed to return result.");
-    } catch (e: unknown) {
+    } catch (e: any) {
       setResult(`Error: ${e.message}`);
     }
     setRunning(false);

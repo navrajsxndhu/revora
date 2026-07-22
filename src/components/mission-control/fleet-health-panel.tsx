@@ -1,6 +1,6 @@
 import React from "react";
 
-export function FleetHealthPanel({ intelligence }: { intelligence: unknown }) {
+export function FleetHealthPanel({ intelligence }: { intelligence: any }) {
   if (!intelligence) return null;
   
   return (

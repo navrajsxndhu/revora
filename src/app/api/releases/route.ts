@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { createEnterpriseRelease } from "@/lib/releases/enterprise-release-engine";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -29,13 +29,13 @@ export async function GET() {
       }
     });
     return NextResponse.json(releases);
-  } catch {
+  } catch (error) {
     console.error("Error fetching releases:", error);
     return NextResponse.json({ error: "Failed to fetch releases" }, { status: 500 });
   }
 }
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -55,7 +55,7 @@ export async function POST() {
     const { releaseName } = await req.json();
     const release = await createEnterpriseRelease(workspaceId, releaseName);
     return NextResponse.json(release);
-  } catch {
+  } catch (error) {
     console.error("Error creating release:", error);
     return NextResponse.json({ error: "Failed to create release" }, { status: 500 });
   }

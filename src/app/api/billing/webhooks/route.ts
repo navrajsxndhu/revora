@@ -3,7 +3,7 @@ import { stripe } from '@/lib/integrations/stripe';
 import { prisma } from '@/lib/prisma';
 import Stripe from 'stripe';
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const body = await req.text();
   const signature = req.headers.get('stripe-signature');
 
@@ -25,7 +25,7 @@ export async function POST() {
       );
     }
   } catch (err: unknown) {
-    console.error('Webhook signature verification failed', err.message);
+    console.error('Webhook signature verification failed', (err as Error).message);
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 });
   }
 
@@ -99,7 +99,7 @@ export async function POST() {
     }
 
     return NextResponse.json({ received: true });
-  } catch {
+  } catch (error) {
     console.error('Error handling webhook', error);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }

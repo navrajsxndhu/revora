@@ -4,7 +4,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { simulateServiceLoad } from "@/lib/service-management/service-simulator";
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -22,7 +22,7 @@ export async function POST() {
     const body = await req.json();
     const result = await simulateServiceLoad(workspaceId, body.scenario);
     return NextResponse.json(result);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to simulate service load" }, { status: 500 });
   }
 }

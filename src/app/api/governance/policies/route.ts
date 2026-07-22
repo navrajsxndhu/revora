@@ -23,7 +23,7 @@ export async function GET() {
       orderBy: { createdAt: 'desc' }
     });
     return NextResponse.json(policies);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch governance policies" }, { status: 500 });
   }
 }

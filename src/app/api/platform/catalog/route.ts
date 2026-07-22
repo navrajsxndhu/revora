@@ -22,7 +22,7 @@ export async function GET() {
       where: { workspaceId }
     });
     return NextResponse.json(catalog);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch service catalog" }, { status: 500 });
   }
 }

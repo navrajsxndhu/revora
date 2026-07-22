@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function InfrastructureSurvivabilityGrid({ snapshots }: { snapshots: unknown[] }) {
+export function InfrastructureSurvivabilityGrid({ snapshots }: { snapshots: any[] }) {
   if (snapshots.length === 0) return <p className="text-sm text-zinc-500">No infrastructure data available.</p>;
 
   return (

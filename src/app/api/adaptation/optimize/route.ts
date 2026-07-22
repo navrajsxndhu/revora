@@ -23,7 +23,7 @@ export async function POST() {
   try {
     const result = await optimizeGovernance(workspaceId);
     return NextResponse.json(result);
-  } catch {
+  } catch (error) {
     console.error("Error optimizing governance:", error);
     return NextResponse.json({ error: "Failed to optimize governance" }, { status: 500 });
   }

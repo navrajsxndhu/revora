@@ -12,7 +12,7 @@ export async function GET() {
   try {
     const signals = extractOperationalSignals();
     return NextResponse.json(signals);
-  } catch {
+  } catch (error) {
     console.error("Error extracting signals:", error);
     return NextResponse.json({ error: "Failed to extract signals" }, { status: 500 });
   }

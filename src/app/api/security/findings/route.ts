@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const findings = await processFindings(workspaceId);
     return NextResponse.json(findings);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch findings" }, { status: 500 });
   }
 }

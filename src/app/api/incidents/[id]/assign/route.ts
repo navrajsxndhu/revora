@@ -5,7 +5,7 @@ import { appendSlackThreadMessage } from "@/lib/integrations/slack-notifier";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-export async function POST(request, { params }: { params: Promise<{ id: string }> }) {
+export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const session = await getServerSession(authOptions);
   if (!session || !session.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -37,7 +37,7 @@ export async function POST(request, { params }: { params: Promise<{ id: string }
     broadcastEvent("INCIDENT_UPDATED", { incidentId: incident.id, state: "ACKNOWLEDGED" });
 
     return NextResponse.json({ success: true, incident });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to assign incident" }, { status: 500 });
   }
 }

@@ -5,7 +5,7 @@ import { broadcastEvent } from "@/lib/events/emitter";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-export async function POST(request, { params }: { params: Promise<{ id: string }> }) {
+export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const session = await getServerSession(authOptions);
   const operatorId = session?.user?.email || "System";
 
@@ -74,7 +74,7 @@ export async function POST(request, { params }: { params: Promise<{ id: string }
     broadcastEvent("EXECUTION_REPLAYED", { originalId: originalExecution.id, newId: newExecutionId });
 
     return NextResponse.json({ success: true, newExecutionId });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to replay execution" }, { status: 500 });
   }
 }

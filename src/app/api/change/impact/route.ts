@@ -3,7 +3,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -18,7 +18,7 @@ export async function GET() {
       where: { changeId }
     });
     return NextResponse.json(impact || {});
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch impact" }, { status: 500 });
   }
 }

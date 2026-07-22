@@ -25,7 +25,7 @@ export async function GET() {
       where: { workspaceId, status: "ACTIVE" }
     });
     return NextResponse.json(active);
-  } catch {
+  } catch (error) {
     console.error("Error fetching active incidents:", error);
     return NextResponse.json({ error: "Failed to fetch incidents" }, { status: 500 });
   }

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ListTree } from "lucide-react";
 
 interface OptimizationTimelineProps {
-  evidence: unknown[];
+  evidence: any[];
 }
 
 export function OptimizationTimeline({ evidence }: OptimizationTimelineProps) {

@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -29,7 +29,7 @@ export async function POST() {
 
     const executionData = await processOperationalExecution(workspaceId, decisionId, strategy);
     return NextResponse.json(executionData);
-  } catch {
+  } catch (error) {
     console.error("Error starting execution:", error);
     return NextResponse.json({ error: "Failed to start execution" }, { status: 500 });
   }

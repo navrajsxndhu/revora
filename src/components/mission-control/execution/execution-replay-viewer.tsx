@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { PlaySquare } from "lucide-react";
 
 interface ExecutionReplayViewerProps {
-  replay: unknown;
+  replay: any;
 }
 
 export function ExecutionReplayViewer({ replay }: ExecutionReplayViewerProps) {

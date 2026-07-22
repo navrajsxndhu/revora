@@ -22,7 +22,7 @@ export async function GET() {
       where: { workspaceId, status: { not: "EXECUTED" } }
     });
     return NextResponse.json(requests);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch requests" }, { status: 500 });
   }
 }

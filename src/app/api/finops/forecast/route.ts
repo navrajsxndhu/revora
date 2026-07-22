@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const forecasts = await processForecasts(workspaceId);
     return NextResponse.json(forecasts);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch forecasts" }, { status: 500 });
   }
 }

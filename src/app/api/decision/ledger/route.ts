@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -23,13 +23,13 @@ export async function GET() {
   try {
     const ledger = await getDecisionLedger(workspaceId);
     return NextResponse.json(ledger);
-  } catch {
+  } catch (error) {
     console.error("Error fetching decision ledger:", error);
     return NextResponse.json({ error: "Failed to fetch ledger" }, { status: 500 });
   }
 }
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -49,7 +49,7 @@ export async function POST() {
     const { decisionType, selectedOption, tradeoffs, score } = await req.json();
     const recorded = await recordDecision(workspaceId, decisionType, selectedOption, tradeoffs, score);
     return NextResponse.json(recorded);
-  } catch {
+  } catch (error) {
     console.error("Error recording decision:", error);
     return NextResponse.json({ error: "Failed to record decision" }, { status: 500 });
   }

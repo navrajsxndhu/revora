@@ -8,7 +8,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 const VALID_ACTIONS = ["REPLAY_WORKFLOW", "TRIGGER_REDEPLOY", "RETRY_SLACK"];
 const COOLDOWN_SECONDS = 60;
 
-export async function POST(request, { params }: { params: Promise<{ id: string }> }) {
+export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const session = await getServerSession(authOptions);
   if (!session || !session.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -17,7 +17,7 @@ export async function POST(request, { params }: { params: Promise<{ id: string }
 
   const resolvedParams = await params;
   try {
-    const { actionType } = await req.json();
+    const { actionType } = await request.json();
 
     if (!VALID_ACTIONS.includes(actionType)) {
       return NextResponse.json({ error: "Invalid remediation action." }, { status: 400 });
@@ -96,7 +96,7 @@ export async function POST(request, { params }: { params: Promise<{ id: string }
     }
 
     return NextResponse.json({ success: true, message: resultMessage });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to execute remediation action" }, { status: 500 });
   }
 }

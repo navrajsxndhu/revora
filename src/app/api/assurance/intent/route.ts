@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -29,13 +29,13 @@ export async function POST() {
 
     const intent = await defineOperationalIntent(workspaceId, executionId, objective, expectedOutcome);
     return NextResponse.json(intent);
-  } catch {
+  } catch (error) {
     console.error("Error defining intent:", error);
     return NextResponse.json({ error: "Failed to define intent" }, { status: 500 });
   }
 }
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -51,7 +51,7 @@ export async function GET() {
 
     const intent = await getOperationalIntent(executionId);
     return NextResponse.json(intent);
-  } catch {
+  } catch (error) {
     console.error("Error fetching intent:", error);
     return NextResponse.json({ error: "Failed to fetch intent" }, { status: 500 });
   }

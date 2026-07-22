@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const result = await constructDecisionContext(workspaceId);
     return NextResponse.json(result);
-  } catch {
+  } catch (error) {
     console.error("Error constructing decision context:", error);
     return NextResponse.json({ error: "Failed to construct context" }, { status: 500 });
   }

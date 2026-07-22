@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const optimizations = await processOptimizations(workspaceId);
     return NextResponse.json(optimizations);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch optimizations" }, { status: 500 });
   }
 }

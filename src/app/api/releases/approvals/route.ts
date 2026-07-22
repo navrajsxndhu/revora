@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -42,7 +42,7 @@ export async function POST() {
     });
 
     return NextResponse.json(updated);
-  } catch {
+  } catch (error) {
     console.error("Error updating approval:", error);
     return NextResponse.json({ error: "Failed to update approval" }, { status: 500 });
   }

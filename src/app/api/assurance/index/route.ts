@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const indexData = await calculateAssuranceIndex(workspaceId);
     return NextResponse.json(indexData);
-  } catch {
+  } catch (error) {
     console.error("Error fetching assurance index:", error);
     return NextResponse.json({ error: "Failed to fetch index" }, { status: 500 });
   }

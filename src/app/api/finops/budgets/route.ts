@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const budgets = await processBudgets(workspaceId);
     return NextResponse.json(budgets);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch budgets" }, { status: 500 });
   }
 }

@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const history = await IntelligenceDecisionLedger.getLedger(workspaceId);
     return NextResponse.json({ history });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch decision history" }, { status: 500 });
   }
 }

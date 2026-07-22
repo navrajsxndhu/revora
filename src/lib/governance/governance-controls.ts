@@ -1,7 +1,7 @@
 
 export async function mapGovernanceControls(workspaceId: string, subsystem: string) {
   // Maps every subsystem against applicable controls
-  const controls: unknown = {
+  const controls: any = {
     "Release": ["Security", "SRE", "Treasury", "Constitution", "Platform Readiness"],
     "Incident": ["Constitution", "SRE"],
     "Change": ["Security", "Constitution"]

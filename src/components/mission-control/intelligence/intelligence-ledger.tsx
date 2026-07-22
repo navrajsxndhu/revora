@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { BookOpen } from "lucide-react";
 
 interface IntelligenceLedgerProps {
-  ledgerEntries: unknown[];
+  ledgerEntries: any[];
 }
 
 export function IntelligenceLedger({ ledgerEntries }: IntelligenceLedgerProps) {

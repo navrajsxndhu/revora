@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { LayoutGrid } from "lucide-react";
 
 interface SubsystemScoreMatrixProps {
-  components: unknown[];
+  components: any[];
 }
 
 export function SubsystemScoreMatrix({ components }: SubsystemScoreMatrixProps) {

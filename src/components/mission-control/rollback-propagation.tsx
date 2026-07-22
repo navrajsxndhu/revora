@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from "react";
 
-export function RollbackPropagation({ rollbacks, onManualTrigger }: { rollbacks: unknown[], onManualTrigger: () => void }) {
+export function RollbackPropagation({ rollbacks, onManualTrigger }: { rollbacks: any[], onManualTrigger: () => void }) {
   const [loading, setLoading] = useState(false);
 
   const trigger = async () => {

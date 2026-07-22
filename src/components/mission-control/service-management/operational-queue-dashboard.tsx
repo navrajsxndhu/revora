@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Users2 } from "lucide-react";
 
 interface OperationalQueueDashboardProps {
-  queues: unknown;
+  queues: any;
 }
 
 export function OperationalQueueDashboard({ queues }: OperationalQueueDashboardProps) {
@@ -20,7 +20,7 @@ export function OperationalQueueDashboard({ queues }: OperationalQueueDashboardP
       </CardHeader>
       <CardContent>
         <div className="space-y-3 mt-2">
-          {queues.map((q: unknown, idx: number) => (
+          {queues.map((q: any, idx: number) => (
             <div key={idx} className="flex flex-col gap-2 p-2 border border-slate-800 rounded bg-slate-950/30">
               <div className="flex justify-between items-center">
                 <span className="text-xs font-semibold text-slate-300">{q.name}</span>

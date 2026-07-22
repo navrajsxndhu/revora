@@ -12,7 +12,7 @@ export async function GET() {
   try {
     const resources = coordinateResources();
     return NextResponse.json(resources);
-  } catch {
+  } catch (error) {
     console.error("Error coordinating resources:", error);
     return NextResponse.json({ error: "Failed to coordinate resources" }, { status: 500 });
   }

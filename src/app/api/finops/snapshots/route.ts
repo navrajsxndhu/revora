@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const snapshots = await orchestrateFinOps(workspaceId);
     return NextResponse.json(snapshots);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch finops snapshots" }, { status: 500 });
   }
 }

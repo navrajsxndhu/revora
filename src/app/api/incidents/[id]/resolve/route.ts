@@ -5,7 +5,7 @@ import { broadcastEvent } from "@/lib/events/emitter";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-export async function POST(request, { params }: { params: Promise<{ id: string }> }) {
+export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const session = await getServerSession(authOptions);
   if (!session || !session.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -14,7 +14,7 @@ export async function POST(request, { params }: { params: Promise<{ id: string }
 
   const resolvedParams = await params;
   try {
-    const { rootCause, mitigation, nextSteps } = await req.json();
+    const { rootCause, mitigation, nextSteps } = await request.json();
 
     if (!rootCause || !mitigation) {
       return NextResponse.json({ error: "Missing required resolution summary fields." }, { status: 400 });
@@ -55,7 +55,7 @@ export async function POST(request, { params }: { params: Promise<{ id: string }
     broadcastEvent("INCIDENT_UPDATED", { incidentId: updated.id, state: "RESOLVED" });
 
     return NextResponse.json({ success: true, incident: updated });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to resolve incident" }, { status: 500 });
   }
 }

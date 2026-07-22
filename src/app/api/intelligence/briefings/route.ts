@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const briefings = await ExecutiveBriefingEngine.getBriefings(workspaceId);
     return NextResponse.json({ briefings });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch briefings" }, { status: 500 });
   }
 }

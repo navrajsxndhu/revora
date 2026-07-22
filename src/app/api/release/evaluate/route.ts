@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { evaluateDeploymentRisk, DeploymentPayload } from "@/lib/release/risk-analysis";
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   try {
     const payload = await req.json() as DeploymentPayload;
 
@@ -36,7 +36,7 @@ export async function POST() {
       proceed: true // Revora provides guidance, does not block
     });
 
-  } catch {
+  } catch (error) {
     console.error("[RELEASE_EVALUATE] Error:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }

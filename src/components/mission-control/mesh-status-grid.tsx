@@ -1,6 +1,6 @@
 import React from "react";
 
-export function MeshStatusGrid({ federatedEvents }: { federatedEvents: unknown[] }) {
+export function MeshStatusGrid({ federatedEvents }: { federatedEvents: any[] }) {
   return (
     <div className="bg-slate-900 border border-slate-800 rounded-lg p-6">
       <h2 className="text-xl font-medium text-slate-100 mb-6">Federated Synchronization Log</h2>

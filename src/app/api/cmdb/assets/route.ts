@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const assets = await processConfigurationItems(workspaceId);
     return NextResponse.json(assets);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch assets" }, { status: 500 });
   }
 }

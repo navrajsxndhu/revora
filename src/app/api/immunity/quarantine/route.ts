@@ -24,7 +24,7 @@ export async function GET() {
   try {
     const quarantine = await enforceSurvivabilityQuarantine(workspaceId, undefined);
     return NextResponse.json(quarantine);
-  } catch {
+  } catch (error) {
     console.error("Error evaluating quarantine:", error);
     return NextResponse.json({ error: "Failed to evaluate quarantine" }, { status: 500 });
   }

@@ -30,7 +30,7 @@ export const createIncidentWorker = () => {
       data: { state: 'PROCESSING' }
     });
 
-    const commitSha = payload.payload?.deployment?.meta?.githubCommitSha || "unknown";
+    const commitSha = payload.payload?.deployment?.meta?.githubCommitSha || "any";
     const diff = await fetchCommitDiff("vercel", "next.js", "base-hash", commitSha); // mock owner/repo
     
     const recurringCount = await detectRecurringIssues(commitSha);

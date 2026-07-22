@@ -1,5 +1,5 @@
 
-export async function determineMandatoryApprovals(workspaceId: string, requestPayload: unknown) {
+export async function determineMandatoryApprovals(workspaceId: string, requestPayload: any) {
   // Determines mandatory approvals deterministically
   return [
     { role: "Platform Engineering", status: "PENDING" },

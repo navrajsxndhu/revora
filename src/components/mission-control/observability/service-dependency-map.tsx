@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Waypoints } from "lucide-react";
 
 interface ServiceDependencyMapProps {
-  dependencies: unknown[];
+  dependencies: any[];
 }
 
 export function ServiceDependencyMap({ dependencies }: ServiceDependencyMapProps) {

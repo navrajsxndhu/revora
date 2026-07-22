@@ -23,7 +23,7 @@ export async function POST() {
   try {
     const drift = await detectOperationalDrift(workspaceId);
     return NextResponse.json(drift);
-  } catch {
+  } catch (error) {
     console.error("Error detecting drift:", error);
     return NextResponse.json({ error: "Failed to detect drift" }, { status: 500 });
   }

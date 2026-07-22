@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function TemporalCivilizationPanel({ drift }: { drift: unknown }) {
+export function TemporalCivilizationPanel({ drift }: { drift: any }) {
   if (!drift) return <p className="text-sm text-zinc-500">No drift data available.</p>;
 
   return (

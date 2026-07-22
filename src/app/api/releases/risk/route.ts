@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -24,7 +24,7 @@ export async function POST() {
     const { releaseId } = await req.json();
     const risk = await computeReleaseRisk(workspaceId, releaseId);
     return NextResponse.json(risk);
-  } catch {
+  } catch (error) {
     console.error("Error computing risk:", error);
     return NextResponse.json({ error: "Failed to compute risk" }, { status: 500 });
   }

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { AlertTriangle } from "lucide-react";
 
 interface ConflictDetectionProps {
-  conflicts: unknown[];
+  conflicts: any[];
 }
 
 export function ConflictDetection({ conflicts }: ConflictDetectionProps) {

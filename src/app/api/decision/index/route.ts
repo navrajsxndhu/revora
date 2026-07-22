@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const decisionData = await processOperationalDecision(workspaceId);
     return NextResponse.json(decisionData);
-  } catch {
+  } catch (error) {
     console.error("Error processing operational decision:", error);
     return NextResponse.json({ error: "Failed to process decision" }, { status: 500 });
   }

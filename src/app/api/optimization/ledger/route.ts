@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const ledger = await getOptimizationLedger(workspaceId);
     return NextResponse.json(ledger);
-  } catch {
+  } catch (error) {
     console.error("Error fetching optimization ledger:", error);
     return NextResponse.json({ error: "Failed to fetch ledger" }, { status: 500 });
   }

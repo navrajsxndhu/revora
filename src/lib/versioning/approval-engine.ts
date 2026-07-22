@@ -2,7 +2,7 @@ import { prisma } from '@/lib/prisma';
 import { randomUUID } from 'crypto';
 
 export class ApproEngineEngine {
-  async process(data: unknown) {
+  async process(data: any) {
     const executionId = randomUUID();
     // Deterministic validation
     return {

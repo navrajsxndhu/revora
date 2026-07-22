@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const perception = await evaluatePerceptionIntegrity(workspaceId);
     return NextResponse.json(perception);
-  } catch {
+  } catch (error) {
     console.error("Error evaluating perception integrity:", error);
     return NextResponse.json({ error: "Failed to evaluate perception integrity" }, { status: 500 });
   }

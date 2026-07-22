@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { RotateCcw } from "lucide-react";
 
 interface RollbackPlanViewerProps {
-  rollback: unknown;
+  rollback: any;
 }
 
 export function RollbackPlanViewer({ rollback }: RollbackPlanViewerProps) {

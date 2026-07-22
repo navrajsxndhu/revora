@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const indexData = await calculateOptimizationIndex(workspaceId);
     return NextResponse.json(indexData);
-  } catch {
+  } catch (error) {
     console.error("Error fetching optimization index:", error);
     return NextResponse.json({ error: "Failed to fetch index" }, { status: 500 });
   }

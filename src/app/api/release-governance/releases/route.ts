@@ -13,7 +13,7 @@ export async function GET() {
   try {
     const data = await ReleaseEngine.getVersions(workspaceId);
     return NextResponse.json(data);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch releases" }, { status: 500 });
   }
 }

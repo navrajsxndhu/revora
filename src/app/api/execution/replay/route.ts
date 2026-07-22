@@ -3,7 +3,7 @@ import { generateExecutionReplay } from "@/lib/execution/execution-replay";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -18,7 +18,7 @@ export async function POST() {
 
     const replay = await generateExecutionReplay(executionId);
     return NextResponse.json(replay);
-  } catch {
+  } catch (error) {
     console.error("Error generating execution replay:", error);
     return NextResponse.json({ error: "Failed to generate replay" }, { status: 500 });
   }

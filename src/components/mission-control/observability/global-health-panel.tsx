@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { HeartPulse } from "lucide-react";
 
 interface GlobalHealthPanelProps {
-  health: unknown;
+  health: any;
 }
 
 export function GlobalHealthPanel({ health }: GlobalHealthPanelProps) {

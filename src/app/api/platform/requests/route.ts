@@ -22,7 +22,7 @@ export async function GET() {
       where: { workspaceId }
     });
     return NextResponse.json(requests);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch provisioning requests" }, { status: 500 });
   }
 }

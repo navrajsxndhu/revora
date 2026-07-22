@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function HardwareLifecycleTimeline({ records }: { records: unknown[] }) {
+export function HardwareLifecycleTimeline({ records }: { records: any[] }) {
   if (records.length === 0) return <p className="text-sm text-zinc-500">No hardware records.</p>;
 
   return (

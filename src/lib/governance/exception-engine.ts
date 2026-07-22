@@ -1,5 +1,5 @@
 
-export async function managePolicyException(workspaceId: string, exceptionData: unknown) {
+export async function managePolicyException(workspaceId: string, exceptionData: any) {
   // Enforces expiration, requires approvals, immutable audit records
   return {
     exceptionId: `EXC-${Date.now()}`,

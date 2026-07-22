@@ -14,7 +14,7 @@ export async function getWorkflowHistory(workspaceId: string, id?: string) {
   });
 }
 
-export async function orchestrateWorkflow(workspaceId: string, id: string, data?: unknown) {
+export async function orchestrateWorkflow(workspaceId: string, id: string, data?: any) {
   return prisma.operationalWorkflowExecution.create({
     data: {
       workspaceId,

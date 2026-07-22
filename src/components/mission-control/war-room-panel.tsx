@@ -1,6 +1,6 @@
 import React from "react";
 
-export function WarRoomPanel({ warRooms }: { warRooms: unknown[] }) {
+export function WarRoomPanel({ warRooms }: { warRooms: any[] }) {
   return (
     <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 mb-6">
       <h2 className="text-xl font-medium text-slate-100 mb-4">Active War Rooms</h2>

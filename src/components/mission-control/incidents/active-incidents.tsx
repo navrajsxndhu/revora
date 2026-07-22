@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { AlertCircle } from "lucide-react";
 
 interface ActiveIncidentsProps {
-  incidents: unknown[];
+  incidents: any[];
 }
 
 export function ActiveIncidents({ incidents }: ActiveIncidentsProps) {

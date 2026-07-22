@@ -23,7 +23,7 @@ export async function POST() {
   try {
     const result = await orchestrateOperationalIntegration(workspaceId);
     return NextResponse.json(result);
-  } catch {
+  } catch (error) {
     console.error("Error synchronizing events:", error);
     return NextResponse.json({ error: "Failed to synchronize events" }, { status: 500 });
   }

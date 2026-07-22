@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { BarChart3 } from "lucide-react";
 
 interface SynchronizationStatisticsProps {
-  stats: unknown;
+  stats: any;
 }
 
 export function SynchronizationStatistics({ stats }: SynchronizationStatisticsProps) {

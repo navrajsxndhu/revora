@@ -13,7 +13,7 @@ export async function GET() {
     const workspaceId = "ws-123";
     const data = await prisma.knowledgeRepository.findMany({ where: { workspaceId } as any });
     return NextResponse.json({ data });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch data" }, { status: 500 });
   }
 }

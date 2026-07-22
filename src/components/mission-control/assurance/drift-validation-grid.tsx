@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { AlertTriangle } from "lucide-react";
 
 interface DriftValidationGridProps {
-  drift: unknown;
+  drift: any;
 }
 
 export function DriftValidationGrid({ drift }: DriftValidationGridProps) {

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ShieldCheck } from "lucide-react";
 
 interface ValidationChecklistProps {
-  validations: unknown[];
+  validations: any[];
 }
 
 export function ValidationChecklist({ validations }: ValidationChecklistProps) {

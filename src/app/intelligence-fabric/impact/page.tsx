@@ -1,118 +1,51 @@
 import React from "react";
-import Link from "next/link";
-import { ArrowLeft, Search, ShieldCheck, Activity, Target, Download, Settings, History, BrainCircuit, Layers, Eye, Smile, Move, Languages, Accessibility, Briefcase, Lock, LineChart, CheckCircle2, AlertTriangle, XCircle, ArrowRight, Image, Keyboard, Timer, TrendingUp, TrendingDown, BookOpen, MousePointerClick, Database, Users, FileCode, GraduationCap, Map, ClipboardList, Sparkles, HeartHandshake, Network, Award, BarChart2, FileSignature, Lightbulb, Compass, MessageSquare, FolderHeart, Tags, Fingerprint, Users2, Video, Megaphone, Inbox, Calendar, Globe, Handshake, MessageCircle, Zap, Wind, Cpu, Mouse, Monitor, EyeOff, Laptop, Smartphone, Box, Maximize, Gauge, Unlock, HelpCircle, Terminal, ThumbsUp, LayoutDashboard, Star, Bell, UserCircle2, RefreshCw, Tablet, WifiOff, ServerCrash, MapPin, Cast, Clock, ActivitySquare, CheckSquare, AlertOctagon, HeartPulse, Bot, Navigation, BarChart3, Paintbrush, Type, Wand2, Palette, Component, Sparkle, Share2, Waypoints, GitMerge, Radar, Telescope, Binary, Workflow, Microscope, Link as LinkIcon } from "lucide-react";
+import { Radar, Activity, Target, ShieldCheck, Zap } from "lucide-react";
+import { PageShell } from "@/components/ui/page-shell";
+import { ExecutiveHeader } from "@/components/ui/executive-header";
+import { MetricGrid } from "@/components/ui/metric-grid";
 import { PremiumTable } from "@/components/ui/premium-table";
+import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
+
+const TABLE_DATA = [{"prop":"Upgrade PostgreSQL to v16","inf":"30s Database Downtime","bus":"Cart Checkout Pause","risk":"Medium","gov":"Review","trace":"EIA-EV-501"},{"prop":"Revoke VPN Access for Vendors","inf":"0 Downtime","bus":"Blocks 4 Active Contracts","risk":"High","gov":"Review","trace":"EIA-EV-502"},{"prop":"Deploy Marketing Site","inf":"CDN Cache Purge","bus":"Zero Customer Impact","risk":"Low","gov":"Approved","trace":"EIA-EV-503"}];
+
+const METRICS = [
+    { label: "Simulations Run", value: "14.2K", icon: Activity, iconColor: "text-teal-500", desc: "Impact models tested", descColor: "text-teal-400" },
+    { label: "Prediction Accuracy", value: "99.9%", icon: Target, iconColor: "text-emerald-500", desc: "Against real outcomes" },
+    { label: "Catastrophes Averted", value: "42", icon: ShieldCheck, iconColor: "text-emerald-500", desc: "Blocked breaking changes" },
+    { label: "Simulation Time", value: "800ms", icon: Zap, iconColor: "text-blue-500", desc: "Average compute time" },
+];
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-black text-white p-8">
-      <div className="max-w-7xl mx-auto space-y-8 flex flex-col h-[calc(100vh-4rem)]">
-        
-        {/* Header */}
-        <header className="flex items-end justify-between border-b border-slate-900 pb-6 shrink-0">
-          <div>
-            <div className="mb-4">
-              <Link href="/intelligence-fabric" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-white transition-colors">
-                <ArrowLeft className="w-4 h-4" /> Back to REIF Command Center
-              </Link>
-            </div>
-            <h1 className="text-3xl font-bold tracking-tight text-white mb-2 flex items-center gap-3">
-              <Radar className="w-8 h-8 text-teal-500" />
-              Enterprise Impact Analyzer
-            </h1>
-            <p className="text-slate-400">Simulates organizational impact and risk propagation before a constitutional change is executed.</p>
-          </div>
-          <div className="flex items-center gap-4">
-             <div className="relative">
-                <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
-                <input type="text" placeholder="Search Knowledge Graph..." className="bg-slate-900 border border-slate-700 rounded-md pl-9 pr-4 py-2 text-sm text-white focus:outline-none focus:border-teal-500 w-64 transition-colors" />
-             </div>
-             <button className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-md text-sm font-medium transition-colors text-slate-200">
-               <Download className="w-4 h-4" /> Export Ledger
-             </button>
-          </div>
-        </header>
+    <PageShell>
+      <ExecutiveHeader
+        title="Enterprise Impact Analyzer"
+        description="Simulates organizational impact and risk propagation before a constitutional change is executed."
+        icon={Radar}
+        iconColor="text-teal-500"
+        backHref="/intelligence-fabric"
+        backLabel="REIF Command Center"
+        searchPlaceholder="Search Knowledge Graph..."
+        exportLabel="Export Ledger"
+      />
 
-        {/* KPIs */}
-        <div className="grid grid-cols-4 gap-4 shrink-0">
-          
-          <div className="bg-slate-900/60 border border-teal-900/30 bg-teal-950/10 shadow-[0_0_15px_rgba(20,184,166,0.05)] rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              Simulations Run
-              <Activity className="w-4 h-4 text-teal-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">14.2K</div>
-            <div className="text-xs text-teal-400">Impact models tested</div>
-          </div>
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              Prediction Accuracy
-              <Target className="w-4 h-4 text-emerald-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-            <div className="text-xs text-slate-500">Against real outcomes</div>
-          </div>
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              Catastrophes Averted
-              <ShieldCheck className="w-4 h-4 text-emerald-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">42</div>
-            <div className="text-xs text-slate-500">Blocked breaking changes</div>
-          </div>
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
-            <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">
-              Simulation Time
-              <Zap className="w-4 h-4 text-blue-500" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">800ms</div>
-            <div className="text-xs text-slate-500">Average compute time</div>
-          </div>
-        </div>
+      <MetricGrid metrics={METRICS} />
 
-        {/* Content */}
-        <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
-          
-          
-          <PremiumTable 
-            title="Enterprise Knowledge Metrics" 
-            headers={["Proposed Change", "Simulated Infrastructure Impact", "Simulated Business Impact", "Risk Level", "Governance", "Trace"]}
-          >
-            {[{"prop":"Upgrade PostgreSQL to v16","inf":"30s Database Downtime","bus":"Cart Checkout Pause","risk":"Medium","gov":"Review","trace":"EIA-EV-501"},{"prop":"Revoke VPN Access for Vendors","inf":"0 Downtime","bus":"Blocks 4 Active Contracts","risk":"High","gov":"Review","trace":"EIA-EV-502"},{"prop":"Deploy Marketing Site","inf":"CDN Cache Purge","bus":"Zero Customer Impact","risk":"Low","gov":"Approved","trace":"EIA-EV-503"}].map((row, i) => (
-              <tr key={i} className="hover:bg-slate-800/30 transition-colors group cursor-pointer border-b border-slate-800/50">
-                
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.prop}
-                </td>
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.inf}
-                </td>
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.bus}
-                </td>
-                <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">
-                  {row.risk}
-                </td>
-                <td className="py-4 px-5">
-                  <span className={`px-2 py-1 rounded text-xs font-bold border flex items-center gap-1 w-max ${
-                    row.gov === 'Critical' || row.gov === 'High' || row.gov === 'Severe' || row.gov === 'Blocked' ? 'bg-rose-900/20 text-rose-400 border-rose-900/50' : 
-                    row.gov === 'Warning' || row.gov === 'Medium' || row.gov === 'Pending' || row.gov === 'Elevated' ? 'bg-amber-900/20 text-amber-400 border-amber-900/50' :
-                    row.gov === 'Optimal' || row.gov === 'Low' || row.gov === 'Approved' || row.gov === 'Verified' || row.gov === 'Strong' || row.gov === 'Healthy' ? 'bg-emerald-900/20 text-emerald-400 border-emerald-900/50' :
-                    'bg-slate-800 text-slate-300 border-slate-700'
-                  }`}>
-                    {row.gov}
-                  </span>
-                </td>
-                <td className="py-4 px-5">
-                  <EvidenceBadge evidenceId={row.trace} timestamp="Verified Graph" />
-                </td>
-              </tr>
-            ))}
-          </PremiumTable>
-        </div>
-
+      <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
+        <PremiumTable title="Enterprise Knowledge Metrics" headers={["Proposed Change", "Simulated Infrastructure Impact", "Simulated Business Impact", "Risk Level", "Governance", "Trace"]}>
+          {TABLE_DATA.map((row: any, i: number) => (
+            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+                <td className="py-4 px-5 text-sm text-slate-400">{row.prop}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.inf}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.bus}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.risk}</td>
+                <td className="py-4 px-5"><StatusBadge status={row.gov} /></td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Verified Graph" /></td>
+            </tr>
+          ))}
+        </PremiumTable>
       </div>
-    </div>
+    </PageShell>
   );
 }

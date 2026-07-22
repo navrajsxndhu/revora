@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const awareness = await calculateSystemicAwareness(workspaceId);
     return NextResponse.json(awareness);
-  } catch {
+  } catch (error) {
     console.error("Error calculating systemic awareness:", error);
     return NextResponse.json({ error: "Failed to calculate systemic awareness" }, { status: 500 });
   }

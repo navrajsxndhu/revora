@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Database } from "lucide-react";
 
 interface OperationalKnowledgeTableProps {
-  knowledgeData: unknown; // We can pass the index result or just use as a placeholder for raw DB records
+  knowledgeData: any; // We can pass the index result or just use as a placeholder for raw DB records
 }
 
 export function OperationalKnowledgeTable({ knowledgeData }: OperationalKnowledgeTableProps) {

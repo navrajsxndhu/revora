@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const correlations = await buildCorrelations(workspaceId);
     return NextResponse.json(correlations);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch correlations" }, { status: 500 });
   }
 }

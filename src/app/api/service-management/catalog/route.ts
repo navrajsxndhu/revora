@@ -23,7 +23,7 @@ export async function GET() {
       { id: "srv-2", name: "Production Database Access", category: "Security", requiredApprovals: ["Security", "Service Owner"] }
     ];
     return NextResponse.json(catalog);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch catalog" }, { status: 500 });
   }
 }

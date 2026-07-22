@@ -21,7 +21,7 @@ export async function GET() {
   try {
     const snapshots = await orchestrateObservability(workspaceId);
     return NextResponse.json(snapshots);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch snapshots" }, { status: 500 });
   }
 }

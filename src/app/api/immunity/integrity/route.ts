@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const integrity = await evaluateGovernanceIntegrity(workspaceId);
     return NextResponse.json(integrity);
-  } catch {
+  } catch (error) {
     console.error("Error evaluating integrity:", error);
     return NextResponse.json({ error: "Failed to evaluate integrity" }, { status: 500 });
   }

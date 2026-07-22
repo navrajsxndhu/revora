@@ -12,7 +12,7 @@ export async function GET() {
   try {
     const graph = buildCoordinationGraph();
     return NextResponse.json(graph);
-  } catch {
+  } catch (error) {
     console.error("Error building coordination graph:", error);
     return NextResponse.json({ error: "Failed to build graph" }, { status: 500 });
   }

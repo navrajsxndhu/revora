@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { History } from "lucide-react";
 
 interface OptimizationLedgerTableProps {
-  evidence: unknown[];
+  evidence: any[];
 }
 
 export function OptimizationLedgerTable({ evidence }: OptimizationLedgerTableProps) {

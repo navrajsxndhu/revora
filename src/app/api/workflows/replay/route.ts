@@ -3,7 +3,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -20,7 +20,7 @@ export async function POST() {
   try {
     const body = await req.json();
     return NextResponse.json({ status: "REPLAYING", originalExecutionId: body.executionId });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to replay workflow" }, { status: 500 });
   }
 }

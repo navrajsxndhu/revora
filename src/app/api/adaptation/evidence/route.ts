@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const evidence = await fetchAdaptationLedger(workspaceId);
     return NextResponse.json(evidence);
-  } catch {
+  } catch (error) {
     console.error("Error fetching adaptation evidence:", error);
     return NextResponse.json({ error: "Failed to fetch adaptation evidence" }, { status: 500 });
   }

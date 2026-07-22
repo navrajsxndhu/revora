@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { AlertTriangle } from "lucide-react";
 
 interface RiskProfileProps {
-  risk: unknown;
+  risk: any;
 }
 
 export function RiskProfile({ risk }: RiskProfileProps) {

@@ -7,7 +7,7 @@ const slack = new WebClient(token);
 
 export interface SlackMessagePayload {
   text: string;
-  blocks?: unknown[];
+  blocks?: any[];
   threadTs?: string;
   channel?: string;
 }
@@ -50,7 +50,7 @@ export async function sendSlackMessage(workspaceId: string, payload: SlackMessag
     });
 
     return { success: true, threadTs: result.ts };
-  } catch (error: unknown) {
+  } catch (error: any) {
     console.error('[SlackClient] Failed to send message:', error.message);
     
     if (deliveryId) {

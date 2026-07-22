@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const result = await extractOperationalKnowledge(workspaceId);
     return NextResponse.json(result);
-  } catch {
+  } catch (error) {
     console.error("Error extracting knowledge:", error);
     return NextResponse.json({ error: "Failed to extract knowledge" }, { status: 500 });
   }

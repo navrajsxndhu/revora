@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const requests = await ApprovalEngine.getApprovals(workspaceId);
     return NextResponse.json({ requests });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch access requests" }, { status: 500 });
   }
 }

@@ -22,7 +22,7 @@ export async function GET() {
       where: { workspaceId }
     });
     return NextResponse.json(resources);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch platform resources" }, { status: 500 });
   }
 }

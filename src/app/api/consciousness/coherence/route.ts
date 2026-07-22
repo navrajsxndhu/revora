@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const coherence = await evaluateCivilizationCoherence(workspaceId);
     return NextResponse.json(coherence);
-  } catch {
+  } catch (error) {
     console.error("Error evaluating civilization coherence:", error);
     return NextResponse.json({ error: "Failed to evaluate civilization coherence" }, { status: 500 });
   }

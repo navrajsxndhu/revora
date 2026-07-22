@@ -1,6 +1,6 @@
 import { prisma } from "@/lib/prisma";
 
-export async function createSLO(workspaceId: string, payload: unknown) {
+export async function createSLO(workspaceId: string, payload: any) {
   return await prisma.serviceLevelObjective.create({
     data: {
       workspaceId,

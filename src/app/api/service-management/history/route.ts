@@ -23,7 +23,7 @@ export async function GET() {
       orderBy: { createdAt: 'desc' }
     });
     return NextResponse.json(history);
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch request history" }, { status: 500 });
   }
 }

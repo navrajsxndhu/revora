@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma';
 
-export async function calculateCivilizationIndex(workspaceId: string, entropySnapshot: unknown) {
+export async function calculateCivilizationIndex(workspaceId: string, entropySnapshot: any) {
   let civilizationIndex = 100 - (entropySnapshot.entropyScore * 0.75);
   civilizationIndex = Math.max(0, civilizationIndex);
 

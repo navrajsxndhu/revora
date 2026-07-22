@@ -1,6 +1,6 @@
 import React from "react";
 
-export function GovernancePanel({ events }: { events: unknown[] }) {
+export function GovernancePanel({ events }: { events: any[] }) {
   return (
     <div className="bg-slate-900 border border-slate-800 rounded-lg p-6">
       <h2 className="text-xl font-medium text-slate-100 mb-6">Governance Audit Trail</h2>

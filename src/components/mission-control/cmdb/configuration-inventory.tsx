@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Server } from "lucide-react";
 
 interface ConfigurationInventoryProps {
-  inventory: unknown;
+  inventory: any;
 }
 
 export function ConfigurationInventory({ inventory }: ConfigurationInventoryProps) {

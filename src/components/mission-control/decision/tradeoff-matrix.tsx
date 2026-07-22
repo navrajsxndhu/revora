@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Scale } from "lucide-react";
 
 interface TradeoffMatrixProps {
-  tradeoffs: unknown[];
+  tradeoffs: any[];
 }
 
 export function TradeoffMatrix({ tradeoffs }: TradeoffMatrixProps) {

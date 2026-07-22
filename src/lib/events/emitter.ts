@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events';
 
 // Global singleton for Next.js dev environment to preserve emitter across HMR
-const globalForEmitter = globalThis as unknown as {
+const globalForEmitter = globalThis as any as {
   emitter: EventEmitter | undefined;
 };
 
@@ -11,6 +11,6 @@ if (process.env.NODE_ENV !== 'production') {
   globalForEmitter.emitter = sseEmitter;
 }
 
-export function broadcastEvent(type: string, payload: unknown) {
+export function broadcastEvent(type: string, payload: any) {
   sseEmitter.emit('broadcast', { type, payload });
 }

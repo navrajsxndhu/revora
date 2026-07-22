@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { GitMerge } from "lucide-react";
 
 interface StrategyViewerProps {
-  strategy: unknown;
+  strategy: any;
 }
 
 export function StrategyViewer({ strategy }: StrategyViewerProps) {

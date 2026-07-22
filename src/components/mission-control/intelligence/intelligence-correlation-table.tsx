@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Link2 } from "lucide-react";
 
 interface IntelligenceCorrelationTableProps {
-  correlations: unknown[];
+  correlations: any[];
 }
 
 export function IntelligenceCorrelationTable({ correlations }: IntelligenceCorrelationTableProps) {

@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const analyses = await BlastRadiusEngine.getAnalyses(workspaceId);
     return NextResponse.json({ analyses });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ error: "Failed to fetch blast radius" }, { status: 500 });
   }
 }

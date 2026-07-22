@@ -1,9 +1,9 @@
 import React from 'react';
 
-export function BreachDetectionFeed({ breaches }: { breaches: unknown[] }) {
+export function BreachDetectionFeed({ breaches }: { breaches: any[] }) {
   return (
     <div className="space-y-3">
-      {breaches.map(breach => (
+      {breaches.map((breach: any) => (
         <div key={breach.id} className="p-4 rounded-lg border border-red-900/30 bg-red-950/10 flex flex-col space-y-2">
           <div className="flex justify-between items-start">
             <h4 className="text-sm font-mono text-zinc-200">{breach.violationType}</h4>

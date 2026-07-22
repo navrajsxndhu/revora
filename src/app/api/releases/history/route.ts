@@ -23,7 +23,7 @@ export async function GET() {
   try {
     const history = await getReleaseLedger(workspaceId);
     return NextResponse.json(history);
-  } catch {
+  } catch (error) {
     console.error("Error fetching release history:", error);
     return NextResponse.json({ error: "Failed to fetch history" }, { status: 500 });
   }
