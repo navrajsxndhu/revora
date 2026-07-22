@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const DecisionValidationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const DecisionValidationEngine = {
   }
 };
 
-export const getDecisionValidationEngine = async (...args: any[]) => ({});
-export const calculateDecisionValidationEngine = async (...args: any[]) => ({});
-export const recordDecisionValidationEngineEvents = async (...args: any[]) => ({});
+export const getDecisionValidationEngine = async (...[]) => ({});
+export const calculateDecisionValidationEngine = async (...[]) => ({});
+export const recordDecisionValidationEngineEvents = async (...[]) => ({});

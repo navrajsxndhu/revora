@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function RegionalPressureGrid({ zone }: { zone: any }) {
+export function RegionalPressureGrid({ zone }: { zone: unknown }) {
   const isSaturated = zone.deploymentCongestion === 'SATURATED';
   const color = isSaturated ? 'border-red-900/50 bg-red-950/20' : 'border-zinc-800 bg-zinc-900/40';
 

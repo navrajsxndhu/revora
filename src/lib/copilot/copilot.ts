@@ -32,7 +32,7 @@ Orchestration failures detected: ${data.deadLetterFailures || 0}.`;
     if (role.includes("Timeline Compressor")) {
       const events = data.timeline || [];
       return `**Timeline Synthesis**
-${events.slice(0,5).map((e: any) => `- [${new Date(e.time).toISOString()}] ${e.type}: Executed by ${e.actor || 'System'}`).join('\n')}
+${events.slice(0,5).map((e: unknown) => `- [${new Date(e.time).toISOString()}] ${e.type}: Executed by ${e.actor || 'System'}`).join('\n')}
 ${events.length > 5 ? `\n*(+ ${events.length - 5} additional internal state transitions suppressed for clarity)*` : ''}
 `;
     }

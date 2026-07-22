@@ -1,6 +1,5 @@
-import { prisma } from "@/lib/prisma";
 
-export async function appendToGovernanceLedger(workspaceId: string, eventData: any) {
+export async function appendToGovernanceLedger(workspaceId: string, eventData: unknown) {
   // Append-only governance history, never mutable
   return {
     status: "RECORDED",

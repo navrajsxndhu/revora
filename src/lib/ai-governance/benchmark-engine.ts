@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const BenchmarkEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const BenchmarkEngine = {
   }
 };
 
-export const validateBenchmarkEngine = async (...args: any[]) => ({});
-export const governBenchmarkEngine = async (...args: any[]) => ({});
-export const verifyBenchmarkEngine = async (...args: any[]) => ({});
+export const validateBenchmarkEngine = async (...[]) => ({});
+export const governBenchmarkEngine = async (...[]) => ({});
+export const verifyBenchmarkEngine = async (...[]) => ({});

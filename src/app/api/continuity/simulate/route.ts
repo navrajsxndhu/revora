@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export async function POST(req: Request) {
+export async function POST() {
   try {
     const { workspaceId, simulatedEntropy } = await req.json();
 
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
         reasoning: `Deterministic projection based on simulated entropy score of ${simulatedEntropy}.`
       }
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

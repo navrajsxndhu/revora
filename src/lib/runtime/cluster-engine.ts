@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ClusterEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ClusterEngine = {
   }
 };
 
-export const getClusterEngine = async (...args: any[]) => ({});
-export const calculateClusterEngine = async (...args: any[]) => ({});
-export const recordClusterEngineEvents = async (...args: any[]) => ({});
+export const getClusterEngine = async (...[]) => ({});
+export const calculateClusterEngine = async (...[]) => ({});
+export const recordClusterEngineEvents = async (...[]) => ({});

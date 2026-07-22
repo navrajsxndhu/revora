@@ -3,8 +3,8 @@ import { prisma } from "../prisma";
 export async function snapshotFailedWebhook(
   workspaceId: string,
   provider: string,
-  payload: any,
-  headers: any,
+  payload: unknown,
+  headers: unknown,
   errorMessage: string
 ) {
   await prisma.webhookReplay.create({

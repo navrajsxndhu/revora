@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RenewalEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const RenewalEngine = {
   }
 };
 
-export const getRenewalEngine = async (...args: any[]) => ({});
-export const calculateRenewalEngine = async (...args: any[]) => ({});
-export const recordRenewalEngineEvents = async (...args: any[]) => ({});
+export const getRenewalEngine = async (...[]) => ({});
+export const calculateRenewalEngine = async (...[]) => ({});
+export const recordRenewalEngineEvents = async (...[]) => ({});

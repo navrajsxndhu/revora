@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const summary = await IdentityIndex.getSummary(workspaceId);
     return NextResponse.json(summary);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch identity index" }, { status: 500 });
   }
 }

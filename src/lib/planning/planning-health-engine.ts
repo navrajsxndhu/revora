@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const PlanningHealthEngine = {
   getHealth: async (workspaceId: string) => {

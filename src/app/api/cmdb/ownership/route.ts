@@ -4,7 +4,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { processOwnership } from "@/lib/cmdb/ownership-engine";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
   try {
     const ownership = await processOwnership(workspaceId);
     return NextResponse.json(ownership);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch ownership" }, { status: 500 });
   }
 }

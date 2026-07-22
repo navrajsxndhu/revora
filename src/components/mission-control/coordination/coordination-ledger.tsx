@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { BookOpen } from "lucide-react";
 
 interface CoordinationLedgerProps {
-  ledgerEntries: any[];
+  ledgerEntries: unknown[];
 }
 
 export function CoordinationLedger({ ledgerEntries }: CoordinationLedgerProps) {

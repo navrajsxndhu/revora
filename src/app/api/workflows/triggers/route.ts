@@ -4,7 +4,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { processWorkflowTrigger } from "@/lib/workflows/workflow-trigger";
 
-export async function POST(req: NextRequest) {
+export async function POST() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const result = await processWorkflowTrigger(workspaceId, body.eventType, body.payload);
     return NextResponse.json(result);
-  } catch (error: any) {
+  } catch (error: unknown) {
     return NextResponse.json({ error: error.message || "Failed to process trigger" }, { status: 500 });
   }
 }

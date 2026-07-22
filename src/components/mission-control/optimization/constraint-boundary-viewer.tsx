@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Lock } from "lucide-react";
 
 interface ConstraintBoundaryViewerProps {
-  constraints: any[];
+  constraints: unknown[];
 }
 
 export function ConstraintBoundaryViewer({ constraints }: ConstraintBoundaryViewerProps) {

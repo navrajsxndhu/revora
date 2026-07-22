@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const PreferenceEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const PreferenceEngine = {
   }
 };
 
-export const getPreferenceEngine = async (...args: any[]) => ({});
-export const calculatePreferenceEngine = async (...args: any[]) => ({});
-export const recordPreferenceEngineEvents = async (...args: any[]) => ({});
+export const getPreferenceEngine = async (...[]) => ({});
+export const calculatePreferenceEngine = async (...[]) => ({});
+export const recordPreferenceEngineEvents = async (...[]) => ({});

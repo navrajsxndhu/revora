@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const WebhookEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const WebhookEngine = {
   }
 };
 
-export const validateWebhookEngine = async (...args: any[]) => ({});
-export const governWebhookEngine = async (...args: any[]) => ({});
-export const verifyWebhookEngine = async (...args: any[]) => ({});
+export const validateWebhookEngine = async (...[]) => ({});
+export const governWebhookEngine = async (...[]) => ({});
+export const verifyWebhookEngine = async (...[]) => ({});

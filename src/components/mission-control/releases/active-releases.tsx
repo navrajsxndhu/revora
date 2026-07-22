@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Rocket } from "lucide-react";
 
 interface ActiveReleasesProps {
-  releases: any[];
+  releases: unknown[];
 }
 
 export function ActiveReleases({ releases }: ActiveReleasesProps) {

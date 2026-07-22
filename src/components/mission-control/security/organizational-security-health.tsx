@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Activity } from "lucide-react";
 
 interface OrganizationalSecurityHealthProps {
-  health: any;
+  health: unknown;
 }
 
 export function OrganizationalSecurityHealth({ health }: OrganizationalSecurityHealthProps) {

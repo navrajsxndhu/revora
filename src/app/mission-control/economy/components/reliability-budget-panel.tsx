@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function ReliabilityBudgetPanel({ budget }: { budget: any }) {
+export function ReliabilityBudgetPanel({ budget }: { budget: unknown }) {
   const exhaustionColor = 
     budget.exhaustionRisk === 'CRITICAL' ? 'text-red-500 border-red-900/50 bg-red-950/20' :
     budget.exhaustionRisk === 'UNSAFE' ? 'text-orange-500 border-orange-900/50 bg-orange-950/20' :

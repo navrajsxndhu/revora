@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const WorkforceIndex = {
   getOverview: async (workspaceId: string) => {

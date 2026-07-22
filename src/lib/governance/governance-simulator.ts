@@ -1,6 +1,5 @@
-import { prisma } from "@/lib/prisma";
 
-export async function simulateGovernanceScenario(workspaceId: string, scenarioData: any) {
+export async function simulateGovernanceScenario(workspaceId: string, scenarioData: unknown) {
   // Simulates policy changes, risk increases, new compliance requirements, infrastructure failures
   return {
     simulationId: `SIM-GOV-${Date.now()}`,

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ShieldCheck } from "lucide-react";
 
 interface ResourcePoliciesProps {
-  policies: any[];
+  policies: unknown[];
 }
 
 export function ResourcePolicies({ policies }: ResourcePoliciesProps) {

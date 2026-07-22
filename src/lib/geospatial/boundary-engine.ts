@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const BoundaryEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const BoundaryEngine = {
   }
 };
 
-export const getBoundaryEngine = async (...args: any[]) => ({});
-export const calculateBoundaryEngine = async (...args: any[]) => ({});
-export const validateBoundaryEngine = async (...args: any[]) => ({});
+export const getBoundaryEngine = async (...[]) => ({});
+export const calculateBoundaryEngine = async (...[]) => ({});
+export const validateBoundaryEngine = async (...[]) => ({});

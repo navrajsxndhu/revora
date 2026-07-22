@@ -1,6 +1,6 @@
 import { osEventStream } from "@/lib/os/event-stream";
 
-export async function GET(req: Request) {
+export async function GET() {
   const url = new URL(req.url);
   const workspaceId = url.searchParams.get("workspaceId");
 
@@ -10,7 +10,7 @@ export async function GET(req: Request) {
 
   const stream = new ReadableStream({
     start(controller) {
-      const listener = (data: any) => {
+      const listener = (data: unknown) => {
         controller.enqueue(`data: ${JSON.stringify(data)}\n\n`);
       };
 

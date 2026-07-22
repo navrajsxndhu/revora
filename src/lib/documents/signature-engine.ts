@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const SignatureEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const SignatureEngine = {
   }
 };
 
-export const getSignatureEngine = async (...args: any[]) => ({});
-export const calculateSignatureEngine = async (...args: any[]) => ({});
-export const recordSignatureEngineEvents = async (...args: any[]) => ({});
+export const getSignatureEngine = async (...[]) => ({});
+export const calculateSignatureEngine = async (...[]) => ({});
+export const recordSignatureEngineEvents = async (...[]) => ({});

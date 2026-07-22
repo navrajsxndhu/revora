@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const EscalationEngine = {
   getOverview: async (workspaceId: string) => {

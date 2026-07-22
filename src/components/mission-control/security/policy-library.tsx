@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { BookOpenCheck } from "lucide-react";
 
 interface PolicyLibraryProps {
-  policies: any[];
+  policies: unknown[];
 }
 
 export function PolicyLibrary({ policies }: PolicyLibraryProps) {

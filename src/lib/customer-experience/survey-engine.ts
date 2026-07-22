@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const SurveyEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const SurveyEngine = {
   }
 };
 
-export const getSurveyEngine = async (...args: any[]) => ({});
-export const calculateSurveyEngine = async (...args: any[]) => ({});
-export const recordSurveyEngineEvents = async (...args: any[]) => ({});
+export const getSurveyEngine = async (...[]) => ({});
+export const calculateSurveyEngine = async (...[]) => ({});
+export const recordSurveyEngineEvents = async (...[]) => ({});

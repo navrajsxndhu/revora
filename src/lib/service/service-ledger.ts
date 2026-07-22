@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ServiceLedger = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ServiceLedger = {
   }
 };
 
-export const getServiceLedger = async (...args: any[]) => ({});
-export const calculateServiceLedger = async (...args: any[]) => ({});
-export const recordServiceLedgerEvents = async (...args: any[]) => ({});
+export const getServiceLedger = async (...[]) => ({});
+export const calculateServiceLedger = async (...[]) => ({});
+export const recordServiceLedgerEvents = async (...[]) => ({});

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ObligationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ObligationEngine = {
   }
 };
 
-export const getObligationEngine = async (...args: any[]) => ({});
-export const calculateObligationEngine = async (...args: any[]) => ({});
-export const recordObligationEngineEvents = async (...args: any[]) => ({});
+export const getObligationEngine = async (...[]) => ({});
+export const calculateObligationEngine = async (...[]) => ({});
+export const recordObligationEngineEvents = async (...[]) => ({});

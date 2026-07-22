@@ -18,11 +18,11 @@ export async function orchestrateOperationalIntegration(workspaceId: string) {
 
   if (connectors.length === 0) return { synchronizedEvents: 0, index: null };
 
-  let allRawEvents: any[] = [];
+  let allRawEvents: unknown[] = [];
 
   // 2. Poll Connectors (Simulated Deterministic Fetch)
   for (const connector of connectors) {
-    let events: any[] = [];
+    let events: unknown[] = [];
     if (connector.provider === "GITHUB") events = await pollGitHubEvents(workspaceId);
     else if (connector.provider === "DATADOG") events = await pollDatadogEvents(workspaceId);
     else if (connector.provider === "JIRA") events = await pollJiraEvents(workspaceId);

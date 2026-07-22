@@ -25,8 +25,8 @@ export async function fetchCommitDiff(owner: string, repo: string, base: string,
     const data = await res.json();
     
     // Parse the raw GitHub response into our concise operational summary
-    const changes: any[] = [];
-    data.files?.forEach((f: any) => {
+    const changes: unknown[] = [];
+    data.files?.forEach((f: unknown) => {
       if (f.filename === 'package.json') {
         changes.push({ type: "DEPENDENCY_CHANGE", file: f.filename, details: "package versions modified" });
       } else if (f.filename.includes('.env')) {
@@ -37,7 +37,7 @@ export async function fetchCommitDiff(owner: string, repo: string, base: string,
     });
 
     return { changes: changes.slice(0, 10) }; // Keep concise
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("Failed to fetch real GitHub diff:", err);
     // Harden: Log integration failure
     await prisma.auditLog.create({

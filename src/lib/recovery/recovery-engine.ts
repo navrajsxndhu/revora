@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RecoveryEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const RecoveryEngine = {
   }
 };
 
-export const getRecoveryEngine = async (...args: any[]) => ({});
-export const calculateRecoveryEngine = async (...args: any[]) => ({});
-export const recordRecoveryEngineEvents = async (...args: any[]) => ({});
+export const getRecoveryEngine = async (...[]) => ({});
+export const calculateRecoveryEngine = async (...[]) => ({});
+export const recordRecoveryEngineEvents = async (...[]) => ({});

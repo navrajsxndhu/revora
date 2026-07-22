@@ -4,7 +4,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { simulateProvisioning } from "@/lib/platform/platform-simulator";
 
-export async function POST(req: NextRequest) {
+export async function POST() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     const payload = await req.json();
     const result = await simulateProvisioning(workspaceId, payload);
     return NextResponse.json(result);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to simulate provisioning" }, { status: 500 });
   }
 }

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const OverrideEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const OverrideEngine = {
   }
 };
 
-export const getOverrideEngine = async (...args: any[]) => ({});
-export const calculateOverrideEngine = async (...args: any[]) => ({});
-export const recordOverrideEngineEvents = async (...args: any[]) => ({});
+export const getOverrideEngine = async (...[]) => ({});
+export const calculateOverrideEngine = async (...[]) => ({});
+export const recordOverrideEngineEvents = async (...[]) => ({});

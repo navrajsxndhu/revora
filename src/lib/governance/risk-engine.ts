@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function calculateOperationalRisk(workspaceId: string) {
   // Uses deterministic formulas from Incidents, Security, Reliability, FinOps, Planning, Releases

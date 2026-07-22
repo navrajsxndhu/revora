@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const services = await ServiceMapEngine.getServices(workspaceId);
     return NextResponse.json({ services });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch services" }, { status: 500 });
   }
 }

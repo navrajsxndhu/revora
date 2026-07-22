@@ -1,6 +1,5 @@
-import { prisma } from "@/lib/prisma";
 
-export async function determineMandatoryApprovals(workspaceId: string, requestPayload: any) {
+export async function determineMandatoryApprovals(workspaceId: string, requestPayload: unknown) {
   // Determines mandatory approvals deterministically
   return [
     { role: "Platform Engineering", status: "PENDING" },

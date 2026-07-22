@@ -3,7 +3,6 @@ import { trackDoctrineEvolution } from "./doctrine-evolution";
 import { deriveOperationalWisdom } from "./operational-wisdom";
 import { constructInstitutionalMemory } from "./institutional-memory";
 import { calculateKnowledgeIndex } from "./knowledge-index";
-import { prisma } from "@/lib/prisma";
 
 export async function processOperationalKnowledge(workspaceId: string) {
   // 1. Extract Knowledge

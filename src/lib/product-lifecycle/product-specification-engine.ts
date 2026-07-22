@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ProductSpecificationEngine = {
   getOverview: async (workspaceId: string) => {

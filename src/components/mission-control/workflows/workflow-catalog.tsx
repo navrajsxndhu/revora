@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Library } from "lucide-react";
 
 interface WorkflowCatalogProps {
-  catalog: any;
+  catalog: unknown;
 }
 
 export function WorkflowCatalog({ catalog }: WorkflowCatalogProps) {
@@ -20,7 +20,7 @@ export function WorkflowCatalog({ catalog }: WorkflowCatalogProps) {
       </CardHeader>
       <CardContent>
         <div className="space-y-3 mt-2">
-          {catalog.map((wf: any, idx: number) => (
+          {catalog.map((wf: unknown, idx: number) => (
             <div key={idx} className="flex justify-between items-center p-2 bg-slate-950/50 rounded border border-indigo-900/30">
               <div className="flex flex-col">
                 <span className="text-xs font-semibold text-slate-300">{wf.name}</span>

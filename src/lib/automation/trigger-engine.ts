@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const TriggerEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const TriggerEngine = {
   }
 };
 
-export const getTriggerEngine = async (...args: any[]) => ({});
-export const calculateTriggerEngine = async (...args: any[]) => ({});
-export const recordTriggerEngineEvents = async (...args: any[]) => ({});
+export const getTriggerEngine = async (...[]) => ({});
+export const calculateTriggerEngine = async (...[]) => ({});
+export const recordTriggerEngineEvents = async (...[]) => ({});

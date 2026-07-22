@@ -47,7 +47,7 @@ export function ServiceTopology() {
             </tr>
           </thead>
           <tbody className="font-mono text-[11px]">
-            {data.map((s: any, i: number) => (
+            {data.map((s: unknown, i: number) => (
               <tr key={i} className="border-b border-slate-800/50 hover:bg-slate-800/30 cursor-pointer">
                 <td className="px-3 py-2">
                   <div className="text-slate-300 font-sans font-medium">{s.name}</div>

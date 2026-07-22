@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { GitCommit } from "lucide-react";
 
 interface DependencyGraphViewerProps {
-  dependencies: any[];
+  dependencies: unknown[];
 }
 
 export function DependencyGraphViewer({ dependencies }: DependencyGraphViewerProps) {

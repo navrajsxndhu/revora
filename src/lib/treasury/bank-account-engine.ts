@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const BankAccountEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const BankAccountEngine = {
   }
 };
 
-export const getBankAccountEngine = async (...args: any[]) => ({});
-export const calculateBankAccountEngine = async (...args: any[]) => ({});
-export const recordBankAccountEngineEvents = async (...args: any[]) => ({});
+export const getBankAccountEngine = async (...[]) => ({});
+export const calculateBankAccountEngine = async (...[]) => ({});
+export const recordBankAccountEngineEvents = async (...[]) => ({});

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const GatewayEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const GatewayEngine = {
   }
 };
 
-export const getGatewayEngine = async (...args: any[]) => ({});
-export const calculateGatewayEngine = async (...args: any[]) => ({});
-export const recordGatewayEngineEvents = async (...args: any[]) => ({});
+export const getGatewayEngine = async (...[]) => ({});
+export const calculateGatewayEngine = async (...[]) => ({});
+export const recordGatewayEngineEvents = async (...[]) => ({});

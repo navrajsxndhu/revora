@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const IntelligenceSimulator = {
   simulate: async (workspaceId: string, action: string, targetId: string) => {

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ActivitySquare } from "lucide-react";
 
 interface OperationalSignalsGridProps {
-  signals: any[];
+  signals: unknown[];
 }
 
 export function OperationalSignalsGrid({ signals }: OperationalSignalsGridProps) {

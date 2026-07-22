@@ -10,7 +10,7 @@ export const PlanningLedger = {
   }
 };
 
-export async function recordOperationalPlan(workspaceId: string, name: string, goal: string, score: number, milestones: any, dependencies: any) {
+export async function recordOperationalPlan(workspaceId: string, name: string, goal: string, score: number, milestones: unknown, dependencies: unknown) {
   return { id: "legacy-plan-1", name, goal, score, milestones, dependencies };
 }
 

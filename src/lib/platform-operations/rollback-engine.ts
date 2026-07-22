@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RollbackEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const RollbackEngine = {
   }
 };
 
-export const getRollbackEngine = async (...args: any[]) => ({});
-export const calculateRollbackEngine = async (...args: any[]) => ({});
-export const recordRollbackEngineEvents = async (...args: any[]) => ({});
+export const getRollbackEngine = async (...[]) => ({});
+export const calculateRollbackEngine = async (...[]) => ({});
+export const recordRollbackEngineEvents = async (...[]) => ({});

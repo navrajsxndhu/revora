@@ -3,7 +3,7 @@ import { simulateAdaptation, AdaptationSimulationScenario } from "@/lib/adaptati
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-export async function POST(req: NextRequest) {
+export async function POST() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
     const simulation = simulateAdaptation(scenario as AdaptationSimulationScenario);
     return NextResponse.json(simulation);
-  } catch (error) {
+  } catch {
     console.error("Error running adaptation simulation:", error);
     return NextResponse.json({ error: "Failed to run simulation" }, { status: 500 });
   }

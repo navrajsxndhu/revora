@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const MappingEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const MappingEngine = {
   }
 };
 
-export const getMappingEngine = async (...args: any[]) => ({});
-export const calculateMappingEngine = async (...args: any[]) => ({});
-export const validateMappingEngine = async (...args: any[]) => ({});
+export const getMappingEngine = async (...[]) => ({});
+export const calculateMappingEngine = async (...[]) => ({});
+export const validateMappingEngine = async (...[]) => ({});

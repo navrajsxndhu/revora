@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const dependencies = await DependencyEngine.getDependencies(workspaceId);
     return NextResponse.json({ dependencies });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch dependencies" }, { status: 500 });
   }
 }

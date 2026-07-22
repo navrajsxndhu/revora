@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const StreamingEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const StreamingEngine = {
   }
 };
 
-export const getStreamingEngine = async (...args: any[]) => ({});
-export const calculateStreamingEngine = async (...args: any[]) => ({});
-export const recordStreamingEngineEvents = async (...args: any[]) => ({});
+export const getStreamingEngine = async (...[]) => ({});
+export const calculateStreamingEngine = async (...[]) => ({});
+export const recordStreamingEngineEvents = async (...[]) => ({});

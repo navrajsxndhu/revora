@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const IntegrationLedger = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const IntegrationLedger = {
   }
 };
 
-export const recordIntegrationEvents = async (...args: any[]) => ({});
+export const recordIntegrationEvents = async (...[]) => ({});
 
-export const getIntegrationLedger = async (...args: any[]) => ({});
+export const getIntegrationLedger = async (...[]) => ({});

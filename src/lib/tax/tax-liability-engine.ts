@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const TaxLiabilityEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const TaxLiabilityEngine = {
   }
 };
 
-export const getTaxLiabilityEngine = async (...args: any[]) => ({});
-export const calculateTaxLiabilityEngine = async (...args: any[]) => ({});
-export const recordTaxLiabilityEngineEvents = async (...args: any[]) => ({});
+export const getTaxLiabilityEngine = async (...[]) => ({});
+export const calculateTaxLiabilityEngine = async (...[]) => ({});
+export const recordTaxLiabilityEngineEvents = async (...[]) => ({});

@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const microservices = await prisma.microservice.findMany({ where: { workspaceId } });
     return NextResponse.json({ microservices });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch microservices" }, { status: 500 });
   }
 }

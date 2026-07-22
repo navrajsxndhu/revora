@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const InvestmentLedger = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const InvestmentLedger = {
   }
 };
 
-export const getInvestmentLedger = async (...args: any[]) => ({});
-export const calculateInvestmentLedger = async (...args: any[]) => ({});
-export const recordInvestmentLedgerEvents = async (...args: any[]) => ({});
+export const getInvestmentLedger = async (...[]) => ({});
+export const calculateInvestmentLedger = async (...[]) => ({});
+export const recordInvestmentLedgerEvents = async (...[]) => ({});

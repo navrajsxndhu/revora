@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ShieldCheck } from "lucide-react";
 
 interface EvidenceChainViewerProps {
-  evidence: any[];
+  evidence: unknown[];
 }
 
 export function EvidenceChainViewer({ evidence }: EvidenceChainViewerProps) {

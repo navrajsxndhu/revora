@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const kpis = await ExecutiveKPIEngine.getKPIs(workspaceId);
     return NextResponse.json({ kpis });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch kpis" }, { status: 500 });
   }
 }

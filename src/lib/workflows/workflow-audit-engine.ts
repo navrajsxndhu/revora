@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const WorkflowAuditEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const WorkflowAuditEngine = {
   }
 };
 
-export const getWorkflowAuditEngine = async (...args: any[]) => ({});
-export const calculateWorkflowAuditEngine = async (...args: any[]) => ({});
-export const recordWorkflowAuditEngineEvents = async (...args: any[]) => ({});
+export const getWorkflowAuditEngine = async (...[]) => ({});
+export const calculateWorkflowAuditEngine = async (...[]) => ({});
+export const recordWorkflowAuditEngineEvents = async (...[]) => ({});

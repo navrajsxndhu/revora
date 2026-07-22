@@ -1,6 +1,5 @@
-import { prisma } from "@/lib/prisma";
 
-export async function appendToServiceLedger(workspaceId: string, requestId: string, eventType: string, payload: any) {
+export async function appendToServiceLedger(workspaceId: string, requestId: string, eventType: string, payload: unknown) {
   // Maintains immutable request history
   return {
     status: "RECORDED",

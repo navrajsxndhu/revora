@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const AiLedgerEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const AiLedgerEngine = {
   }
 };
 
-export const validateAiLedgerEngine = async (...args: any[]) => ({});
-export const governAiLedgerEngine = async (...args: any[]) => ({});
-export const verifyAiLedgerEngine = async (...args: any[]) => ({});
+export const validateAiLedgerEngine = async (...[]) => ({});
+export const governAiLedgerEngine = async (...[]) => ({});
+export const verifyAiLedgerEngine = async (...[]) => ({});

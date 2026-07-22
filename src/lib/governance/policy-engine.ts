@@ -1,6 +1,5 @@
-import { prisma } from "@/lib/prisma";
 
-export async function validatePolicy(workspaceId: string, policyId: string, evidencePayload: any) {
+export async function validatePolicy(workspaceId: string, policyId: string, evidencePayload: unknown) {
   // Deterministic rule-based evaluation. No AI.
   return {
     compliant: true,

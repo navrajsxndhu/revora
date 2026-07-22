@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ProtocolEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ProtocolEngine = {
   }
 };
 
-export const getProtocolEngine = async (...args: any[]) => ({});
-export const calculateProtocolEngine = async (...args: any[]) => ({});
-export const recordProtocolEngineEvents = async (...args: any[]) => ({});
+export const getProtocolEngine = async (...[]) => ({});
+export const calculateProtocolEngine = async (...[]) => ({});
+export const recordProtocolEngineEvents = async (...[]) => ({});

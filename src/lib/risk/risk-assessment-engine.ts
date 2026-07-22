@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RiskAssessmentEngine = {
   getOverview: async (workspaceId: string) => {

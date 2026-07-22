@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Sigma } from "lucide-react";
 
 interface ObjectiveFunctionTableProps {
-  objectives: any[];
+  objectives: unknown[];
 }
 
 export function ObjectiveFunctionTable({ objectives }: ObjectiveFunctionTableProps) {

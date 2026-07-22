@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const JurisdictionEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const JurisdictionEngine = {
   }
 };
 
-export const getJurisdictionEngine = async (...args: any[]) => ({});
-export const calculateJurisdictionEngine = async (...args: any[]) => ({});
-export const recordJurisdictionEngineEvents = async (...args: any[]) => ({});
+export const getJurisdictionEngine = async (...[]) => ({});
+export const calculateJurisdictionEngine = async (...[]) => ({});
+export const recordJurisdictionEngineEvents = async (...[]) => ({});

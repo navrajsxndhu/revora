@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const LocationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const LocationEngine = {
   }
 };
 
-export const getLocationEngine = async (...args: any[]) => ({});
-export const calculateLocationEngine = async (...args: any[]) => ({});
-export const validateLocationEngine = async (...args: any[]) => ({});
+export const getLocationEngine = async (...[]) => ({});
+export const calculateLocationEngine = async (...[]) => ({});
+export const validateLocationEngine = async (...[]) => ({});

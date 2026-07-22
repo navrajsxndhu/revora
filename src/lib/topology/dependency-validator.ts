@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const DependencyValidator = {
   validate: async (workspaceId: string) => {

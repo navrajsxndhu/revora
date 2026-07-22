@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
-export async function POST(req: NextRequest) {
+export async function POST() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
 
     const verificationData = await processOperationalAssurance(workspaceId, executionId);
     return NextResponse.json(verificationData);
-  } catch (error) {
+  } catch {
     console.error("Error verifying assurance:", error);
     return NextResponse.json({ error: "Failed to verify assurance" }, { status: 500 });
   }

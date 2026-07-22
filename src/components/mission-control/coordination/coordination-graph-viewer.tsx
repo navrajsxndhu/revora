@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Workflow } from "lucide-react";
 
 interface CoordinationGraphViewerProps {
-  graph: any;
+  graph: unknown;
 }
 
 export function CoordinationGraphViewer({ graph }: CoordinationGraphViewerProps) {
@@ -21,9 +21,9 @@ export function CoordinationGraphViewer({ graph }: CoordinationGraphViewerProps)
       <CardContent>
         {graph.edges && graph.edges.length > 0 ? (
           <div className="relative mt-4 space-y-4">
-            {graph.edges.map((edge: any, idx: number) => {
-              const sourceNode = graph.nodes.find((n: any) => n.id === edge.sourceId);
-              const targetNode = graph.nodes.find((n: any) => n.id === edge.targetId);
+            {graph.edges.map((edge: unknown, idx: number) => {
+              const sourceNode = graph.nodes.find((n: unknown) => n.id === edge.sourceId);
+              const targetNode = graph.nodes.find((n: unknown) => n.id === edge.targetId);
 
               return (
                 <div key={idx} className="flex flex-col gap-1">

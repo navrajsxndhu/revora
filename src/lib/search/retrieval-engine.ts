@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RetrievalEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const RetrievalEngine = {
   }
 };
 
-export const validateRetrievalEngine = async (...args: any[]) => ({});
-export const governRetrievalEngine = async (...args: any[]) => ({});
-export const verifyRetrievalEngine = async (...args: any[]) => ({});
+export const validateRetrievalEngine = async (...[]) => ({});
+export const governRetrievalEngine = async (...[]) => ({});
+export const verifyRetrievalEngine = async (...[]) => ({});

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Fingerprint } from "lucide-react";
 
 interface ReleaseEvidenceProps {
-  evidence: any[];
+  evidence: unknown[];
 }
 
 export function ReleaseEvidence({ evidence }: ReleaseEvidenceProps) {

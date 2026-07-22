@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const SettlementEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const SettlementEngine = {
   }
 };
 
-export const getSettlementEngine = async (...args: any[]) => ({});
-export const calculateSettlementEngine = async (...args: any[]) => ({});
-export const recordSettlementEngineEvents = async (...args: any[]) => ({});
+export const getSettlementEngine = async (...[]) => ({});
+export const calculateSettlementEngine = async (...[]) => ({});
+export const recordSettlementEngineEvents = async (...[]) => ({});

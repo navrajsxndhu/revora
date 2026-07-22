@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { History } from "lucide-react";
 
 interface WorkflowTimelineProps {
-  timeline: any;
+  timeline: unknown;
 }
 
 export function WorkflowTimeline({ timeline }: WorkflowTimelineProps) {
@@ -20,7 +20,7 @@ export function WorkflowTimeline({ timeline }: WorkflowTimelineProps) {
       </CardHeader>
       <CardContent>
         <div className="space-y-4 mt-2">
-          {timeline.map((event: any, idx: number) => (
+          {timeline.map((event: unknown, idx: number) => (
             <div key={idx} className="flex flex-col gap-1 relative pl-4 border-l-2 border-emerald-900/50">
               <div className="absolute w-2 h-2 rounded-full bg-emerald-500 -left-[5px] top-1"></div>
               <div className="flex justify-between">

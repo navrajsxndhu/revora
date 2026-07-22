@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const InvestmentIndex = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const InvestmentIndex = {
   }
 };
 
-export const getInvestmentIndex = async (...args: any[]) => ({});
-export const calculateInvestmentIndex = async (...args: any[]) => ({});
-export const recordInvestmentIndexEvents = async (...args: any[]) => ({});
+export const getInvestmentIndex = async (...[]) => ({});
+export const calculateInvestmentIndex = async (...[]) => ({});
+export const recordInvestmentIndexEvents = async (...[]) => ({});

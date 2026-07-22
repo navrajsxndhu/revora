@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ListChecks } from "lucide-react";
 
 interface ActiveServiceRequestsProps {
-  requests: any;
+  requests: unknown;
 }
 
 export function ActiveServiceRequests({ requests }: ActiveServiceRequestsProps) {

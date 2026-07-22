@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Undo2 } from "lucide-react";
 
 interface RollbackCenterProps {
-  rollback: any;
+  rollback: unknown;
 }
 
 export function RollbackCenter({ rollback }: RollbackCenterProps) {

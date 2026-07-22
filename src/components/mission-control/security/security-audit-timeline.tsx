@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { History } from "lucide-react";
 
 interface SecurityAuditTimelineProps {
-  audit: any[];
+  audit: unknown[];
 }
 
 export function SecurityAuditTimeline({ audit }: SecurityAuditTimelineProps) {

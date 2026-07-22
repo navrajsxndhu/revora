@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function trackSLA(workspaceId: string) {
   // Tracks Response Time, Resolution Time, Escalation, Breaches, Queue Health

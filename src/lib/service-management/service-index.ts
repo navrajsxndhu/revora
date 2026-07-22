@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function calculateServiceMaturity(workspaceId: string) {
   // Calculates enterprise service maturity deterministically

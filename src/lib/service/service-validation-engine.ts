@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ServiceValidationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ServiceValidationEngine = {
   }
 };
 
-export const getServiceValidationEngine = async (...args: any[]) => ({});
-export const calculateServiceValidationEngine = async (...args: any[]) => ({});
-export const recordServiceValidationEngineEvents = async (...args: any[]) => ({});
+export const getServiceValidationEngine = async (...[]) => ({});
+export const calculateServiceValidationEngine = async (...[]) => ({});
+export const recordServiceValidationEngineEvents = async (...[]) => ({});

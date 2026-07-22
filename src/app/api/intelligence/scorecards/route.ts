@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const scorecards = await ScorecardEngine.getScorecards(workspaceId);
     return NextResponse.json({ scorecards });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch scorecards" }, { status: 500 });
   }
 }

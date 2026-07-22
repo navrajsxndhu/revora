@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const BatchEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const BatchEngine = {
   }
 };
 
-export const getBatchEngine = async (...args: any[]) => ({});
-export const calculateBatchEngine = async (...args: any[]) => ({});
-export const recordBatchEngineEvents = async (...args: any[]) => ({});
+export const getBatchEngine = async (...[]) => ({});
+export const calculateBatchEngine = async (...[]) => ({});
+export const recordBatchEngineEvents = async (...[]) => ({});

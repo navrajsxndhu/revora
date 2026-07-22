@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function EcosystemFragilityMap({ dependencies }: { dependencies: any[] }) {
+export function EcosystemFragilityMap({ dependencies }: { dependencies: unknown[] }) {
   if (dependencies.length === 0) return <p className="text-sm text-zinc-500">No ecosystem dependencies mapped.</p>;
 
   return (

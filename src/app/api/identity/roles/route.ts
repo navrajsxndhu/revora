@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123"; // Mocked workspace context
     const roles = await RoleEngine.getRoles(workspaceId);
     return NextResponse.json({ roles });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch roles" }, { status: 500 });
   }
 }

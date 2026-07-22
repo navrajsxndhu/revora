@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const NegotiationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const NegotiationEngine = {
   }
 };
 
-export const getNegotiationEngine = async (...args: any[]) => ({});
-export const calculateNegotiationEngine = async (...args: any[]) => ({});
-export const recordNegotiationEngineEvents = async (...args: any[]) => ({});
+export const getNegotiationEngine = async (...[]) => ({});
+export const calculateNegotiationEngine = async (...[]) => ({});
+export const recordNegotiationEngineEvents = async (...[]) => ({});

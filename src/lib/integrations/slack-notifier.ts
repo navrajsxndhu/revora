@@ -1,6 +1,6 @@
 import { ENV } from './env';
 
-export async function sendSlackOperationalAlert(incident: any) {
+export async function sendSlackOperationalAlert(incident: unknown) {
   if (!ENV.SLACK_BOT_TOKEN) {
     console.warn(`[MOCK SLACK] Would send incident ${incident.id} to Slack`);
     return "mock-ts-12345";

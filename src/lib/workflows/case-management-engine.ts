@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const CaseManagementEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const CaseManagementEngine = {
   }
 };
 
-export const getCaseManagementEngine = async (...args: any[]) => ({});
-export const calculateCaseManagementEngine = async (...args: any[]) => ({});
-export const recordCaseManagementEngineEvents = async (...args: any[]) => ({});
+export const getCaseManagementEngine = async (...[]) => ({});
+export const calculateCaseManagementEngine = async (...[]) => ({});
+export const recordCaseManagementEngineEvents = async (...[]) => ({});

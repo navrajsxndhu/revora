@@ -1,6 +1,5 @@
-import { prisma } from "@/lib/prisma";
 
-export async function routeServiceRequest(workspaceId: string, requestPayload: any) {
+export async function routeServiceRequest(workspaceId: string, requestPayload: unknown) {
   // Routes requests based on deterministic policies. Never AI classification.
   return {
     queueId: `Q-${Date.now()}`,

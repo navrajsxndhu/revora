@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const EventbusEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const EventbusEngine = {
   }
 };
 
-export const validateEventbusEngine = async (...args: any[]) => ({});
-export const governEventbusEngine = async (...args: any[]) => ({});
-export const verifyEventbusEngine = async (...args: any[]) => ({});
+export const validateEventbusEngine = async (...[]) => ({});
+export const governEventbusEngine = async (...[]) => ({});
+export const verifyEventbusEngine = async (...[]) => ({});

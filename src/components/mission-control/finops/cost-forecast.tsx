@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { TrendingUp } from "lucide-react";
 
 interface CostForecastProps {
-  forecast: any;
+  forecast: unknown;
 }
 
 export function CostForecast({ forecast }: CostForecastProps) {

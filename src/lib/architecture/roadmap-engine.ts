@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RoadmapEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const RoadmapEngine = {
   }
 };
 
-export const getRoadmapEngine = async (...args: any[]) => ({});
-export const calculateRoadmapEngine = async (...args: any[]) => ({});
-export const recordRoadmapEngineEvents = async (...args: any[]) => ({});
+export const getRoadmapEngine = async (...[]) => ({});
+export const calculateRoadmapEngine = async (...[]) => ({});
+export const recordRoadmapEngineEvents = async (...[]) => ({});

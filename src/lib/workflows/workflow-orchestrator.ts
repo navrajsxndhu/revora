@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function executeWorkflowSteps(executionId: string) {
   // Executes ordered steps deterministically

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const PaymentAllocationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const PaymentAllocationEngine = {
   }
 };
 
-export const getPaymentAllocationEngine = async (...args: any[]) => ({});
-export const calculatePaymentAllocationEngine = async (...args: any[]) => ({});
-export const recordPaymentAllocationEngineEvents = async (...args: any[]) => ({});
+export const getPaymentAllocationEngine = async (...[]) => ({});
+export const calculatePaymentAllocationEngine = async (...[]) => ({});
+export const recordPaymentAllocationEngineEvents = async (...[]) => ({});

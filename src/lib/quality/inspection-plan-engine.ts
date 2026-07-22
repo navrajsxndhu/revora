@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const InspectionPlanEngine = {
   getOverview: async (workspaceId: string) => {

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { PieChart } from "lucide-react";
 
 interface BudgetGovernanceProps {
-  budgets: any[];
+  budgets: unknown[];
 }
 
 export function BudgetGovernance({ budgets }: BudgetGovernanceProps) {

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ExtensionEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ExtensionEngine = {
   }
 };
 
-export const getExtensionEngine = async (...args: any[]) => ({});
-export const calculateExtensionEngine = async (...args: any[]) => ({});
-export const recordExtensionEngineEvents = async (...args: any[]) => ({});
+export const getExtensionEngine = async (...[]) => ({});
+export const calculateExtensionEngine = async (...[]) => ({});
+export const recordExtensionEngineEvents = async (...[]) => ({});

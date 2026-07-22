@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ListTree } from "lucide-react";
 
 interface ReleaseTimelineProps {
-  checkpoints: any[];
+  checkpoints: unknown[];
 }
 
 export function ReleaseTimeline({ checkpoints }: ReleaseTimelineProps) {

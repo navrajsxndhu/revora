@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const HierarchyEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const HierarchyEngine = {
   }
 };
 
-export const validateHierarchyEngine = async (...args: any[]) => ({});
-export const governHierarchyEngine = async (...args: any[]) => ({});
-export const verifyHierarchyEngine = async (...args: any[]) => ({});
+export const validateHierarchyEngine = async (...[]) => ({});
+export const governHierarchyEngine = async (...[]) => ({});
+export const verifyHierarchyEngine = async (...[]) => ({});

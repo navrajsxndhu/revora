@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -24,7 +24,7 @@ export async function GET(req: NextRequest) {
   try {
     const quarantine = await enforceSurvivabilityQuarantine(workspaceId, undefined);
     return NextResponse.json(quarantine);
-  } catch (error) {
+  } catch {
     console.error("Error evaluating quarantine:", error);
     return NextResponse.json({ error: "Failed to evaluate quarantine" }, { status: 500 });
   }

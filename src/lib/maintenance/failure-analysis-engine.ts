@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const FailureAnalysisEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const FailureAnalysisEngine = {
   }
 };
 
-export const getFailureAnalysisEngine = async (...args: any[]) => ({});
-export const calculateFailureAnalysisEngine = async (...args: any[]) => ({});
-export const recordFailureAnalysisEngineEvents = async (...args: any[]) => ({});
+export const getFailureAnalysisEngine = async (...[]) => ({});
+export const calculateFailureAnalysisEngine = async (...[]) => ({});
+export const recordFailureAnalysisEngineEvents = async (...[]) => ({});

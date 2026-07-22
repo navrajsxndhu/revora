@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const TelemetryEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const TelemetryEngine = {
   }
 };
 
-export const validateTelemetryEngine = async (...args: any[]) => ({});
-export const governTelemetryEngine = async (...args: any[]) => ({});
-export const verifyTelemetryEngine = async (...args: any[]) => ({});
+export const validateTelemetryEngine = async (...[]) => ({});
+export const governTelemetryEngine = async (...[]) => ({});
+export const verifyTelemetryEngine = async (...[]) => ({});

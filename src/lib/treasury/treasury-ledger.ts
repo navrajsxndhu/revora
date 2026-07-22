@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const TreasuryLedger = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const TreasuryLedger = {
   }
 };
 
-export const getTreasuryLedger = async (...args: any[]) => ({});
-export const calculateTreasuryLedger = async (...args: any[]) => ({});
-export const recordTreasuryLedgerEvents = async (...args: any[]) => ({});
+export const getTreasuryLedger = async (...[]) => ({});
+export const calculateTreasuryLedger = async (...[]) => ({});
+export const recordTreasuryLedgerEvents = async (...[]) => ({});

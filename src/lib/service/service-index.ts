@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ServiceIndex = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ServiceIndex = {
   }
 };
 
-export const getServiceIndex = async (...args: any[]) => ({});
-export const calculateServiceIndex = async (...args: any[]) => ({});
-export const recordServiceIndexEvents = async (...args: any[]) => ({});
+export const getServiceIndex = async (...[]) => ({});
+export const calculateServiceIndex = async (...[]) => ({});
+export const recordServiceIndexEvents = async (...[]) => ({});

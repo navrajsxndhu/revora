@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const BiasEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const BiasEngine = {
   }
 };
 
-export const validateBiasEngine = async (...args: any[]) => ({});
-export const governBiasEngine = async (...args: any[]) => ({});
-export const verifyBiasEngine = async (...args: any[]) => ({});
+export const validateBiasEngine = async (...[]) => ({});
+export const governBiasEngine = async (...[]) => ({});
+export const verifyBiasEngine = async (...[]) => ({});

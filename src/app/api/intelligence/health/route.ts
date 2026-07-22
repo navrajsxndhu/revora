@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const health = await HealthEngine.getHealth(workspaceId);
     return NextResponse.json({ health });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch health" }, { status: 500 });
   }
 }

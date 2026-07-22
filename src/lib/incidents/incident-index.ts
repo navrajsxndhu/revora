@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function calculateIncidentIndex(workspaceId: string) {
   // Calculates organizational maturity (INCIDENT_CIVILIZATION)

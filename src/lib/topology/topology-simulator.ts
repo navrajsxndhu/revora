@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const TopologySimulator = {
   simulate: async (workspaceId: string, action: string, targetId: string) => {

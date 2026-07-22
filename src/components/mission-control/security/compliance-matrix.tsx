@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
 
 interface ComplianceMatrixProps {
-  compliance: any[];
+  compliance: unknown[];
 }
 
 export function ComplianceMatrix({ compliance }: ComplianceMatrixProps) {

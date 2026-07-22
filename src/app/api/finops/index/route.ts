@@ -4,7 +4,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { calculateFinOpsIndex } from "@/lib/finops/finops-index";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
   try {
     const index = await calculateFinOpsIndex(workspaceId);
     return NextResponse.json(index);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch finops index" }, { status: 500 });
   }
 }

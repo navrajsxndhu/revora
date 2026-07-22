@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const VaultEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const VaultEngine = {
   }
 };
 
-export const getVaultEngine = async (...args: any[]) => ({});
-export const calculateVaultEngine = async (...args: any[]) => ({});
-export const recordVaultEngineEvents = async (...args: any[]) => ({});
+export const getVaultEngine = async (...[]) => ({});
+export const calculateVaultEngine = async (...[]) => ({});
+export const recordVaultEngineEvents = async (...[]) => ({});

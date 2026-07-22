@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const rules = await SodEngine.getRules(workspaceId);
     return NextResponse.json({ rules });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch sod rules" }, { status: 500 });
   }
 }

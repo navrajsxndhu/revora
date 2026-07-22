@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const KnowledgeValidationEngine = {
   validate: async (workspaceId: string, resourceId: string) => {

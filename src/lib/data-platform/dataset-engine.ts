@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const DatasetEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const DatasetEngine = {
   }
 };
 
-export const getDatasetEngine = async (...args: any[]) => ({});
-export const calculateDatasetEngine = async (...args: any[]) => ({});
-export const recordDatasetEngineEvents = async (...args: any[]) => ({});
+export const getDatasetEngine = async (...[]) => ({});
+export const calculateDatasetEngine = async (...[]) => ({});
+export const recordDatasetEngineEvents = async (...[]) => ({});

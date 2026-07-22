@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function processOwnership(workspaceId: string) {
   // Maps Engineering Teams to Services, Applications, etc.

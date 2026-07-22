@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Package } from "lucide-react";
 
 interface ReleasePackagesProps {
-  packages: any[];
+  packages: unknown[];
 }
 
 export function ReleasePackages({ packages }: ReleasePackagesProps) {

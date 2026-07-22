@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RoutingEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const RoutingEngine = {
   }
 };
 
-export const getRoutingEngine = async (...args: any[]) => ({});
-export const calculateRoutingEngine = async (...args: any[]) => ({});
-export const recordRoutingEngineEvents = async (...args: any[]) => ({});
+export const getRoutingEngine = async (...[]) => ({});
+export const calculateRoutingEngine = async (...[]) => ({});
+export const recordRoutingEngineEvents = async (...[]) => ({});

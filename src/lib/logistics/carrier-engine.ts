@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const CarrierEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const CarrierEngine = {
   }
 };
 
-export const getCarrierEngine = async (...args: any[]) => ({});
-export const calculateCarrierEngine = async (...args: any[]) => ({});
-export const recordCarrierEngineEvents = async (...args: any[]) => ({});
+export const getCarrierEngine = async (...[]) => ({});
+export const calculateCarrierEngine = async (...[]) => ({});
+export const recordCarrierEngineEvents = async (...[]) => ({});

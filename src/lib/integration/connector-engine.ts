@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ConnectorEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ConnectorEngine = {
   }
 };
 
-export const validateConnectorEngine = async (...args: any[]) => ({});
-export const governConnectorEngine = async (...args: any[]) => ({});
-export const verifyConnectorEngine = async (...args: any[]) => ({});
+export const validateConnectorEngine = async (...[]) => ({});
+export const governConnectorEngine = async (...[]) => ({});
+export const verifyConnectorEngine = async (...[]) => ({});

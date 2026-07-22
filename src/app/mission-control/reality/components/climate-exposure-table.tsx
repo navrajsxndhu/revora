@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function ClimateExposureTable({ zones }: { zones: any[] }) {
+export function ClimateExposureTable({ zones }: { zones: unknown[] }) {
   return (
     <table className="w-full text-left text-sm text-zinc-400">
       <thead className="bg-zinc-900/50 text-xs uppercase tracking-wider text-zinc-500 border-b border-zinc-800">

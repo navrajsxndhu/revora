@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { CalendarRange } from "lucide-react";
 
 interface ReleaseWindowsProps {
-  windows: any[];
+  windows: unknown[];
 }
 
 export function ReleaseWindows({ windows }: ReleaseWindowsProps) {

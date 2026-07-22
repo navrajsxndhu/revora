@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ZoneEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ZoneEngine = {
   }
 };
 
-export const getZoneEngine = async (...args: any[]) => ({});
-export const calculateZoneEngine = async (...args: any[]) => ({});
-export const validateZoneEngine = async (...args: any[]) => ({});
+export const getZoneEngine = async (...[]) => ({});
+export const calculateZoneEngine = async (...[]) => ({});
+export const validateZoneEngine = async (...[]) => ({});

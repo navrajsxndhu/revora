@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function InstitutionalLineageTimeline({ lineages }: { lineages: any[] }) {
+export function InstitutionalLineageTimeline({ lineages }: { lineages: unknown[] }) {
   return (
     <div className="relative border-l border-zinc-800 ml-4 pl-6 space-y-6">
       {lineages.map((lineage, idx) => (

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const SnapshotEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const SnapshotEngine = {
   }
 };
 
-export const getSnapshotEngine = async (...args: any[]) => ({});
-export const calculateSnapshotEngine = async (...args: any[]) => ({});
-export const recordSnapshotEngineEvents = async (...args: any[]) => ({});
+export const getSnapshotEngine = async (...[]) => ({});
+export const calculateSnapshotEngine = async (...[]) => ({});
+export const recordSnapshotEngineEvents = async (...[]) => ({});

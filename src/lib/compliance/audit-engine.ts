@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const AuditEngine = {
   getOverview: async (workspaceId: string) => {

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { GitCommit } from "lucide-react";
 
 interface IncidentTimelineProps {
-  timeline: any[];
+  timeline: unknown[];
 }
 
 export function IncidentTimeline({ timeline }: IncidentTimelineProps) {

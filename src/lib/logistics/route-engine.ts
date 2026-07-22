@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RouteEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const RouteEngine = {
   }
 };
 
-export const getRouteEngine = async (...args: any[]) => ({});
-export const calculateRouteEngine = async (...args: any[]) => ({});
-export const recordRouteEngineEvents = async (...args: any[]) => ({});
+export const getRouteEngine = async (...[]) => ({});
+export const calculateRouteEngine = async (...[]) => ({});
+export const recordRouteEngineEvents = async (...[]) => ({});

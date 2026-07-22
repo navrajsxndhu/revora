@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ShutdownEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ShutdownEngine = {
   }
 };
 
-export const getShutdownEngine = async (...args: any[]) => ({});
-export const calculateShutdownEngine = async (...args: any[]) => ({});
-export const recordShutdownEngineEvents = async (...args: any[]) => ({});
+export const getShutdownEngine = async (...[]) => ({});
+export const calculateShutdownEngine = async (...[]) => ({});
+export const recordShutdownEngineEvents = async (...[]) => ({});

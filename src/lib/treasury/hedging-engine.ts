@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const HedgingEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const HedgingEngine = {
   }
 };
 
-export const getHedgingEngine = async (...args: any[]) => ({});
-export const calculateHedgingEngine = async (...args: any[]) => ({});
-export const recordHedgingEngineEvents = async (...args: any[]) => ({});
+export const getHedgingEngine = async (...[]) => ({});
+export const calculateHedgingEngine = async (...[]) => ({});
+export const recordHedgingEngineEvents = async (...[]) => ({});

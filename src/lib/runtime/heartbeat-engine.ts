@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const HeartbeatEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const HeartbeatEngine = {
   }
 };
 
-export const getHeartbeatEngine = async (...args: any[]) => ({});
-export const calculateHeartbeatEngine = async (...args: any[]) => ({});
-export const recordHeartbeatEngineEvents = async (...args: any[]) => ({});
+export const getHeartbeatEngine = async (...[]) => ({});
+export const calculateHeartbeatEngine = async (...[]) => ({});
+export const recordHeartbeatEngineEvents = async (...[]) => ({});

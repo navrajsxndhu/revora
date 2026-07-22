@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { AlertOctagon } from "lucide-react";
 
 interface ActiveFindingsCenterProps {
-  findings: any[];
+  findings: unknown[];
 }
 
 export function ActiveFindingsCenter({ findings }: ActiveFindingsCenterProps) {

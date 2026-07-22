@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RecallEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const RecallEngine = {
   }
 };
 
-export const getRecallEngine = async (...args: any[]) => ({});
-export const calculateRecallEngine = async (...args: any[]) => ({});
-export const recordRecallEngineEvents = async (...args: any[]) => ({});
+export const getRecallEngine = async (...[]) => ({});
+export const calculateRecallEngine = async (...[]) => ({});
+export const recordRecallEngineEvents = async (...[]) => ({});

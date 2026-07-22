@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Scale } from "lucide-react";
 
 interface ConstitutionalValidationProps {
-  validation: any[];
+  validation: unknown[];
 }
 
 export function ConstitutionalValidation({ validation }: ConstitutionalValidationProps) {

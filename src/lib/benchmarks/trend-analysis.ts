@@ -16,7 +16,7 @@ export async function getReliabilityTrends() {
     })
   ]);
 
-  const calcMTTR = (incs: any[]) => {
+  const calcMTTR = (incs: unknown[]) => {
     let total = 0;
     let count = 0;
     for (const inc of incs) {
@@ -28,7 +28,7 @@ export async function getReliabilityTrends() {
     return count > 0 ? (total / count) / 60000 : 0;
   };
 
-  const calcBlast = (incs: any[]) => {
+  const calcBlast = (incs: unknown[]) => {
     if (incs.length === 0) return 0;
     return incs.reduce((acc, i) => acc + i.childIncidents.length, 0) / incs.length;
   };

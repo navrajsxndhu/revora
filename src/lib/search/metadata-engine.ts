@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const MetadataEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const MetadataEngine = {
   }
 };
 
-export const validateMetadataEngine = async (...args: any[]) => ({});
-export const governMetadataEngine = async (...args: any[]) => ({});
-export const verifyMetadataEngine = async (...args: any[]) => ({});
+export const validateMetadataEngine = async (...[]) => ({});
+export const governMetadataEngine = async (...[]) => ({});
+export const verifyMetadataEngine = async (...[]) => ({});

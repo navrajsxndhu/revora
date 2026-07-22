@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const MaintenanceProgramEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const MaintenanceProgramEngine = {
   }
 };
 
-export const getMaintenanceProgramEngine = async (...args: any[]) => ({});
-export const calculateMaintenanceProgramEngine = async (...args: any[]) => ({});
-export const recordMaintenanceProgramEngineEvents = async (...args: any[]) => ({});
+export const getMaintenanceProgramEngine = async (...[]) => ({});
+export const calculateMaintenanceProgramEngine = async (...[]) => ({});
+export const recordMaintenanceProgramEngineEvents = async (...[]) => ({});

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const TopologyEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const TopologyEngine = {
   }
 };
 
-export const validateTopologyEngine = async (...args: any[]) => ({});
-export const governTopologyEngine = async (...args: any[]) => ({});
-export const verifyTopologyEngine = async (...args: any[]) => ({});
+export const validateTopologyEngine = async (...[]) => ({});
+export const governTopologyEngine = async (...[]) => ({});
+export const verifyTopologyEngine = async (...[]) => ({});

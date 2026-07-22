@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const IntegrationIndex = {
   getOverview: async (workspaceId: string) => {
@@ -6,4 +5,4 @@ export const IntegrationIndex = {
   }
 };
 
-export const calculateIntegrationIndex = async (...args: any[]) => ({});
+export const calculateIntegrationIndex = async (...[]) => ({});

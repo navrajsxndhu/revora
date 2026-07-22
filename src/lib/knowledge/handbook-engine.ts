@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const HandbookEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const HandbookEngine = {
   }
 };
 
-export const getHandbookEngine = async (...args: any[]) => ({});
-export const calculateHandbookEngine = async (...args: any[]) => ({});
-export const recordHandbookEngineEvents = async (...args: any[]) => ({});
+export const getHandbookEngine = async (...[]) => ({});
+export const calculateHandbookEngine = async (...[]) => ({});
+export const recordHandbookEngineEvents = async (...[]) => ({});

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const PatentEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const PatentEngine = {
   }
 };
 
-export const getPatentEngine = async (...args: any[]) => ({});
-export const calculatePatentEngine = async (...args: any[]) => ({});
-export const recordPatentEngineEvents = async (...args: any[]) => ({});
+export const getPatentEngine = async (...[]) => ({});
+export const calculatePatentEngine = async (...[]) => ({});
+export const recordPatentEngineEvents = async (...[]) => ({});

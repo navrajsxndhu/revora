@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const QuotaEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const QuotaEngine = {
   }
 };
 
-export const getQuotaEngine = async (...args: any[]) => ({});
-export const calculateQuotaEngine = async (...args: any[]) => ({});
-export const recordQuotaEngineEvents = async (...args: any[]) => ({});
+export const getQuotaEngine = async (...[]) => ({});
+export const calculateQuotaEngine = async (...[]) => ({});
+export const recordQuotaEngineEvents = async (...[]) => ({});

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const CollaborationIndex = {
   getOverview: async (workspaceId: string) => {

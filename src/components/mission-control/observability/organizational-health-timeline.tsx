@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { LineChart } from "lucide-react";
 
 interface OrganizationalHealthTimelineProps {
-  timeline: any[];
+  timeline: unknown[];
 }
 
 export function OrganizationalHealthTimeline({ timeline }: OrganizationalHealthTimelineProps) {

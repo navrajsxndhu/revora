@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Route } from "lucide-react";
 
 interface ExecutionRoadmapViewerProps {
-  milestones: any[];
+  milestones: unknown[];
 }
 
 export function ExecutionRoadmapViewer({ milestones }: ExecutionRoadmapViewerProps) {

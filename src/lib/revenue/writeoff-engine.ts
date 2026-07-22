@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const WriteoffEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const WriteoffEngine = {
   }
 };
 
-export const getWriteoffEngine = async (...args: any[]) => ({});
-export const calculateWriteoffEngine = async (...args: any[]) => ({});
-export const recordWriteoffEngineEvents = async (...args: any[]) => ({});
+export const getWriteoffEngine = async (...[]) => ({});
+export const calculateWriteoffEngine = async (...[]) => ({});
+export const recordWriteoffEngineEvents = async (...[]) => ({});

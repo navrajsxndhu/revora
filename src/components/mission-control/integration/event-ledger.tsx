@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Database } from "lucide-react";
 
 interface EventLedgerProps {
-  events: any[];
+  events: unknown[];
 }
 
 export function EventLedger({ events }: EventLedgerProps) {

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const CompatibilityEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const CompatibilityEngine = {
   }
 };
 
-export const getCompatibilityEngine = async (...args: any[]) => ({});
-export const calculateCompatibilityEngine = async (...args: any[]) => ({});
-export const recordCompatibilityEngineEvents = async (...args: any[]) => ({});
+export const getCompatibilityEngine = async (...[]) => ({});
+export const calculateCompatibilityEngine = async (...[]) => ({});
+export const recordCompatibilityEngineEvents = async (...[]) => ({});

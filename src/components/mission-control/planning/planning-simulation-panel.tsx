@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Activity } from "lucide-react";
 
 interface PlanningSimulationPanelProps {
-  simulation: any;
+  simulation: unknown;
 }
 
 export function PlanningSimulationPanel({ simulation }: PlanningSimulationPanelProps) {

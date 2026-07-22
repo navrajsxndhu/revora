@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ScorecardEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ScorecardEngine = {
   }
 };
 
-export const getScorecardEngine = async (...args: any[]) => ({});
-export const calculateScorecardEngine = async (...args: any[]) => ({});
-export const recordScorecardEngineEvents = async (...args: any[]) => ({});
+export const getScorecardEngine = async (...[]) => ({});
+export const calculateScorecardEngine = async (...[]) => ({});
+export const recordScorecardEngineEvents = async (...[]) => ({});

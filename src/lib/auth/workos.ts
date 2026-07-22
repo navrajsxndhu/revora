@@ -3,10 +3,10 @@
 
 export const workos = {
   sso: {
-    getAuthorizationURL: ({ clientId, redirectUri, provider }: any) => {
+    getAuthorizationURL: ({ clientId, redirectUri, provider }: unknown) => {
       return `https://mock-sso.workos.com/authorize?client_id=${clientId}&provider=${provider}`;
     },
-    getProfileAndToken: async ({ code, clientId }: any) => {
+    getProfileAndToken: async ({ code, clientId }: unknown) => {
       return {
         profile: {
           id: 'mock_prof_123',

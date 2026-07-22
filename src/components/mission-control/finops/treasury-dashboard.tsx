@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Landmark } from "lucide-react";
 
 interface TreasuryDashboardProps {
-  treasury: any;
+  treasury: unknown;
 }
 
 export function TreasuryDashboard({ treasury }: TreasuryDashboardProps) {

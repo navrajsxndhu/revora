@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RetentionEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const RetentionEngine = {
   }
 };
 
-export const getRetentionEngine = async (...args: any[]) => ({});
-export const calculateRetentionEngine = async (...args: any[]) => ({});
-export const recordRetentionEngineEvents = async (...args: any[]) => ({});
+export const getRetentionEngine = async (...[]) => ({});
+export const calculateRetentionEngine = async (...[]) => ({});
+export const recordRetentionEngineEvents = async (...[]) => ({});

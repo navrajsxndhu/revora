@@ -3,7 +3,7 @@ import { getAvailableObjectiveFunctions } from "@/lib/optimization/objective-fun
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
   try {
     const objectives = getAvailableObjectiveFunctions();
     return NextResponse.json(objectives);
-  } catch (error) {
+  } catch {
     console.error("Error fetching objectives:", error);
     return NextResponse.json({ error: "Failed to fetch objectives" }, { status: 500 });
   }

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function simulateSecurityScenario(workspaceId: string, scenario: string) {
   // Evaluates hypothetical scenarios

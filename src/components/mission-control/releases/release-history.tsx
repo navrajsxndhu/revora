@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { History } from "lucide-react";
 
 interface ReleaseHistoryProps {
-  history: any[];
+  history: unknown[];
 }
 
 export function ReleaseHistory({ history }: ReleaseHistoryProps) {

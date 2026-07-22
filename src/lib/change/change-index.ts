@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function calculateChangeIndex(workspaceId: string) {
   // Calculates CHANGE_GOVERNANCE_CIVILIZATION maturity metric

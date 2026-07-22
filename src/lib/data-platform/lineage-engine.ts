@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const LineageEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const LineageEngine = {
   }
 };
 
-export const getLineageEngine = async (...args: any[]) => ({});
-export const calculateLineageEngine = async (...args: any[]) => ({});
-export const recordLineageEngineEvents = async (...args: any[]) => ({});
+export const getLineageEngine = async (...[]) => ({});
+export const calculateLineageEngine = async (...[]) => ({});
+export const recordLineageEngineEvents = async (...[]) => ({});

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function coordinateFulfillment(workspaceId: string, requestId: string) {
   // Integrates with Platform Engineering, Workflows, CMDB, etc.

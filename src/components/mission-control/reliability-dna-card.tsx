@@ -1,6 +1,6 @@
 import React from "react";
 
-export function ReliabilityDNACard({ dna }: { dna: any }) {
+export function ReliabilityDNACard({ dna }: { dna: unknown }) {
   if (!dna) return null;
 
   return (

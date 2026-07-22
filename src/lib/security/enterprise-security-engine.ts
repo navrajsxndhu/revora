@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const EnterpriseSecurityEngine = {
   orchestrateSecurity: async () => ({}), getOverview: async (workspaceId: string) => {

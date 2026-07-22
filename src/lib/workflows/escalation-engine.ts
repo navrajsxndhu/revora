@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const EscalationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const EscalationEngine = {
   }
 };
 
-export const getEscalationEngine = async (...args: any[]) => ({});
-export const calculateEscalationEngine = async (...args: any[]) => ({});
-export const recordEscalationEngineEvents = async (...args: any[]) => ({});
+export const getEscalationEngine = async (...[]) => ({});
+export const calculateEscalationEngine = async (...[]) => ({});
+export const recordEscalationEngineEvents = async (...[]) => ({});

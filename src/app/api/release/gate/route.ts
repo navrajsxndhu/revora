@@ -5,7 +5,7 @@ import { detectArchitecturalDrift } from "@/lib/release/drift-detection";
 import { getHistoricalInsights } from "@/lib/benchmarks/operational-memory";
 import { calculateServiceMetrics } from "@/lib/benchmarks/service-benchmarks";
 
-export async function POST(req: NextRequest) {
+export async function POST() {
   try {
     const payload = await req.json();
     const serviceName = payload.serviceName;
@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
       prCommentMarkdown: comment
     });
 
-  } catch (error) {
+  } catch {
     console.error("[RELEASE_GATE_API] Error:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }

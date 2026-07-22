@@ -1,6 +1,6 @@
 import React from "react";
 
-export function AdaptiveGovernancePanel({ rolloutStrategy }: { rolloutStrategy: any }) {
+export function AdaptiveGovernancePanel({ rolloutStrategy }: { rolloutStrategy: unknown }) {
   if (!rolloutStrategy) return null;
 
   return (

@@ -3,7 +3,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
       { id: "srv-2", name: "Production Database Access", category: "Security", requiredApprovals: ["Security", "Service Owner"] }
     ];
     return NextResponse.json(catalog);
-  } catch (error: any) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch catalog" }, { status: 500 });
   }
 }

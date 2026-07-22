@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const TerminationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const TerminationEngine = {
   }
 };
 
-export const getTerminationEngine = async (...args: any[]) => ({});
-export const calculateTerminationEngine = async (...args: any[]) => ({});
-export const recordTerminationEngineEvents = async (...args: any[]) => ({});
+export const getTerminationEngine = async (...[]) => ({});
+export const calculateTerminationEngine = async (...[]) => ({});
+export const recordTerminationEngineEvents = async (...[]) => ({});

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Activity } from "lucide-react";
 
 interface ExecutiveWorkflowMetricsProps {
-  metrics: any;
+  metrics: unknown;
 }
 
 export function ExecutiveWorkflowMetrics({ metrics }: ExecutiveWorkflowMetricsProps) {

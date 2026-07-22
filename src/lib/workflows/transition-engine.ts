@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const TransitionEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const TransitionEngine = {
   }
 };
 
-export const getTransitionEngine = async (...args: any[]) => ({});
-export const calculateTransitionEngine = async (...args: any[]) => ({});
-export const recordTransitionEngineEvents = async (...args: any[]) => ({});
+export const getTransitionEngine = async (...[]) => ({});
+export const calculateTransitionEngine = async (...[]) => ({});
+export const recordTransitionEngineEvents = async (...[]) => ({});

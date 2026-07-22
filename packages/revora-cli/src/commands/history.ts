@@ -17,7 +17,7 @@ export const historyCommand = new Command('history')
         return;
       }
 
-      const data: any = await res.json();
+      const data: unknown = await res.json();
       
       if (!data || data.incidentsCount === 0) {
         log.info('No historical incidents found for this service.');
@@ -33,7 +33,7 @@ export const historyCommand = new Command('history')
         log.success(data.mostSuccessfulAction);
       }
 
-    } catch (e: any) {
+    } catch (e: unknown) {
       log.error(`Could not connect to Revora backend at ${config.backendUrl}`);
     }
   });

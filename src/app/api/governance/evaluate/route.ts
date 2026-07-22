@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { evaluateDeploymentPolicy } from "@/lib/governance/policy-evaluator";
 import { prisma } from "@/lib/prisma";
 
-export async function POST(req: Request) {
+export async function POST() {
   try {
     const { serviceName, workspaceId } = await req.json();
 
@@ -24,7 +24,7 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json(evaluation);
-  } catch (error: any) {
+  } catch (error: unknown) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

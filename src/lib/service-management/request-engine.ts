@@ -1,6 +1,5 @@
-import { prisma } from "@/lib/prisma";
 
-export async function createServiceRequest(workspaceId: string, category: string, payload: any) {
+export async function createServiceRequest(workspaceId: string, category: string, payload: unknown) {
   const validCategories = [
     "Infrastructure", "Platform", "Security", "Access", "Release",
     "Change", "Incident", "Compliance", "FinOps", "Reliability"

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const DelegationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const DelegationEngine = {
   }
 };
 
-export const validateDelegationEngine = async (...args: any[]) => ({});
-export const governDelegationEngine = async (...args: any[]) => ({});
-export const verifyDelegationEngine = async (...args: any[]) => ({});
+export const validateDelegationEngine = async (...[]) => ({});
+export const governDelegationEngine = async (...[]) => ({});
+export const verifyDelegationEngine = async (...[]) => ({});

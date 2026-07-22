@@ -1,12 +1,12 @@
 import { describe, it, expect } from 'vitest';
 
 // Dummy engine representations to satisfy coverage of core architecture
-function evaluatePolicy(policyId: string, context: any) {
+function evaluatePolicy(policyId: string, context: unknown) {
   if (context.isAI) throw new Error('AI interventions are constitutionally prohibited');
   return { status: 'COMPLIANT', policyId };
 }
 
-function generateEvidence(executionId: string, data: any) {
+function generateEvidence(executionId: string, data: unknown) {
   return { evidenceId: `evd-${executionId}`, immutable: true, hash: 'a1b2c3d4' };
 }
 

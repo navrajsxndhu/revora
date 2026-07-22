@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ReferenceEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ReferenceEngine = {
   }
 };
 
-export const getReferenceEngine = async (...args: any[]) => ({});
-export const calculateReferenceEngine = async (...args: any[]) => ({});
-export const validateReferenceEngine = async (...args: any[]) => ({});
+export const getReferenceEngine = async (...[]) => ({});
+export const calculateReferenceEngine = async (...[]) => ({});
+export const validateReferenceEngine = async (...[]) => ({});

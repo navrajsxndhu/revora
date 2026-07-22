@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ServiceAssessmentEngine = {
   getOverview: async (workspaceId: string) => {

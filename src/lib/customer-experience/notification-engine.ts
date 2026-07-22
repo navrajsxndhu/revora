@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const NotificationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const NotificationEngine = {
   }
 };
 
-export const getNotificationEngine = async (...args: any[]) => ({});
-export const calculateNotificationEngine = async (...args: any[]) => ({});
-export const recordNotificationEngineEvents = async (...args: any[]) => ({});
+export const getNotificationEngine = async (...[]) => ({});
+export const calculateNotificationEngine = async (...[]) => ({});
+export const recordNotificationEngineEvents = async (...[]) => ({});

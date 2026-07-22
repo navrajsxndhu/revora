@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ChannelEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ChannelEngine = {
   }
 };
 
-export const getChannelEngine = async (...args: any[]) => ({});
-export const calculateChannelEngine = async (...args: any[]) => ({});
-export const recordChannelEngineEvents = async (...args: any[]) => ({});
+export const getChannelEngine = async (...[]) => ({});
+export const calculateChannelEngine = async (...[]) => ({});
+export const recordChannelEngineEvents = async (...[]) => ({});

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { LineChart } from "lucide-react";
 
 interface ParetoFrontierPanelProps {
-  candidates: any[];
+  candidates: unknown[];
 }
 
 export function ParetoFrontierPanel({ candidates }: ParetoFrontierPanelProps) {

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const PlanningGovernanceEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const PlanningGovernanceEngine = {
   }
 };
 
-export const getPlanningGovernanceEngine = async (...args: any[]) => ({});
-export const calculatePlanningGovernanceEngine = async (...args: any[]) => ({});
-export const recordPlanningGovernanceEngineEvents = async (...args: any[]) => ({});
+export const getPlanningGovernanceEngine = async (...[]) => ({});
+export const calculatePlanningGovernanceEngine = async (...[]) => ({});
+export const recordPlanningGovernanceEngineEvents = async (...[]) => ({});

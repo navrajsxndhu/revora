@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const PortfolioRoadmapEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const PortfolioRoadmapEngine = {
   }
 };
 
-export const getPortfolioRoadmapEngine = async (...args: any[]) => ({});
-export const calculatePortfolioRoadmapEngine = async (...args: any[]) => ({});
-export const recordPortfolioRoadmapEngineEvents = async (...args: any[]) => ({});
+export const getPortfolioRoadmapEngine = async (...[]) => ({});
+export const calculatePortfolioRoadmapEngine = async (...[]) => ({});
+export const recordPortfolioRoadmapEngineEvents = async (...[]) => ({});

@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { triggerRollback } from "@/lib/integrations/vercel";
 import { broadcastEvent } from "@/lib/events/emitter";
 
-export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+export async function POST(, { params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   try {
     const incident = await prisma.incident.findUnique({
@@ -29,7 +29,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     broadcastEvent("INCIDENT_UPDATED", { incidentId: incident.id });
 
     return NextResponse.json({ success: true, rollbackId: result.id });
-  } catch (error) {
+  } catch {
     console.error("Rollback failed:", error);
     return NextResponse.json({ error: "Failed to execute rollback" }, { status: 500 });
   }

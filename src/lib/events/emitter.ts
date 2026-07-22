@@ -11,6 +11,6 @@ if (process.env.NODE_ENV !== 'production') {
   globalForEmitter.emitter = sseEmitter;
 }
 
-export function broadcastEvent(type: string, payload: any) {
+export function broadcastEvent(type: string, payload: unknown) {
   sseEmitter.emit('broadcast', { type, payload });
 }

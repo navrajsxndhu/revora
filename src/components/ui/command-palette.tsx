@@ -5,7 +5,7 @@ import { Command } from 'cmdk';
 import { useRouter } from 'next/navigation';
 import { 
   Search, Shield, Users, Server, Activity, 
-  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe, Presentation, Workflow, Hexagon, Undo, PlayCircle, History, RefreshCw, BrainCircuit, Bot, KeyRound, FileKey2, Fingerprint, Lock, CloudCog, Thermometer, ShoppingCart, Store, Tag, Puzzle, DownloadCloud, Blocks, Code2, BarChart2, TerminalSquare, GitMerge, LineChart
+  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe, Presentation, Workflow, Hexagon, Undo, PlayCircle, History, RefreshCw, BrainCircuit, Bot, KeyRound, FileKey2, Fingerprint, Lock, CloudCog, Thermometer, ShoppingCart, Store, Tag, Puzzle, DownloadCloud, Blocks, Code2, BarChart2, TerminalSquare, GitMerge, LineChart, MapPin, AlertTriangle, Gavel, FileCode2
 } from 'lucide-react';
 
 export function CommandPalette() {
@@ -560,6 +560,46 @@ export function CommandPalette() {
                 <Brain className="w-4 h-4 text-purple-400" />
                 Experiment Tracking Workspace
               </Command.Item>
+              <Command.Item onSelect={() => navigate('/architecture')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Building2 className="w-4 h-4 text-emerald-400" />
+                Enterprise Architecture Command Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/architecture/capabilities')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Map className="w-4 h-4 text-blue-400" />
+                Business Capability Map
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/architecture/applications')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Box className="w-4 h-4 text-amber-400" />
+                Enterprise Application Portfolio
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/architecture/standards')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <FileCode2 className="w-4 h-4 text-purple-400" />
+                Technology Standards & Reference
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/architecture/transformation')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Rocket className="w-4 h-4 text-rose-400" />
+                Strategic Transformation Portfolio
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/architecture/roadmaps')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <MapPin className="w-4 h-4 text-blue-400" />
+                Enterprise Roadmap Planner
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/architecture/debt')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <AlertTriangle className="w-4 h-4 text-amber-500" />
+                Technical Debt Governance
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/architecture/reviews')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Gavel className="w-4 h-4 text-emerald-500" />
+                Architecture Review Board
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/architecture/analytics')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <BarChart2 className="w-4 h-4 text-purple-400" />
+                Architecture Analytics
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/architecture/audit')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <History className="w-4 h-4 text-slate-400" />
+                Enterprise Architecture Audit Ledger
+              </Command.Item>
               <Command.Item onSelect={() => navigate('/ml-platform/deployments')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <GitMerge className="w-4 h-4 text-blue-400" />
                 Model Deployment Governance
@@ -583,6 +623,52 @@ export function CommandPalette() {
               <Command.Item onSelect={() => navigate('/ml-platform/audit')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <History className="w-4 h-4 text-slate-400" />
                 ML Audit Ledger
+              </Command.Item>
+            </Command.Group>
+            <Command.Group heading="ECARGQAP" className="px-2 py-2 text-xs font-medium text-slate-500 uppercase tracking-wider mt-4">
+              <Command.Item onSelect={() => navigate('/engineering/audit')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <ShieldCheck className="w-4 h-4 text-emerald-500" />
+                Enterprise Repository Command Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/audit/dead-code')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <FileCode2 className="w-4 h-4 text-rose-400" />
+                Dead Code Governance
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/audit/imports')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Network className="w-4 h-4 text-blue-400" />
+                Import & Dependency Governance
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/audit/routes')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <LayoutDashboard className="w-4 h-4 text-purple-400" />
+                Route & Navigation Governance
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/audit/components')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Box className="w-4 h-4 text-emerald-400" />
+                Component Quality Governance
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/audit/types')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Code2 className="w-4 h-4 text-amber-400" />
+                TypeScript Governance Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/audit/prisma')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Database className="w-4 h-4 text-indigo-400" />
+                Prisma & Data Layer Audit
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/audit/performance')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Zap className="w-4 h-4 text-yellow-400" />
+                Performance Optimization Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/audit/security')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <ShieldCheck className="w-4 h-4 text-emerald-500" />
+                Security & Compliance Audit
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/audit/analytics')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <LineChart className="w-4 h-4 text-blue-500" />
+                Enterprise Engineering Analytics
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/audit/evidence')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <History className="w-4 h-4 text-slate-400" />
+                Repository Evidence Ledger
               </Command.Item>
             </Command.Group>
           </Command.List>

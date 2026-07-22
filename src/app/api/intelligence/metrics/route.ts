@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const metrics = await OperationalMetricsEngine.getMetrics(workspaceId);
     return NextResponse.json({ metrics });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch metrics" }, { status: 500 });
   }
 }

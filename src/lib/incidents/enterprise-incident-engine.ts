@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 import { detectIncidents } from "./incident-detection";
 import { buildIncidentTimeline } from "./incident-timeline";
 import { analyzeRootCause } from "./root-cause-analysis";

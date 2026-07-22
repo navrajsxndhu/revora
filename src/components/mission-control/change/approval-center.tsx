@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
 
 interface ApprovalCenterProps {
-  approvals: any[];
+  approvals: unknown[];
 }
 
 export function ApprovalCenter({ approvals }: ApprovalCenterProps) {

@@ -3,12 +3,12 @@ import { sseEmitter } from "@/lib/events/emitter";
 
 export const dynamic = "force-dynamic";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   let responseStream = new TransformStream();
   const writer = responseStream.writable.getWriter();
   const encoder = new TextEncoder();
 
-  const onEvent = (data: { type: string; payload: any }) => {
+  const onEvent = (data: { type: string; payload: unknown }) => {
     writer.write(encoder.encode(`data: ${JSON.stringify(data)}\n\n`));
   };
 

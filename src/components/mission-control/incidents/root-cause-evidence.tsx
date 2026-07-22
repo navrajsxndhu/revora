@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Search } from "lucide-react";
 
 interface RootCauseEvidenceProps {
-  evidence: any[];
+  evidence: unknown[];
 }
 
 export function RootCauseEvidence({ evidence }: RootCauseEvidenceProps) {

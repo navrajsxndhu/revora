@@ -1,6 +1,6 @@
 import { Command } from 'commander';
 import { getApiKey } from './auth';
-import fetch from 'node-fetch'; // assuming this exists or use native fetch if available
+ // assuming this exists or use native fetch if available
 
 // In this mockup we will just fake the API call output, but in a real CLI we'd hit our actual API endpoint
 // For now we'll simulate the console output.

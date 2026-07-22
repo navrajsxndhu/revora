@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const IdentityEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const IdentityEngine = {
   }
 };
 
-export const getIdentityEngine = async (...args: any[]) => ({});
-export const calculateIdentityEngine = async (...args: any[]) => ({});
-export const recordIdentityEngineEvents = async (...args: any[]) => ({});
+export const getIdentityEngine = async (...[]) => ({});
+export const calculateIdentityEngine = async (...[]) => ({});
+export const recordIdentityEngineEvents = async (...[]) => ({});

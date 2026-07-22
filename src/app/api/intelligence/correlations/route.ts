@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const correlations = await CorrelationEngine.getCorrelations(workspaceId);
     return NextResponse.json({ correlations });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch correlations" }, { status: 500 });
   }
 }

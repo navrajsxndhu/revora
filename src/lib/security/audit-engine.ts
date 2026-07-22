@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function processAudit(workspaceId: string) {
   // Mock audit events

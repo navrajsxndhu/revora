@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const initiatives = await prisma.strategicInitiative.findMany({ where: { workspaceId } });
     return NextResponse.json({ initiatives });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch initiatives" }, { status: 500 });
   }
 }

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Activity } from "lucide-react";
 
 interface ExecutiveFinOpsHealthProps {
-  health: any;
+  health: unknown;
 }
 
 export function ExecutiveFinOpsHealth({ health }: ExecutiveFinOpsHealthProps) {

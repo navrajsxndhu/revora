@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const WorkOrderEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const WorkOrderEngine = {
   }
 };
 
-export const getWorkOrderEngine = async (...args: any[]) => ({});
-export const calculateWorkOrderEngine = async (...args: any[]) => ({});
-export const recordWorkOrderEngineEvents = async (...args: any[]) => ({});
+export const getWorkOrderEngine = async (...[]) => ({});
+export const calculateWorkOrderEngine = async (...[]) => ({});
+export const recordWorkOrderEngineEvents = async (...[]) => ({});

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RuleVersionEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const RuleVersionEngine = {
   }
 };
 
-export const getRuleVersionEngine = async (...args: any[]) => ({});
-export const calculateRuleVersionEngine = async (...args: any[]) => ({});
-export const recordRuleVersionEngineEvents = async (...args: any[]) => ({});
+export const getRuleVersionEngine = async (...[]) => ({});
+export const calculateRuleVersionEngine = async (...[]) => ({});
+export const recordRuleVersionEngineEvents = async (...[]) => ({});

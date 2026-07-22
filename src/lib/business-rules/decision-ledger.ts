@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const DecisionLedger = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const DecisionLedger = {
   }
 };
 
-export const getDecisionLedger = async (...args: any[]) => ({});
-export const calculateDecisionLedger = async (...args: any[]) => ({});
-export const recordDecisionLedgerEvents = async (...args: any[]) => ({});
+export const getDecisionLedger = async (...[]) => ({});
+export const calculateDecisionLedger = async (...[]) => ({});
+export const recordDecisionLedgerEvents = async (...[]) => ({});

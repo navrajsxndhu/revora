@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const CdcEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const CdcEngine = {
   }
 };
 
-export const getCdcEngine = async (...args: any[]) => ({});
-export const calculateCdcEngine = async (...args: any[]) => ({});
-export const recordCdcEngineEvents = async (...args: any[]) => ({});
+export const getCdcEngine = async (...[]) => ({});
+export const calculateCdcEngine = async (...[]) => ({});
+export const recordCdcEngineEvents = async (...[]) => ({});

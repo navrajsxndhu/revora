@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { AlertTriangle } from "lucide-react";
 
 interface ConfigurationDriftPanelProps {
-  drift: any;
+  drift: unknown;
 }
 
 export function ConfigurationDriftPanel({ drift }: ConfigurationDriftPanelProps) {

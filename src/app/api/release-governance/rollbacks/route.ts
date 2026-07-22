@@ -4,7 +4,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { RollbackEngine } from "@/lib/release-governance/rollback-engine";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const user = await prisma.user.findUnique({ where: { email: session.user.email }, include: { memberships: true } });
@@ -13,7 +13,7 @@ export async function GET(req: NextRequest) {
   try {
     const data = await RollbackEngine.getRollbacks(workspaceId);
     return NextResponse.json(data);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch rollbacks" }, { status: 500 });
   }
 }

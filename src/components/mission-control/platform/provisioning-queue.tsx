@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ListTodo } from "lucide-react";
 
 interface ProvisioningQueueProps {
-  queue: any[];
+  queue: unknown[];
 }
 
 export function ProvisioningQueue({ queue }: ProvisioningQueueProps) {

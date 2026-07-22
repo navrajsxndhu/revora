@@ -1,6 +1,5 @@
-import { prisma } from "@/lib/prisma";
 
-export async function orchestrateGovernance(workspaceId: string, eventPayload: any) {
+export async function orchestrateGovernance(workspaceId: string, eventPayload: unknown) {
   // Master orchestrator coordinating all governance subsystems
   return {
     status: "GOVERNED",

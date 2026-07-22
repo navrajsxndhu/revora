@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function OperationalDebtMap({ profile }: { profile: any }) {
+export function OperationalDebtMap({ profile }: { profile: unknown }) {
   return (
     <div className="p-4 border border-zinc-800 bg-zinc-900/50 rounded-lg flex flex-col space-y-3">
       <div className="flex justify-between items-center">

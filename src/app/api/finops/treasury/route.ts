@@ -4,7 +4,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { processTreasury } from "@/lib/finops/treasury-engine";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
   try {
     const treasury = await processTreasury(workspaceId);
     return NextResponse.json(treasury);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch treasury metrics" }, { status: 500 });
   }
 }

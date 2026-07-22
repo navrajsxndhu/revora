@@ -3,7 +3,7 @@ import { simulateDecisionScenario, DecisionSimulationScenario } from "@/lib/deci
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-export async function POST(req: NextRequest) {
+export async function POST() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
     const simulation = simulateDecisionScenario(scenario as DecisionSimulationScenario);
     return NextResponse.json(simulation);
-  } catch (error) {
+  } catch {
     console.error("Error simulating decision:", error);
     return NextResponse.json({ error: "Failed to simulate decision" }, { status: 500 });
   }

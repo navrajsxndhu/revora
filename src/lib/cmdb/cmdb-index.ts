@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function calculateCMDBIndex(workspaceId: string) {
   // Calculate enterprise CMDB maturity

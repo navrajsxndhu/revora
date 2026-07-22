@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const PlanningValidationEngine = {
   validate: async (workspaceId: string, targetId: string) => {

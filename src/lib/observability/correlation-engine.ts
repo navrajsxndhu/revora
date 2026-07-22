@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const CorrelationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -9,7 +8,7 @@ export const CorrelationEngine = {
   }
 };
 
-export const getCorrelationEngine = async (...args: any[]) => ({});
-export const calculateCorrelationEngine = async (...args: any[]) => ({});
-export const recordCorrelationEngineEvents = async (...args: any[]) => ({});
-export const buildCorrelations = async (...args: any[]) => ({});
+export const getCorrelationEngine = async (...[]) => ({});
+export const calculateCorrelationEngine = async (...[]) => ({});
+export const recordCorrelationEngineEvents = async (...[]) => ({});
+export const buildCorrelations = async (...[]) => ({});

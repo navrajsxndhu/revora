@@ -5,7 +5,7 @@ export async function GET() {
   try {
     const health = await checkPlatformHealth();
     return NextResponse.json(health);
-  } catch (error) {
+  } catch {
     return NextResponse.json({
       database: "RED",
       redis: "RED",

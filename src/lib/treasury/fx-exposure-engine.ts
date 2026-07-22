@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const FxExposureEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const FxExposureEngine = {
   }
 };
 
-export const getFxExposureEngine = async (...args: any[]) => ({});
-export const calculateFxExposureEngine = async (...args: any[]) => ({});
-export const recordFxExposureEngineEvents = async (...args: any[]) => ({});
+export const getFxExposureEngine = async (...[]) => ({});
+export const calculateFxExposureEngine = async (...[]) => ({});
+export const recordFxExposureEngineEvents = async (...[]) => ({});

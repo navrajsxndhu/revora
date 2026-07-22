@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const TerritoryEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const TerritoryEngine = {
   }
 };
 
-export const getTerritoryEngine = async (...args: any[]) => ({});
-export const calculateTerritoryEngine = async (...args: any[]) => ({});
-export const validateTerritoryEngine = async (...args: any[]) => ({});
+export const getTerritoryEngine = async (...[]) => ({});
+export const calculateTerritoryEngine = async (...[]) => ({});
+export const validateTerritoryEngine = async (...[]) => ({});

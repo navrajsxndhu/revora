@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ScheduleLedgerEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ScheduleLedgerEngine = {
   }
 };
 
-export const getScheduleLedgerEngine = async (...args: any[]) => ({});
-export const calculateScheduleLedgerEngine = async (...args: any[]) => ({});
-export const recordScheduleLedgerEngineEvents = async (...args: any[]) => ({});
+export const getScheduleLedgerEngine = async (...[]) => ({});
+export const calculateScheduleLedgerEngine = async (...[]) => ({});
+export const recordScheduleLedgerEngineEvents = async (...[]) => ({});

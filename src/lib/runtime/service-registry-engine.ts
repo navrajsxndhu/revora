@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ServiceRegistryEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ServiceRegistryEngine = {
   }
 };
 
-export const getServiceRegistryEngine = async (...args: any[]) => ({});
-export const calculateServiceRegistryEngine = async (...args: any[]) => ({});
-export const recordServiceRegistryEngineEvents = async (...args: any[]) => ({});
+export const getServiceRegistryEngine = async (...[]) => ({});
+export const calculateServiceRegistryEngine = async (...[]) => ({});
+export const recordServiceRegistryEngineEvents = async (...[]) => ({});

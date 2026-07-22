@@ -1,6 +1,6 @@
 import React from "react";
 
-export function OperationsTimeline({ events }: { events: any[] }) {
+export function OperationsTimeline({ events }: { events: unknown[] }) {
   return (
     <div className="bg-slate-900 border border-slate-800 rounded-lg p-6">
       <h2 className="text-xl font-medium text-slate-100 mb-6">Unified Operations Timeline</h2>

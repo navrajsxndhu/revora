@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ShieldCheck } from "lucide-react";
 
 interface ValidationCenterProps {
-  validation: any;
+  validation: unknown;
 }
 
 export function ValidationCenter({ validation }: ValidationCenterProps) {

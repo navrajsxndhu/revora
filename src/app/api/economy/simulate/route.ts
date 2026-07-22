@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { simulateEconomy } from '@/lib/economy/economy-simulator';
 
-export async function POST(req: Request) {
+export async function POST() {
   try {
     const { workspaceId, service, scenario } = await req.json();
 
@@ -22,7 +22,7 @@ export async function POST(req: Request) {
         reasoning: `Deterministic simulation based on scenario ${scenario} applied to historical burn rate.`
       }
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

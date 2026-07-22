@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const MeshEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const MeshEngine = {
   }
 };
 
-export const getMeshEngine = async (...args: any[]) => ({});
-export const calculateMeshEngine = async (...args: any[]) => ({});
-export const recordMeshEngineEvents = async (...args: any[]) => ({});
+export const getMeshEngine = async (...[]) => ({});
+export const calculateMeshEngine = async (...[]) => ({});
+export const recordMeshEngineEvents = async (...[]) => ({});

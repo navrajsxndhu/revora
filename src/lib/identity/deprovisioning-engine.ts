@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const DeprovisioningEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const DeprovisioningEngine = {
   }
 };
 
-export const getDeprovisioningEngine = async (...args: any[]) => ({});
-export const calculateDeprovisioningEngine = async (...args: any[]) => ({});
-export const recordDeprovisioningEngineEvents = async (...args: any[]) => ({});
+export const getDeprovisioningEngine = async (...[]) => ({});
+export const calculateDeprovisioningEngine = async (...[]) => ({});
+export const recordDeprovisioningEngineEvents = async (...[]) => ({});

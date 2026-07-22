@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { proposeAmendment } from '@/lib/constitution/amendment-engine';
 
-export async function POST(req: Request) {
+export async function POST() {
   try {
     const { workspaceId, title, proposedChange } = await req.json();
 
@@ -18,7 +18,7 @@ export async function POST(req: Request) {
         reasoning: `Deterministic assessment completed. Policy simulation bounded by treasury reserves.`
       }
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

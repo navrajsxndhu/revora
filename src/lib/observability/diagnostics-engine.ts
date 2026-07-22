@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const DiagnosticsEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const DiagnosticsEngine = {
   }
 };
 
-export const getDiagnosticsEngine = async (...args: any[]) => ({});
-export const calculateDiagnosticsEngine = async (...args: any[]) => ({});
-export const recordDiagnosticsEngineEvents = async (...args: any[]) => ({});
+export const getDiagnosticsEngine = async (...[]) => ({});
+export const calculateDiagnosticsEngine = async (...[]) => ({});
+export const recordDiagnosticsEngineEvents = async (...[]) => ({});

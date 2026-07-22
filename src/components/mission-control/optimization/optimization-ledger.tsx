@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { BookOpen } from "lucide-react";
 
 interface OptimizationLedgerProps {
-  ledgerEntries: any[];
+  ledgerEntries: unknown[];
 }
 
 export function OptimizationLedger({ ledgerEntries }: OptimizationLedgerProps) {

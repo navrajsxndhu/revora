@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RecurrenceEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const RecurrenceEngine = {
   }
 };
 
-export const getRecurrenceEngine = async (...args: any[]) => ({});
-export const calculateRecurrenceEngine = async (...args: any[]) => ({});
-export const recordRecurrenceEngineEvents = async (...args: any[]) => ({});
+export const getRecurrenceEngine = async (...[]) => ({});
+export const calculateRecurrenceEngine = async (...[]) => ({});
+export const recordRecurrenceEngineEvents = async (...[]) => ({});

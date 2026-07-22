@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const CredentialEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const CredentialEngine = {
   }
 };
 
-export const getCredentialEngine = async (...args: any[]) => ({});
-export const calculateCredentialEngine = async (...args: any[]) => ({});
-export const recordCredentialEngineEvents = async (...args: any[]) => ({});
+export const getCredentialEngine = async (...[]) => ({});
+export const calculateCredentialEngine = async (...[]) => ({});
+export const recordCredentialEngineEvents = async (...[]) => ({});

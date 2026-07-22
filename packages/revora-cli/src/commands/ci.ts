@@ -35,7 +35,7 @@ export const ciCommand = new Command('ci')
         });
 
         if (govRes.ok) {
-          const govData: any = await govRes.json();
+          const govData: unknown = await govRes.json();
           if (govData.status === 'BLOCK') {
              log.error('Deployment BLOCKED by Revora Governance Engine.');
              log.bullet(govData.message);
@@ -57,7 +57,7 @@ export const ciCommand = new Command('ci')
         });
 
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data: any = await res.json();
+        const data: unknown = await res.json();
 
         console.log(`\nGate Decision: ${data.decision}`);
         
@@ -77,7 +77,7 @@ export const ciCommand = new Command('ci')
           log.success('Deployment PASSED Revora gates.');
         }
 
-      } catch (e: any) {
+      } catch (e: unknown) {
         log.error(`Failed to connect to backend: ${e.message}`);
         // Fallback to local
         process.exit(localResult.level === 'CRITICAL' ? 1 : 0);

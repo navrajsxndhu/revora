@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function CivilizationEvolutionTimeline({ records }: { records: any[] }) {
+export function CivilizationEvolutionTimeline({ records }: { records: unknown[] }) {
   if (records.length === 0) return <p className="text-sm text-zinc-500">No evolution records.</p>;
 
   return (

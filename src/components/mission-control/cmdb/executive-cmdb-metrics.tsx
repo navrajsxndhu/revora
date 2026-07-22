@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Activity } from "lucide-react";
 
 interface ExecutiveCmdbMetricsProps {
-  metrics: any;
+  metrics: unknown;
 }
 
 export function ExecutiveCmdbMetrics({ metrics }: ExecutiveCmdbMetricsProps) {

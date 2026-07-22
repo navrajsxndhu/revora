@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import crypto from 'crypto';
 
-export async function POST(req: NextRequest) {
+export async function POST() {
   try {
     const rawBody = await req.text();
     const signature = req.headers.get('x-hub-signature-256');
@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
     
     return NextResponse.json({ success: true });
 
-  } catch (error) {
+  } catch {
     console.error("[GitHub Webhook]", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }

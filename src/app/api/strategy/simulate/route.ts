@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { simulateStrategy } from '@/lib/strategy/strategic-coordination-engine';
 
-export async function POST(req: Request) {
+export async function POST() {
   try {
     const { workspaceId, scenario } = await req.json();
 
@@ -22,7 +22,7 @@ export async function POST(req: Request) {
         reasoning: `Deterministic simulation of ${scenario} against current organizational treasury burn rate.`
       }
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

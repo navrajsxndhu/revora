@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const MaintenanceLedger = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const MaintenanceLedger = {
   }
 };
 
-export const getMaintenanceLedger = async (...args: any[]) => ({});
-export const calculateMaintenanceLedger = async (...args: any[]) => ({});
-export const recordMaintenanceLedgerEvents = async (...args: any[]) => ({});
+export const getMaintenanceLedger = async (...[]) => ({});
+export const calculateMaintenanceLedger = async (...[]) => ({});
+export const recordMaintenanceLedgerEvents = async (...[]) => ({});

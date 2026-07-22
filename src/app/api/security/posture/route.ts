@@ -4,7 +4,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { orchestrateSecurity } from "@/lib/security/enterprise-security-engine";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
   try {
     const posture = await orchestrateSecurity(workspaceId);
     return NextResponse.json(posture);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch posture" }, { status: 500 });
   }
 }

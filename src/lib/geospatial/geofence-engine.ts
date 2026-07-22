@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const GeofenceEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const GeofenceEngine = {
   }
 };
 
-export const getGeofenceEngine = async (...args: any[]) => ({});
-export const calculateGeofenceEngine = async (...args: any[]) => ({});
-export const validateGeofenceEngine = async (...args: any[]) => ({});
+export const getGeofenceEngine = async (...[]) => ({});
+export const calculateGeofenceEngine = async (...[]) => ({});
+export const validateGeofenceEngine = async (...[]) => ({});

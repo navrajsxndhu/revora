@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const LicenseEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const LicenseEngine = {
   }
 };
 
-export const getLicenseEngine = async (...args: any[]) => ({});
-export const calculateLicenseEngine = async (...args: any[]) => ({});
-export const recordLicenseEngineEvents = async (...args: any[]) => ({});
+export const getLicenseEngine = async (...[]) => ({});
+export const calculateLicenseEngine = async (...[]) => ({});
+export const recordLicenseEngineEvents = async (...[]) => ({});

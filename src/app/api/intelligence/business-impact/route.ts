@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const impacts = await BusinessImpactEngine.getImpacts(workspaceId);
     return NextResponse.json({ impacts });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch business impacts" }, { status: 500 });
   }
 }

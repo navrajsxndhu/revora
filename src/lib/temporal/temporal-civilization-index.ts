@@ -1,4 +1,4 @@
-export async function calculateTemporalCivilizationIndex(workspaceId: string, drift: any) {
+export async function calculateTemporalCivilizationIndex(workspaceId: string, drift: unknown) {
   let score = 100.0 - (drift.driftScore * 0.5);
   score = Math.max(0, score);
 

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { simulateTemporalDecay } from '@/lib/temporal/temporal-simulator';
 
-export async function POST(req: Request) {
+export async function POST() {
   try {
     const { scenario } = await req.json();
 
@@ -15,7 +15,7 @@ export async function POST(req: Request) {
       success: true,
       data: simulation
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

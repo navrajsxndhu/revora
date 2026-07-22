@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ShieldAlert } from "lucide-react";
 
 interface ConflictResolutionTableProps {
-  conflicts: any[];
+  conflicts: unknown[];
 }
 
 export function ConflictResolutionTable({ conflicts }: ConflictResolutionTableProps) {

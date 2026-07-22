@@ -7,7 +7,7 @@ export async function POST(request: Request) {
     const { action, targetId } = await request.json();
     const result = await TopologySimulator.simulate(workspaceId, action, targetId);
     return NextResponse.json({ result });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to run topology simulation" }, { status: 500 });
   }
 }

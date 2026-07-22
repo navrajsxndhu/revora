@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Plug } from "lucide-react";
 
 interface ConnectorStatusPanelProps {
-  connectors: any[];
+  connectors: unknown[];
 }
 
 export function ConnectorStatusPanel({ connectors }: ConnectorStatusPanelProps) {

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { DollarSign } from "lucide-react";
 
 interface CloudSpendOverviewProps {
-  spend: any;
+  spend: unknown;
 }
 
 export function CloudSpendOverview({ spend }: CloudSpendOverviewProps) {

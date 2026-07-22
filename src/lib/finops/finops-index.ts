@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function calculateFinOpsIndex(workspaceId: string) {
   // Calculates enterprise finops maturity

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const FeatureFlagEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const FeatureFlagEngine = {
   }
 };
 
-export const getFeatureFlagEngine = async (...args: any[]) => ({});
-export const calculateFeatureFlagEngine = async (...args: any[]) => ({});
-export const recordFeatureFlagEngineEvents = async (...args: any[]) => ({});
+export const getFeatureFlagEngine = async (...[]) => ({});
+export const calculateFeatureFlagEngine = async (...[]) => ({});
+export const recordFeatureFlagEngineEvents = async (...[]) => ({});

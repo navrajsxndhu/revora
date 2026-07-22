@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const PlaybookEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const PlaybookEngine = {
   }
 };
 
-export const getPlaybookEngine = async (...args: any[]) => ({});
-export const calculatePlaybookEngine = async (...args: any[]) => ({});
-export const recordPlaybookEngineEvents = async (...args: any[]) => ({});
+export const getPlaybookEngine = async (...[]) => ({});
+export const calculatePlaybookEngine = async (...[]) => ({});
+export const recordPlaybookEngineEvents = async (...[]) => ({});

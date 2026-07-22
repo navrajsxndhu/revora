@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const TimezoneEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const TimezoneEngine = {
   }
 };
 
-export const getTimezoneEngine = async (...args: any[]) => ({});
-export const calculateTimezoneEngine = async (...args: any[]) => ({});
-export const recordTimezoneEngineEvents = async (...args: any[]) => ({});
+export const getTimezoneEngine = async (...[]) => ({});
+export const calculateTimezoneEngine = async (...[]) => ({});
+export const recordTimezoneEngineEvents = async (...[]) => ({});

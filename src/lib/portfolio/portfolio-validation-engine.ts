@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const PortfolioValidationEngine = {
   validate: async (workspaceId: string, portfolioId: string) => {

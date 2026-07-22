@@ -5,7 +5,7 @@ import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { RUNBOOKS } from "@/lib/incidents/runbooks";
 
-export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+export async function POST(, { params }: { params: Promise<{ id: string }> }) {
   const session = await getServerSession(authOptions);
   if (!session || !session.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -87,7 +87,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     }
 
     return NextResponse.json({ success: true, message: resultMessage });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to execute runbook step" }, { status: 500 });
   }
 }

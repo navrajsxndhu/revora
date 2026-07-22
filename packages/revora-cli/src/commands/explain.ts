@@ -25,7 +25,7 @@ export const explainCommand = new Command('explain')
       try {
         const res = await fetch(`${config.backendUrl}/api/cli/risk?service=${service}`);
         if (res.ok) {
-          const data: any = await res.json();
+          const data: unknown = await res.json();
           if (data.driftWarnings && data.driftWarnings.length > 0) {
             console.log('\nHistorical Operational Drift:');
             for (const warning of data.driftWarnings) {
@@ -33,7 +33,7 @@ export const explainCommand = new Command('explain')
             }
           }
         }
-      } catch (e: any) {
+      } catch (e: unknown) {
         // Backend not reachable, silently ignore as it's an optional enhancement
       }
     }

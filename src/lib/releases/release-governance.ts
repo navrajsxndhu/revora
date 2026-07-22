@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export interface GovernanceValidationResult {
   status: "VALID" | "VIOLATION" | "WARNING";

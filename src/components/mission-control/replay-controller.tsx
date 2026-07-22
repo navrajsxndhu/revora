@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from "react";
 
-export function ReplayController({ events }: { events: any[] }) {
+export function ReplayController({ events }: { events: unknown[] }) {
   const [index, setIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 

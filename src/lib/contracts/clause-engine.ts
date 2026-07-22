@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ClauseEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ClauseEngine = {
   }
 };
 
-export const getClauseEngine = async (...args: any[]) => ({});
-export const calculateClauseEngine = async (...args: any[]) => ({});
-export const recordClauseEngineEvents = async (...args: any[]) => ({});
+export const getClauseEngine = async (...[]) => ({});
+export const calculateClauseEngine = async (...[]) => ({});
+export const recordClauseEngineEvents = async (...[]) => ({});

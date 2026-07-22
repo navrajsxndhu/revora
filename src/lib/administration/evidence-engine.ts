@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const EvidenceEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const EvidenceEngine = {
   }
 };
 
-export const validateEvidenceEngine = async (...args: any[]) => ({});
-export const governEvidenceEngine = async (...args: any[]) => ({});
-export const verifyEvidenceEngine = async (...args: any[]) => ({});
+export const validateEvidenceEngine = async (...[]) => ({});
+export const governEvidenceEngine = async (...[]) => ({});
+export const verifyEvidenceEngine = async (...[]) => ({});

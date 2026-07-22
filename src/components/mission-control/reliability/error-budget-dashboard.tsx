@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Coins } from "lucide-react";
 
 interface ErrorBudgetDashboardProps {
-  budgets: any[];
+  budgets: unknown[];
 }
 
 export function ErrorBudgetDashboard({ budgets }: ErrorBudgetDashboardProps) {

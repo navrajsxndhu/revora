@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const DigitalTwinIndex = {
   getIndex: async (workspaceId: string) => {

@@ -4,7 +4,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { createServiceRequest } from "@/lib/service-management/request-engine";
 
-export async function POST(req: NextRequest) {
+export async function POST() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const result = await createServiceRequest(workspaceId, body.category, body.payload);
     return NextResponse.json(result);
-  } catch (error: any) {
+  } catch (error: unknown) {
     return NextResponse.json({ error: error.message || "Failed to create service request" }, { status: 500 });
   }
 }

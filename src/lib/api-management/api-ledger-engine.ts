@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ApiLedgerEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ApiLedgerEngine = {
   }
 };
 
-export const getApiLedgerEngine = async (...args: any[]) => ({});
-export const calculateApiLedgerEngine = async (...args: any[]) => ({});
-export const recordApiLedgerEngineEvents = async (...args: any[]) => ({});
+export const getApiLedgerEngine = async (...[]) => ({});
+export const calculateApiLedgerEngine = async (...[]) => ({});
+export const recordApiLedgerEngineEvents = async (...[]) => ({});

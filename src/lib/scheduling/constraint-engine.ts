@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ConstraintEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ConstraintEngine = {
   }
 };
 
-export const getConstraintEngine = async (...args: any[]) => ({});
-export const calculateConstraintEngine = async (...args: any[]) => ({});
-export const recordConstraintEngineEvents = async (...args: any[]) => ({});
+export const getConstraintEngine = async (...[]) => ({});
+export const calculateConstraintEngine = async (...[]) => ({});
+export const recordConstraintEngineEvents = async (...[]) => ({});

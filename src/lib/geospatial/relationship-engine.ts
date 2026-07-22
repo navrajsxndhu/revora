@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RelationshipEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const RelationshipEngine = {
   }
 };
 
-export const getRelationshipEngine = async (...args: any[]) => ({});
-export const calculateRelationshipEngine = async (...args: any[]) => ({});
-export const validateRelationshipEngine = async (...args: any[]) => ({});
+export const getRelationshipEngine = async (...[]) => ({});
+export const calculateRelationshipEngine = async (...[]) => ({});
+export const validateRelationshipEngine = async (...[]) => ({});

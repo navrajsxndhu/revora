@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function calculateGovernanceIndex(workspaceId: string) {
   // Calculates Governance Maturity, Coverage, Risk Exposure, Control Effectiveness

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ListTree } from "lucide-react";
 
 interface OptimizationCandidateTableProps {
-  candidates: any[];
+  candidates: unknown[];
 }
 
 export function OptimizationCandidateTable({ candidates }: OptimizationCandidateTableProps) {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function GovernanceEntropyChart({ snapshots }: { snapshots: any[] }) {
+export function GovernanceEntropyChart({ snapshots }: { snapshots: unknown[] }) {
   if (snapshots.length === 0) return <p className="text-sm text-zinc-500">No entropy history available.</p>;
 
   return (

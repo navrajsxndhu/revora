@@ -4,7 +4,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { processFindings } from "@/lib/security/finding-engine";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
   try {
     const findings = await processFindings(workspaceId);
     return NextResponse.json(findings);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch findings" }, { status: 500 });
   }
 }

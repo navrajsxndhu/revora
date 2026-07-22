@@ -1,6 +1,5 @@
-import { prisma } from "@/lib/prisma";
 
-export async function processWorkflowTrigger(workspaceId: string, eventType: string, payload: any) {
+export async function processWorkflowTrigger(workspaceId: string, eventType: string, payload: unknown) {
   // Validate if trigger is allowed
   const validTriggers = [
     "RELEASE_APPROVED",

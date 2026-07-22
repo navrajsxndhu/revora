@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ExceptionEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ExceptionEngine = {
   }
 };
 
-export const getExceptionEngine = async (...args: any[]) => ({});
-export const calculateExceptionEngine = async (...args: any[]) => ({});
-export const recordExceptionEngineEvents = async (...args: any[]) => ({});
+export const getExceptionEngine = async (...[]) => ({});
+export const calculateExceptionEngine = async (...[]) => ({});
+export const recordExceptionEngineEvents = async (...[]) => ({});

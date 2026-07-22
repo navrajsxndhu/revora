@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const EnterpriseComplianceEngine = {
   getOverview: async (workspaceId: string) => {

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const DirectoryEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const DirectoryEngine = {
   }
 };
 
-export const getDirectoryEngine = async (...args: any[]) => ({});
-export const calculateDirectoryEngine = async (...args: any[]) => ({});
-export const recordDirectoryEngineEvents = async (...args: any[]) => ({});
+export const getDirectoryEngine = async (...[]) => ({});
+export const calculateDirectoryEngine = async (...[]) => ({});
+export const recordDirectoryEngineEvents = async (...[]) => ({});

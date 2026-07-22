@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const DecisionTableEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const DecisionTableEngine = {
   }
 };
 
-export const getDecisionTableEngine = async (...args: any[]) => ({});
-export const calculateDecisionTableEngine = async (...args: any[]) => ({});
-export const recordDecisionTableEngineEvents = async (...args: any[]) => ({});
+export const getDecisionTableEngine = async (...[]) => ({});
+export const calculateDecisionTableEngine = async (...[]) => ({});
+export const recordDecisionTableEngineEvents = async (...[]) => ({});

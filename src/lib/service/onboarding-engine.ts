@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const OnboardingEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const OnboardingEngine = {
   }
 };
 
-export const getOnboardingEngine = async (...args: any[]) => ({});
-export const calculateOnboardingEngine = async (...args: any[]) => ({});
-export const recordOnboardingEngineEvents = async (...args: any[]) => ({});
+export const getOnboardingEngine = async (...[]) => ({});
+export const calculateOnboardingEngine = async (...[]) => ({});
+export const recordOnboardingEngineEvents = async (...[]) => ({});

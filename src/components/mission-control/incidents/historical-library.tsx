@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { BookOpen } from "lucide-react";
 
 interface HistoricalLibraryProps {
-  history: any[];
+  history: unknown[];
 }
 
 export function HistoricalLibrary({ history }: HistoricalLibraryProps) {

@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const Select = ({ children, value, onValueChange }: any) => {
+const Select = ({ children, value, onValueChange }: unknown) => {
   return (
     <div className="relative inline-block w-full">
       <select 
@@ -14,9 +14,9 @@ const Select = ({ children, value, onValueChange }: any) => {
   )
 }
 
-const SelectTrigger = ({ children, className }: any) => <>{children}</>;
-const SelectValue = ({ placeholder }: any) => <option value="" disabled>{placeholder}</option>;
-const SelectContent = ({ children }: any) => <>{children}</>;
-const SelectItem = ({ value, children }: any) => <option value={value}>{children}</option>;
+const SelectTrigger = ({ children, className }: unknown) => <>{children}</>;
+const SelectValue = ({ placeholder }: unknown) => <option value="" disabled>{placeholder}</option>;
+const SelectContent = ({ children }: unknown) => <>{children}</>;
+const SelectItem = ({ value, children }: unknown) => <option value={value}>{children}</option>;
 
 export { Select, SelectContent, SelectItem, SelectTrigger, SelectValue }

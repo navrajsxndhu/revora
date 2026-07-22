@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const CashPositionEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const CashPositionEngine = {
   }
 };
 
-export const getCashPositionEngine = async (...args: any[]) => ({});
-export const calculateCashPositionEngine = async (...args: any[]) => ({});
-export const recordCashPositionEngineEvents = async (...args: any[]) => ({});
+export const getCashPositionEngine = async (...[]) => ({});
+export const calculateCashPositionEngine = async (...[]) => ({});
+export const recordCashPositionEngineEvents = async (...[]) => ({});

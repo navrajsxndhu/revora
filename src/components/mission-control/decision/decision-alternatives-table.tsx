@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { GitMerge } from "lucide-react";
 
 interface DecisionAlternativesTableProps {
-  alternatives: any[];
+  alternatives: unknown[];
 }
 
 export function DecisionAlternativesTable({ alternatives }: DecisionAlternativesTableProps) {

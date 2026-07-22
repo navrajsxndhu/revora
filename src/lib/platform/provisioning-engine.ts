@@ -1,6 +1,6 @@
 import { prisma } from "@/lib/prisma";
 
-export async function processProvisioningRequest(workspaceId: string, payload: any) {
+export async function processProvisioningRequest(workspaceId: string, payload: unknown) {
   return await prisma.provisioningRequest.create({
     data: {
       workspaceId,

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Lock } from "lucide-react";
 
 interface AuthenticationStatusProps {
-  connectors: any[];
+  connectors: unknown[];
 }
 
 export function AuthenticationStatus({ connectors }: AuthenticationStatusProps) {

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const EnterprisePortfolioEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const EnterprisePortfolioEngine = {
   }
 };
 
-export const getEnterprisePortfolioEngine = async (...args: any[]) => ({});
-export const calculateEnterprisePortfolioEngine = async (...args: any[]) => ({});
-export const recordEnterprisePortfolioEngineEvents = async (...args: any[]) => ({});
+export const getEnterprisePortfolioEngine = async (...[]) => ({});
+export const calculateEnterprisePortfolioEngine = async (...[]) => ({});
+export const recordEnterprisePortfolioEngineEvents = async (...[]) => ({});

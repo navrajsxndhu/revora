@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const TopologyHealthEngine = {
   getHealth: async (workspaceId: string) => {

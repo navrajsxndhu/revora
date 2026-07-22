@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const FabricEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const FabricEngine = {
   }
 };
 
-export const getFabricEngine = async (...args: any[]) => ({});
-export const calculateFabricEngine = async (...args: any[]) => ({});
-export const recordFabricEngineEvents = async (...args: any[]) => ({});
+export const getFabricEngine = async (...[]) => ({});
+export const calculateFabricEngine = async (...[]) => ({});
+export const recordFabricEngineEvents = async (...[]) => ({});

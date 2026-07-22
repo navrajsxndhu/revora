@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ProfileEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ProfileEngine = {
   }
 };
 
-export const getProfileEngine = async (...args: any[]) => ({});
-export const calculateProfileEngine = async (...args: any[]) => ({});
-export const recordProfileEngineEvents = async (...args: any[]) => ({});
+export const getProfileEngine = async (...[]) => ({});
+export const calculateProfileEngine = async (...[]) => ({});
+export const recordProfileEngineEvents = async (...[]) => ({});

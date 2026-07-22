@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const CrawlEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const CrawlEngine = {
   }
 };
 
-export const validateCrawlEngine = async (...args: any[]) => ({});
-export const governCrawlEngine = async (...args: any[]) => ({});
-export const verifyCrawlEngine = async (...args: any[]) => ({});
+export const validateCrawlEngine = async (...[]) => ({});
+export const governCrawlEngine = async (...[]) => ({});
+export const verifyCrawlEngine = async (...[]) => ({});

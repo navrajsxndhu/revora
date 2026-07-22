@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Lock } from "lucide-react";
 
 interface ResourceAllocationGridProps {
-  resources: any[];
+  resources: unknown[];
 }
 
 export function ResourceAllocationGrid({ resources }: ResourceAllocationGridProps) {

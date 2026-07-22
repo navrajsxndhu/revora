@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const WithholdingEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const WithholdingEngine = {
   }
 };
 
-export const getWithholdingEngine = async (...args: any[]) => ({});
-export const calculateWithholdingEngine = async (...args: any[]) => ({});
-export const recordWithholdingEngineEvents = async (...args: any[]) => ({});
+export const getWithholdingEngine = async (...[]) => ({});
+export const calculateWithholdingEngine = async (...[]) => ({});
+export const recordWithholdingEngineEvents = async (...[]) => ({});

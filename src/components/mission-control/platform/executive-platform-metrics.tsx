@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { BarChart4 } from "lucide-react";
 
 interface ExecutivePlatformMetricsProps {
-  metrics: any;
+  metrics: unknown;
 }
 
 export function ExecutivePlatformMetrics({ metrics }: ExecutivePlatformMetricsProps) {

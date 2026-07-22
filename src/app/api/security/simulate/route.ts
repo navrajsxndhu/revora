@@ -4,7 +4,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import { simulateSecurityScenario } from "@/lib/security/security-simulator";
 
-export async function POST(req: NextRequest) {
+export async function POST() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const result = await simulateSecurityScenario(workspaceId, body.scenario);
     return NextResponse.json(result);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to simulate scenario" }, { status: 500 });
   }
 }

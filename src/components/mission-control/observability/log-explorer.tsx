@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Terminal } from "lucide-react";
 
 interface LogExplorerProps {
-  logs: any[];
+  logs: unknown[];
 }
 
 export function LogExplorer({ logs }: LogExplorerProps) {

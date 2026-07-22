@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ArrowRightLeft } from "lucide-react";
 
 interface ActiveChangesProps {
-  changes: any[];
+  changes: unknown[];
 }
 
 export function ActiveChanges({ changes }: ActiveChangesProps) {

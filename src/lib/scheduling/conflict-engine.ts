@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ConflictEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ConflictEngine = {
   }
 };
 
-export const getConflictEngine = async (...args: any[]) => ({});
-export const calculateConflictEngine = async (...args: any[]) => ({});
-export const recordConflictEngineEvents = async (...args: any[]) => ({});
+export const getConflictEngine = async (...[]) => ({});
+export const calculateConflictEngine = async (...[]) => ({});
+export const recordConflictEngineEvents = async (...[]) => ({});

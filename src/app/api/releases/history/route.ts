@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   const session = await getServerSession(authOptions);
   if (!session?.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
   try {
     const history = await getReleaseLedger(workspaceId);
     return NextResponse.json(history);
-  } catch (error) {
+  } catch {
     console.error("Error fetching release history:", error);
     return NextResponse.json({ error: "Failed to fetch history" }, { status: 500 });
   }

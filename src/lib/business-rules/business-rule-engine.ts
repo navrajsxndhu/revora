@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const BusinessRuleEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const BusinessRuleEngine = {
   }
 };
 
-export const getBusinessRuleEngine = async (...args: any[]) => ({});
-export const calculateBusinessRuleEngine = async (...args: any[]) => ({});
-export const recordBusinessRuleEngineEvents = async (...args: any[]) => ({});
+export const getBusinessRuleEngine = async (...[]) => ({});
+export const calculateBusinessRuleEngine = async (...[]) => ({});
+export const recordBusinessRuleEngineEvents = async (...[]) => ({});

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ReservationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ReservationEngine = {
   }
 };
 
-export const getReservationEngine = async (...args: any[]) => ({});
-export const calculateReservationEngine = async (...args: any[]) => ({});
-export const recordReservationEngineEvents = async (...args: any[]) => ({});
+export const getReservationEngine = async (...[]) => ({});
+export const calculateReservationEngine = async (...[]) => ({});
+export const recordReservationEngineEvents = async (...[]) => ({});

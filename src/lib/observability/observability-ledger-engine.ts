@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const ObservabilityLedgerEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const ObservabilityLedgerEngine = {
   }
 };
 
-export const getObservabilityLedgerEngine = async (...args: any[]) => ({});
-export const calculateObservabilityLedgerEngine = async (...args: any[]) => ({});
-export const recordObservabilityLedgerEngineEvents = async (...args: any[]) => ({});
+export const getObservabilityLedgerEngine = async (...[]) => ({});
+export const calculateObservabilityLedgerEngine = async (...[]) => ({});
+export const recordObservabilityLedgerEngineEvents = async (...[]) => ({});

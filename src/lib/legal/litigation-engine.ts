@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const LitigationEngine = {
   getOverview: async (workspaceId: string) => {

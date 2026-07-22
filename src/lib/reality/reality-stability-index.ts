@@ -1,4 +1,4 @@
-export async function calculateRealityStability(workspaceId: string, survivability: any, energyGovernance: any) {
+export async function calculateRealityStability(workspaceId: string, survivability: unknown, energyGovernance: unknown) {
   let score = 100.0;
   
   if (survivability.survivabilityScore < 80) score -= 15.0;

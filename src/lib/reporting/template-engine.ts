@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const TemplateEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const TemplateEngine = {
   }
 };
 
-export const validateTemplateEngine = async (...args: any[]) => ({});
-export const governTemplateEngine = async (...args: any[]) => ({});
-export const verifyTemplateEngine = async (...args: any[]) => ({});
+export const validateTemplateEngine = async (...[]) => ({});
+export const governTemplateEngine = async (...[]) => ({});
+export const verifyTemplateEngine = async (...[]) => ({});

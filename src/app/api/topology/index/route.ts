@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const index = await TopologyIndex.getIndex(workspaceId);
     return NextResponse.json(index);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch topology index" }, { status: 500 });
   }
 }

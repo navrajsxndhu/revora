@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Network } from "lucide-react";
 
 interface DistributedTraceViewerProps {
-  traces: any[];
+  traces: unknown[];
 }
 
 export function DistributedTraceViewer({ traces }: DistributedTraceViewerProps) {

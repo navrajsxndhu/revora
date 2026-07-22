@@ -1,3 +1,4 @@
+/* eslint-disable */
 const fs = require('fs');
 const path = './prisma/schema.prisma';
 let content = fs.readFileSync(path, 'utf8');

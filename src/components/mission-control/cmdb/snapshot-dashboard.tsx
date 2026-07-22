@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Camera } from "lucide-react";
 
 interface SnapshotDashboardProps {
-  snapshots: any;
+  snapshots: unknown;
 }
 
 export function SnapshotDashboard({ snapshots }: SnapshotDashboardProps) {

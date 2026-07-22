@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const IntegrationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const IntegrationEngine = {
   }
 };
 
-export const getIntegrationEngine = async (...args: any[]) => ({});
-export const calculateIntegrationEngine = async (...args: any[]) => ({});
-export const recordIntegrationEngineEvents = async (...args: any[]) => ({});
+export const getIntegrationEngine = async (...[]) => ({});
+export const calculateIntegrationEngine = async (...[]) => ({});
+export const recordIntegrationEngineEvents = async (...[]) => ({});

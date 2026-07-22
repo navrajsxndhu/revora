@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const workspaceId = "ws-123";
     const overview = await EnterpriseIntelligenceEngine.getOverview(workspaceId);
     return NextResponse.json(overview);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Failed to fetch overview" }, { status: 500 });
   }
 }

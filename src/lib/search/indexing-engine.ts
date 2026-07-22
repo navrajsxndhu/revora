@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const IndexingEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const IndexingEngine = {
   }
 };
 
-export const validateIndexingEngine = async (...args: any[]) => ({});
-export const governIndexingEngine = async (...args: any[]) => ({});
-export const verifyIndexingEngine = async (...args: any[]) => ({});
+export const validateIndexingEngine = async (...[]) => ({});
+export const governIndexingEngine = async (...[]) => ({});
+export const verifyIndexingEngine = async (...[]) => ({});

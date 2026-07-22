@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function BreachDetectionFeed({ breaches }: { breaches: any[] }) {
+export function BreachDetectionFeed({ breaches }: { breaches: unknown[] }) {
   return (
     <div className="space-y-3">
       {breaches.map(breach => (

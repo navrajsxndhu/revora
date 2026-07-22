@@ -1,6 +1,6 @@
 import React from "react";
 
-export function DebtWatchlist({ debtScores }: { debtScores: any[] }) {
+export function DebtWatchlist({ debtScores }: { debtScores: unknown[] }) {
   if (debtScores.length === 0) return null;
 
   return (

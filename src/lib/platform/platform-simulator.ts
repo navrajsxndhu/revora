@@ -1,6 +1,5 @@
-import { prisma } from "@/lib/prisma";
 
-export async function simulateProvisioning(workspaceId: string, payload: any) {
+export async function simulateProvisioning(workspaceId: string, payload: unknown) {
   // Simulate the governance and execution pathway of a provisioning request
   return {
     simulated: true,

@@ -1,6 +1,6 @@
 import React from "react";
 
-export function GlobalSignatures({ signatures }: { signatures: any[] }) {
+export function GlobalSignatures({ signatures }: { signatures: unknown[] }) {
   if (signatures.length === 0) return null;
 
   return (

@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
 import { calculateServiceMetrics } from "@/lib/benchmarks/service-benchmarks";
 import { getHistoricalInsights } from "@/lib/benchmarks/operational-memory";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   const service = req.nextUrl.searchParams.get("service");
   if (!service) {
     return NextResponse.json({ error: "Service name required" }, { status: 400 });
@@ -14,7 +13,7 @@ export async function GET(req: NextRequest) {
     
     // We need a dummy incident to query historical insights since it takes an Incident object
     // Just build a minimal object that satisfies the type enough for the function
-    const dummyIncident: any = { serviceAffected: service, id: "dummy" };
+    const dummyIncident: unknown = { serviceAffected: service, id: "dummy" };
     const insights = await getHistoricalInsights(dummyIncident);
 
     return NextResponse.json({
@@ -24,7 +23,7 @@ export async function GET(req: NextRequest) {
       blastRadius: metrics.avgBlastRadius,
       mostSuccessfulAction: insights?.mostSuccessfulAction || null,
     });
-  } catch (error) {
+  } catch {
     console.error("[CLI_HISTORY_API]", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }

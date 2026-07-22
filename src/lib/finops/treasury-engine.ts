@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function processTreasury(workspaceId: string) {
   // Synchronizes with existing Operational Economy subsystem

@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const RecognitionEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const RecognitionEngine = {
   }
 };
 
-export const getRecognitionEngine = async (...args: any[]) => ({});
-export const calculateRecognitionEngine = async (...args: any[]) => ({});
-export const recordRecognitionEngineEvents = async (...args: any[]) => ({});
+export const getRecognitionEngine = async (...[]) => ({});
+export const calculateRecognitionEngine = async (...[]) => ({});
+export const recordRecognitionEngineEvents = async (...[]) => ({});

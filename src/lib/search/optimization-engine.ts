@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export const OptimizationEngine = {
   getOverview: async (workspaceId: string) => {
@@ -6,6 +5,6 @@ export const OptimizationEngine = {
   }
 };
 
-export const validateOptimizationEngine = async (...args: any[]) => ({});
-export const governOptimizationEngine = async (...args: any[]) => ({});
-export const verifyOptimizationEngine = async (...args: any[]) => ({});
+export const validateOptimizationEngine = async (...[]) => ({});
+export const governOptimizationEngine = async (...[]) => ({});
+export const verifyOptimizationEngine = async (...[]) => ({});

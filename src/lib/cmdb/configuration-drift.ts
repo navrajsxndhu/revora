@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 export async function detectConfigurationDrift(workspaceId: string) {
   // Detects drift between Declared State vs Observed State
