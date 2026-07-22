@@ -5,7 +5,7 @@ import { Command } from 'cmdk';
 import { useRouter } from 'next/navigation';
 import { 
   Search, Shield, Users, Server, Activity, 
-  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe, Presentation, Workflow, Hexagon, Undo, PlayCircle, History, RefreshCw, BrainCircuit, Bot, KeyRound, FileKey2, Fingerprint, Lock, CloudCog, Thermometer, ShoppingCart, Store, Tag, Puzzle, DownloadCloud, Blocks, Code2, BarChart2, TerminalSquare
+  Settings, BookOpen, Layers, Zap, Cloud, Sparkles, Network, ShieldAlert, Share2, Brain, Cpu, DatabaseZap, Database, Code, Bell, Box, Monitor, GitCompare, DollarSign, TrendingUp, CreditCard, FileWarning, Target, ShieldCheck, Scale, FileSignature, Landmark, Briefcase, FileCheck2, GraduationCap, HeartHandshake, PackageCheck, Truck, Building2, Factory, Cog, ClipboardList, Lightbulb, Rocket, LayoutDashboard, CalendarSync, Map, Leaf, TreePine, Droplets, BarChart, Globe, Presentation, Workflow, Hexagon, Undo, PlayCircle, History, RefreshCw, BrainCircuit, Bot, KeyRound, FileKey2, Fingerprint, Lock, CloudCog, Thermometer, ShoppingCart, Store, Tag, Puzzle, DownloadCloud, Blocks, Code2, BarChart2, TerminalSquare, GitMerge, LineChart
 } from 'lucide-react';
 
 export function CommandPalette() {
@@ -536,6 +536,53 @@ export function CommandPalette() {
               <Command.Item onSelect={() => window.open('https://revora.io/docs')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <BookOpen className="w-4 h-4 text-slate-400" />
                 Documentation
+              </Command.Item>
+            </Command.Group>
+
+            <Command.Group heading="EDSMLMGP" className="px-2 py-2 text-xs font-medium text-slate-500 uppercase tracking-wider mt-4">
+              <Command.Item onSelect={() => navigate('/ml-platform')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <BrainCircuit className="w-4 h-4 text-purple-400" />
+                Enterprise ML Command Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/ml-platform/models')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <BrainCircuit className="w-4 h-4 text-purple-400" />
+                Enterprise Model Registry
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/ml-platform/features')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Layers className="w-4 h-4 text-blue-400" />
+                Feature Store Governance
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/ml-platform/training')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Network className="w-4 h-4 text-emerald-400" />
+                Training Pipeline Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/ml-platform/experiments')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Brain className="w-4 h-4 text-purple-400" />
+                Experiment Tracking Workspace
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/ml-platform/deployments')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <GitMerge className="w-4 h-4 text-blue-400" />
+                Model Deployment Governance
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/ml-platform/inference')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Cpu className="w-4 h-4 text-slate-400" />
+                Inference Monitoring Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/ml-platform/monitoring')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <LineChart className="w-4 h-4 text-rose-400" />
+                Model Monitoring & Drift Detection
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/ml-platform/datasets')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Database className="w-4 h-4 text-slate-400" />
+                Dataset Governance Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/ml-platform/analytics')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <BarChart2 className="w-4 h-4 text-amber-400" />
+                MLOps Analytics
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/ml-platform/audit')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <History className="w-4 h-4 text-slate-400" />
+                ML Audit Ledger
               </Command.Item>
             </Command.Group>
           </Command.List>
