@@ -625,6 +625,52 @@ export function CommandPalette() {
                 ML Audit Ledger
               </Command.Item>
             </Command.Group>
+            <Command.Group heading="EACDSUGP" className="px-2 py-2 text-xs font-medium text-slate-500 uppercase tracking-wider mt-4">
+              <Command.Item onSelect={() => navigate('/engineering/design')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Palette className="w-4 h-4 text-indigo-500" />
+                Design Governance Command Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/design/system')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Palette className="w-4 h-4 text-rose-400" />
+                Design System Registry
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/design/components')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Box className="w-4 h-4 text-blue-400" />
+                Component Standardization
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/design/layouts')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <LayoutTemplate className="w-4 h-4 text-purple-400" />
+                Layout & Navigation
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/design/patterns')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <MousePointerClick className="w-4 h-4 text-emerald-400" />
+                UX Pattern Governance
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/design/accessibility')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Accessibility className="w-4 h-4 text-amber-400" />
+                Accessibility Center
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/design/motion')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <Move className="w-4 h-4 text-indigo-400" />
+                Motion & Animation
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/design/responsive')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <MonitorSmartphone className="w-4 h-4 text-yellow-400" />
+                Responsive Governance
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/design/analytics')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <LineChart className="w-4 h-4 text-emerald-500" />
+                Visual Analytics
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/design/reviews')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <FileSignature className="w-4 h-4 text-blue-500" />
+                Design Review Board
+              </Command.Item>
+              <Command.Item onSelect={() => navigate('/engineering/design/evidence')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
+                <History className="w-4 h-4 text-slate-400" />
+                Design Evidence Ledger
+              </Command.Item>
+            </Command.Group>
             <Command.Group heading="ECARGQAP" className="px-2 py-2 text-xs font-medium text-slate-500 uppercase tracking-wider mt-4">
               <Command.Item onSelect={() => navigate('/engineering/audit')} className="flex items-center gap-2 px-3 py-3 text-sm text-slate-200 rounded-md hover:bg-slate-800 cursor-pointer aria-selected:bg-slate-800 aria-selected:text-white transition-colors">
                 <ShieldCheck className="w-4 h-4 text-emerald-500" />
