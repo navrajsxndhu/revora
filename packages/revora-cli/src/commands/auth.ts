@@ -19,7 +19,7 @@ authCommands
   .command('login')
   .description('Log in to your Revora workspace using an API Key')
   .argument('<api-key>', 'Your Revora API Key')
-  .action((apiKey: string) => {
+  .action((apiKey: any) => {
     ensureConfigDir();
     const config = { apiKey, updatedAt: new Date().toISOString() };
     fs.writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));

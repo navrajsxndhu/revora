@@ -1,7 +1,9 @@
 
 import React from "react";
+import { ArrowLeft, LayoutTemplate, Search, ShieldCheck, Activity, Target, Download, Settings, History, Palette, Box, MousePointerClick, Accessibility, Move, MonitorSmartphone, LineChart, FileSignature, CheckCircle2, AlertTriangle, XCircle, FileCode } from "lucide-react";
+
 import Link from "next/link";
-import { ArrowLeft, LayoutTemplate, Search, ShieldCheck, Activity, Target, Download, Settings, History, Palette, Box, LayoutTemplate, MousePointerClick, Accessibility, Move, MonitorSmartphone, LineChart, FileSignature, CheckCircle2, AlertTriangle, XCircle, FileCode } from "lucide-react";
+
 import { PremiumTable } from "@/components/ui/premium-table";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
@@ -52,7 +54,7 @@ export default function Page() {
               <ShieldCheck className="w-4 h-4 text-emerald-500" />
             </div>
             <div className="text-3xl font-bold text-white mb-2">Verified</div>
-            <div className="text-xs text-slate-500">Depth <= 3 levels</div>
+            <div className="text-xs text-slate-500">Depth &lt;= 3 levels</div>
           </div>
           <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
             <div className="text-slate-400 text-sm font-medium mb-1 flex items-center justify-between">

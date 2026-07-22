@@ -1,7 +1,9 @@
 
 import React from "react";
+import { ArrowLeft, Code2, Search, ShieldCheck, Activity, Target, Download, Settings, History, Database, Network, Key, Layout, Cpu, LineChart, FileCode, CheckCircle2, AlertTriangle, Zap, Server } from "lucide-react";
+
 import Link from "next/link";
-import { ArrowLeft, Code2, Search, ShieldCheck, Activity, Target, Download, Settings, History, Database, Network, Key, Layout, Code2, Cpu, LineChart, FileCode, CheckCircle2, AlertTriangle, Zap, Server } from "lucide-react";
+
 import { PremiumTable } from "@/components/ui/premium-table";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 

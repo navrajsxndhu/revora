@@ -1,7 +1,9 @@
 
 import React from "react";
-import Link from "next/link";
 import { ArrowRight, ShieldCheck, Palette, Box, LayoutTemplate, MousePointerClick, Accessibility, Move, MonitorSmartphone, LineChart, FileSignature, History } from "lucide-react";
+
+import Link from "next/link";
+
 
 export default function DesignGovernanceDashboard() {
   const modules = [

@@ -1,7 +1,9 @@
 
 import React from "react";
+import { ArrowLeft, Zap, Search, ShieldCheck, Activity, Target, Download, Settings, History, Database, Network, Key, Layout, Code2, Cpu, LineChart, FileCode, CheckCircle2, AlertTriangle, Server } from "lucide-react";
+
 import Link from "next/link";
-import { ArrowLeft, Zap, Search, ShieldCheck, Activity, Target, Download, Settings, History, Database, Network, Key, Layout, Code2, Cpu, LineChart, FileCode, CheckCircle2, AlertTriangle, Zap, Server } from "lucide-react";
+
 import { PremiumTable } from "@/components/ui/premium-table";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
@@ -80,7 +82,7 @@ export default function Page() {
             title="Governance Findings" 
             headers={["Route / Asset", "Metric", "Current Value", "Threshold", "Status", "Trace"]}
           >
-            {[{"route":"/mission-control","metric":"First Load JS","val":"84 kB","thresh":"< 100 kB","status":"Passed","trace":"PF-EV-901"},{"route":"/engineering/audit","metric":"First Load JS","val":"92 kB","thresh":"< 100 kB","status":"Passed","trace":"PF-EV-902"},{"route":"globals.css","metric":"CSS Payload","val":"45 kB","thresh":"< 50 kB","status":"Passed","trace":"PF-EV-903"},{"route":"/digital-twin","metric":"Hydration Time","val":"320 ms","thresh":"< 200 ms","status":"Warning","trace":"PF-EV-904"}].map((row, i) => (
+            {[{"route":"/mission-control","metric":"First Load JS","val":"84 kB","thresh":"< 100 kB","status":"Passed","trace":"PF-EV-901"},{"route":"/engineering/audit","metric":"First Load JS","val":"92 kB","thresh":"< 100 kB","status":"Passed","trace":"PF-EV-902"},{"route":"globals.css","metric":"CSS Payload","val":"45 kB","thresh":"< 50 kB","status":"Passed","trace":"PF-EV-903"},{"route":"/digital-twin","metric":"Hydration Time","val":"320 ms","thresh":"&lt; 200 ms","status":"Warning","trace":"PF-EV-904"}].map((row, i) => (
               <tr key={i} className="hover:bg-slate-800/30 transition-colors group cursor-pointer border-b border-slate-800/50">
                 
                 <td className="py-4 px-5 text-sm ${j === 0 ? 'font-medium text-slate-200' : 'text-slate-400'}">

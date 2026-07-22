@@ -7,7 +7,7 @@ import { generateRecoveryPlan } from "@/lib/incidents/recovery-plan";
 
 const COOLDOWN_SECONDS = 60;
 
-export async function POST(, { params }: { params: Promise<{ id: string }> }) {
+export async function POST(request, { params }: { params: Promise<{ id: string }> }) {
   const session = await getServerSession(authOptions);
   if (!session || !session.user?.email) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
