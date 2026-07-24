@@ -1,9 +1,23 @@
 import React from "react";
-import { Bell, MessageSquare, AlertTriangle, ShieldCheck, Settings } from "lucide-react";
+import { Bell, MessageSquare, AlertTriangle, ShieldCheck, Settings, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-export default function NotificationCenter() {
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { NotificationService } from "@/services/notification-service";
+
+export default async function NotificationCenter() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const notifications = await NotificationService.getUserNotifications(workspaceId, session.user.id);
+
   return (
     <div className="min-h-screen bg-black text-white p-8">
       <div className="max-w-4xl mx-auto">
@@ -33,62 +47,52 @@ export default function NotificationCenter() {
         {/* Notification Feed */}
         <div className="space-y-2">
           
-          {/* Unread Alert */}
-          <div className="p-4 bg-slate-900/80 border border-slate-700 rounded-xl hover:bg-slate-800/80 transition-colors cursor-pointer group flex items-start gap-4 relative overflow-hidden">
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-blue-500"></div>
-            <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
-              <MessageSquare className="w-4 h-4" />
+          {notifications.length === 0 ? (
+            <div className="p-12 text-center text-slate-500 bg-slate-900/30 border border-slate-800/50 rounded-xl">
+              <CheckCircle2 className="w-12 h-12 mx-auto mb-4 text-slate-700" />
+              <p>You're all caught up!</p>
+              <p className="text-sm mt-1">No new notifications in this workspace.</p>
             </div>
-            <div className="flex-1">
-              <div className="flex items-center justify-between mb-1">
-                <p className="text-sm">
-                  <span className="font-semibold text-white">Sarah Chen</span> mentioned you in <Link href="#" className="font-semibold text-blue-400 hover:underline">TASK-890</Link>
-                </p>
-                <time className="text-xs text-slate-500">10m ago</time>
-              </div>
-              <p className="text-sm text-slate-400 bg-slate-950 p-3 rounded-md border border-slate-800/50 mt-2">
-                "Can you verify the policy parameters before I submit this for executive sign-off? We need this mapped to the Q3 compliance goal."
-              </p>
-            </div>
-          </div>
+          ) : (
+            notifications.map((notification) => {
+              const isUnread = !notification.readAt;
+              let Icon = Bell;
+              let colorClass = "bg-slate-500/10 text-slate-400 border-slate-500/20";
+              let unreadBorder = "bg-slate-500";
+              
+              if (notification.type === 'INFO') { Icon = MessageSquare; colorClass = "bg-blue-500/10 text-blue-400 border-blue-500/20"; unreadBorder = "bg-blue-500"; }
+              if (notification.type === 'SUCCESS') { Icon = ShieldCheck; colorClass = "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"; unreadBorder = "bg-emerald-500"; }
+              if (notification.type === 'WARNING') { Icon = AlertTriangle; colorClass = "bg-amber-500/10 text-amber-400 border-amber-500/20"; unreadBorder = "bg-amber-500"; }
+              if (notification.type === 'ERROR') { Icon = AlertTriangle; colorClass = "bg-rose-500/10 text-rose-400 border-rose-500/20"; unreadBorder = "bg-rose-500"; }
 
-          {/* Unread Approval */}
-          <div className="p-4 bg-slate-900/80 border border-slate-700 rounded-xl hover:bg-slate-800/80 transition-colors cursor-pointer group flex items-start gap-4 relative overflow-hidden">
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-amber-500"></div>
-            <div className="w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
-              <AlertTriangle className="w-4 h-4" />
-            </div>
-            <div className="flex-1">
-              <div className="flex items-center justify-between mb-1">
-                <p className="text-sm">
-                  Approval requested on <Link href="#" className="font-semibold text-amber-400 hover:underline">Phase 1 Integration</Link>
-                </p>
-                <time className="text-xs text-slate-500">1h ago</time>
-              </div>
-              <p className="text-sm text-slate-400 mb-3">
-                Constitutional binding verified. Waiting for final authorization.
-              </p>
-              <EvidenceBadge evidenceId="REQ-59A" timestamp="Pending" />
-            </div>
-          </div>
-
-          {/* Read System Notice */}
-          <div className="p-4 bg-transparent border border-transparent hover:border-slate-800 rounded-xl hover:bg-slate-900/50 transition-colors cursor-pointer group flex items-start gap-4">
-            <div className="w-10 h-10 rounded-full bg-slate-800 text-slate-400 flex items-center justify-center shrink-0">
-              <ShieldCheck className="w-4 h-4" />
-            </div>
-            <div className="flex-1">
-              <div className="flex items-center justify-between mb-1">
-                <p className="text-sm text-slate-300">
-                  <span className="font-semibold text-slate-200">System</span> automatically resolved policy drift in production.
-                </p>
-                <time className="text-xs text-slate-500">Yesterday</time>
-              </div>
-              <div className="mt-2 opacity-75">
-                <EvidenceBadge evidenceId="DRIFT-RESOLVE-92" timestamp="Verified" />
-              </div>
-            </div>
-          </div>
+              return (
+                <div key={notification.id} className={`p-4 border rounded-xl transition-colors cursor-pointer group flex items-start gap-4 relative overflow-hidden ${isUnread ? 'bg-slate-900/80 border-slate-700 hover:bg-slate-800/80' : 'bg-transparent border-transparent hover:border-slate-800 hover:bg-slate-900/50'}`}>
+                  {isUnread && <div className={`absolute left-0 top-0 bottom-0 w-1 ${unreadBorder}`}></div>}
+                  <div className={`w-10 h-10 rounded-full border flex items-center justify-center shrink-0 ${colorClass}`}>
+                    <Icon className="w-4 h-4" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-1">
+                      <p className={`text-sm ${isUnread ? 'text-white' : 'text-slate-300'}`}>
+                        {notification.title}
+                      </p>
+                      <time className="text-xs text-slate-500">{new Date(notification.createdAt).toLocaleString()}</time>
+                    </div>
+                    {notification.content && (
+                      <p className={`text-sm mt-2 ${isUnread ? 'text-slate-400 bg-slate-950 p-3 rounded-md border border-slate-800/50' : 'text-slate-500'}`}>
+                        {notification.content}
+                      </p>
+                    )}
+                    {notification.actionUrl && (
+                      <div className="mt-3">
+                        <Link href={notification.actionUrl} className="text-sm text-indigo-400 hover:text-indigo-300">View Details &rarr;</Link>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })
+          )}
 
         </div>
       </div>

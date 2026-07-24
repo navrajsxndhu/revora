@@ -1,4 +1,7 @@
-import { prisma } from "@/lib/prisma";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { IncidentService } from "@/services/incident-service";
+import { WorkspaceService } from "@/services/workspace-service";
 import Link from "next/link";
 import { IntegrationHealth } from "@/components/mission-control/integration-health";
 import { sortIncidents } from "@/lib/intelligence/prioritization";
@@ -7,11 +10,14 @@ import { EmptyState } from "@/components/ui/empty-state";
 import { ShieldAlert, Activity, ShieldCheck, Clock } from "lucide-react";
 
 export default async function MissionControlPage() {
-  const incidents = await prisma.incident.findMany({
-    orderBy: { createdAt: 'desc' },
-    take: 5
-  });
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
 
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const incidents = await IncidentService.getRecentIncidents(workspaceId, 5, session.user.id, session.user.role);
   const sortedIncidents = sortIncidents(incidents);
 
   return (

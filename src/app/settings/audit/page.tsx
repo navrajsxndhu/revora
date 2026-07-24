@@ -1,14 +1,17 @@
-import { prisma } from "@/lib/prisma";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { AuditService } from "@/audit/audit-service";
 
 export default async function AuditLogPage() {
-  const workspaceId = await prisma.workspace.findFirst().then(w => w?.id);
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div>Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
   if (!workspaceId) return <div>No workspace found.</div>;
 
-  const logs = await prisma.auditLog.findMany({
-    where: { workspaceId },
-    orderBy: { createdAt: 'desc' },
-    take: 50
-  });
+  const logs = await AuditService.getWorkspaceLogs(workspaceId);
 
   return (
     <div className="p-10 max-w-5xl mx-auto font-sans text-slate-900">

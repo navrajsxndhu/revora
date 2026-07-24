@@ -1,11 +1,21 @@
-import { prisma } from "@/lib/prisma";
+import { WorkspaceService } from "@/services/workspace-service";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { OrganizationService } from "@/services/organization-service";
 
 export default async function SettingsPage() {
-  const workspace = await prisma.workspace.findFirst({
-    include: { organization: true }
-  });
+  const session = await getServerSession(authOptions);
+  
+  if (!session?.user) {
+    return <div>Unauthorized</div>;
+  }
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspace = workspaces.length > 0 ? workspaces[0] : null;
 
   if (!workspace) return <div>No workspace found.</div>;
+
+  const organization = await OrganizationService.getOrganization(workspace.organizationId);
 
   return (
     <div className="p-10 max-w-3xl mx-auto font-sans text-slate-900">
@@ -20,7 +30,7 @@ export default async function SettingsPage() {
           </div>
           <div>
             <label className="block text-sm font-medium text-slate-700">Organization</label>
-            <input type="text" defaultValue={workspace.organization.name} className="mt-1 w-full rounded border p-2 text-sm bg-slate-50" readOnly />
+            <input type="text" defaultValue={organization?.name || "Unknown"} className="mt-1 w-full rounded border p-2 text-sm bg-slate-50" readOnly />
           </div>
         </div>
       </div>

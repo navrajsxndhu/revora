@@ -3,8 +3,24 @@ import Link from "next/link";
 import { ArrowLeft, Shield, AlertTriangle, Globe, Activity, Building2, Zap, Briefcase, Database, Lock, Box, CreditCard, Factory } from "lucide-react";
 import { PremiumTable } from "@/components/ui/premium-table";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { IncidentService } from "@/services/incident-service";
+import { HealthService } from "@/services/health-service";
 
-export default function SituationRoom() {
+export default async function SituationRoom() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const incidents = await IncidentService.getActiveIncidents(workspaceId, session.user.id, session.user.role);
+  const healthHistory = await HealthService.getWorkspaceHealthHistory(workspaceId, 1, session.user.id, session.user.role);
+  const currentHealth = healthHistory[0];
+
   return (
     <div className="min-h-screen bg-black text-white p-8">
       <div className="max-w-7xl mx-auto space-y-8 flex flex-col h-[calc(100vh-4rem)]">
@@ -35,7 +51,7 @@ export default function SituationRoom() {
               Enterprise Operating State
               <Globe className="w-5 h-5 text-emerald-500" />
             </div>
-            <div className="text-5xl font-black text-white mb-2">NOMINAL</div>
+            <div className="text-5xl font-black text-white mb-2">{currentHealth?.status || "NOMINAL"}</div>
             <div className="text-sm font-medium text-emerald-400">All Constitutional Systems Stable</div>
           </div>
           
@@ -81,28 +97,24 @@ export default function SituationRoom() {
               title="Enterprise Priority Engine" 
               headers={["Strategic Priority", "Domain", "Risk / Value Matrix", "Status"]}
             >
-              {[
-                { name: "Mitigate AWS Cost Overrun", domain: "Finance", matrix: "High Financial Impact", status: "Requires Executive Decision", icon: <CreditCard className="w-4 h-4 text-rose-500"/> },
-                { name: "Finalize EU Supplier Contract", domain: "Supply Chain", matrix: "Medium Ops Risk", status: "In Procurement Review", icon: <Factory className="w-4 h-4 text-amber-500"/> },
-                { name: "Launch Revora v2.5.0", domain: "Products", matrix: "High Strategic Value", status: "Pending Release Gate", icon: <Box className="w-4 h-4 text-blue-500"/> },
-                { name: "Submit CSRD Annual Report", domain: "ESG", matrix: "Critical Compliance", status: "Awaiting Board Sign-off", icon: <Globe className="w-4 h-4 text-emerald-500"/> },
-              ].map((row, i) => (
-                <tr key={i} className="hover:bg-slate-800/30 transition-colors">
+              {incidents.length === 0 ? (
+                <tr><td colSpan={4} className="py-8 text-center text-slate-500">No active priorities flagged.</td></tr>
+              ) : incidents.map((row) => (
+                <tr key={row.id} className="hover:bg-slate-800/30 transition-colors">
                   <td className="py-4 px-5 font-medium text-slate-200 text-sm">
                     <div className="flex items-center gap-3">
-                       {row.icon}
-                       {row.name}
+                       <AlertTriangle className={`w-4 h-4 ${row.severity === 'CRITICAL' ? 'text-rose-500' : 'text-amber-500'}`}/>
+                       {row.title}
                     </div>
                   </td>
-                  <td className="py-4 px-5 text-sm text-slate-400">{row.domain}</td>
-                  <td className="py-4 px-5 text-sm font-mono text-slate-300">{row.matrix}</td>
+                  <td className="py-4 px-5 text-sm text-slate-400">{row.serviceAffected || "Global"}</td>
+                  <td className="py-4 px-5 text-sm font-mono text-slate-300">{row.severity}</td>
                   <td className="py-4 px-5">
                     <span className={`px-2 py-1 rounded text-xs font-bold border w-max block ${
-                      row.status.includes('Requires') || row.status.includes('Critical') ? 'bg-rose-900/20 text-rose-400 border-rose-900/50' : 
-                      row.status.includes('Pending') || row.status.includes('Awaiting') ? 'bg-amber-900/20 text-amber-400 border-amber-900/50' :
+                      row.state === 'OPEN' || row.severity === 'CRITICAL' ? 'bg-rose-900/20 text-rose-400 border-rose-900/50' : 
                       'bg-blue-900/20 text-blue-400 border-blue-900/50'
                     }`}>
-                      {row.status}
+                      {row.state}
                     </span>
                   </td>
                 </tr>

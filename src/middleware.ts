@@ -1,27 +1,39 @@
+import { withAuth } from "next-auth/middleware";
 import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { can } from "@/permissions/engine";
 
-export async function middleware(request: NextRequest) {
-  const path = request.nextUrl.pathname;
-
-  // Protect sensitive routes
-  const protectedRoutes = ['/mission-control', '/settings'];
-  const isProtected = protectedRoutes.some(route => path.startsWith(route));
-
-  if (isProtected) {
-    const token = request.cookies.get('revora_session');
+export default withAuth(
+  function middleware(req) {
+    const token = req.nextauth.token;
+    const path = req.nextUrl.pathname;
     
-    // We can't hit Prisma directly in Edge middleware currently, so we rely on 
-    // the layout/page Server Components to do the hard database validation.
-    // However, if there's no token at all, we can fast-fail here.
-    if (!token && process.env.NODE_ENV !== 'development') {
-      return NextResponse.redirect(new URL('/login', request.url));
-    }
-  }
+    // Convert token to UserContext shape for the permission engine
+    const userContext = token ? {
+      id: token.id as string,
+      role: token.role as string,
+      workspaceId: token.workspaceId as string,
+      organizationId: token.organizationId as string,
+    } : null;
 
-  return NextResponse.next();
-}
+    // Enterprise RBAC Logic using the new engine
+    // If the user tries to access /settings but isn't authorized to MANAGE SETTINGS, deny access
+    if (path.startsWith("/settings") && !can(userContext, "SETTINGS", "MANAGE")) {
+      return NextResponse.rewrite(new URL("/mission-control?error=unauthorized", req.url));
+    }
+    
+    // If the user isn't assigned to any workspace, they shouldn't access mission-control
+    if (path.startsWith("/mission-control") && !token?.workspaceId) {
+       return NextResponse.rewrite(new URL("/setup/workspace", req.url));
+    }
+  },
+  {
+    callbacks: {
+      authorized: ({ token }) => !!token,
+    },
+  }
+);
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  matcher: ['/mission-control/:path*', '/settings/:path*', '/observability/:path*', '/orchestration/:path*'],
 };
+

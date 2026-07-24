@@ -7,7 +7,10 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"id":"INC-2026-901","srv":"Checkout Processing API","cmd":"Jane Doe (SRE)","time":"14m","sev":"SEV-2","trace":"IIC-EV-301"},{"id":"INC-2026-900","srv":"Internal Search Index","cmd":"System Auto-Resolved","time":"Resolved","sev":"SEV-3","trace":"IIC-EV-302"},{"id":"INC-2026-899","srv":"EU Database Replica","cmd":"John Smith","time":"Resolved","sev":"SEV-1","trace":"IIC-EV-303"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { ObservabilityService } from "@/services/observability-service";
 
 const METRICS = [
     { label: "Active Incidents", value: "1", icon: Siren, iconColor: "text-rose-500", desc: "SEV-2 (Checkout)", descColor: "text-rose-400" },
@@ -16,7 +19,16 @@ const METRICS = [
     { label: "Blast Radius", value: "Isolated", icon: Target, iconColor: "text-emerald-500", desc: "Current impact" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const TABLE_DATA = await ObservabilityService.getIncidents(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,13 +46,15 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Operational Telemetry" headers={["Incident ID", "Impacted Service", "Commander", "Time Open", "Severity", "Trace"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
-                <td className="py-4 px-5 text-sm text-slate-400">{row.id}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.srv}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.cmd}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.time}</td>
-                <td className="py-4 px-5"><StatusBadge status={row.sev} /></td>
+          {TABLE_DATA.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No incidents active.</td></tr>
+          ) : TABLE_DATA.map((row: any, i: number) => (
+            <tr key={row.id || i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+                <td className="py-4 px-5 text-sm text-slate-400">{row.incidentId}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.service}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.commander}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.timeToResolve}</td>
+                <td className="py-4 px-5"><StatusBadge status={row.severity} /></td>
                 <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Observed" /></td>
             </tr>
           ))}

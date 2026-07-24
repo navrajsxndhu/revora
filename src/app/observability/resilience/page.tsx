@@ -7,7 +7,10 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"scen":"Region US-East Outage","targ":"Global DB Clusters","fail":"Total Datacenter Loss","res":"Failover to US-West (<2s)","cond":"Optimal","trace":"ERS-EV-901"},{"scen":"Stripe API 500 Errors","targ":"Checkout Pipeline","fail":"3rd Party Blackout","res":"Graceful Queueing","cond":"Optimal","trace":"ERS-EV-902"},{"scen":"Redis Cache Purge","targ":"User Sessions","fail":"Memory Exhaustion","res":"14% User Logout (Bug)","cond":"Warning","trace":"ERS-EV-903"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { ObservabilityService } from "@/services/observability-service";
 
 const METRICS = [
     { label: "Chaos Experiments", value: "142", icon: Flame, iconColor: "text-rose-500", desc: "Automated monthly", descColor: "text-rose-400" },
@@ -16,7 +19,16 @@ const METRICS = [
     { label: "DR Readiness", value: "Verified", icon: ShieldCheck, iconColor: "text-blue-500", desc: "Compliance status" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const TABLE_DATA = await ObservabilityService.getResilience(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,13 +46,15 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Operational Telemetry" headers={["Simulation Scenario", "Target Subsystem", "Simulated Failure", "Recovery Result", "Condition", "Trace"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
-                <td className="py-4 px-5 text-sm text-slate-400">{row.scen}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.targ}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.fail}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.res}</td>
-                <td className="py-4 px-5"><StatusBadge status={row.cond} /></td>
+          {TABLE_DATA.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No resilience tests run.</td></tr>
+          ) : TABLE_DATA.map((row: any, i: number) => (
+            <tr key={row.id || i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+                <td className="py-4 px-5 text-sm text-slate-400">{row.scenario}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.target}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.failureType}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.resolution}</td>
+                <td className="py-4 px-5"><StatusBadge status={row.condition} /></td>
                 <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Observed" /></td>
             </tr>
           ))}

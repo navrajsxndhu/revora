@@ -7,7 +7,10 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"rule":"All Tier 0 services require Tracing","dom":"Core Architecture","enf":"CI/CD Block","block":"142","gov":"Verified","trace":"OGB-EV-801"},{"rule":"Deployments freeze if Error Budget < 0","dom":"Release Engineering","enf":"Pipeline Reject","block":"12","gov":"Verified","trace":"OGB-EV-802"},{"rule":"P1 incidents require post-mortem within 48h","dom":"SRE Operations","enf":"Manager Escalation","block":"0 (Compliant)","gov":"Verified","trace":"OGB-EV-803"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { ObservabilityService } from "@/services/observability-service";
 
 const METRICS = [
     { label: "Monitoring Policies", value: "42", icon: FileSignature, iconColor: "text-indigo-500", desc: "Constitutional rules", descColor: "text-indigo-400" },
@@ -16,7 +19,16 @@ const METRICS = [
     { label: "Audit Readiness", value: "Immediate", icon: Clock, iconColor: "text-emerald-500", desc: "Evidence backed" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const TABLE_DATA = await ObservabilityService.getGovernance(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,11 +46,16 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Operational Telemetry" headers={["Governance Rule", "Target Domain", "Enforcement Logic", "Violations Blocked", "Governance", "Execution ID"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
-
-
-                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Observed" /></td>
+          {TABLE_DATA.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No governance data available.</td></tr>
+          ) : TABLE_DATA.map((row: any, i: number) => (
+            <tr key={row.id || i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+                <td className="py-4 px-5 text-sm text-slate-400">{row.rule}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.domain}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.enforcement}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.blockedCount}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.governance}</td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Verified Block" /></td>
             </tr>
           ))}
         </PremiumTable>

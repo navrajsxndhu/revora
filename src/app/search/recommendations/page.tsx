@@ -7,7 +7,10 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"src":"Incident #8012 (DB Lock)","rec":"Incident #7044 (DB Lock)","vec":"Root Cause Match","val":"Faster Resolution","conf":"High","trace":"RSE-EV-601"},{"src":"Data Retention Policy v2","rec":"GDPR Compliance Check","vec":"Regulatory Tagging","val":"Audit Prevention","conf":"High","trace":"RSE-EV-602"},{"src":"React Component: Table","rec":"Design System: Grid","vec":"UI Architecture","val":"Code Reuse","conf":"Medium","trace":"RSE-EV-603"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { SearchService } from "@/services/search-service";
 
 const METRICS = [
     { label: "Acceptance Rate", value: "42%", icon: CheckCircle2, iconColor: "text-cyan-500", desc: "Users clicking suggestions", descColor: "text-cyan-400" },
@@ -16,7 +19,16 @@ const METRICS = [
     { label: "Knowledge Silos", value: "-14%", icon: Network, iconColor: "text-amber-500", desc: "Cross-dept discoveries" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const TABLE_DATA = await SearchService.getRecommendations(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,14 +46,15 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Search & Discovery Metrics" headers={["Source Asset", "Recommended Asset", "Similarity Vector", "Business Value", "Confidence", "Evidence"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
-                <td className="py-4 px-5 text-sm text-slate-400">{row.src}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.rec}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.vec}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.val}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.conf}</td>
-
+          {TABLE_DATA.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No recommendations available.</td></tr>
+          ) : TABLE_DATA.map((row: any, i: number) => (
+            <tr key={row.id || i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+                <td className="py-4 px-5 text-sm text-slate-400">{row.source}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.recommendation}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.vector}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.value}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.confidence}</td>
                 <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Verified Result" /></td>
             </tr>
           ))}

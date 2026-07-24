@@ -7,7 +7,10 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"asset":"users_table_v2","fld":"ssn_hash","term":"Social Security Number","desc":"Cryptographically hashed SSN for tax purposes.","class":"Restricted","trace":"MIE-EV-401"},{"asset":"sales_q3_raw","fld":"mrr_calc","term":"Monthly Recurring Rev","desc":"Aggregated subscription revenue per account.","class":"Confidential","trace":"MIE-EV-402"},{"asset":"public_api_v1","fld":"server_status","term":"Uptime Indicator","desc":"Boolean indicating system availability.","class":"Public","trace":"MIE-EV-403"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { DataFabricService } from "@/services/data-fabric-service";
 
 const METRICS = [
     { label: "Business Glossary", value: "14.2K", icon: BookOpen, iconColor: "text-indigo-500", desc: "Defined terms", descColor: "text-indigo-400" },
@@ -16,7 +19,16 @@ const METRICS = [
     { label: "Orphaned Columns", value: "12", icon: AlertTriangle, iconColor: "text-rose-500", desc: "Flagged for review" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const TABLE_DATA = await DataFabricService.getMetadata(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,14 +46,16 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Data Governance Records" headers={["Physical Asset", "Technical Field", "Business Term", "Description", "Classification", "Execution ID"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+          {TABLE_DATA.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No metadata available.</td></tr>
+          ) : TABLE_DATA.map((row: any, i: number) => (
+            <tr key={row.id || i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
                 <td className="py-4 px-5 text-sm text-slate-400">{row.asset}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.fld}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.term}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.desc}</td>
                 <td className="py-4 px-5"><StatusBadge status={row.class} /></td>
-                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Governed" /></td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Observed" /></td>
             </tr>
           ))}
         </PremiumTable>

@@ -7,7 +7,10 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"targ":"v2 Architecture Approval","cond":"CISO on leave (escalation)","out":"Delegates to Deputy CISO","risk":"Low","status":"Verified","trace":"PSS-EV-601"},{"targ":"Mass Auth Revocation","cond":"API limit exceeded","out":"Workflow fails mid-execution","risk":"High","status":"Failed","trace":"PSS-EV-602"},{"targ":"Vendor Renewal","cond":"Budget exceeded by 10%","out":"Routes to CFO for approval","risk":"Medium","status":"Simulating","trace":"PSS-EV-603"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { WorkflowService } from "@/services/workflow-service";
 
 const METRICS = [
     { label: "Simulations Run", value: "4,102", icon: PlayCircle, iconColor: "text-indigo-500", desc: "Past 30 days", descColor: "text-indigo-400" },
@@ -16,7 +19,16 @@ const METRICS = [
     { label: "Mock Coverage", value: "100%", icon: Layers, iconColor: "text-emerald-500", desc: "All modules mapped" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const TABLE_DATA = await WorkflowService.getSimulations(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,14 +46,16 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Orchestration Metrics" headers={["Simulation Target", "Simulated Condition", "Predicted Outcome", "Risk Level", "Status", "Execution ID"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+          {TABLE_DATA.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No simulations available.</td></tr>
+          ) : TABLE_DATA.map((row: any, i: number) => (
+            <tr key={row.id || i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
                 <td className="py-4 px-5 text-sm text-slate-400">{row.targ}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.cond}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.out}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.risk}</td>
                 <td className="py-4 px-5"><StatusBadge status={row.status} /></td>
-                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Orchestrated" /></td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Observed" /></td>
             </tr>
           ))}
         </PremiumTable>

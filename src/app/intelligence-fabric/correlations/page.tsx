@@ -7,7 +7,10 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"trig":"CPU Spike (Infrastructure)","corr":"End-of-Month Financial Batch","conf":"99.8%","act":"Auto-scaled cluster","status":"Optimal","trace":"CDE-EV-201"},{"trig":"Failed Security Audit","corr":"New Marketplace Extension","conf":"94.2%","act":"Quarantined Plugin","status":"Warning","trace":"CDE-EV-202"},{"trig":"High Attrition (HR)","corr":"Elevated On-Call Pages (Eng)","conf":"88.4%","act":"Alerted VP Engineering","status":"Critical","trace":"CDE-EV-203"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { IntelligenceFabricService } from "@/services/intelligence-fabric-service";
 
 const METRICS = [
     { label: "Correlations Found", value: "142K", icon: Search, iconColor: "text-teal-500", desc: "In last 30 days", descColor: "text-teal-400" },
@@ -16,7 +19,16 @@ const METRICS = [
     { label: "Cross-Department", value: "64%", icon: Layers, iconColor: "text-teal-500", desc: "Silos eliminated" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const TABLE_DATA = await IntelligenceFabricService.getCorrelations(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,14 +46,16 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Enterprise Knowledge Metrics" headers={["Trigger Event", "Correlated Discovery", "Confidence Score", "Action Taken", "Status", "Execution ID"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+          {TABLE_DATA.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No correlations available.</td></tr>
+          ) : TABLE_DATA.map((row: any, i: number) => (
+            <tr key={row.id || i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
                 <td className="py-4 px-5 text-sm text-slate-400">{row.trig}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.corr}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.conf}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.act}</td>
                 <td className="py-4 px-5"><StatusBadge status={row.status} /></td>
-                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Verified Graph" /></td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Observed" /></td>
             </tr>
           ))}
         </PremiumTable>

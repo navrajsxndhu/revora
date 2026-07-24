@@ -6,8 +6,10 @@ import { MetricGrid } from "@/components/ui/metric-grid";
 import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
-
-const TABLE_DATA = [{"time":"10:42 AM Today","ctx":"Production Deployment (Frontend)","init":"Release Engineering","imp":"High (Customer Facing)","status":"Completed","trace":"UET-EV-101"},{"time":"09:15 AM Today","ctx":"Financial Ledger Reconciliation","init":"Automated Job","imp":"Critical (Compliance)","status":"Failed","trace":"UET-EV-102"},{"time":"08:00 AM Today","ctx":"C-Suite Access Granted","init":"System Admin","imp":"Medium (RBAC)","status":"Approved","trace":"UET-EV-103"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { TimelineService } from "@/services/timeline-service";
 
 const METRICS = [
     { label: "Timeline Events", value: "8.4M", icon: History, iconColor: "text-fuchsia-500", desc: "Constitutional actions logged", descColor: "text-fuchsia-400" },
@@ -16,7 +18,16 @@ const METRICS = [
     { label: "Missing Evidence", value: "0", icon: ShieldCheck, iconColor: "text-emerald-500", desc: "Perfect cryptographic seal" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const timelineEvents = await TimelineService.getWorkspaceTimeline(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,16 +45,19 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Enterprise Workspace Metrics" headers={["Timestamp", "Event Context", "Initiator", "Business Impact", "Status", "Trace"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
-                <td className="py-4 px-5 text-sm text-slate-400">{row.time}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.ctx}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.init}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.imp}</td>
+          {timelineEvents.map((row) => (
+            <tr key={row.id} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+                <td className="py-4 px-5 text-sm text-slate-400">{row.createdAt.toLocaleString()}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.eventContext}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.initiator}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.businessImpact}</td>
                 <td className="py-4 px-5"><StatusBadge status={row.status} /></td>
-                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Unified Ledger" /></td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.traceId} timestamp="Unified Ledger" /></td>
             </tr>
           ))}
+          {timelineEvents.length === 0 && (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No timeline events recorded.</td></tr>
+          )}
         </PremiumTable>
       </div>
     </PageShell>

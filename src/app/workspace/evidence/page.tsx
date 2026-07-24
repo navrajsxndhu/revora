@@ -7,16 +7,28 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"id":"WS-E-5501","time":"2026-07-22T09:55:00Z","user":"U-8842","act":"Situation Room Assembled: DB Outage","gov":"Policy: Incident Response","trace":"EV-W-5501"},{"id":"WS-E-5502","time":"2026-07-22T09:52:15Z","user":"U-1042","act":"Approved Q3 Financials in Unified Hub","gov":"Policy: Human Approval","trace":"EV-W-5502"},{"id":"WS-E-5503","time":"2026-07-22T09:45:00Z","user":"U-5042","act":"Assistant Explained Audit Failure","gov":"Policy: Explainable Governance","trace":"EV-W-5503"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { EvidenceService } from "@/services/evidence-service";
 
 const METRICS = [
-    { label: "Workspace Logs", value: "84.2M", icon: Database, iconColor: "text-fuchsia-500", desc: "Cryptographic state records", descColor: "text-fuchsia-400" },
+    { label: "Workspace Logs", value: "Realtime", icon: Database, iconColor: "text-fuchsia-500", desc: "Cryptographic state records", descColor: "text-fuchsia-400" },
     { label: "Ledger Integrity", value: "Verified", icon: ShieldCheck, iconColor: "text-emerald-500", desc: "SHA-256 Validated" },
     { label: "Commit Velocity", value: "4ms", icon: Zap, iconColor: "text-blue-500", desc: "State tracking speed" },
     { label: "Audit Exports", value: "142", icon: Download, iconColor: "text-indigo-500", desc: "Compliance reports pulled" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div>Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div>No workspace found.</div>;
+
+  const evidenceData = await EvidenceService.getWorkspaceEvidence(workspaceId);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -33,19 +45,21 @@ export default function Page() {
       <MetricGrid metrics={METRICS} />
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
-        <PremiumTable title="Enterprise Workspace Metrics" headers={["Event ID", "Timestamp", "User Identity", "Unified Workspace Action", "Constitutional Governance", "EvidenceBadge"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
-                <td className="py-4 px-5 text-sm text-slate-400">{row.id}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.time}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.user}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.act}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.gov}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.trace}</td>
-
-
-            </tr>
-          ))}
+        <PremiumTable title="Enterprise Workspace Evidence" headers={["Event ID", "Timestamp", "Tenant ID", "Organization ID", "Status", "Trace ID"]}>
+          {evidenceData.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No evidence recorded yet.</td></tr>
+          ) : (
+            evidenceData.map((row: any) => (
+              <tr key={row.id} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+                  <td className="py-4 px-5 text-sm font-mono text-slate-300">{row.id.split('-')[0]}</td>
+                  <td className="py-4 px-5 text-sm text-slate-400">{new Date(row.createdAt).toISOString()}</td>
+                  <td className="py-4 px-5 text-sm text-slate-400">{row.tenantId || '-'}</td>
+                  <td className="py-4 px-5 text-sm text-slate-400">{row.organizationId || '-'}</td>
+                  <td className="py-4 px-5 text-sm text-slate-400"><StatusBadge status={row.status} /></td>
+                  <td className="py-4 px-5"><EvidenceBadge evidenceId={row.id} timestamp="Unified Ledger" /></td>
+              </tr>
+            ))
+          )}
         </PremiumTable>
       </div>
     </PageShell>

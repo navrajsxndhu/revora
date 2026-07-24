@@ -7,7 +7,10 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"obj":"User Login Success","target":"99.99%","val":"99.995%","budget":"84% Remaining","status":"Optimal","trace":"REC-EV-401"},{"obj":"Payment Processing Latency","target":"&lt; 500ms (99%)","val":"94.2%","budget":"0% (Exhausted)","status":"Critical","trace":"REC-EV-402"},{"obj":"Dashboard Load Time","target":"&lt; 2s (95%)","val":"98.4%","budget":"42% Remaining","status":"Warning","trace":"REC-EV-403"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { ObservabilityService } from "@/services/observability-service";
 
 const METRICS = [
     { label: "SLO Compliance", value: "98.4%", icon: Award, iconColor: "text-indigo-500", desc: "Enterprise average", descColor: "text-indigo-400" },
@@ -16,7 +19,16 @@ const METRICS = [
     { label: "Resilience Score", value: "A-", icon: TrendingUp, iconColor: "text-emerald-500", desc: "Quarterly rating" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const TABLE_DATA = await ObservabilityService.getReliability(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,9 +46,14 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Operational Telemetry" headers={["Business Journey", "SLO Target", "Current Value", "Error Budget Remaining", "Status", "Execution ID"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
-
+          {TABLE_DATA.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No reliability data available.</td></tr>
+          ) : TABLE_DATA.map((row: any, i: number) => (
+            <tr key={row.id || i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+                <td className="py-4 px-5 text-sm text-slate-400">{row.objective}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.target}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.value}</td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.budget}</td>
                 <td className="py-4 px-5"><StatusBadge status={row.status} /></td>
                 <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Observed" /></td>
             </tr>

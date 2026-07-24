@@ -7,7 +7,10 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"pol":"No unmasked PII in lower envs","class":"Dev/Staging Databases","enf":"Hard Block (CI/CD)","prev":"142","gov":"Verified","trace":"DGB-EV-901"},{"pol":"All APIs must have an Owner","class":"Service Endpoints","enf":"Deployment Reject","prev":"412","gov":"Verified","trace":"DGB-EV-902"},{"pol":"Financial data requires Tier 1 Cert","class":"Executive Reports","enf":"Read-Access Block","prev":"14","gov":"Verified","trace":"DGB-EV-903"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { DataFabricService } from "@/services/data-fabric-service";
 
 const METRICS = [
     { label: "Active Policies", value: "42", icon: FileSignature, iconColor: "text-indigo-500", desc: "Data governance rules", descColor: "text-indigo-400" },
@@ -16,7 +19,16 @@ const METRICS = [
     { label: "Audit Readiness", value: "Immediate", icon: Clock, iconColor: "text-emerald-500", desc: "Real-time compliance" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const TABLE_DATA = await DataFabricService.getGovernance(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,14 +46,16 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Data Governance Records" headers={["Data Policy", "Target Asset Class", "Enforcement Logic", "Violations Prevented", "Governance", "Trace"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+          {TABLE_DATA.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No governance available.</td></tr>
+          ) : TABLE_DATA.map((row: any, i: number) => (
+            <tr key={row.id || i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
                 <td className="py-4 px-5 text-sm text-slate-400">{row.pol}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.class}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.enf}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.prev}</td>
                 <td className="py-4 px-5"><StatusBadge status={row.gov} /></td>
-                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Governed" /></td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Observed" /></td>
             </tr>
           ))}
         </PremiumTable>

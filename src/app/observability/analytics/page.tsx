@@ -7,7 +7,10 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"dom":"Commerce Platform","sla":"99.99%","alerts":"14 (Low Noise)","trend":"-14% (Improving)","state":"Optimal","trace":"OIA-EV-701"},{"dom":"Enterprise Search","sla":"99.9%","alerts":"2","trend":"Stable","state":"Optimal","trace":"OIA-EV-702"},{"dom":"Legacy HR Portal","sla":"99.0%","alerts":"412 (High Noise)","trend":"+42% (Degrading)","state":"Warning","trace":"OIA-EV-703"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { ObservabilityService } from "@/services/observability-service";
 
 const METRICS = [
     { label: "Reliability Index", value: "94/100", icon: Activity, iconColor: "text-indigo-500", desc: "Enterprise wide score", descColor: "text-indigo-400" },
@@ -16,7 +19,16 @@ const METRICS = [
     { label: "Downtime Cost Saved", value: "$4.2M", icon: Award, iconColor: "text-emerald-500", desc: "Estimated ROI" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const TABLE_DATA = await ObservabilityService.getAnalytics(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,14 +46,16 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Operational Telemetry" headers={["Business Domain", "Uptime SLA", "Alerts / Month", "MTTR Trend", "State", "Trace"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
-                <td className="py-4 px-5 text-sm text-slate-400">{row.dom}</td>
+          {TABLE_DATA.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No analytics data available.</td></tr>
+          ) : TABLE_DATA.map((row: any, i: number) => (
+            <tr key={row.id || i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+                <td className="py-4 px-5 text-sm text-slate-400">{row.domain}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.sla}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.alerts}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.trend}</td>
                 <td className="py-4 px-5"><StatusBadge status={row.state} /></td>
-                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Observed" /></td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Verified Block" /></td>
             </tr>
           ))}
         </PremiumTable>

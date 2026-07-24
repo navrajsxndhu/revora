@@ -7,7 +7,10 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"ass":"Redis Cache Cluster","fin":"$4,200/mo (Underutilized)","sec":"VPC Bound, No Public IP","comp":"SOC2 Compliant","state":"Optimal","trace":"UBC-EV-401"},{"ass":"User Profile DB","fin":"$14,500/mo (Optimized)","sec":"AES-256 Encrypted at Rest","comp":"GDPR / CCPA In Scope","state":"Optimal","trace":"UBC-EV-402"},{"ass":"Legacy CRM Export","fin":"$800/mo (Deprecated)","sec":"Basic Auth (Flagged)","comp":"Policy Violation","state":"Warning","trace":"UBC-EV-403"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { IntelligenceFabricService } from "@/services/intelligence-fabric-service";
 
 const METRICS = [
     { label: "Context Hydration", value: "4ms", icon: Zap, iconColor: "text-teal-500", desc: "Real-time assembly", descColor: "text-teal-400" },
@@ -16,7 +19,16 @@ const METRICS = [
     { label: "Time Saved", value: "4.2h/user", icon: Timer, iconColor: "text-emerald-500", desc: "No more searching" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const TABLE_DATA = await IntelligenceFabricService.getContext(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,15 +46,16 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Enterprise Knowledge Metrics" headers={["Technical Asset", "Financial Context", "Security Context", "Compliance Context", "State", "Execution ID"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+          {TABLE_DATA.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No context available.</td></tr>
+          ) : TABLE_DATA.map((row: any, i: number) => (
+            <tr key={row.id || i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
                 <td className="py-4 px-5 text-sm text-slate-400">{row.ass}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.fin}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.sec}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.comp}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.state}</td>
-
-                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Verified Graph" /></td>
+                <td className="py-4 px-5"><StatusBadge status={row.state} /></td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Observed" /></td>
             </tr>
           ))}
         </PremiumTable>

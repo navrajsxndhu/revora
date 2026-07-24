@@ -7,7 +7,10 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"obj":"Expand into EMEA Markets","spon":"Chief Revenue Officer","prog":"42%","conf":"High","status":"On Track","trace":"OKR-EV-201"},{"obj":"Zero-Trust Architecture","spon":"Chief Information Security Officer","prog":"84%","conf":"High","status":"On Track","trace":"OKR-EV-202"},{"obj":"Reduce Cloud Spend by 15%","spon":"Chief Financial Officer","prog":"4%","conf":"Low","status":"Off Track","trace":"OKR-EV-203"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { BusinessIntelligenceService } from "@/services/bi-service";
 
 const METRICS = [
     { label: "Active Objectives", value: "14", icon: Target, iconColor: "text-indigo-500", desc: "Corporate Tier 1", descColor: "text-indigo-400" },
@@ -16,7 +19,16 @@ const METRICS = [
     { label: "At Risk OKRs", value: "2", icon: AlertTriangle, iconColor: "text-rose-500", desc: "Pending intervention" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const TABLE_DATA = await BusinessIntelligenceService.getObjectives(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,14 +46,16 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Strategic Intelligence" headers={["Strategic Objective", "Executive Sponsor", "Progress", "Confidence", "Status", "Execution ID"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+          {TABLE_DATA.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No objectives available.</td></tr>
+          ) : TABLE_DATA.map((row: any, i: number) => (
+            <tr key={row.id || i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
                 <td className="py-4 px-5 text-sm text-slate-400">{row.obj}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.spon}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.prog}</td>
-                <td className="py-4 px-5 text-sm text-slate-400">{row.status}</td>
-                <td className="py-4 px-5"><StatusBadge status={row.conf} /></td>
-                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Verified" /></td>
+                <td className="py-4 px-5 text-sm text-slate-400">{row.conf}</td>
+                <td className="py-4 px-5"><StatusBadge status={row.status} /></td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Observed" /></td>
             </tr>
           ))}
         </PremiumTable>

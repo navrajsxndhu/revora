@@ -1,8 +1,26 @@
 import React from "react";
 import { ShieldCheck, TrendingUp, AlertTriangle, Activity, DollarSign, Users } from "lucide-react";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { ExecutiveService } from "@/services/executive-service";
 
-export default function ExecutiveHome() {
+export default async function ExecutiveHome() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const metrics = await ExecutiveService.getWorkspaceMetrics(workspaceId, session.user.id, session.user.role);
+  
+  // Helper to extract metric or fallback
+  const getMetric = (key: string, defaultVal: string) => {
+    const m = metrics.find(m => m.key === key);
+    return m ? m.value.toString() : defaultVal;
+  };
   return (
     <div className="min-h-screen bg-black text-white p-8">
       <div className="max-w-7xl mx-auto space-y-10">
@@ -27,21 +45,21 @@ export default function ExecutiveHome() {
           <div className="bg-gradient-to-br from-slate-900 to-black border border-slate-800 rounded-2xl p-6 relative overflow-hidden">
             <div className="absolute top-0 right-0 p-6 opacity-20 text-emerald-500"><ShieldCheck className="w-16 h-16" /></div>
             <div className="text-sm font-medium text-slate-400 uppercase tracking-wider mb-2">Platform Compliance</div>
-            <div className="text-5xl font-bold text-white mb-2">99.9%</div>
+            <div className="text-5xl font-bold text-white mb-2">{getMetric('compliance', '99.9')}%</div>
             <div className="text-sm text-emerald-400 flex items-center gap-1 font-medium"><TrendingUp className="w-4 h-4" /> +0.2% from last quarter</div>
           </div>
 
           <div className="bg-gradient-to-br from-slate-900 to-black border border-slate-800 rounded-2xl p-6 relative overflow-hidden">
             <div className="absolute top-0 right-0 p-6 opacity-20 text-amber-500"><AlertTriangle className="w-16 h-16" /></div>
             <div className="text-sm font-medium text-slate-400 uppercase tracking-wider mb-2">Active Operational Risks</div>
-            <div className="text-5xl font-bold text-white mb-2">3</div>
+            <div className="text-5xl font-bold text-white mb-2">{getMetric('risks', '3')}</div>
             <div className="text-sm text-amber-400 flex items-center gap-1 font-medium">Requires executive acknowledgement</div>
           </div>
 
           <div className="bg-gradient-to-br from-slate-900 to-black border border-slate-800 rounded-2xl p-6 relative overflow-hidden">
             <div className="absolute top-0 right-0 p-6 opacity-20 text-blue-500"><Activity className="w-16 h-16" /></div>
             <div className="text-sm font-medium text-slate-400 uppercase tracking-wider mb-2">Runtime Executions</div>
-            <div className="text-5xl font-bold text-white mb-2">4.2M</div>
+            <div className="text-5xl font-bold text-white mb-2">{getMetric('executions', '4.2')}M</div>
             <div className="text-sm text-blue-400 flex items-center gap-1 font-medium"><TrendingUp className="w-4 h-4" /> +12% scaling factor</div>
           </div>
         </div>
@@ -60,7 +78,7 @@ export default function ExecutiveHome() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="font-semibold text-emerald-400">+$124,500</div>
+                  <div className="font-semibold text-emerald-400">+${getMetric('finops_savings', '124,500')}</div>
                   <div className="text-xs text-slate-500">Saved this month</div>
                 </div>
               </div>
@@ -73,7 +91,7 @@ export default function ExecutiveHome() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="font-semibold text-white">87%</div>
+                  <div className="font-semibold text-white">{getMetric('workforce_allocation', '87')}%</div>
                   <div className="text-xs text-slate-500">Optimal range</div>
                 </div>
               </div>

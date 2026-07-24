@@ -7,7 +7,10 @@ import { PremiumTable } from "@/components/ui/premium-table";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { EvidenceBadge } from "@/components/ui/evidence-badge";
 
-const TABLE_DATA = [{"mod":"Q4 Revenue Trajectory","targ":"Net New ARR","cur":"$14.2M","next":"$18.4M (Expected)","conf":"High","trace":"FTI-EV-401"},{"mod":"Customer Churn Predictor","targ":"Logo Churn Rate","cur":"2.1%","next":"2.4% (Risk Warning)","conf":"Medium","trace":"FTI-EV-402"},{"mod":"Infrastructure Capacity","targ":"Compute Spend","cur":"$412K/mo","next":"$540K/mo","conf":"High","trace":"FTI-EV-403"}];
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { WorkspaceService } from "@/services/workspace-service";
+import { BusinessIntelligenceService } from "@/services/bi-service";
 
 const METRICS = [
     { label: "Forecast Accuracy", value: "94%", icon: Target, iconColor: "text-indigo-500", desc: "Rolling 12 months", descColor: "text-indigo-400" },
@@ -16,7 +19,16 @@ const METRICS = [
     { label: "Risk Flags", value: "3", icon: AlertTriangle, iconColor: "text-rose-500", desc: "Predicted anomalies" },
 ];
 
-export default function Page() {
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (!session?.user) return <div className="text-white p-8">Unauthorized</div>;
+
+  const workspaces = await WorkspaceService.getUserWorkspaces(session.user.id);
+  const workspaceId = workspaces[0]?.id;
+  if (!workspaceId) return <div className="text-white p-8">No workspace found.</div>;
+
+  const TABLE_DATA = await BusinessIntelligenceService.getForecasting(workspaceId, session.user.id, session.user.role);
+
   return (
     <PageShell>
       <ExecutiveHeader
@@ -34,14 +46,16 @@ export default function Page() {
 
       <div className="flex-1 min-h-0 pb-12 flex flex-col gap-6">
         <PremiumTable title="Strategic Intelligence" headers={["Prediction Model", "Target Metric", "Current Value", "90-Day Forecast", "Confidence", "Execution ID"]}>
-          {TABLE_DATA.map((row: any, i: number) => (
-            <tr key={i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
+          {TABLE_DATA.length === 0 ? (
+            <tr><td colSpan={6} className="py-8 text-center text-slate-500">No forecasting available.</td></tr>
+          ) : TABLE_DATA.map((row: any, i: number) => (
+            <tr key={row.id || i} className="hover:bg-slate-800/30 transition-colors duration-200 cursor-pointer border-b border-slate-800/50">
                 <td className="py-4 px-5 text-sm text-slate-400">{row.mod}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.targ}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.cur}</td>
                 <td className="py-4 px-5 text-sm text-slate-400">{row.next}</td>
                 <td className="py-4 px-5"><StatusBadge status={row.conf} /></td>
-                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Verified" /></td>
+                <td className="py-4 px-5"><EvidenceBadge evidenceId={row.trace} timestamp="Observed" /></td>
             </tr>
           ))}
         </PremiumTable>
